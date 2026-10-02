@@ -20,11 +20,11 @@ We have seven files, two distinct command channels, and a delivery chain that re
 
 The punchline is that it does work. We extracted the RAT from the MSI and exercised the executable and installer in an isolated Windows 11 lab. All nine command types completed their tests. A downloaded file came back through the upload channel byte for byte, and the screenshot command captured and uploaded the lab desktop. Whatever we think of the luggage-password school of engineering, this is a functioning backdoor.
 
-### Who Sent the Goop, and Who Was Supposed to Click It?
+### Goop acquired
 
-We contacted Smelly at vx-underground after seeing [the 1 October post](https://x.com/vxunderground/status/2105548045542736119), and he sent over the material analysed here. His source reported that it had slipped past their EDR and AV checks, including static scanning on VirusTotal. Smelly suspected a state-sponsored campaign. What landed on our desk was a working backdoor dressed up as a gala invite.
+Smelly posted about it [on Twitter](https://x.com/vxunderground/status/2105548045542736119), so we downloaded it and had a look.
 
-He tentatively identified the lure as an invitation to **AmCham Kazakhstan's 2026 Gala**. The event is real: [AmCham's listing](https://amchamkz.glueup.com/event/amcham-2026-gala-174439/) places it at the St. Regis Astana on **16 October 2026**, with senior executives, government officials and diplomats among its audience. Looks like they were fishing for Kazakhstan's business leaders, government officials and diplomats. Black tie, business cards, and a complimentary remote shell. Fucking lovely.
+The lure appears to be an invitation to **AmCham Kazakhstan's 2026 Gala**. The event is real: [AmCham's listing](https://amchamkz.glueup.com/event/amcham-2026-gala-174439/) places it at the St. Regis Astana on **16 October 2026**, with senior executives, government officials and diplomats among its audience. Looks like they were fishing for Kazakhstan's business leaders, government officials and diplomats. Black tie, business cards, and a complimentary remote shell. Fucking lovely.
 
 ## 2. THE DELIVERY CHAIN
 
@@ -247,11 +247,11 @@ For a normal destination directory, that final path is either absent or a file, 
 
 The RAT shrugs and writes to its hardcoded fallback: `C:\programdata\ss.jpg`. It has checked the image path instead of the parent folder. Task failed successfully.
 
-In our controlled run, the requested fixture path stayed absent and the ProgramData fallback was written and uploaded. The Windows file and received JPEG both measured **123,772 bytes**, with SHA-256 `d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9`. The received image decoded as **1024 x 768 RGB**.
+SS1 ignored the folder we gave it and dumped the screenshot in `C:\ProgramData\ss.jpg`. It then uploaded the JPEG, which [arrived intact](report/ss1-visual-controlled-summary.json).
 
 ![Guest viewer displaying the desktop image captured and uploaded by SS1](report/screenshots/native-controlled-ss1-viewer-edited.png)
 
-*Figure 4. Desktop captured and uploaded by the RAT's SS1 command, displayed in the guest viewer. Edited presentation copy; the [original capture](report/screenshots/native-controlled-ss1-viewer.png) and [transfer record](report/ss1-visual-controlled-summary.json) are preserved.*
+*Figure 4. The lab desktop captured and uploaded by SS1. Lab label edited for display.*
 
 ## 6. ANTI-ANALYSIS AND COMPILER NOISE
 

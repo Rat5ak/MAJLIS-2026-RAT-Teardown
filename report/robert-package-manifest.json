@@ -3,27 +3,27 @@
   "date": "2026-10-02",
   "pages": 13,
   "figures": 5,
-  "word_count": 4840,
+  "word_count": 4755,
   "files": [
     {
       "path": "majlis-robert-teardown.md",
-      "bytes": 35868,
-      "sha256": "5b82048c8c7c83527ad584cd22d26555406d180b0d7f8db608f468020b6c7d4c"
+      "bytes": 35215,
+      "sha256": "73e009be3110ad17464db50230d71d8fbb206df1f1e919451b30f4b91df18de9"
     },
     {
       "path": "majlis-robert-teardown.html",
-      "bytes": 54741,
-      "sha256": "93057a612d9c94fa79fd441a7ba185fbcaf1951bb1d7b4a21423c2ee0247829a"
+      "bytes": 54014,
+      "sha256": "c73e9c1eaf3dde4625c9fa8193ce2157c50ca7dd49871e3bdc49faaff181453f"
     },
     {
       "path": "majlis-robert-teardown.pdf",
-      "bytes": 3490182,
-      "sha256": "145f5efa81d986dcfe043de77c38d52533f449cbaff0b2867225ead37f13c5d6"
+      "bytes": 3486901,
+      "sha256": "f9818c8d29aea79250b4245b77e2b5137f1dc3ab5b5eb1623746eaee22c7f832"
     },
     {
       "path": "majlis-robert-teardown.txt",
-      "bytes": 33511,
-      "sha256": "31fa5e8e313772a2463bf417430f667ad4f85c069a6c5ef55483a3c226a6bca7"
+      "bytes": 32907,
+      "sha256": "2cd6924d7f4dac6ddfab80920a0cdc07bb38bd36bdc65ea3a2c61e08c9f7cebf"
     },
     {
       "path": "acquisition-deep.json",
@@ -157,8 +157,8 @@
     },
     {
       "path": "robert-build.json",
-      "bytes": 5202,
-      "sha256": "7b2322017df8dfd4c8cb4ab80bcf9375132da01df0315b0c2e0a1957388aafc1"
+      "bytes": 5395,
+      "sha256": "27ce44bb60e63ccfcb8bb31068180549387fda38e37c97ae985a6e190e616c1e"
     },
     {
       "path": "runtime-findings.json",
