@@ -1,0 +1,130 @@
+{
+  "analysis_date": "2026-10-01",
+  "confidence": "Static-phase IOC inventory: artifact/code findings plus separately logged guest-only retrieval observations. Later isolated Windows execution against a local HTTP replica is documented in runtime-findings.json.",
+  "domains": [
+    {
+      "role": "WebDAV delivery server",
+      "value": "rappellingaart.com"
+    },
+    {
+      "role": "Script-authored recurring command source",
+      "value": "gomescareerplans.com"
+    },
+    {
+      "role": "Decoded executable HTTP C2 host",
+      "value": "www.chestergreenfarming.com",
+      "port": 80
+    }
+  ],
+  "network_paths": [
+    "/secure-docs/3",
+    "/secure-docs/res.ico",
+    "/secure-docs/Imp_Details.msi",
+    "/docs/?vid=%computername%G",
+    "/peachforthevictory/",
+    "/peachforthevictory/receive.php",
+    "/peachforthevictory/send.php?file="
+  ],
+  "task": {
+    "interval_minutes": 39,
+    "name": "MicrosoftUpdates\\updates88679"
+  },
+  "local_paths": [
+    "C:\\users\\public\\music\\err.log",
+    "C:\\programdata\\ss.jpg"
+  ],
+  "command_types": [
+    "msg",
+    "ms2",
+    "FDD",
+    "UPP",
+    "DWW",
+    "DEL",
+    "RUN",
+    "GDR",
+    "SS1"
+  ],
+  "archive": {
+    "size": 2340789,
+    "sha256": "24a751d37ae7b0ceb0958ee4c3a0bd3ecde8c13f63400e963aebc91c909f62f1",
+    "name": "Official Invitation Majilis 2026 Gala Dinner.7z"
+  },
+  "files": [
+    {
+      "name": "Binary.exe",
+      "size": 574976,
+      "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+      "file": "PE32 executable for MS Windows 6.00 (GUI), Intel i386, 5 sections"
+    },
+    {
+      "name": "Imp_Details.msi.bin",
+      "size": 633856,
+      "sha256": "4008c8f9e52d3e6fd7df4a980a9a78f46f2412ba2fda10a38aa92d338767c54c",
+      "file": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, MSI Installer, Last Printed: Fri Dec 11 12:47:44 2009, Create Time/Date: Fri Dec 11 12:47:44 2009, Last Saved Time/Date: Fri Sep 18 14:06:51 2020, Code page: 1252, Revision Number: {9F7B8B68-4FAA-4CA2-B5B7-45A15CEA967E}, Number of Words: 10, Subject: YunDetectService, Author: Microsoft Corporation, Name of Creating Application: Windows Installer, Template: ;1033, Title: MSI_SETUP_2025, Keywords: Installer, MSI, Database, Security: 1, Number of Pages: 200"
+    },
+    {
+      "name": "Scanned Document 2026.lnk.bin",
+      "size": 1745,
+      "sha256": "613b6569bd8a4cd75ab11ee9682dd690fabfb11d5c1103caf2ba086e006da034",
+      "file": "MS Windows shortcut, Item id list present, Points to a file or directory, Has command line arguments, Icon number=11, Unicoded, HasExpIcon \"%ProgramFiles(x86)%\\Microsoft\\Edge\\Application\\msedge.exe\", MachineID desktop-qghtbcb KnownFolderID 1AC14E77-02E7-4E5D-B744-2EB1AE5198B7, Archive, ctime=Fri Dec  6 23:39:51 2019, atime=Sat Jan 18 05:48:11 2025, mtime=Fri Dec  6 23:39:51 2019, length=58880, window=showminnoactive, IDListSize 0x0135, Root folder \"20D04FE0-3AEA-1069-A2D8-08002B30309D\", Volume \"C:\\\", LocalBasePath \"C:\\Windows\\System32\\ftp.exe\""
+    },
+    {
+      "name": "Scanned Image.url",
+      "size": 190,
+      "sha256": "0457ad9cb2f0ecfabd7cf324d0af59ac7ce5e8ded5ea3619385c460139ed4577",
+      "file": "MS Windows 95 Internet shortcut text (URL=<file://rappellingaart.com@SSL/secure-docs/3>), ASCII text"
+    },
+    {
+      "name": "icon.ico.bin",
+      "size": 59,
+      "sha256": "c27ca16248e04f6535ae3e6d1670d740b3884f0fa64935ddfd39faf712f4175d",
+      "file": "ASCII text"
+    },
+    {
+      "name": "icon2.xz",
+      "size": 2086470,
+      "sha256": "fec4f301a1be36a42ec27208e13b5d1d3d0bbe0f1ab47bbab863a7ca9923c571",
+      "file": "JPEG image data, JFIF standard 1.01, resolution (DPI), density 254x254, segment length 16, Exif Standard: [TIFF image data, big-endian, direntries=4, description=A beautiful shot of a small village surrounded by a lake and snowy hills], baseline, precision 8, 5641x3761, components 3"
+    },
+    {
+      "name": "res.ico.bin",
+      "size": 361,
+      "sha256": "f1060a81c9f68d6f3d23e28f2a1af50fa18ecb9b0a763ca5dcd4b294b6a3593c",
+      "file": "ASCII text"
+    }
+  ],
+  "observed_addresses": [
+    {
+      "value": "176.123.0.199",
+      "host": "gomescareerplans.com",
+      "observed_utc": "2026-10-01T10:57:35Z",
+      "role": "Resolved address during script-source acquisition; not dedicated-host attribution"
+    }
+  ],
+  "protocol": {
+    "transfer_otp": "123456",
+    "multipart_boundary": "----Boundary43985743985798fjkfscxWW",
+    "file_headers": [
+      "OTP",
+      "ClientID"
+    ],
+    "poll_body": "client_id plus dynamic response-type property",
+    "incoming": "next_data string containing inner type/value JSON",
+    "initial_response": {
+      "type": "fdd",
+      "data": null
+    },
+    "native_c2_contacted": false
+  },
+  "path_context": [
+    {
+      "value": "C:\\users\\public\\music\\err.log",
+      "role": "Authored command-text file"
+    },
+    {
+      "value": "C:\\programdata\\ss.jpg",
+      "role": "Screenshot fallback after predicate on value plus \\ss.jpg"
+    }
+  ],
+  "acquisition_evidence": "acquisition-deep.json"
+}

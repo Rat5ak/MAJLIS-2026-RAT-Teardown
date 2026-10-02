@@ -1,0 +1,188 @@
+{
+  "schema": 2,
+  "record_kind": "runtime_final_verification",
+  "status": "verified_from_safe_records",
+  "case_id": "majlis-2026-analysis-20261001",
+  "verification_utc": "2026-10-01T15:08:44.739377+00:00",
+  "phase": "After completed runtime reviews, guest v3 preservation and final VM shutdown",
+  "verification_basis": "Host validation of fixed safe guest/analyst metadata and hashes; raw archive readback occurred inside Kali",
+  "raw_archive_read_on_host": false,
+  "specimens_or_raw_evidence_copied_to_host": false,
+  "historical_static_checkpoint": {
+    "scope": "Historical pre-runtime static checkpoint; not current interface state",
+    "source_sha256": "4c8c49d856ce4ed6a7f01adc0c38e02290fdef9ab07c257bdf44c510117079d4",
+    "checkpoint": {
+      "verification_utc": "2026-10-01T11:28:00.747972+00:00",
+      "phase": "After expanded static teardown and remote-acquisition window",
+      "network_offline": true,
+      "non_loopback_interfaces": [
+        {
+          "name": "eth0",
+          "state": "DOWN",
+          "flags": [
+            "BROADCAST",
+            "MULTICAST"
+          ]
+        }
+      ],
+      "ipv4_routes": [],
+      "ipv6_routes": [],
+      "archive_guest_path": "/home/kali/majlis-analysis/incoming/sample.7z",
+      "archive_sha256": "24a751d37ae7b0ceb0958ee4c3a0bd3ecde8c13f63400e963aebc91c909f62f1",
+      "archive_permissions": "0o400"
+    }
+  },
+  "runtime_phase_status": {
+    "baseline": "complete",
+    "controlled": "complete",
+    "msi": "complete"
+  },
+  "guest_case_archive": {
+    "guest_archive_path": "/home/kali/majlis-analysis/majlis-case-20261001-v3.tar.gz",
+    "archive_bytes": 557571996,
+    "archive_sha256": "c9bf7f7f851a0861ff58281b5d461d5601a3ce9a12a405679801e27cd0e93487",
+    "manifest_sha256": "f710fb2796181b66a261c9c4996ab33fc175469b15e7515a68379481cb5c03a1",
+    "verified_utc": "2026-10-01T15:07:41.080435+00:00",
+    "source_files_verified": 538,
+    "archive_members_verified": 539,
+    "every_member_stream_hash_verified": true,
+    "gzip_readback_to_eof_verified": true,
+    "source_inventory_unchanged": true,
+    "writers_stopped_verified": true,
+    "fixed_private_network_guard_passed": true,
+    "final_windows_phase_archives_verified": true,
+    "report_snapshot_included": true,
+    "report_snapshot_relation": "dated_guest_snapshot_not_final_host_report",
+    "report_html_sha256": "69b323b355a9d8ebbf1bf3bc4a94c3cc1229da99d4885c87afadffa3ca40801c"
+  },
+  "final_windows_phase_archives": {
+    "baseline": {
+      "receipt": "windows-export-native-baseline.json",
+      "zip_bytes": 43770815,
+      "zip_sha256": "5c11cfdfbd7a7271a89fe1e9b6659f0800745e936e5d8bd75b1ae97155e26380",
+      "included_in_verified_guest_v3": true
+    },
+    "controlled": {
+      "receipt": "windows-export-native-controlled.json",
+      "zip_bytes": 190868480,
+      "zip_sha256": "2f08e52f4b71d721dde36bc7a4aa6f3517d807bc486c96c93e7c5cc906100321",
+      "included_in_verified_guest_v3": true
+    },
+    "msi": {
+      "receipt": "windows-export-msi.json",
+      "zip_bytes": 122595772,
+      "zip_sha256": "f67544712261d4c5e96196e8b47b473023356c032772823d03f5591149885492",
+      "included_in_verified_guest_v3": true
+    }
+  },
+  "final_lab_state": {
+    "schema": 1,
+    "recorded_utc": "2026-10-01T15:08:44.5320085Z",
+    "windows": {
+      "vm": "Windows-Fresh",
+      "clean_snapshot": "Majlis-clean-instrumented-isolated-20261001",
+      "restore_command_exit_code": 0,
+      "running_vm_inventory_contains_windows": false,
+      "post_restore_stop_command": "not powered on",
+      "state": "restored_to_clean_snapshot_and_not_running",
+      "raw_evidence_export_receipt": "windows-export-msi.json"
+    },
+    "kali": {
+      "state": "powered_off_after_verified_archive",
+      "transfer_receiver": "replacement_process_stopped",
+      "transfer_stop_receipt": "transfer-maintenance-stop-replacement.json",
+      "running_vm_inventory_contains_kali": false,
+      "shutdown_command_exit_code": 0,
+      "archive_status": "case-bundle-status-v3.json"
+    },
+    "specimens_or_raw_evidence_copied_to_host": false,
+    "running_vm_count_after_shutdown": 0
+  },
+  "source_records": [
+    {
+      "file": "runtime-findings.json",
+      "sha256": "fe75a2120b7118c0c9100e1b0c8e45e0449a85ddb554fcd4626fc99bd68fc8bb"
+    },
+    {
+      "file": "windows-native-baseline.json",
+      "sha256": "111338df075d9a6eb6ca0e930f7b399ce7a97eb192b2857e61372c4abd56af9b"
+    },
+    {
+      "file": "windows-native-controlled.json",
+      "sha256": "30b4bee0b41610ce95b44145b4d441484a79d0dbf3c641884e3695036fa3bcca"
+    },
+    {
+      "file": "windows-msi.json",
+      "sha256": "45edc1e0eb5eee4bbc5eed7feea56d873839ed789b0aa795c4d0170105dd052d"
+    },
+    {
+      "file": "runtime-native-baseline.json",
+      "sha256": "efe242727ae73964d31da54d56551a0d3efd9fcc7a185a534dde2d4fd6b7ce43"
+    },
+    {
+      "file": "runtime-native-controlled.json",
+      "sha256": "545fbe549fe5e6ba0b8f6f956de0356fc2336d302bbac67e20bb077c94a44e62"
+    },
+    {
+      "file": "runtime-msi.json",
+      "sha256": "d67db8804562a4f37fe58e2fe75f3f5dc83eb06130f56fe269799e386843f12e"
+    },
+    {
+      "file": "procmon-native-baseline.json",
+      "sha256": "4090915452159800584e55320faec9fdedf45df0f147069fe4a4f09ee56dcb4b"
+    },
+    {
+      "file": "procmon-native-controlled.json",
+      "sha256": "b980a38e0daac3c98e1fe3baf63d90f08de8ed6a46d1a43c1ada7af3f305df17"
+    },
+    {
+      "file": "procmon-controlled-supplement.json",
+      "sha256": "9846c6eefa4e8abdff5c64ebec47ab7e482f7e2b48812d9112e276ad5b2b038d"
+    },
+    {
+      "file": "windows-export-native-baseline.json",
+      "sha256": "8062335161efb45b262a9d6e726a56ca605f378be7b07ac9369103ff1fe9bd15"
+    },
+    {
+      "file": "windows-export-native-controlled.json",
+      "sha256": "0855a97dd316ff89deba5ba82c94464ab8d022a49bff5614257ee1b98ed23e36"
+    },
+    {
+      "file": "windows-export-msi.json",
+      "sha256": "d3249d2d3e331d1950291b7fb2e40901e563ef73c0cad018a685af092541032c"
+    },
+    {
+      "file": "msi-log-review.json",
+      "sha256": "fe989722ebf757935a0bba0d1c3094ffc6265e787cca0ea979da7c64bbe37726"
+    },
+    {
+      "file": "msi-payload-cleanup.json",
+      "sha256": "7499d426e4eb9ecd94999c61e686b87038c2d1291dfb933cf8f879ac283c6c9e"
+    },
+    {
+      "file": "ss1-visual-controlled-summary.json",
+      "sha256": "533b78048d649c07122f9e3a1278274c538a2a8c0bed1d88fc2c2887078874d6"
+    },
+    {
+      "file": "case-bundle-status-v3.json",
+      "sha256": "6d87c985c8f5b79e5ec42fe3421908aa0a36efe98d3917c53f1d3ea3440f6e72"
+    },
+    {
+      "file": "lab-final-state.json",
+      "sha256": "520be13498804a324858ae807f212c557c86ee290278c672922f3db82ed7a2da"
+    },
+    {
+      "file": "screened-image-manifest.json",
+      "sha256": "75c53f65a98b61214017172aab41d00865b295076a2d21e707d2a4f44785e774"
+    }
+  ],
+  "report_hash_cycle_avoided": true,
+  "final_portable_report_hashes_recorded_separately_by_packager": true,
+  "limits": [
+    "Completed phase review does not mean every hypothesis or behavior succeeded; per-phase results and failure/cleanup limits remain authoritative.",
+    "The old eth0-down/no-route checkpoint is historical. Current sealing used the separately recorded private-network guard; final state records shutdown.",
+    "Optional report files in the guest archive are a dated snapshot, not the final portable report or PDF.",
+    "The host verifies metadata consistency; it never opens the raw guest archive. Guest readback and source hashing are reported by the pinned guest helper.",
+    "The original delivery chain, missing remote stages and operator history remain outside these bounded runtime experiments."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "recorded_utc": "2026-10-01T15:08:44.5320085Z",
+  "windows": {
+    "vm": "Windows-Fresh",
+    "clean_snapshot": "Majlis-clean-instrumented-isolated-20261001",
+    "restore_command_exit_code": 0,
+    "running_vm_inventory_contains_windows": false,
+    "post_restore_stop_command": "not powered on",
+    "state": "restored_to_clean_snapshot_and_not_running",
+    "raw_evidence_export_receipt": "windows-export-msi.json"
+  },
+  "kali": {
+    "state": "powered_off_after_verified_archive",
+    "transfer_receiver": "replacement_process_stopped",
+    "transfer_stop_receipt": "transfer-maintenance-stop-replacement.json",
+    "running_vm_inventory_contains_kali": false,
+    "shutdown_command_exit_code": 0,
+    "archive_status": "case-bundle-status-v3.json"
+  },
+  "specimens_or_raw_evidence_copied_to_host": false,
+  "running_vm_count_after_shutdown": 0
+}

@@ -1,0 +1,3292 @@
+{
+  "schema": 1,
+  "record_kind": "curated_runtime_synthesis",
+  "case_id": "majlis-2026-analysis-20261001",
+  "generated_utc": "2026-10-01T15:05:44.048115+00:00",
+  "scope": "Verified direct native baseline, corrected nine-command native controlled run with bounded trace supplement, and supplied local MSI launch/polling experiment. Runtime results, controlled screened images, identity-scoped cleanup and guest-only raw exports are recorded; original delivery and persistence remain separate unproven limits. Whole-case sealing is separate.",
+  "contains_original_specimen_bytes": false,
+  "contains_raw_packets_or_logs": false,
+  "lab_setup": {
+    "windows": {
+      "installation": "fresh Windows installation for this case",
+      "caption": "Microsoft Windows 11 Pro",
+      "display_version": "25H2",
+      "version": "10.0.26200",
+      "build_number": 26200,
+      "update_build_revision": 8037,
+      "full_build": "26200.8037",
+      "vcpus": 4,
+      "memory_mib": 8192,
+      "firmware": "EFI",
+      "secure_boot_configured": true,
+      "virtual_tpm_present": false,
+      "lab_install_tpm_check_bypassed": true,
+      "vmware_tools_version": "12.5.3.52671",
+      "provenance": {
+        "os_and_tools": "windows-interactive-inventory.json (post-clock-alignment inventory)",
+        "cpu_memory_efi_secure_boot": "Read-only Windows-Fresh.vmx inspection plus parent-confirmed fresh lab setup",
+        "tpm_and_install_bypass": "Parent-confirmed lab installation conditions; not asserted as a default consumer setup"
+      }
+    },
+    "instrumentation": {
+      "procmon": {
+        "version": "4.11",
+        "binary": "Procmon64.exe",
+        "sha256": "fc3af5317c707e0555ad6e7590ad65ceb5c5085b053b41221944ac3ca3492d9c",
+        "signature_status": "Valid",
+        "signer": "Microsoft Corporation",
+        "source_url": "https://download.sysinternals.com/files/ProcessMonitor.zip",
+        "archive_sha256": "80a6442b46af762ed1432f6fec3f7e20366bed62a2522b3486503398a40a1128",
+        "provenance": "windows-procmon-preparation.json; Windows launch record confirms pinned binary used"
+      },
+      "network": "Kali tcpdump capture, bounded guest-only parser metadata, and direct Wireshark window capture"
+    },
+    "isolation": {
+      "topology": "Dedicated two-guest private VMware PVN",
+      "windows_address": "172.30.77.2/24",
+      "kali_address": "172.30.77.1/24",
+      "vm_backing": {
+        "windows_connection_type": "pvn",
+        "kali_connection_type": "pvn",
+        "matching_pvn_id": true,
+        "pvn_id": "56 4d 67 a0 b8 f2 29 ab-df 73 70 a8 26 e1 17 47",
+        "provenance": "Read-only VMX checks; parent separately verified dedicated segment without host/uplink backing"
+      },
+      "windows": {
+        "active_hardware_adapter_count": 1,
+        "default_routes_at_launch": 0,
+        "gateway_routes_at_launch": 0,
+        "forwarding_disabled": true,
+        "adapter_ipv6_binding_enabled": false,
+        "firewall_profiles": [
+          {
+            "name": "Domain",
+            "enabled": true,
+            "default_inbound": "Block",
+            "default_outbound": "Block"
+          },
+          {
+            "name": "Private",
+            "enabled": true,
+            "default_inbound": "Block",
+            "default_outbound": "Block"
+          },
+          {
+            "name": "Public",
+            "enabled": true,
+            "default_inbound": "Block",
+            "default_outbound": "Block"
+          }
+        ],
+        "outbound_exception_rule_names": [
+          "Majlis-Lab-Only-TCP",
+          "Majlis-Lab-Only-ICMP"
+        ],
+        "native_c2_hosts_override": [
+          {
+            "hostname": "www.chestergreenfarming.com",
+            "address": "172.30.77.1"
+          }
+        ],
+        "peer_health_passed": true,
+        "finite_negative_controls": 8,
+        "all_negative_controls_passed": true
+      },
+      "kali": {
+        "default_routes": 0,
+        "ipv4_forwarding": 0,
+        "ipv6_forwarding": 0,
+        "hgfs_mounted": false,
+        "finite_no_route_probe_count": 3,
+        "all_fixed_probes_no_route": true
+      },
+      "limits": [
+        "Finite guest connectivity checks are not a formal hypervisor audit.",
+        "Host/uplink absence depends on verified PVN backing and route/firewall checks, not failed TCP probes alone.",
+        "The native hostname resolves to an analyst replica; no live native RAT C2 exchange is established."
+      ]
+    },
+    "snapshots": {
+      "verification": "Read-only vmrun listSnapshots on both running VMs during this synthesis",
+      "windows": {
+        "status": "present_verified",
+        "listed_total": 1,
+        "name": "Majlis-clean-instrumented-isolated-20261001"
+      },
+      "kali": {
+        "status": "present_verified",
+        "listed_total": 1,
+        "name": "Majlis-static-complete-offline-20261001"
+      },
+      "restore_performed_by_this_synthesis": false,
+      "limits": "Snapshot listing proves recorded snapshot presence, not restoration before every run or an exhaustive cleanliness audit."
+    },
+    "clock_alignment": {
+      "windows_timezone": "UTC",
+      "corrected_before_capture": true,
+      "reference_utc": "2026-10-01T12:48:53.4722022Z",
+      "after_utc": "2026-10-01T12:48:53.4748325Z",
+      "source": "windows-clock-alignment.json",
+      "remaining_cross_guest_skew_measured": false,
+      "limit": "Several-second residual Windows/Kali offset is evident despite clock setting. No cross-guest latency or subsecond ordering is established.",
+      "controlled_clock_source": "windows-clock-controlled.json"
+    }
+  },
+  "runtime_conditions": {
+    "launch_kind": "Analyst-controlled direct executable launch",
+    "elevated_interactive_session": true,
+    "windows_session_id": 1,
+    "specimen_privilege_escalation_tested": false,
+    "mark_of_the_web_provenance_established": false,
+    "smartscreen_or_original_delivery_handler_behavior_tested": false,
+    "baseline_fixture_response": {
+      "next_data": ""
+    },
+    "operator_commands_supplied_during_baseline": 0,
+    "specimen_transfer": {
+      "route": "Isolated Kali-to-Windows guest peer",
+      "host_staging": false,
+      "hashes_verified_in_windows": true
+    },
+    "defender_before": {
+      "AMRunningMode": "Normal",
+      "AntivirusEnabled": true,
+      "RealTimeProtectionEnabled": true,
+      "BehaviorMonitorEnabled": true,
+      "IsTamperProtected": true,
+      "AntivirusSignatureVersion": "1.437.1.0"
+    },
+    "defender_after": {
+      "AMRunningMode": "Normal",
+      "AntivirusEnabled": true,
+      "RealTimeProtectionEnabled": true,
+      "BehaviorMonitorEnabled": true,
+      "IsTamperProtected": true,
+      "AntivirusSignatureVersion": "1.437.1.0"
+    },
+    "protection_observation": "The pinned specimen reached polling with the recorded Defender settings and signature 1.437.1.0. No conclusion about other signatures, cloud responses, or Internet download provenance follows.",
+    "observation_seconds": 300,
+    "cleanup": "Retained specimen process stopped through its owned handle; Procmon stopped gracefully.",
+    "raw_evidence_locations": "Specimens, original PML/CSV, PCAPs, raw request bodies and guest export ZIPs remain inside analysis guests.",
+    "observation_seconds_applies_to": "baseline; controlled has separate timing and stop records",
+    "launch_kind_applies_to": "native baseline/controlled; MSI uses separately recorded system msiexec launch"
+  },
+  "phases": {
+    "baseline": {
+      "status": "complete",
+      "kind": "native_executable",
+      "windows_run_id": "baseline-20261001T131647267Z",
+      "kali_controller_run_id": "baseline-20261001T131627068490Z",
+      "specimen_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+      "process": {
+        "pid": 6360,
+        "parent_pid": 4868,
+        "created_utc": "2026-10-01T13:17:01.2297292Z",
+        "identity_retained": true,
+        "alive_before_cleanup": true,
+        "cleanup_result": "terminated_owned_handle",
+        "harness_end_reason": "fixed_deadline_reached",
+        "procmon_start_corroborated": true,
+        "procmon_start_path_empty": true,
+        "parent_corroboration": "WMI parent PID 4868 plus pinned retained process identity and Procmon start",
+        "procmon_exit_observed": false,
+        "procmon_lifetime_upper_bound_kind": "capture_end_only",
+        "procmon_lifetime_upper_bound_utc": "2026-10-01T13:22:02.8679314Z"
+      },
+      "timing": {
+        "first_fixture_post_utc": "2026-10-01T13:18:38.011720+00:00",
+        "last_fixture_post_utc": "2026-10-01T13:22:02.212101+00:00",
+        "creation_to_first_post_approx_seconds": 97,
+        "cross_guest_precision": "Approximate whole seconds; alignment/skew/event delay limit precision",
+        "static_startup_sleep_budget_seconds": [
+          64,
+          136
+        ],
+        "poll_interarrival_seconds_same_kali_clock": {
+          "interval_count": 10,
+          "minimum": 17.0,
+          "maximum": 23.0,
+          "median": 20.5
+        },
+        "static_normal_poll_jitter_seconds": [
+          14,
+          24
+        ],
+        "interpretation": "Observed startup and interarrival timing is consistent with reviewed sleep budgets; interarrival includes processing and transport overhead."
+      },
+      "http": {
+        "frames": 126,
+        "requests": 11,
+        "methods": {
+          "POST": 11
+        },
+        "responses": 11,
+        "status_codes": {
+          "200": 11
+        },
+        "path": "/peachforthevictory/",
+        "foreign_ipv4_frames_observed": 0,
+        "capture_filter": "host 172.30.77.2",
+        "poll_envelope": {
+          "property_names": [
+            "client_id",
+            "fdd"
+          ],
+          "fdd_value": null,
+          "two_member_envelope": true,
+          "body_size_each": 45,
+          "all_body_sha256_equal": true,
+          "body_sha256": "2458b8b655a3739e7d13b92bd5c2506f4f8d13e25a4fb01326e7fb33ce22144c",
+          "all_json_valid": true,
+          "content_type_matches_fixture_expectation": true,
+          "connection_close_all": true
+        },
+        "fixture_response": {
+          "next_data": ""
+        },
+        "multipart_upload_requests": 0,
+        "saved_uploads": 0,
+        "source_captures": [
+          {
+            "bytes": 13492,
+            "foreign_ipv4_frames": 0,
+            "frames": 126,
+            "http_request_methods": {
+              "POST": 11
+            },
+            "http_response_codes": {
+              "200": 11
+            },
+            "name": "network.pcap0",
+            "sha256": "3773a908c6101f649e06e3c4aac811a0ed97f55f152da3094ef05aad592ababa",
+            "tcp_destination_ports": {
+              "49693": 2,
+              "49694": 2,
+              "49695": 5,
+              "49696": 5,
+              "49697": 5,
+              "49698": 5,
+              "49699": 5,
+              "49700": 5,
+              "49701": 5,
+              "49702": 5,
+              "49703": 5,
+              "49704": 5,
+              "49705": 5,
+              "80": 63
+            },
+            "tshark_exit": 0
+          }
+        ]
+      },
+      "procmon": {
+        "review_status": "reviewed",
+        "review_recorded_utc": "2026-10-01T13:49:16.8898098Z",
+        "csv_rows": 902113,
+        "attributed_rows": 2097,
+        "rejected_pid_name_or_lifetime_rows": 0,
+        "lifecycle_time_parse_failures": 0,
+        "candidate_time_parse_failures": 0,
+        "pid_reuse_boundaries": 0,
+        "tcp_connect_success": 11,
+        "tcp_send_success": 11,
+        "tcp_receive_success": 26,
+        "tcp_disconnect_success": 11,
+        "operation_counts": [
+          {
+            "role": "pinned_specimen",
+            "operation": "CloseFile",
+            "result": "SUCCESS",
+            "count": 65
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "CreateFile",
+            "result": "NAME NOT FOUND",
+            "count": 2
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "CreateFile",
+            "result": "SUCCESS",
+            "count": 68
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "FileSystemControl",
+            "result": "other_result",
+            "count": 2
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "FileSystemControl",
+            "result": "SUCCESS",
+            "count": 21
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Load Image",
+            "result": "SUCCESS",
+            "count": 35
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "other_operation",
+            "result": "BUFFER OVERFLOW",
+            "count": 27
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "other_operation",
+            "result": "FILE LOCKED WITH ONLY READERS",
+            "count": 15
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "other_operation",
+            "result": "SUCCESS",
+            "count": 503
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Process Start",
+            "result": "SUCCESS",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryBasicInformationFile",
+            "result": "SUCCESS",
+            "count": 14
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryNameInformationFile",
+            "result": "SUCCESS",
+            "count": 12
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryNetworkOpenInformationFile",
+            "result": "SUCCESS",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryOpen",
+            "result": "FAST IO DISALLOWED",
+            "count": 13
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryStandardInformationFile",
+            "result": "SUCCESS",
+            "count": 10
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "ReadFile",
+            "result": "SUCCESS",
+            "count": 67
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegCloseKey",
+            "result": "SUCCESS",
+            "count": 164
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegCreateKey",
+            "result": "REPARSE",
+            "count": 7
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegCreateKey",
+            "result": "SUCCESS",
+            "count": 7
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegEnumKey",
+            "result": "NO MORE ENTRIES",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegEnumKey",
+            "result": "SUCCESS",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegEnumValue",
+            "result": "NO MORE ENTRIES",
+            "count": 5
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegEnumValue",
+            "result": "SUCCESS",
+            "count": 14
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegOpenKey",
+            "result": "NAME NOT FOUND",
+            "count": 53
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegOpenKey",
+            "result": "REPARSE",
+            "count": 122
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegOpenKey",
+            "result": "SUCCESS",
+            "count": 170
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryKey",
+            "result": "SUCCESS",
+            "count": 149
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryValue",
+            "result": "BUFFER OVERFLOW",
+            "count": 36
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryValue",
+            "result": "BUFFER TOO SMALL",
+            "count": 4
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryValue",
+            "result": "NAME NOT FOUND",
+            "count": 182
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryValue",
+            "result": "SUCCESS",
+            "count": 168
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegSetInfoKey",
+            "result": "SUCCESS",
+            "count": 84
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "TCP Connect",
+            "result": "SUCCESS",
+            "count": 11
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "TCP Disconnect",
+            "result": "SUCCESS",
+            "count": 11
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "TCP Receive",
+            "result": "SUCCESS",
+            "count": 26
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "TCP Send",
+            "result": "SUCCESS",
+            "count": 11
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Thread Create",
+            "result": "SUCCESS",
+            "count": 9
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Thread Exit",
+            "result": "SUCCESS",
+            "count": 6
+          }
+        ],
+        "registry_operation_scope": {
+          "reg_create_key_success_operations": 7,
+          "reg_set_info_key_success_operations": 84,
+          "grouped_successful_create_or_set_info_operations": 91,
+          "new_keys_or_distinct_changes_proven": null,
+          "interpretation": "These are observed operation counts. RegCreateKey may open an existing key; RegSetInfoKey is not proof of a new value or distinct persisted change. The 91 grouped operations do not establish 91 new registry changes."
+        },
+        "reviewed_fixed_path_indicators": {
+          "download_successful_write_events": 0,
+          "download_delete_true_success_events": 0,
+          "requested_screenshot_successful_write_events": 0,
+          "fallback_screenshot_successful_write_events": 0,
+          "successful_fixed_child_process_create_events": 0,
+          "attributed_expected_task_path_mutation_success_events": 0,
+          "attributed_tcp_send_events": 11,
+          "attributed_tcp_receive_events": 26
+        },
+        "task_registration_proven_by_this_review": false,
+        "raw_pml": {
+          "bytes": 365312131,
+          "sha256": "39134bb43b045e9a0ce3ac8af482ba85939156d3011c2af850a09b92fd3ddf61",
+          "guest_only": true
+        },
+        "raw_csv": {
+          "bytes": 150461130,
+          "sha256": "d40c4fa55b6032a2e70baa9b7d8fb6ea1199bdf0d54e50c4d087aab48ae87ea4",
+          "guest_only": true
+        },
+        "limitations": [
+          "Only observed process lifetimes are attributed; PID/name alone is insufficient and broker-created processes remain unattributed.",
+          "Capture-end bounds without a Procmon exit are explicit limits; missing events and dropped events are not ruled out.",
+          "CreateFile success does not prove data was written. WriteFile success is an observed operation; downloaded content needs separate file/hash proof.",
+          "A successful delete disposition requests deletion; final absence and fixture chronology provide separate outcome evidence.",
+          "Process Create/Start proves launch, not successful command completion. Network operations do not establish HTTP body contents.",
+          "Registry/file mutations on task paths do not alone prove a task was registered or fired. Service/broker rows are not attributed to the specimen.",
+          "Raw command lines, registry data, arbitrary paths and CSV remain in the guest; selected fixed fields and SHA256 digests are exported.",
+          "MSI captures require their own validated harness schema and are not accepted by this native reviewer."
+        ]
+      },
+      "named_fixtures_final": {
+        "entry_count": 2,
+        "unexpected_name_count": 0,
+        "subdir_entry_count": 0,
+        "files": [
+          {
+            "label": "alpha",
+            "present": true,
+            "size": 23,
+            "sha256": "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+            "last_write_utc": "2026-10-01T12:57:49.8007526Z"
+          },
+          {
+            "label": "inert_download",
+            "present": false
+          },
+          {
+            "label": "requested_screenshot",
+            "present": false
+          },
+          {
+            "label": "fallback_screenshot",
+            "present": false
+          }
+        ]
+      },
+      "screened_image": {
+        "file": "screenshots/native-baseline-wireshark.png",
+        "sha256": "446fbf93c855744362b03ceab4e3d0682378d02a7a00b44ddb0c9cd4bd0764f9",
+        "dimensions": [
+          1900,
+          1000
+        ],
+        "displayed_http_rows": 22,
+        "direct_unedited_app_window": true,
+        "screening_manifest": "screened-image-manifest.json"
+      },
+      "guest_evidence_export": {
+        "status": "success",
+        "evidence_file_count": 13,
+        "zip_bytes": 43770815,
+        "zip_sha256": "5c11cfdfbd7a7271a89fe1e9b6659f0800745e936e5d8bd75b1ae97155e26380",
+        "receiver_hash_and_size_verified": true,
+        "guest_to_guest_only": true,
+        "raw_evidence_safe_for_host_copy": false
+      },
+      "conclusion": "The native client stayed alive and repeatedly polled the analyst replica in this VMware configuration. Baseline establishes initialized fdd:null transport and repeated polling, not command-capability completion or live operator activity.",
+      "limits": [
+        "Baseline supplied no commands; shell, files, screenshots, MSI delivery and persistence are separate tests.",
+        "Named-fixture absence and bounded Procmon indicators do not prove absence of every filesystem, registry, task or broker-created event.",
+        "Procmon attribution uses retained process identity, pinned hash, PID/name/time and corroborated parent; its missing exit is bounded by capture end.",
+        "No universal VM-evasion or Defender-bypass conclusion follows from this particular successful lab polling run.",
+        "Raw payload bodies and private trace files are not included in this portable JSON."
+      ]
+    },
+    "controlled": {
+      "status": "complete",
+      "kind": "native_executable",
+      "completion_scope": "Nine fixed commands, main Procmon review, bounded deletion-flag/Notepad supplement and raw Windows evidence export are complete. Later case phases remain separate; overall case completion is not asserted.",
+      "windows_run_id": "controlled-20261001T141416071Z",
+      "kali_controller_run_id": "controlled-20261001T141355136847Z",
+      "specimen_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+      "process": {
+        "pid": 2172,
+        "parent_pid": 2740,
+        "created_utc": "2026-10-01T14:14:30.3986897Z",
+        "identity_retained": true,
+        "alive_before_cleanup": true,
+        "cleanup_result": "terminated_owned_handle",
+        "harness_end_reason": "analyst_stop_requested",
+        "procmon_start_corroborated": true,
+        "procmon_exit_observed": true,
+        "procmon_start_path_empty": true,
+        "procmon_parent_corroborated": true,
+        "procmon_lifetime_upper_bound_kind": "observed_process_exit",
+        "procmon_lifetime_upper_bound_utc": "2026-10-01T14:23:15.5346249Z"
+      },
+      "runtime_conditions": {
+        "launch_kind": "Direct analyst launch; fixed inert tasks from the isolated responder",
+        "elevated_interactive_session": true,
+        "windows_session_id": 1,
+        "specimen_privilege_escalation_tested": false,
+        "planned_maximum_observation_seconds": 900,
+        "harness_finished": true,
+        "end_reason": "analyst_stop_requested",
+        "defender_before": {
+          "AMRunningMode": "Normal",
+          "AntivirusEnabled": true,
+          "RealTimeProtectionEnabled": true,
+          "BehaviorMonitorEnabled": true,
+          "IsTamperProtected": true,
+          "AntivirusSignatureVersion": "1.437.1.0"
+        },
+        "defender_after": {
+          "AMRunningMode": "Normal",
+          "AntivirusEnabled": true,
+          "RealTimeProtectionEnabled": true,
+          "BehaviorMonitorEnabled": true,
+          "IsTamperProtected": true,
+          "AntivirusSignatureVersion": "1.437.1.0"
+        },
+        "initial_network": {
+          "interface_index": 4,
+          "address": "172.30.77.2/24",
+          "default_routes": 0,
+          "gateway_routes": 0,
+          "c2_address": "172.30.77.1"
+        },
+        "final_network": {
+          "interface_index": 4,
+          "address": "172.30.77.2/24",
+          "default_routes": 0,
+          "gateway_routes": 0,
+          "c2_address": "172.30.77.1"
+        },
+        "scoped_keep_awake": {
+          "enabled": true,
+          "restored": true,
+          "persistent_power_settings_changed": false
+        },
+        "native_hostname_overridden_to_lab": true
+      },
+      "phase_counts": {
+        "fixed_commands_dispatched": 9,
+        "fixed_command_results_acknowledged": 9,
+        "fixed_sequence_complete_events": 1,
+        "poll_post_requests": 26,
+        "inert_download_requests": 1,
+        "multipart_upload_requests": 2,
+        "saved_uploads": 2,
+        "windows_fixture_samples": 100,
+        "windows_selected_process_events": 8
+      },
+      "timing": {
+        "windows_harness_created_utc": "2026-10-01T14:14:16.0922694Z",
+        "windows_process_created_utc": "2026-10-01T14:14:30.3986897Z",
+        "windows_harness_ended_utc": "2026-10-01T14:23:18.5595209Z",
+        "windows_process_creation_to_harness_end_seconds_same_clock": 528.161,
+        "kali_first_poll_utc": "2026-10-01T14:16:05.463888+00:00",
+        "kali_last_poll_utc": "2026-10-01T14:23:12.709342+00:00",
+        "kali_fixed_sequence_complete_utc": "2026-10-01T14:22:48.688579+00:00",
+        "within_guest_command_times": "command_observations has Kali-only dispatch/ack intervals; file_transitions has Windows-only observation windows.",
+        "cross_guest_clock_warning": "Several-second residual offset is evident: WMI CMD start is 14:17:44.7060224Z while Kali dispatch is 14:17:47.591123+00:00. The host timestamp was transported into Windows when its clock was set; this is not evidence of execution before receipt. No cross-guest latency or subsecond ordering is claimed.",
+        "clock_setting_source": "windows-clock-controlled.json",
+        "poll_interval_limit": "Controlled POSTs mix immediate worker responses and main-loop polls; pooled intervals are not direct Sleep measurements."
+      },
+      "http": {
+        "frames": 310,
+        "requests": 29,
+        "methods": {
+          "GET": 1,
+          "POST": 28
+        },
+        "responses": 29,
+        "status_codes": {
+          "200": 29
+        },
+        "path": "/peachforthevictory/",
+        "multipart_upload_requests": 2,
+        "saved_uploads": 2,
+        "foreign_ipv4_frames_observed": 0,
+        "capture_filter": "host 172.30.77.2",
+        "poll_posts": 26,
+        "all_poll_json_valid": true,
+        "all_two_member_envelopes": true,
+        "all_poll_client_ids_match_lab": true,
+        "connection_close_all_polls": true,
+        "all_multipart_checks_passed": true,
+        "source_captures": [
+          {
+            "bytes": 160556,
+            "foreign_ipv4_frames": 0,
+            "frames": 310,
+            "http_request_methods": {
+              "GET": 1,
+              "POST": 28
+            },
+            "http_response_codes": {
+              "200": 29
+            },
+            "name": "network.pcap0",
+            "sha256": "d31e7712846f44773b59c2f1ff677d3fd9f9b7f4f0a871cd033d2dc7f9e3fdef",
+            "tcp_destination_ports": {
+              "49684": 2,
+              "49685": 2,
+              "49686": 5,
+              "49687": 5,
+              "49688": 5,
+              "49689": 5,
+              "49690": 5,
+              "49691": 5,
+              "49692": 5,
+              "49693": 5,
+              "49694": 5,
+              "49695": 5,
+              "49696": 5,
+              "49697": 5,
+              "49698": 5,
+              "49699": 5,
+              "49700": 5,
+              "49701": 5,
+              "49702": 5,
+              "49703": 5,
+              "49704": 5,
+              "49705": 5,
+              "49706": 5,
+              "49707": 5,
+              "49708": 5,
+              "49709": 5,
+              "49710": 5,
+              "49711": 5,
+              "49712": 5,
+              "49713": 8,
+              "49714": 5,
+              "80": 156
+            },
+            "tshark_exit": 0
+          }
+        ]
+      },
+      "command_results": [
+        {
+          "command": "GDR",
+          "evidence": "Request 000002 returned one C:\\ entry. Independent Win32_LogicalDisk reference reported C: with DriveType 3 (LocalDisk).",
+          "interpretation": "The fixed drive enumeration agrees with the independently observed logical drive.",
+          "limits": "One guest/drive; no removable, optical, network or additional-volume coverage."
+        },
+        {
+          "command": "FDD",
+          "evidence": "Request 000005 listed alpha.txt (23 bytes, file) and subdir (directory). Whole-second fmod values matched independent UTC LastWriteTime values; alpha retained SHA256 ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91.",
+          "interpretation": "The fixed directory enumeration returned expected names, types, size and timestamps. The future-looking subdir timestamp was pre-existing lab setup metadata before clock correction, as reported by the parent analyst.",
+          "limits": "Only the fixed directory was tested. Setup-clock causation comes from setup chronology; timestamp agreement does not establish specimen timestomping."
+        },
+        {
+          "command": "msg",
+          "evidence": "Request 000009 returned the exact inert CMD marker (21-character string). WMI observed cmd.exe PID 4544 with specimen PID 2172 as parent at Windows 14:17:44.7060224Z. Procmon independently binds C:\\Windows\\SysWOW64\\cmd.exe PID 4544 from the specimen parent Create through child Start/Exit (14:17:44.5868780Z to 14:17:44.6230608Z).",
+          "interpretation": "The fixed CMD fixture executed and its expected output reached the analyst responder.",
+          "limits": "This establishes the fixed inert command and observed child lifetime. Command output and process events are separate corroboration; no cross-guest latency or general arbitrary-command claim."
+        },
+        {
+          "command": "ms2",
+          "evidence": "Request 000012 returned the exact inert PowerShell marker (20-character string). WMI observed powershell.exe PID 6344 with parent 2172 and a later exit status 0; its retained process was already exited at cleanup. Procmon independently binds C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe PID 6344 with child Start/Exit (14:18:30.6327456Z to 14:18:34.3857197Z).",
+          "interpretation": "The fixed PowerShell fixture executed and returned the expected output.",
+          "limits": "Applies to the inert Write-Output fixture and this launch context. The bounded full-image process lifetime and returned marker do not establish arbitrary PowerShell behavior."
+        },
+        {
+          "command": "DWW",
+          "evidence": "The replica served one inert-file GET. Windows changed received-from-lab.txt from absent to 36 bytes between 14:19:10.3532946Z and 14:19:15.6012268Z, SHA256 7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23. Request 000016 listed the file. Attributed Procmon row 1597952 records successful WriteFile at 14:19:10.6313121Z with requested length 36 to the exact fixed download path.",
+          "interpretation": "The expected inert file was downloaded and appeared on Windows with the supplied content hash.",
+          "limits": "A successful write operation and independent resulting file/hash corroborate this fixed inert download. No downloaded malware execution or arbitrary/protected-path coverage."
+        },
+        {
+          "command": "UPP",
+          "evidence": "Multipart request 000019 passed expected boundary, OTP and client checks. Kali retained a 36-byte upload with SHA256 7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23, matching the supplied inert bytes and Windows file.",
+          "interpretation": "The Windows file was uploaded with byte-for-byte hash agreement.",
+          "limits": "Fixed inert file only; no arbitrary/protected-file access or live-operator exfiltration is established."
+        },
+        {
+          "command": "DEL",
+          "evidence": "Windows observed received-from-lab.txt present at 14:20:45.3322819Z and absent at 14:20:50.5802189Z. Request 000022 returned the original two-entry listing; the file stayed absent at final check. Attributed Procmon row 2889136 records successful SetDispositionInformationEx on that exact file at 14:20:47.7539368Z, inside the Windows presence-to-absence interval. The hash-verified CSV supplement recognizes FILE_DISPOSITION_DELETE and FILE_DISPOSITION_POSIX_SEMANTICS in that row; raw detail remains guest-only.",
+          "interpretation": "The specimen successfully requested POSIX-style deletion of the fixed downloaded file, which disappeared within the independent Windows observation interval and remained absent.",
+          "limits": "The original legacy Delete:True counter remains zero because it does not recognize the newer Flags detail. The supplement establishes an accepted delete request plus separate named-file absence, not storage reclamation or arbitrary-file behavior."
+        },
+        {
+          "command": "RUN",
+          "evidence": "Request 000025 first returned sts:success. WMI recorded Notepad.exe PID 8336 with parent 2172, then Notepad.exe PID 8728 with parent 8336. Both Notepad identities were retained and stopped through owned handles at cleanup. The CSV supplement links successful root Process Create row3199971 at14:21:43.2371592Z to WindowsApps Microsoft.WindowsNotepad_11.2501.31.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe PID8336, child Start row3199972 at14:21:43.2371635Z with parent2172, and Exit row3725978 at14:23:15.5559975Z.",
+          "interpretation": "The fixed Notepad launch is corroborated by returned status, retained identities, WMI and the newly bound Procmon create/start/exit lifetime for PID8336.",
+          "limits": "The main reviewer retains its two fixed-image bindings; the supplemental WindowsApps path binding explains the third successful root create. Path recognition is not executable hash/signature verification or successful program completion. Descendant8728 remains supported only by the separate WMI/retained-handle observations, not newly bound by this CSV supplement."
+        },
+        {
+          "command": "SS1",
+          "evidence": "C:\\Lab\\Fixtures\\ss.jpg stayed absent in all 100 periodic checks and at final check. C:\\ProgramData\\ss.jpg appeared as 123,772 bytes, SHA256 d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9, exactly matching the received JPEG (full decode, 1024 x 768 RGB). Root visually approved a direct guest viewer capture showing the expected lab marker. Procmon records the requested path Open failing NAME NOT FOUND (row 3613148), then two successful fallback WriteFile operations (rows 3614101/3614104; lengths 122880 and 892).",
+          "interpretation": "The screenshot command produced and uploaded the fallback-path JPEG, with Windows/Kali hash identity and separate visual confirmation.",
+          "limits": "The successful write lengths sum to the independently hashed JPEG size; the intervening FAST IO DISALLOWED retry is not counted as another successful write. Only the fixed lab desktop capture is established; raw JPEG stays guest-only."
+        }
+      ],
+      "command_observations": [
+        {
+          "command": "GDR",
+          "fixture_index": 0,
+          "kali_dispatch_utc": "2026-10-01T14:16:05.464766+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:16:23.481304+00:00",
+          "acknowledgment_type": "drive_array",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 18.016538,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "first_validated_response": {
+            "request_id": "000002",
+            "utc": "2026-10-01T14:16:23.481013+00:00",
+            "body_size": 89,
+            "body_sha256": "874414a12708c926a6ef13529dff527d2dbd759f94c889c18a122b818f059116",
+            "response_type": "fdd",
+            "value_type": "list"
+          },
+          "fixed_entries": [
+            {
+              "fmod": 0,
+              "isDir": true,
+              "name": "C:\\",
+              "size": 0
+            }
+          ]
+        },
+        {
+          "command": "FDD",
+          "fixture_index": 1,
+          "kali_dispatch_utc": "2026-10-01T14:16:55.525635+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:16:55.541828+00:00",
+          "acknowledgment_type": "directory_array",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 0.016193,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "first_validated_response": {
+            "request_id": "000005",
+            "utc": "2026-10-01T14:16:55.541655+00:00",
+            "body_size": 185,
+            "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+            "response_type": "fdd",
+            "value_type": "list"
+          },
+          "fixed_entries": [
+            {
+              "fmod": "2026-10-01 12:57:49",
+              "isDir": false,
+              "name": "alpha.txt",
+              "size": 23
+            },
+            {
+              "fmod": "2026-10-01 22:17:58",
+              "isDir": true,
+              "name": "subdir",
+              "size": 0
+            }
+          ]
+        },
+        {
+          "command": "msg",
+          "fixture_index": 2,
+          "kali_dispatch_utc": "2026-10-01T14:17:47.591123+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:17:47.702792+00:00",
+          "acknowledgment_type": "fixed_shell_marker",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 0.111669,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "first_validated_response": {
+            "request_id": "000009",
+            "utc": "2026-10-01T14:17:47.702551+00:00",
+            "body_size": 66,
+            "body_sha256": "e9c1c503d5cf5625863821003e764238320effb0dffab0f3bc827e8b61849650",
+            "response_type": "msg",
+            "value_type": "str"
+          }
+        },
+        {
+          "command": "ms2",
+          "fixture_index": 3,
+          "kali_dispatch_utc": "2026-10-01T14:18:33.626451+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:18:37.465689+00:00",
+          "acknowledgment_type": "fixed_shell_marker",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 3.839238,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "first_validated_response": {
+            "request_id": "000012",
+            "utc": "2026-10-01T14:18:37.465478+00:00",
+            "body_size": 65,
+            "body_sha256": "30cbe4850b2a29283107a7151bc4fd30f40c9a8d3c28de76219ccf5095f53da8",
+            "response_type": "msg",
+            "value_type": "str"
+          }
+        },
+        {
+          "command": "DWW",
+          "fixture_index": 4,
+          "kali_dispatch_utc": "2026-10-01T14:19:13.682401+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:19:36.714026+00:00",
+          "acknowledgment_type": "inert_file_present_in_listing",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 23.031625,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "first_validated_response": {
+            "request_id": "000016",
+            "utc": "2026-10-01T14:19:36.713805+00:00",
+            "body_size": 271,
+            "body_sha256": "4d809c2ec64d0c985d5f7253bf94223f8e545dbe01570089c8cfe520265ad6fd",
+            "response_type": "fdd",
+            "value_type": "list"
+          },
+          "fixed_entries": [
+            {
+              "fmod": "2026-10-01 12:57:49",
+              "isDir": false,
+              "name": "alpha.txt",
+              "size": 23
+            },
+            {
+              "fmod": "2026-10-01 14:19:10",
+              "isDir": false,
+              "name": "received-from-lab.txt",
+              "size": 36
+            },
+            {
+              "fmod": "2026-10-01 22:17:58",
+              "isDir": true,
+              "name": "subdir",
+              "size": 0
+            }
+          ]
+        },
+        {
+          "command": "UPP",
+          "fixture_index": 5,
+          "kali_dispatch_utc": "2026-10-01T14:20:12.757790+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:20:12.773809+00:00",
+          "acknowledgment_type": "inert_file_upload",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 0.016019,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "multipart_request": {
+            "body_sha256": "936de37465d4a46cac5ea281b9c7ba9b591ca9667cf98b40d75391d287a803b4",
+            "body_size": 239,
+            "boundary_matches_static": true,
+            "client_id_matches_lab": true,
+            "otp_matches_static": true,
+            "request_id": "000019",
+            "utc": "2026-10-01T14:20:12.772748+00:00"
+          },
+          "saved_upload": {
+            "bytes": 36,
+            "inert_fixture_matches": true,
+            "name": "fixture-05-7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23.bin",
+            "sha256": "7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23"
+          }
+        },
+        {
+          "command": "DEL",
+          "fixture_index": 6,
+          "kali_dispatch_utc": "2026-10-01T14:20:50.820396+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:21:05.841135+00:00",
+          "acknowledgment_type": "inert_file_absent_in_listing",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 15.020739,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "first_validated_response": {
+            "request_id": "000022",
+            "utc": "2026-10-01T14:21:05.840943+00:00",
+            "body_size": 185,
+            "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+            "response_type": "fdd",
+            "value_type": "list"
+          },
+          "fixed_entries": [
+            {
+              "fmod": "2026-10-01 12:57:49",
+              "isDir": false,
+              "name": "alpha.txt",
+              "size": 23
+            },
+            {
+              "fmod": "2026-10-01 22:17:58",
+              "isDir": true,
+              "name": "subdir",
+              "size": 0
+            }
+          ]
+        },
+        {
+          "command": "RUN",
+          "fixture_index": 7,
+          "kali_dispatch_utc": "2026-10-01T14:21:45.883924+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:22:04.397704+00:00",
+          "acknowledgment_type": "process_success",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 18.51378,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "first_validated_response": {
+            "request_id": "000025",
+            "utc": "2026-10-01T14:22:04.397527+00:00",
+            "body_size": 50,
+            "body_sha256": "9417d7144de7ba3eca7748f1d481ee444e29eb8d5b3c431d0f22f076fe57085c",
+            "response_type": "sts",
+            "value_type": "str"
+          }
+        },
+        {
+          "command": "SS1",
+          "fixture_index": 8,
+          "kali_dispatch_utc": "2026-10-01T14:22:48.439939+00:00",
+          "kali_acknowledgment_utc": "2026-10-01T14:22:48.688549+00:00",
+          "acknowledgment_type": "screenshot_upload",
+          "dispatch_to_acknowledgment_seconds_same_kali_clock": 0.24861,
+          "timing_limit": "One Kali clock; includes polling, transport and processing, not isolated execution time.",
+          "multipart_request": {
+            "body_sha256": "73991d5ddac4abc9f1edd763530cbf376ffd7a843f92add81115cc94a8debfca",
+            "body_size": 123960,
+            "boundary_matches_static": true,
+            "client_id_matches_lab": true,
+            "otp_matches_static": true,
+            "request_id": "000028",
+            "utc": "2026-10-01T14:22:48.684625+00:00"
+          },
+          "saved_upload": {
+            "bytes": 123772,
+            "decoded_image_format": "JPEG",
+            "height": 768,
+            "inert_fixture_matches": false,
+            "name": "fixture-08-d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9.bin",
+            "sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+            "width": 1024
+          }
+        }
+      ],
+      "file_transitions": [
+        {
+          "label": "alpha",
+          "previous_observation_utc": null,
+          "observed_utc": "2026-10-01T14:14:32.1847059Z",
+          "elapsed_seconds_from_harness": 1.58,
+          "previous_present": null,
+          "observed_file": {
+            "label": "alpha",
+            "present": true,
+            "size": 23,
+            "sha256": "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+            "last_write_utc": "2026-10-01T12:57:49.8007526Z"
+          }
+        },
+        {
+          "label": "inert_download",
+          "previous_observation_utc": null,
+          "observed_utc": "2026-10-01T14:14:32.1847059Z",
+          "elapsed_seconds_from_harness": 1.58,
+          "previous_present": null,
+          "observed_file": {
+            "label": "inert_download",
+            "present": false
+          }
+        },
+        {
+          "label": "requested_screenshot",
+          "previous_observation_utc": null,
+          "observed_utc": "2026-10-01T14:14:32.1847059Z",
+          "elapsed_seconds_from_harness": 1.58,
+          "previous_present": null,
+          "observed_file": {
+            "label": "requested_screenshot",
+            "present": false
+          }
+        },
+        {
+          "label": "fallback_screenshot",
+          "previous_observation_utc": null,
+          "observed_utc": "2026-10-01T14:14:32.1847059Z",
+          "elapsed_seconds_from_harness": 1.58,
+          "previous_present": null,
+          "observed_file": {
+            "label": "fallback_screenshot",
+            "present": false
+          }
+        },
+        {
+          "label": "inert_download",
+          "previous_observation_utc": "2026-10-01T14:19:10.3532946Z",
+          "observed_utc": "2026-10-01T14:19:15.6012268Z",
+          "elapsed_seconds_from_harness": 285,
+          "previous_present": false,
+          "observed_file": {
+            "label": "inert_download",
+            "present": true,
+            "size": 36,
+            "sha256": "7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23",
+            "last_write_utc": "2026-10-01T14:19:10.6306492Z"
+          }
+        },
+        {
+          "label": "inert_download",
+          "previous_observation_utc": "2026-10-01T14:20:45.3322819Z",
+          "observed_utc": "2026-10-01T14:20:50.5802189Z",
+          "elapsed_seconds_from_harness": 379.98,
+          "previous_present": true,
+          "observed_file": {
+            "label": "inert_download",
+            "present": false
+          }
+        },
+        {
+          "label": "fallback_screenshot",
+          "previous_observation_utc": "2026-10-01T14:22:40.8912139Z",
+          "observed_utc": "2026-10-01T14:22:46.1544448Z",
+          "elapsed_seconds_from_harness": 495.55,
+          "previous_present": false,
+          "observed_file": {
+            "label": "fallback_screenshot",
+            "present": true,
+            "size": 123772,
+            "sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+            "last_write_utc": "2026-10-01T14:22:45.5937357Z"
+          }
+        }
+      ],
+      "file_transition_clock": "Windows UTC; periodic sampling bounds, not exact API call times.",
+      "selected_windows_process_events": [
+        {
+          "kind": "start",
+          "name": "cmd.exe",
+          "name_sha256": "7371f071a9a4e653a5afd134bce9c735ef74b0421d6988958e5c6d8a34feaa3b",
+          "process_id": 4544,
+          "parent_process_id": 2172,
+          "event_utc": "2026-10-01T14:17:44.7060224Z",
+          "exit_status": null,
+          "related_to_retained_specimen_process": true
+        },
+        {
+          "kind": "start",
+          "name": "powershell.exe",
+          "name_sha256": "f307e73a3447b10444e67233700c1aa5ca8e3673dd2f292084bf485583caad6f",
+          "process_id": 6344,
+          "parent_process_id": 2172,
+          "event_utc": "2026-10-01T14:18:31.1731991Z",
+          "exit_status": null,
+          "related_to_retained_specimen_process": true
+        },
+        {
+          "kind": "stop",
+          "name": "powershell.exe",
+          "name_sha256": "f307e73a3447b10444e67233700c1aa5ca8e3673dd2f292084bf485583caad6f",
+          "process_id": 6344,
+          "parent_process_id": 0,
+          "event_utc": "2026-10-01T14:18:35.1968705Z",
+          "exit_status": 0,
+          "related_to_retained_specimen_process": true
+        },
+        {
+          "kind": "start",
+          "name": "Notepad.exe",
+          "name_sha256": "772dcad8ec8b79675f0c555696255604fc87ee7d369ab0e4222e5d4299b1cc31",
+          "process_id": 8336,
+          "parent_process_id": 2172,
+          "event_utc": "2026-10-01T14:21:43.3859441Z",
+          "exit_status": null,
+          "related_to_retained_specimen_process": true
+        },
+        {
+          "kind": "start",
+          "name": "Notepad.exe",
+          "name_sha256": "772dcad8ec8b79675f0c555696255604fc87ee7d369ab0e4222e5d4299b1cc31",
+          "process_id": 8728,
+          "parent_process_id": 8336,
+          "event_utc": "2026-10-01T14:21:44.4010660Z",
+          "exit_status": null,
+          "related_to_retained_specimen_process": true
+        },
+        {
+          "kind": "stop",
+          "name": "Notepad.exe",
+          "name_sha256": "772dcad8ec8b79675f0c555696255604fc87ee7d369ab0e4222e5d4299b1cc31",
+          "process_id": 8728,
+          "parent_process_id": 0,
+          "event_utc": "2026-10-01T14:23:16.5861821Z",
+          "exit_status": 19786,
+          "related_to_retained_specimen_process": true
+        }
+      ],
+      "retained_child_cleanup": [
+        {
+          "pid": 6344,
+          "start_utc": "2026-10-01T14:18:30.6276723Z",
+          "result": "already_exited"
+        },
+        {
+          "pid": 8336,
+          "start_utc": "2026-10-01T14:21:43.2358639Z",
+          "result": "terminated_owned_handle"
+        },
+        {
+          "pid": 8728,
+          "start_utc": "2026-10-01T14:21:43.4586644Z",
+          "result": "terminated_owned_handle"
+        }
+      ],
+      "named_fixtures_final": {
+        "entry_count": 2,
+        "unexpected_name_count": 0,
+        "subdir_entry_count": 0,
+        "files": [
+          {
+            "label": "alpha",
+            "present": true,
+            "size": 23,
+            "sha256": "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+            "last_write_utc": "2026-10-01T12:57:49.8007526Z"
+          },
+          {
+            "label": "inert_download",
+            "present": false
+          },
+          {
+            "label": "requested_screenshot",
+            "present": false
+          },
+          {
+            "label": "fallback_screenshot",
+            "present": true,
+            "size": 123772,
+            "sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+            "last_write_utc": "2026-10-01T14:22:45.5937357Z"
+          }
+        ]
+      },
+      "independent_fixture_reference": {
+        "status": "observed_reference",
+        "schema": 1,
+        "case_id": "majlis-2026-analysis-20261001",
+        "guest_id": "14d36378-76f4-4bf7-9f85-2e82f60651a9",
+        "run_id": "controlled-20261001T141416071Z",
+        "observed_utc": "2026-10-01T14:23:52.2236383Z",
+        "guest_timezone": "UTC",
+        "logical_drive_source": "Win32_LogicalDisk",
+        "logical_drives": [
+          {
+            "drive_letter": "C:",
+            "drive_type": 3,
+            "drive_type_name": "LocalDisk"
+          }
+        ],
+        "alpha": {
+          "fixed_path": "C:\\Lab\\Fixtures\\alpha.txt",
+          "is_directory": false,
+          "size": 23,
+          "sha256": "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+          "fixed_inert_content_hash_verified": true,
+          "last_write_utc": "2026-10-01T12:57:49.8007526Z"
+        },
+        "subdir": {
+          "fixed_path": "C:\\Lab\\Fixtures\\subdir",
+          "is_directory": true,
+          "last_write_utc": "2026-10-01T22:17:58.7975029Z"
+        },
+        "metadata_changed_by_helper": false,
+        "sample_bytes_read": false,
+        "network_requests_made": false,
+        "interpretation": "Independent current Windows reference for comparison with GDR/FDD output. Timestamp cause requires setup chronology; future fixture metadata alone does not prove specimen timestomping."
+      },
+      "uploads": {
+        "count": 2,
+        "artifacts": [
+          {
+            "bytes": 36,
+            "inert_fixture_matches": true,
+            "name": "fixture-05-7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23.bin",
+            "sha256": "7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23"
+          },
+          {
+            "bytes": 123772,
+            "decoded_image_format": "JPEG",
+            "height": 768,
+            "inert_fixture_matches": false,
+            "name": "fixture-08-d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9.bin",
+            "sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+            "width": 1024
+          }
+        ],
+        "raw_uploads_guest_only": true
+      },
+      "procmon": {
+        "csv_rows": 3726839,
+        "attributed_rows": 20879,
+        "rejected_pid_name_or_lifetime_rows": 154,
+        "lifecycle_time_parse_failures": 0,
+        "candidate_time_parse_failures": 0,
+        "pid_reuse_boundaries": 0,
+        "unmatched_fixed_child_creates": 0,
+        "process_lifetimes": [
+          {
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "image": "C:\\Lab\\Specimens\\Binary.exe",
+            "parent_pid": 2740,
+            "start_utc": "2026-10-01T14:14:30.3986897Z",
+            "end_utc": "2026-10-01T14:23:15.5346249Z",
+            "basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "procmon_start_corroborated": true,
+            "procmon_exit_observed": true,
+            "procmon_start_path_empty": true,
+            "procmon_parent_corroborated": true,
+            "upper_bound_kind": "observed_process_exit"
+          },
+          {
+            "pid": 4544,
+            "process_name": "cmd.exe",
+            "role": "verified_fixture_child_image",
+            "image": "C:\\Windows\\SysWOW64\\cmd.exe",
+            "parent_pid": 2172,
+            "start_utc": "2026-10-01T14:17:44.5868780Z",
+            "end_utc": "2026-10-01T14:17:44.6230608Z",
+            "basis": "procmon_parent_full_image_create_and_child_pid_name_time_start",
+            "procmon_start_corroborated": true,
+            "procmon_exit_observed": true,
+            "procmon_start_path_empty": true,
+            "procmon_parent_corroborated": true,
+            "upper_bound_kind": "observed_process_exit"
+          },
+          {
+            "pid": 6344,
+            "process_name": "powershell.exe",
+            "role": "verified_fixture_child_image",
+            "image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "parent_pid": 2172,
+            "start_utc": "2026-10-01T14:18:30.6327456Z",
+            "end_utc": "2026-10-01T14:18:34.3857197Z",
+            "basis": "procmon_parent_full_image_create_and_child_pid_name_time_start",
+            "procmon_start_corroborated": true,
+            "procmon_exit_observed": true,
+            "procmon_start_path_empty": true,
+            "procmon_parent_corroborated": true,
+            "upper_bound_kind": "observed_process_exit"
+          }
+        ],
+        "operation_counts": [
+          {
+            "role": "pinned_specimen",
+            "operation": "CloseFile",
+            "result": "SUCCESS",
+            "count": 178
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "CreateFile",
+            "result": "NAME NOT FOUND",
+            "count": 16
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "CreateFile",
+            "result": "PATH NOT FOUND",
+            "count": 2
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "CreateFile",
+            "result": "SUCCESS",
+            "count": 183
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "FileSystemControl",
+            "result": "other_result",
+            "count": 26
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "FileSystemControl",
+            "result": "SUCCESS",
+            "count": 73
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Load Image",
+            "result": "SUCCESS",
+            "count": 58
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "other_operation",
+            "result": "BUFFER OVERFLOW",
+            "count": 55
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "other_operation",
+            "result": "FILE LOCKED WITH ONLY READERS",
+            "count": 54
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "other_operation",
+            "result": "INVALID PARAMETER",
+            "count": 5
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "other_operation",
+            "result": "SUCCESS",
+            "count": 1183
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Process Create",
+            "result": "SUCCESS",
+            "count": 3
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Process Exit",
+            "result": "SUCCESS",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Process Start",
+            "result": "SUCCESS",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryAttributeTagFile",
+            "result": "SUCCESS",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryBasicInformationFile",
+            "result": "SUCCESS",
+            "count": 44
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryDirectory",
+            "result": "NO MORE FILES",
+            "count": 3
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryDirectory",
+            "result": "SUCCESS",
+            "count": 6
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryInformationVolume",
+            "result": "BUFFER OVERFLOW",
+            "count": 5
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryInformationVolume",
+            "result": "SUCCESS",
+            "count": 5
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryNameInformationFile",
+            "result": "SUCCESS",
+            "count": 33
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryNetworkOpenInformationFile",
+            "result": "SUCCESS",
+            "count": 6
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryOpen",
+            "result": "FAST IO DISALLOWED",
+            "count": 52
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "QueryStandardInformationFile",
+            "result": "SUCCESS",
+            "count": 52
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "ReadFile",
+            "result": "END OF FILE",
+            "count": 2
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "ReadFile",
+            "result": "FAST IO DISALLOWED",
+            "count": 5
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "ReadFile",
+            "result": "other_result",
+            "count": 2
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "ReadFile",
+            "result": "SUCCESS",
+            "count": 321
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegCloseKey",
+            "result": "SUCCESS",
+            "count": 539
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegCreateKey",
+            "result": "other_result",
+            "count": 2
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegCreateKey",
+            "result": "REPARSE",
+            "count": 10
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegCreateKey",
+            "result": "SUCCESS",
+            "count": 13
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegEnumKey",
+            "result": "NO MORE ENTRIES",
+            "count": 3
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegEnumKey",
+            "result": "SUCCESS",
+            "count": 35
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegEnumValue",
+            "result": "NO MORE ENTRIES",
+            "count": 8
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegEnumValue",
+            "result": "SUCCESS",
+            "count": 26
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegOpenKey",
+            "result": "NAME NOT FOUND",
+            "count": 125
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegOpenKey",
+            "result": "REPARSE",
+            "count": 242
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegOpenKey",
+            "result": "SUCCESS",
+            "count": 552
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryKey",
+            "result": "SUCCESS",
+            "count": 524
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryValue",
+            "result": "BUFFER OVERFLOW",
+            "count": 70
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryValue",
+            "result": "BUFFER TOO SMALL",
+            "count": 8
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryValue",
+            "result": "NAME NOT FOUND",
+            "count": 317
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegQueryValue",
+            "result": "SUCCESS",
+            "count": 354
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "RegSetInfoKey",
+            "result": "SUCCESS",
+            "count": 205
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "SetDispositionInformationEx",
+            "result": "SUCCESS",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "TCP Connect",
+            "result": "SUCCESS",
+            "count": 29
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "TCP Disconnect",
+            "result": "SUCCESS",
+            "count": 29
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "TCP Receive",
+            "result": "SUCCESS",
+            "count": 62
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "TCP Send",
+            "result": "SUCCESS",
+            "count": 30
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Thread Create",
+            "result": "SUCCESS",
+            "count": 19
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "Thread Exit",
+            "result": "SUCCESS",
+            "count": 19
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "WriteFile",
+            "result": "FAST IO DISALLOWED",
+            "count": 1
+          },
+          {
+            "role": "pinned_specimen",
+            "operation": "WriteFile",
+            "result": "SUCCESS",
+            "count": 3
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "CloseFile",
+            "result": "SUCCESS",
+            "count": 610
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "CreateFile",
+            "result": "NAME NOT FOUND",
+            "count": 181
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "CreateFile",
+            "result": "other_result",
+            "count": 26
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "CreateFile",
+            "result": "PATH NOT FOUND",
+            "count": 42
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "CreateFile",
+            "result": "SUCCESS",
+            "count": 638
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "FileSystemControl",
+            "result": "other_result",
+            "count": 28
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "FileSystemControl",
+            "result": "SUCCESS",
+            "count": 75
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "Load Image",
+            "result": "SUCCESS",
+            "count": 122
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "other_operation",
+            "result": "BUFFER OVERFLOW",
+            "count": 32
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "other_operation",
+            "result": "FILE LOCKED WITH ONLY READERS",
+            "count": 146
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "other_operation",
+            "result": "SUCCESS",
+            "count": 1321
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "Process Create",
+            "result": "SUCCESS",
+            "count": 2
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "Process Exit",
+            "result": "SUCCESS",
+            "count": 2
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "Process Start",
+            "result": "SUCCESS",
+            "count": 2
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryAttributeTagFile",
+            "result": "SUCCESS",
+            "count": 2
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryBasicInformationFile",
+            "result": "SUCCESS",
+            "count": 162
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryDirectory",
+            "result": "NO MORE FILES",
+            "count": 26
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryDirectory",
+            "result": "other_result",
+            "count": 6
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryDirectory",
+            "result": "SUCCESS",
+            "count": 58
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryInformationVolume",
+            "result": "BUFFER OVERFLOW",
+            "count": 32
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryInformationVolume",
+            "result": "SUCCESS",
+            "count": 1
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryNameInformationFile",
+            "result": "SUCCESS",
+            "count": 39
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryNetworkOpenInformationFile",
+            "result": "SUCCESS",
+            "count": 219
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryOpen",
+            "result": "FAST IO DISALLOWED",
+            "count": 566
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "QueryStandardInformationFile",
+            "result": "SUCCESS",
+            "count": 148
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "ReadFile",
+            "result": "END OF FILE",
+            "count": 26
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "ReadFile",
+            "result": "SUCCESS",
+            "count": 485
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegCloseKey",
+            "result": "SUCCESS",
+            "count": 1534
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegCreateKey",
+            "result": "REPARSE",
+            "count": 57
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegCreateKey",
+            "result": "SUCCESS",
+            "count": 267
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegEnumKey",
+            "result": "NO MORE ENTRIES",
+            "count": 33
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegEnumKey",
+            "result": "SUCCESS",
+            "count": 325
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegEnumValue",
+            "result": "NO MORE ENTRIES",
+            "count": 3
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegEnumValue",
+            "result": "SUCCESS",
+            "count": 302
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegOpenKey",
+            "result": "NAME NOT FOUND",
+            "count": 465
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegOpenKey",
+            "result": "REPARSE",
+            "count": 407
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegOpenKey",
+            "result": "SUCCESS",
+            "count": 1315
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegQueryKey",
+            "result": "SUCCESS",
+            "count": 3281
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegQueryValue",
+            "result": "BUFFER OVERFLOW",
+            "count": 448
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegQueryValue",
+            "result": "NAME NOT FOUND",
+            "count": 454
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegQueryValue",
+            "result": "SUCCESS",
+            "count": 656
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegSetInfoKey",
+            "result": "SUCCESS",
+            "count": 613
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "RegSetValue",
+            "result": "SUCCESS",
+            "count": 2
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "SetDispositionInformationEx",
+            "result": "SUCCESS",
+            "count": 2
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "Thread Create",
+            "result": "SUCCESS",
+            "count": 23
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "Thread Exit",
+            "result": "SUCCESS",
+            "count": 23
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "WriteFile",
+            "result": "FAST IO DISALLOWED",
+            "count": 2
+          },
+          {
+            "role": "verified_fixture_child_image",
+            "operation": "WriteFile",
+            "result": "SUCCESS",
+            "count": 69
+          }
+        ],
+        "limitations": [
+          "Only observed process lifetimes are attributed; PID/name alone is insufficient and broker-created processes remain unattributed.",
+          "Capture-end bounds without a Procmon exit are explicit limits; missing events and dropped events are not ruled out.",
+          "CreateFile success does not prove data was written. WriteFile success is an observed operation; downloaded content needs separate file/hash proof.",
+          "A successful delete disposition requests deletion; final absence and fixture chronology provide separate outcome evidence.",
+          "Process Create/Start proves launch, not successful command completion. Network operations do not establish HTTP body contents.",
+          "Registry/file mutations on task paths do not alone prove a task was registered or fired. Service/broker rows are not attributed to the specimen.",
+          "Raw command lines, registry data, arbitrary paths and CSV remain in the guest; selected fixed fields and SHA256 digests are exported.",
+          "MSI captures require their own validated harness schema and are not accepted by this native reviewer."
+        ],
+        "review_status": "reviewed",
+        "review_recorded_utc": "2026-10-01T14:29:48.9874328Z",
+        "tcp_connect_success": 29,
+        "tcp_send_success": 30,
+        "tcp_receive_success": 62,
+        "tcp_disconnect_success": 29,
+        "reviewed_fixed_path_indicators": {
+          "download_successful_write_events": 1,
+          "download_delete_true_success_events": 0,
+          "requested_screenshot_successful_write_events": 0,
+          "fallback_screenshot_successful_write_events": 2,
+          "successful_fixed_child_process_create_events": 2,
+          "attributed_registry_mutation_success_events": 1100,
+          "attributed_expected_task_path_mutation_success_events": 0,
+          "attributed_tcp_send_events": 30,
+          "attributed_tcp_receive_events": 62
+        },
+        "selected_fixed_proof_rows": [
+          {
+            "classification": "observed_procmon_event",
+            "row_ordinal": 919895,
+            "event_utc": "2026-10-01T14:17:44.5868726Z",
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "process_start_utc": "2026-10-01T14:14:30.3986897Z",
+            "attribution_basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "operation": "Process Create",
+            "result": "SUCCESS",
+            "path": {
+              "label": "expected_child_image",
+              "fixed_path": "C:\\Windows\\SysWOW64\\cmd.exe",
+              "exact_fixed_path": true
+            },
+            "raw_path_sha256": "b056b86c143b8046334f42865c920d80bdcb77ee149a602737df2ceebe886cad",
+            "raw_detail_sha256": "5c833620e317f3367acd5e173b0b83e3e37869c93ee3afbb2eacc1ba4f280a64",
+            "derived_detail": {
+              "created_process_id": 4544
+            },
+            "command_success_inferred": false,
+            "http_payload_content_inferred": false
+          },
+          {
+            "classification": "observed_procmon_event",
+            "row_ordinal": 1265983,
+            "event_utc": "2026-10-01T14:18:30.6327403Z",
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "process_start_utc": "2026-10-01T14:14:30.3986897Z",
+            "attribution_basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "operation": "Process Create",
+            "result": "SUCCESS",
+            "path": {
+              "label": "expected_child_image",
+              "fixed_path": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+              "exact_fixed_path": true
+            },
+            "raw_path_sha256": "9dde6c209fd73e685b33971b54eb17b37952617271960a88e5012cb0b5ee76b8",
+            "raw_detail_sha256": "83a79a66558a9aea1a3ff49243d3c897bec63aad499efca3eb8b3f4aa16923c7",
+            "derived_detail": {
+              "created_process_id": 6344
+            },
+            "command_success_inferred": false,
+            "http_payload_content_inferred": false
+          },
+          {
+            "classification": "observed_procmon_event",
+            "row_ordinal": 1597952,
+            "event_utc": "2026-10-01T14:19:10.6313121Z",
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "process_start_utc": "2026-10-01T14:14:30.3986897Z",
+            "attribution_basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "operation": "WriteFile",
+            "result": "SUCCESS",
+            "path": {
+              "label": "fixture_download",
+              "fixed_path": "C:\\Lab\\Fixtures\\received-from-lab.txt",
+              "exact_fixed_path": true
+            },
+            "raw_path_sha256": "093f2239fa5eed4d91a89cc674690a7d69e1dc8ad475f84d72442e1c19e9bb67",
+            "raw_detail_sha256": "c129e810fc6b58cb6de17cae8ece8e9ea05b7d430c6a58d9251ec4ff4094371e",
+            "derived_detail": {
+              "requested_length": 36
+            },
+            "command_success_inferred": false,
+            "http_payload_content_inferred": false
+          },
+          {
+            "classification": "observed_procmon_event",
+            "row_ordinal": 2889136,
+            "event_utc": "2026-10-01T14:20:47.7539368Z",
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "process_start_utc": "2026-10-01T14:14:30.3986897Z",
+            "attribution_basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "operation": "SetDispositionInformationEx",
+            "result": "SUCCESS",
+            "path": {
+              "label": "fixture_download",
+              "fixed_path": "C:\\Lab\\Fixtures\\received-from-lab.txt",
+              "exact_fixed_path": true
+            },
+            "raw_path_sha256": "093f2239fa5eed4d91a89cc674690a7d69e1dc8ad475f84d72442e1c19e9bb67",
+            "raw_detail_sha256": "52e371f79d0a35d345f0f8dbc3e605a203dbe4b2aa7469900f8e7f8d275cf712",
+            "derived_detail": {},
+            "command_success_inferred": false,
+            "http_payload_content_inferred": false
+          },
+          {
+            "classification": "observed_procmon_event",
+            "row_ordinal": 3613148,
+            "event_utc": "2026-10-01T14:22:45.3730523Z",
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "process_start_utc": "2026-10-01T14:14:30.3986897Z",
+            "attribution_basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "operation": "CreateFile",
+            "result": "NAME NOT FOUND",
+            "path": {
+              "label": "requested_screenshot",
+              "fixed_path": "C:\\Lab\\Fixtures\\ss.jpg",
+              "exact_fixed_path": true
+            },
+            "raw_path_sha256": "e0ed8ef324de1622871d078d2ddc17e77e4b0e13c3985e9f6d85772fc198b7b1",
+            "raw_detail_sha256": "281e1926c5d2277f5d721df6288be83f7c0fb65895bb65f3a03d6edaafb66e89",
+            "derived_detail": {
+              "create_disposition": "Open"
+            },
+            "command_success_inferred": false,
+            "http_payload_content_inferred": false
+          },
+          {
+            "classification": "observed_procmon_event",
+            "row_ordinal": 3614101,
+            "event_utc": "2026-10-01T14:22:45.5943467Z",
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "process_start_utc": "2026-10-01T14:14:30.3986897Z",
+            "attribution_basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "operation": "WriteFile",
+            "result": "SUCCESS",
+            "path": {
+              "label": "fallback_screenshot",
+              "fixed_path": "C:\\ProgramData\\ss.jpg",
+              "exact_fixed_path": true
+            },
+            "raw_path_sha256": "6b4c6e44a1ae3edc0d7b9132233d045eb5dccc6d1b2419fa88ce468909ed0125",
+            "raw_detail_sha256": "bd073a0ba7fd5a357de44c37254764742826e07cb74811ac311d9ce21e806d8b",
+            "derived_detail": {
+              "requested_length": 122880
+            },
+            "command_success_inferred": false,
+            "http_payload_content_inferred": false
+          },
+          {
+            "classification": "observed_procmon_event",
+            "row_ordinal": 3614103,
+            "event_utc": "2026-10-01T14:22:45.5945316Z",
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "process_start_utc": "2026-10-01T14:14:30.3986897Z",
+            "attribution_basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "operation": "WriteFile",
+            "result": "FAST IO DISALLOWED",
+            "path": {
+              "label": "fallback_screenshot",
+              "fixed_path": "C:\\ProgramData\\ss.jpg",
+              "exact_fixed_path": true
+            },
+            "raw_path_sha256": "6b4c6e44a1ae3edc0d7b9132233d045eb5dccc6d1b2419fa88ce468909ed0125",
+            "raw_detail_sha256": "a0e9823c7ebecf61155a0758a5557fa78805e47bbe0c9ae267c6062239611447",
+            "derived_detail": {
+              "requested_length": 892
+            },
+            "command_success_inferred": false,
+            "http_payload_content_inferred": false
+          },
+          {
+            "classification": "observed_procmon_event",
+            "row_ordinal": 3614104,
+            "event_utc": "2026-10-01T14:22:45.5945425Z",
+            "pid": 2172,
+            "process_name": "Binary.exe",
+            "role": "pinned_specimen",
+            "process_start_utc": "2026-10-01T14:14:30.3986897Z",
+            "attribution_basis": "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+            "operation": "WriteFile",
+            "result": "SUCCESS",
+            "path": {
+              "label": "fallback_screenshot",
+              "fixed_path": "C:\\ProgramData\\ss.jpg",
+              "exact_fixed_path": true
+            },
+            "raw_path_sha256": "6b4c6e44a1ae3edc0d7b9132233d045eb5dccc6d1b2419fa88ce468909ed0125",
+            "raw_detail_sha256": "b7d0f6f1e38b0848373f01237be6f886e934ddc84b568028f571520a64d91baf",
+            "derived_detail": {
+              "requested_length": 892
+            },
+            "command_success_inferred": false,
+            "http_payload_content_inferred": false
+          }
+        ],
+        "raw_pml": {
+          "bytes": 1743638699,
+          "sha256": "c36abe0882935cf80a0d0e171c346013145863fbae7c5477b5272452a6f898c1",
+          "guest_only": true
+        },
+        "raw_csv": {
+          "bytes": 669862849,
+          "sha256": "66f8f5743630974665475b5eb4bed0bec197aefab08ca0335085fd0231c61c5b",
+          "guest_only": true
+        },
+        "task_registration_proven_by_this_review": false,
+        "unattributed_expected_task_path_rows": 0,
+        "registry_operation_scope": {
+          "all_attributed_registry_mutation_success_operations": 1100,
+          "pinned_specimen_grouped_operations": 218,
+          "verified_fixture_children_grouped_operations": 882,
+          "reg_create_key_success_operations": 280,
+          "reg_set_info_key_success_operations": 818,
+          "reg_set_value_success_operations": 2,
+          "distinct_persisted_changes_proven": null,
+          "interpretation": "1,100 grouped successful API operations span specimen and verified shell children; they are not 1,100 distinct/new registry changes. RegCreateKey may open existing keys; RegSetInfoKey is not a value write."
+        },
+        "fixed_child_attribution_scope": {
+          "pinned_specimen_process_create_success_operations": 3,
+          "bound_children": [
+            "cmd.exe",
+            "powershell.exe"
+          ],
+          "notepad_procmon_lifetime_bound_by_main_reviewer": false,
+          "limit": "The unchanged main reviewer counts three successful root Process Create operations and binds CMD/PowerShell. A separate hash-verified CSV supplement now binds the third create to WindowsApps Notepad PID8336, parent2172, with matching child Start/Exit and WMI. It does not expand the original reviewer operation totals or attribute Notepad descendant8728.",
+          "full_fixed_image_child_lifetimes_corroborated": 2,
+          "supplement_notepad_lifetime_bound": true,
+          "supplement_source": "procmon-controlled-supplement.json"
+        },
+        "delete_indicator_scope": {
+          "legacy_delete_true_indicator": 0,
+          "successful_fixed_download_SetDispositionInformationEx_rows": 1,
+          "known_row_ordinal": 2889136,
+          "known_event_utc": "2026-10-01T14:20:47.7539368Z",
+          "known_raw_detail_sha256": "52e371f79d0a35d345f0f8dbc3e605a203dbe4b2aa7469900f8e7f8d275cf712",
+          "legacy_detail_fields": {},
+          "parser_condition": "Delete flag indicator recognizes only literal Delete: True or Delete: False detail text.",
+          "interpretation": "The unchanged legacy Delete:True indicator remains zero. The separate hash-verified CSV supplement resolves row2889136 as a successful SetDispositionInformationEx request carrying FILE_DISPOSITION_DELETE and FILE_DISPOSITION_POSIX_SEMANTICS. Independent Windows checks show the previously present fixed file absent afterwards; actual storage reclamation is not established.",
+          "supplement_recognized_flags": [
+            "FILE_DISPOSITION_DELETE",
+            "FILE_DISPOSITION_POSIX_SEMANTICS"
+          ],
+          "supplement_source": "procmon-controlled-supplement.json"
+        },
+        "supplement_status": "reviewed",
+        "supplement": {
+          "source": {
+            "file": "procmon-controlled-supplement.json",
+            "sha256": "9846c6eefa4e8abdff5c64ebec47ab7e482f7e2b48812d9112e276ad5b2b038d"
+          },
+          "recorded_utc": "2026-10-01T14:42:01.733157+00:00",
+          "source_csv_sha256": "66f8f5743630974665475b5eb4bed0bec197aefab08ca0335085fd0231c61c5b",
+          "source_archive_sha256": "2f08e52f4b71d721dde36bc7a4aa6f3517d807bc486c96c93e7c5cc906100321",
+          "original_main_review_counts_preserved": true,
+          "delete_disposition": {
+            "row_ordinal": 2889136,
+            "event_utc": "2026-10-01T14:20:47.7539368Z",
+            "parsed_row_sha256": "efe8eb489835a1851e06f94107602f6fafc20e80ad8082eba0caa5b1bbde3f04",
+            "recognized_flags": [
+              "FILE_DISPOSITION_DELETE",
+              "FILE_DISPOSITION_POSIX_SEMANTICS"
+            ],
+            "successful_delete_disposition_request": true,
+            "final_named_fixture_absent": true,
+            "actual_storage_reclamation_proven": false
+          },
+          "notepad": {
+            "pid": 8336,
+            "parent_pid": 2172,
+            "binding_verified": true,
+            "observed_image_path": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2501.31.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe",
+            "root_create_row_ordinal": 3199971,
+            "root_create_utc": "2026-10-01T14:21:43.2371592Z",
+            "root_create_parsed_row_sha256": "aab9aa226c08e32de24033d6be29be0fd20f3ff51bf001f83df54f88fbb1470f",
+            "start_row_ordinal": 3199972,
+            "start_utc": "2026-10-01T14:21:43.2371635Z",
+            "start_parsed_row_sha256": "e0360dd4b3df6d705535d1227bb3fc799607772b969607e1beac3d42d20490a7",
+            "exit_row_ordinal": 3725978,
+            "exit_utc": "2026-10-01T14:23:15.5559975Z",
+            "start_path_empty": true,
+            "start_parent_pid_corroborated": true,
+            "wmi_start_utc": "2026-10-01T14:21:43.3859441Z",
+            "signed_binary_identity_verified": false,
+            "successful_program_completion_proven": false,
+            "descendant_pid_8728_attributed_by_supplement": false
+          }
+        }
+      },
+      "artifact_hashes": {
+        "specimen_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+        "pcap_sha256": "d31e7712846f44773b59c2f1ff677d3fd9f9b7f4f0a871cd033d2dc7f9e3fdef",
+        "pml_sha256": "c36abe0882935cf80a0d0e171c346013145863fbae7c5477b5272452a6f898c1",
+        "inert_windows_and_upload_sha256": "7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23",
+        "fallback_jpeg_windows_and_upload_sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+        "wireshark_png_sha256": "a3af3cdd4b4f8c275f1ad4dc424163d429e0f710e4cf6822070c4fcb6e31c44d",
+        "ss1_viewer_png_sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+        "csv_sha256": "66f8f5743630974665475b5eb4bed0bec197aefab08ca0335085fd0231c61c5b",
+        "windows_evidence_zip_sha256": "2f08e52f4b71d721dde36bc7a4aa6f3517d807bc486c96c93e7c5cc906100321"
+      },
+      "visual_evidence": {
+        "wireshark": {
+          "source": "wireshark-native-controlled-summary.json",
+          "display_filter": "http && (http.request.uri contains \"receive.php\" || http.request.uri contains \"send.php\")",
+          "matching_frames": 6,
+          "image_sha256": "a3af3cdd4b4f8c275f1ad4dc424163d429e0f710e4cf6822070c4fcb6e31c44d",
+          "direct_unedited_app_window": true,
+          "screening_manifest": "report/screened-image-manifest.json",
+          "approved_manifest_status": "approved_verified"
+        },
+        "ss1": {
+          "source": "ss1-visual-controlled-summary.json",
+          "jpeg_bytes": 123772,
+          "jpeg_sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+          "jpeg_dimensions": [
+            1024,
+            768
+          ],
+          "full_pixel_decode": true,
+          "windows_fallback_hash_match": true,
+          "requested_path_absent": true,
+          "parent_reported_manual_review": "Root visually approved the direct guest viewer PNG showing the expected lab marker.",
+          "source_summary_manual_review_flag_at_synthesis": "pending_manual_review",
+          "approved_manifest_status": "approved_verified",
+          "image_sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+          "raw_jpeg_guest_only": true,
+          "approved_manifest": "report/screened-image-manifest.json",
+          "manual_screening_provenance": "Root visual approval and independent hash/size correlation are recorded in the approved manifest; original helper pending-review flag is preserved as capture-time metadata."
+        }
+      },
+      "guest_evidence_export": {
+        "status": "success",
+        "recorded_utc": "2026-10-01T14:31:28.2685425Z",
+        "evidence_file_count": 14,
+        "source_bytes": 2419469612,
+        "zip_bytes": 190868480,
+        "zip_sha256": "2f08e52f4b71d721dde36bc7a4aa6f3517d807bc486c96c93e7c5cc906100321",
+        "receiver_hash_and_size_verified": true,
+        "guest_to_guest_only": true,
+        "raw_evidence_safe_for_host_copy": false,
+        "source": "windows-export-native-controlled.json"
+      },
+      "sources": [
+        {
+          "file": "windows-native-controlled.json",
+          "sha256": "30b4bee0b41610ce95b44145b4d441484a79d0dbf3c641884e3695036fa3bcca"
+        },
+        {
+          "file": "runtime-native-controlled.json",
+          "sha256": "545fbe549fe5e6ba0b8f6f956de0356fc2336d302bbac67e20bb077c94a44e62"
+        },
+        {
+          "file": "windows-fixture-reference.json",
+          "sha256": "d9a91310df119b005eea5ac88bc95a639661e014d02ee140b01174598d163444"
+        },
+        {
+          "file": "wireshark-native-controlled-summary.json",
+          "sha256": "7cdf8f194f716f7d575eb6355e62956a2f544521e55081a861f9dcee2a2c3a91"
+        },
+        {
+          "file": "ss1-visual-controlled-summary.json",
+          "sha256": "533b78048d649c07122f9e3a1278274c538a2a8c0bed1d88fc2c2887078874d6"
+        },
+        {
+          "file": "windows-clock-controlled.json",
+          "sha256": "194cf6df51422b73ae7d3d1a463fa5e2185c6d6d1d3261948d0637faa1f576a9"
+        },
+        {
+          "file": "procmon-native-controlled.json",
+          "sha256": "b980a38e0daac3c98e1fe3baf63d90f08de8ed6a46d1a43c1ada7af3f305df17"
+        },
+        {
+          "file": "windows-export-native-controlled.json",
+          "sha256": "0855a97dd316ff89deba5ba82c94464ab8d022a49bff5614257ee1b98ed23e36"
+        },
+        {
+          "file": "report/screened-image-manifest.json",
+          "sha256": "75c53f65a98b61214017172aab41d00865b295076a2d21e707d2a4f44785e774"
+        },
+        {
+          "file": "procmon-controlled-supplement.json",
+          "sha256": "9846c6eefa4e8abdff5c64ebec47ab7e482f7e2b48812d9112e276ad5b2b038d"
+        }
+      ],
+      "observations": [
+        "All nine fixed commands were dispatched once and acknowledged once. Their acknowledgments are combined with Windows process/file observations and captured HTTP evidence.",
+        "The 36-byte download/upload/delete chain has matching Windows/Kali hashes and a later observed disappearance.",
+        "SS1 used C:\\ProgramData\\ss.jpg, while the requested fixture screenshot path remained absent.",
+        "FDD returned the pre-existing future-looking subdir timestamp from lab setup before clock correction, as independently referenced and parent-explained. It is not attributed to specimen timestomping.",
+        "The hash-verified CSV supplement resolves the newer deletion flags and the third root Process Create as WindowsApps Notepad PID8336. Original main-review counts remain unchanged; its two fixed-image bindings and legacy Delete:True count describe the original parser scope."
+      ],
+      "conclusion": "The corrected native run completed all nine fixed commands from the isolated analyst replica. Retained process/file records, matching transfer hashes, captured HTTP, screened screenshot evidence, main Procmon review and the bounded CSV supplement corroborate the results. The supplement confirms an accepted POSIX-style delete request and binds WindowsApps Notepad PID8336; MSI delivery, persistence and original delivery behavior remain separate questions.",
+      "limits": [
+        "Analyst-authored fixed tasking and an overridden lab hostname do not establish recovered attacker tasking or live C2.",
+        "Several-second Windows/Kali offset prohibits cross-guest latency calculations and subsecond ordering.",
+        "File checks cover fixed inert paths. Periodic absence does not exclude transient files between samples.",
+        "Inherited analyst elevation is not specimen privilege escalation. No universal Defender bypass or VM-evasion verdict follows.",
+        "This does not test MSI, original LNK/FTP delivery, SmartScreen/MOTW or batch-authored persistence.",
+        "No foreign IPv4 frames were observed under the finite capture filter; that is not an exhaustive network audit.",
+        "The main Procmon review binds CMD/PowerShell; the separate supplement binds WindowsApps Notepad PID8336 using its root Create and child Start/Exit plus WMI. Descendant8728 is not attributed by the supplement; recognized image paths do not establish executable authenticity or program completion.",
+        "The legacy Delete:True counter remains unchanged at zero. Recognized FILE_DISPOSITION_DELETE and FILE_DISPOSITION_POSIX_SEMANTICS plus SUCCESS establish an accepted request; final named-file absence is independent evidence, not proof of storage reclamation.",
+        "Registry operation counts span specimen and shell children; 1,100 successful grouped operations do not imply 1,100 new or distinct registry changes."
+      ],
+      "screened_images": [
+        {
+          "file": "screenshots/native-controlled-wireshark.png",
+          "sha256": "a3af3cdd4b4f8c275f1ad4dc424163d429e0f710e4cf6822070c4fcb6e31c44d",
+          "width": 1900,
+          "height": 1000,
+          "classification": "actual_runtime_evidence",
+          "source": {
+            "kind": "wireshark",
+            "run_id": "controlled-20261001T141355136847Z",
+            "phase": "controlled",
+            "screenshot_sha256": "a3af3cdd4b4f8c275f1ad4dc424163d429e0f710e4cf6822070c4fcb6e31c44d",
+            "capture_sha256": [
+              "d31e7712846f44773b59c2f1ff677d3fd9f9b7f4f0a871cd033d2dc7f9e3fdef"
+            ],
+            "captured_frames": 310,
+            "displayed_frames": 6,
+            "view_capture_sha256": "601b3adad3868f8eb8a416e091a77f4538ab662d39d497a47579b59291844bb3",
+            "display_filter": "http && (http.request.uri contains \"receive.php\" || http.request.uri contains \"send.php\")"
+          },
+          "screening": {
+            "approved": true,
+            "reviewer": "root analyst",
+            "reviewed_utc": "2026-10-01T14:27:13.575455+00:00",
+            "no_malware_file_bytes": true,
+            "no_raw_payloads": true,
+            "no_credentials": true,
+            "direct_tool_screenshot": true
+          }
+        },
+        {
+          "file": "screenshots/native-controlled-ss1-viewer.png",
+          "sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+          "width": 1034,
+          "height": 804,
+          "classification": "actual_runtime_evidence",
+          "source": {
+            "kind": "imagemagick_ss1",
+            "run_id": "controlled-20261001T141355136847Z",
+            "phase": "controlled",
+            "screenshot_sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+            "fixture_index": 8,
+            "command_type": "SS1",
+            "visual_summary_file": "ss1-visual-controlled-summary.json",
+            "visual_summary_sha256": "533b78048d649c07122f9e3a1278274c538a2a8c0bed1d88fc2c2887078874d6",
+            "upload_sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+            "upload_bytes": 123772,
+            "jpeg_dimensions": [
+              1024,
+              768
+            ],
+            "windows_record_file": "windows-native-controlled.json",
+            "windows_record_sha256": "30b4bee0b41610ce95b44145b4d441484a79d0dbf3c641884e3695036fa3bcca",
+            "windows_run_id": "controlled-20261001T141416071Z",
+            "windows_fixture_label": "fallback_screenshot",
+            "windows_file_sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+            "windows_file_bytes": 123772,
+            "windows_upload_hash_match": true,
+            "raw_upload_kept_guest_only": true,
+            "actual_image_viewer_window": true,
+            "image_edited_or_composited": false,
+            "requested_screenshot_present": false
+          },
+          "screening": {
+            "approved": true,
+            "reviewer": "root analyst",
+            "reviewed_utc": "2026-10-01T14:27:13.575455+00:00",
+            "no_malware_file_bytes": true,
+            "no_raw_payloads": true,
+            "no_credentials": true,
+            "direct_tool_screenshot": true
+          }
+        }
+      ]
+    },
+    "msi": {
+      "status": "complete",
+      "kind": "installer",
+      "completion_scope": "Supplied local MSI experiment, log review, independent payload cleanup and guest-only raw evidence export complete. Final case archive/sealing is separate.",
+      "windows_run_id": "msi-20261001T144810035Z",
+      "kali_controller_run_id": "baseline-20261001T144804439169Z",
+      "kali_phase_mode": "baseline_empty_tasking",
+      "msi_sha256": "4008c8f9e52d3e6fd7df4a980a9a78f46f2412ba2fda10a38aa92d338767c54c",
+      "specimen_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+      "install_client_exit_code": 0,
+      "product_registered": false,
+      "product_registration_scope": "MsiQueryProductState for the observed analyst context and three fixed uninstall-key locations; not an exhaustive every-user registration audit.",
+      "pinned_payload_processes": 1,
+      "launch": {
+        "system_installer": "C:\\Windows\\System32\\msiexec.exe",
+        "installer_client_pid": 5992,
+        "creation_filetime": 134353396927844786,
+        "start_utc": "2026-10-01T14:48:12.7844786Z",
+        "identity_retained": true,
+        "msi_path": "C:\\Lab\\Specimens\\Imp_Details.msi",
+        "mode": "quiet install with reboot suppressed and private verbose logging",
+        "elevated_analyst_context": true,
+        "session_id": 1,
+        "specimen_privilege_escalation_tested": false
+      },
+      "runtime_conditions": {
+        "launch_kind": "Analyst-controlled local MSI through signed Windows system msiexec",
+        "observation_seconds_planned": 300,
+        "window_end_reason": "fixed_deadline_reached",
+        "harness_sha256_recorded": "0aba71eef24c08249669b7ec5033717f1fa060bd6418191eb185d314127d9381",
+        "procmon_readiness_timeout_seconds": 180,
+        "defender_before": {
+          "AMRunningMode": "Normal",
+          "AntivirusEnabled": true,
+          "RealTimeProtectionEnabled": true,
+          "BehaviorMonitorEnabled": true,
+          "IsTamperProtected": true,
+          "AntivirusSignatureVersion": "1.437.1.0"
+        },
+        "defender_after": {
+          "AMRunningMode": "Normal",
+          "AntivirusEnabled": true,
+          "RealTimeProtectionEnabled": true,
+          "BehaviorMonitorEnabled": true,
+          "IsTamperProtected": true,
+          "AntivirusSignatureVersion": "1.437.1.0"
+        },
+        "initial_network": {
+          "interface_index": 4,
+          "address": "172.30.77.2/24",
+          "default_routes": 0,
+          "gateway_routes": 0,
+          "c2_address": "172.30.77.1"
+        },
+        "final_network": {
+          "interface_index": 4,
+          "address": "172.30.77.2/24",
+          "default_routes": 0,
+          "gateway_routes": 0,
+          "c2_address": "172.30.77.1"
+        },
+        "scoped_keep_awake": {
+          "enabled": true,
+          "restored": true,
+          "persistent_power_settings_changed": false
+        },
+        "native_hostname_overridden_to_lab": true,
+        "operator_commands_supplied": 0,
+        "original_delivery_entry_tested": false
+      },
+      "phase_counts": {
+        "installer_clients_launched": 1,
+        "pinned_payload_file_observations": 1,
+        "pinned_payload_process_observations": 1,
+        "windows_periodic_samples": 56,
+        "native_poll_requests": 21,
+        "fixed_commands_dispatched": 0,
+        "multipart_upload_requests": 0,
+        "saved_uploads": 0
+      },
+      "custom_action_log": {
+        "expected_action": "_9AE88E99_8372_4458_9911_9EC626582345",
+        "static_type": 194,
+        "static_type_source": "msi-notes.json CustomAction table",
+        "binary_source_key": "_2E9D1C8BAC5D0F288E61BF5987C52203",
+        "target_empty": true,
+        "static_execute_sequence": {
+          "Action": "_9AE88E99_8372_4458_9911_9EC626582345",
+          "Condition": "NOT REMOVE~=\"ALL\"",
+          "Sequence": 5999
+        },
+        "dispatch_start_end_logged": true,
+        "recognized_type194_schedule_rows": 0,
+        "type194_dynamic_schedule_row_observed": false,
+        "expected_action_end_logged_numeric_value": 0,
+        "installer_sequence_end_logged_numeric_value": 1,
+        "client_engine_return_markers": [
+          0
+        ],
+        "natural_return_matches_client_log_marker": true,
+        "interpretation": "The log proves dispatch/start/end markers for the exact named action. Type194 comes from the static MSI table; the conservative log parser found no recognized CustomActionSchedule Type194 row. Installer/action log return values are not the spawned payload exit code."
+      },
+      "installer_return": {
+        "natural_exit_observed": true,
+        "observed_utc": "2026-10-01T14:48:29.9371747Z",
+        "return_code": 0,
+        "success_return_code": true,
+        "reboot_required_return_code": false,
+        "proves_payload_execution": false
+      },
+      "product_before": {
+        "checked_utc": "2026-10-01T14:48:11.2852542Z",
+        "product_code": "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}",
+        "msi_query_state": -1,
+        "installed_for_current_context": false,
+        "registration_indicators_present": false,
+        "uninstall_registry_entries": [],
+        "method": "Read-only MsiQueryProductState and fixed uninstall registry keys; no Win32_Product query"
+      },
+      "product_after": {
+        "checked_utc": "2026-10-01T14:53:16.6444997Z",
+        "product_code": "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}",
+        "msi_query_state": -1,
+        "installed_for_current_context": false,
+        "registration_indicators_present": false,
+        "uninstall_registry_entries": [],
+        "method": "Read-only MsiQueryProductState and fixed uninstall registry keys; no Win32_Product query"
+      },
+      "payload_file_observation": {
+        "image_guest_path": "C:\\WINDOWS\\Installer\\MSIE099.tmp",
+        "size": 574976,
+        "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+        "observed_utc": "2026-10-01T14:48:29.2719632Z",
+        "source": "new_process_image",
+        "new_file_event_after_launch": true,
+        "file_creation_utc": "2026-10-01T14:48:28.5614127Z",
+        "file_last_write_utc": "2026-10-01T14:48:28.5634204Z"
+      },
+      "payload_process_observation": {
+        "process_id": 8912,
+        "start_utc": "2026-10-01T14:48:28.7498452Z",
+        "creation_filetime": 134353397087498452,
+        "image_guest_path": "C:\\Windows\\Installer\\MSIE099.tmp",
+        "image_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+        "image_size": 574976,
+        "observed_parent_pid": 7572,
+        "observed_parent_name": "msiexec.exe",
+        "session_id": 1,
+        "identification_source": "periodic_new_process_identity",
+        "process_start_proven_by": "Retained live/new process handle, creation time, image path and on-disk pinned SHA256",
+        "assumed_installer_client_child": false,
+        "first_observed_utc": "2026-10-01T14:48:29.3712702Z"
+      },
+      "embedded_payload_identity": {
+        "size": 574976,
+        "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+        "matches_standalone": true
+      },
+      "network_proof": "The isolated Windows guest sent 21 native-protocol fdd:null POSTs and received 21 HTTP200 replies in the paired empty-tasking capture. The payload launch is independently retained-handle/hash verified. The MSI TCP sampler recorded no per-process sockets; HTTP attribution is case/run correlation, not a PID-tagged packet trace.",
+      "http": {
+        "frames": 226,
+        "requests": 21,
+        "methods": {
+          "POST": 21
+        },
+        "responses": 21,
+        "status_codes": {
+          "200": 21
+        },
+        "path": "/peachforthevictory/",
+        "multipart_upload_requests": 0,
+        "saved_uploads": 0,
+        "foreign_ipv4_frames_observed": 0,
+        "capture_filter": "host 172.30.77.2",
+        "source_captures": [
+          {
+            "bytes": 24652,
+            "foreign_ipv4_frames": 0,
+            "frames": 226,
+            "http_request_methods": {
+              "POST": 21
+            },
+            "http_response_codes": {
+              "200": 21
+            },
+            "name": "network.pcap0",
+            "sha256": "a926944388ff56154b0939db984ba39eb3e1fc92775d5e7caf3beb8322b7d582",
+            "tcp_destination_ports": {
+              "49684": 2,
+              "49685": 2,
+              "49686": 5,
+              "49687": 5,
+              "49688": 5,
+              "49689": 5,
+              "49690": 5,
+              "49691": 5,
+              "49692": 5,
+              "49693": 5,
+              "49694": 5,
+              "49695": 5,
+              "49696": 5,
+              "49697": 5,
+              "49698": 5,
+              "49699": 5,
+              "49700": 5,
+              "49701": 5,
+              "49702": 5,
+              "49703": 5,
+              "49704": 5,
+              "49705": 5,
+              "49706": 5,
+              "80": 113
+            },
+            "tshark_exit": 0
+          }
+        ],
+        "poll_envelope": {
+          "property_names": [
+            "client_id",
+            "fdd"
+          ],
+          "fdd_value": null,
+          "two_member_envelope": true,
+          "body_size_each": 45,
+          "all_body_sha256_equal": true,
+          "body_sha256": "2458b8b655a3739e7d13b92bd5c2506f4f8d13e25a4fb01326e7fb33ce22144c",
+          "all_json_valid": true,
+          "all_client_ids_match_lab": true,
+          "connection_close_all": true
+        },
+        "fixture_response": {
+          "next_data": ""
+        },
+        "windows_tcp_sampler_observations": 0,
+        "per_process_http_binding_established": false
+      },
+      "timing": {
+        "windows_harness_created_utc": "2026-10-01T14:48:10.0559989Z",
+        "windows_installer_created_utc": "2026-10-01T14:48:12.7844786Z",
+        "windows_payload_created_utc": "2026-10-01T14:48:28.7498452Z",
+        "windows_installer_natural_exit_observed_utc": "2026-10-01T14:48:29.9371747Z",
+        "windows_harness_ended_utc": "2026-10-01T14:53:16.7156394Z",
+        "windows_pml_last_write_utc": "2026-10-01T14:53:14.0211323Z",
+        "windows_installer_creation_to_harness_end_seconds_same_clock": 303.931,
+        "kali_first_poll_utc": "2026-10-01T14:50:02.368657+00:00",
+        "kali_last_poll_utc": "2026-10-01T14:56:13.798844+00:00",
+        "kali_first_to_last_poll_seconds_same_clock": 371.430187,
+        "poll_interarrival_seconds_same_kali_clock": {
+          "interval_count": 20,
+          "minimum": 14.016021,
+          "maximum": 24.025497,
+          "median": 18.0190125
+        },
+        "separate_windows_payload_stop_utc": "2026-10-01T15:00:02.8695522Z",
+        "windows_payload_creation_to_owned_stop_seconds_same_clock": 694.12,
+        "window_limit": "Windows observation/PML ended near14:53; Kali HTTP evidence extends through14:56:13; separate owned payload stop occurred15:00:02. These are distinct windows because the harness cleanup collection was overwritten. Do not treat all21 requests as occurring inside the300-second PML window.",
+        "cross_guest_precision": "Residual cross-guest clock offset prevents exact startup or response latency calculations. Raw timestamp strings preserve the original fractional precision."
+      },
+      "procmon": {
+        "review_status": "captured_preserved_not_parsed_for_msi",
+        "tool_sha256": "fc3af5317c707e0555ad6e7590ad65ceb5c5085b053b41221944ac3ca3492d9c",
+        "backing_file_present_before_installer": true,
+        "stop_result": "graceful_termination_confirmed",
+        "raw_pml": {
+          "bytes": 1234376289,
+          "sha256": "99bcccdccc94f02fba701924fdad04bb7d0933ddbdde54f8a7b0b96f6766950f",
+          "guest_only": true
+        },
+        "attributed_rows": null,
+        "task_registration_proven_by_this_review": false,
+        "limit": "The native direct-executable parser does not accept the MSI harness schema. MSI raw PML is preserved; detailed installer-service/payload API attribution is not asserted from that PML here."
+      },
+      "verbose_log_review": {
+        "status": "reviewed",
+        "reviewed_utc": "2026-10-01T14:56:33.9653500Z",
+        "log_bytes": 104944,
+        "log_sha256": "aa72fe3ff4ed48c42ab37ba237f1f8f298c49efad50b6d61dcc8831dd67f29ef",
+        "decoded_encoding": "utf-16",
+        "line_count": 684,
+        "marker_counts": {
+          "expected_action_end": 1,
+          "expected_action_start": 1,
+          "expected_product_code_property": 1,
+          "engine_return_marker": 2,
+          "install_sequence_end": 1,
+          "product_install_status_marker": 1,
+          "expected_action_dispatch": 1
+        },
+        "selected_marker_rows": [
+          {
+            "classification": "observed_installer_log_marker",
+            "kind": "expected_action_dispatch",
+            "line_index": 486,
+            "decoded_line_utf8_sha256": "1fd9c66b9b8361ee23c7e933bc7a8b33e81333ad00dccc552886801512e6d70d",
+            "event_utc": "2026-10-01T14:48:28.5610000Z",
+            "log_context": "server",
+            "child_execution_proven_by_this_line": false,
+            "expected_custom_action": "_9AE88E99_8372_4458_9911_9EC626582345"
+          },
+          {
+            "classification": "observed_installer_log_marker",
+            "kind": "expected_action_start",
+            "line_index": 489,
+            "decoded_line_utf8_sha256": "591f3c57f783fdab776ef305f02b40d80068f61de130fd39afa3c3801984f2b2",
+            "event_utc": "2026-10-01T14:48:28.0000000Z",
+            "log_context": "sequence",
+            "child_execution_proven_by_this_line": false,
+            "expected_custom_action": "_9AE88E99_8372_4458_9911_9EC626582345"
+          },
+          {
+            "classification": "observed_installer_log_marker",
+            "kind": "expected_action_end",
+            "line_index": 538,
+            "decoded_line_utf8_sha256": "ba4dc5c5415ef9a7b5ad23272d509370760a7e6f368de031d16016b9aa86a5b6",
+            "event_utc": "2026-10-01T14:48:28.0000000Z",
+            "log_context": "sequence",
+            "child_execution_proven_by_this_line": false,
+            "logged_numeric_value": 0,
+            "expected_custom_action": "_9AE88E99_8372_4458_9911_9EC626582345"
+          },
+          {
+            "classification": "observed_installer_log_marker",
+            "kind": "install_sequence_end",
+            "line_index": 543,
+            "decoded_line_utf8_sha256": "61957411fc00629f4361ad9419a6f711f751db9a72b1ce77e130175d07ef544d",
+            "event_utc": "2026-10-01T14:48:28.0000000Z",
+            "log_context": "sequence",
+            "child_execution_proven_by_this_line": false,
+            "logged_numeric_value": 1
+          },
+          {
+            "classification": "observed_installer_log_marker",
+            "kind": "expected_product_code_property",
+            "line_index": 573,
+            "decoded_line_utf8_sha256": "9d0c88a01c3e4a899009a68c9915946ccf3b226f4d6446df56b21d8508cb8e07",
+            "event_utc": null,
+            "log_context": "property",
+            "child_execution_proven_by_this_line": false,
+            "expected_product_code": "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}"
+          },
+          {
+            "classification": "observed_installer_log_marker",
+            "kind": "product_install_status_marker",
+            "line_index": 666,
+            "decoded_line_utf8_sha256": "e2a09f7bdb97d96eb61df9b49bbde2779652d991d85795ed685de2df3c863c11",
+            "event_utc": "2026-10-01T14:48:28.8150000Z",
+            "log_context": "server",
+            "child_execution_proven_by_this_line": false,
+            "logged_numeric_value": 0
+          },
+          {
+            "classification": "observed_installer_log_marker",
+            "kind": "engine_return_marker",
+            "line_index": 670,
+            "decoded_line_utf8_sha256": "a663c19158f0d53f7df17b9eb56042ee9e8a2f58ade809d59916655dd1927080",
+            "event_utc": "2026-10-01T14:48:28.8260000Z",
+            "log_context": "server",
+            "child_execution_proven_by_this_line": false,
+            "logged_numeric_value": 0
+          },
+          {
+            "classification": "observed_installer_log_marker",
+            "kind": "engine_return_marker",
+            "line_index": 682,
+            "decoded_line_utf8_sha256": "180f454bf2441dd8e9f7097864b78c4a116e7868274c327124b1a426bef81f91",
+            "event_utc": "2026-10-01T14:48:28.8590000Z",
+            "log_context": "client",
+            "child_execution_proven_by_this_line": false,
+            "logged_numeric_value": 0
+          }
+        ],
+        "timestamp_parse_or_window_failures": 0,
+        "raw_log_proves_child_process_execution": false,
+        "interpretation_source": "https://learn.microsoft.com/en-us/windows/win32/msi/custom-action-return-processing-options",
+        "limitations": [
+          "Action start/dispatch/schedule/end markers are installer evidence for the fixed custom action, not proof that its EXE began or completed successfully.",
+          "Type194 is EXE type2 plus async/continue192: Windows Installer does not wait for the child to complete. Installer return codes and action log return values are separate quantities.",
+          "A logged action Return value1 is an installer action result, not a child exit code. Actual-error-code text is preserved as a numeric log marker without promoting it to independent child proof.",
+          "Only exact source-path matches to separate pinned file/process observations are correlated. The raw source target and arbitrary command line never leave the guest.",
+          "Line hashes cover decoded line text encoded as UTF8 without the line terminator; the complete raw-file SHA256 anchors original bytes.",
+          "Missing markers or observations do not prove the action or child was absent; hash-verified process observations and packet evidence must be assessed separately."
+        ]
+      },
+      "cleanup": {
+        "historical_harness_process_cleanup": [
+          {
+            "role": "installer_client",
+            "pid": 5992,
+            "start_utc": "2026-10-01T14:48:12.7844786Z",
+            "result": "already_exited"
+          }
+        ],
+        "payload_omitted_from_historical_cleanup": true,
+        "cause": "At script scope, foreach($owned...) overwrote the case-insensitive $script:Owned process collection with the installer-client object. The later payload cleanup loop never visited PID8912.",
+        "instrumentation_error_not_malware_behavior": true,
+        "historical_harness_modified_after_run": false,
+        "separate_cleanup_receipt": {
+          "case_id": "majlis-2026-analysis-20261001",
+          "run_id": "msi-20261001T144810035Z",
+          "pid": 8912,
+          "expected_creation_filetime": 134353397087498452,
+          "expected_image_path": "C:\\Windows\\Installer\\MSIE099.tmp",
+          "expected_image_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+          "checked_utc": "2026-10-01T15:00:01.6604250Z",
+          "historical_harness_cleanup_missing": true,
+          "specimen_executed_by_helper": false,
+          "network_or_power_settings_changed": false,
+          "raw_commandline_exported": false,
+          "termination_attempted": true,
+          "alive_before_cleanup": true,
+          "creation_filetime_verified": 134353397087498452,
+          "image_hash_and_size_verified": true,
+          "status": "terminated_owned_handle",
+          "alive_after_cleanup": false,
+          "observed_exit_code": 19786,
+          "observed_exit_utc": "2026-10-01T15:00:02.8695522Z",
+          "kernel_handle_used_for_identity_and_stop": true,
+          "finished_utc": "2026-10-01T15:00:02.9706630Z"
+        },
+        "final_payload_state": "Exact recorded payload identity confirmed stopped by retained-handle cleanup.",
+        "cleanup_record_source": "msi-payload-cleanup.json",
+        "exit_code_limit": "Observed exit19786 (0x4D4A) is the analyst-owned termination code, not a natural payload failure."
+      },
+      "guest_evidence_export": {
+        "status": "success",
+        "recorded_utc": "2026-10-01T15:01:16.0760929Z",
+        "evidence_file_count": 16,
+        "source_bytes": 1237836995,
+        "zip_bytes": 122595772,
+        "zip_sha256": "f67544712261d4c5e96196e8b47b473023356c032772823d03f5591149885492",
+        "receiver_hash_and_size_verified": true,
+        "guest_to_guest_only": true,
+        "raw_evidence_safe_for_host_copy": false
+      },
+      "artifact_hashes": {
+        "msi_sha256": "4008c8f9e52d3e6fd7df4a980a9a78f46f2412ba2fda10a38aa92d338767c54c",
+        "payload_temp_file_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+        "embedded_binary_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+        "verbose_log_sha256": "aa72fe3ff4ed48c42ab37ba237f1f8f298c49efad50b6d61dcc8831dd67f29ef",
+        "pml_sha256": "99bcccdccc94f02fba701924fdad04bb7d0933ddbdde54f8a7b0b96f6766950f",
+        "pcap_sha256": "a926944388ff56154b0939db984ba39eb3e1fc92775d5e7caf3beb8322b7d582",
+        "windows_evidence_zip_sha256": "f67544712261d4c5e96196e8b47b473023356c032772823d03f5591149885492",
+        "historical_harness_sha256": "0aba71eef24c08249669b7ec5033717f1fa060bd6418191eb185d314127d9381"
+      },
+      "command_results": [
+        {
+          "command": "Named MSI custom action",
+          "evidence": "Exact CA dispatch/start/end markers at verbose-log lines486/489/538; the static CustomAction table specifies Type194 and the known Binary stream.",
+          "interpretation": "The supplied local MSI reached its named executable custom action. Its static type is asynchronous EXE/continue.",
+          "limits": "No recognized Type194 schedule row was captured by the conservative parser; action Return value0 is not a child exit status."
+        },
+        {
+          "command": "Embedded payload launch",
+          "evidence": "New C:\\Windows\\Installer\\MSIE099.tmp appeared as574976 bytes matching the embedded and standalone native SHA256. PID8912 creation14:48:28.7498452Z was retained and re-hashed; its observed parent was msiexec.exe PID7572.",
+          "interpretation": "The package launched the supplied native payload from the Windows Installer temporary path.",
+          "limits": "Parent is the observed installer process, not assumed to be direct client5992. The on-disk image hash does not measure every in-memory byte."
+        },
+        {
+          "command": "Installer return / registration",
+          "evidence": "System msiexec client5992 naturally returned0, matching client log return0. Product query was-1 before and after; the three fixed uninstall-key checks found no registration.",
+          "interpretation": "Installer success and payload launch were observed; product registration was not established in the checked context.",
+          "limits": "Return0 is not payload success or persistence. Registration checks are bounded to the tested context/keys."
+        },
+        {
+          "command": "Native polling",
+          "evidence": "Kali captured21 fdd:null POST/HTTP200 pairs with the same45-byte native envelope and body hash as the direct native baseline; empty tasking supplied no commands.",
+          "interpretation": "The MSI run produced native-protocol polling corroborating the independently verified payload launch.",
+          "limits": "No PID-tagged HTTP capture or MSI TCP-sampler socket match is available. The network window extends beyond the300-second PML window due to analyst cleanup omission."
+        }
+      ],
+      "observations": [
+        "The local MSI reached its exact named custom action and created a temporary EXE whose hash equals both the embedded Binary stream and the standalone native specimen.",
+        "The live process was independently verified by retained handle, exact creation time, image path, file size and repeated SHA256 checks.",
+        "Installer return0 and absent registration indicators are reported separately; neither substitutes for the direct payload-process observation.",
+        "Kali recorded21 empty-tasking native polls; this is a longer network window than the300-second Windows observation because of a documented harness cleanup defect.",
+        "A separate fixed-identity helper stopped the still-live payload at15:00:02.8695522Z, and the final16-file raw evidence archive was verified in Kali."
+      ],
+      "conclusion": "The supplied local MSI invoked the named custom action, extracted and launched the hash-matched native payload, and returned installer code0. Native-protocol polling was observed in the paired isolated guest capture; no product registration was found in the checked context. The extended network window resulted from an analyst harness cleanup oversight and is separately bounded; exact payload cleanup and raw evidence preservation are verified.",
+      "limits": [
+        "This tests the supplied local MSI, not the unavailable WebDAV MSI or original shortcut/FTP delivery path.",
+        "Type194 is static MSI-table evidence; the log independently establishes named-action dispatch/start/end, but its conservative schedule recognizer found no Type194 row.",
+        "Installer return code, action log return value, product registration, child execution and native polling are distinct findings.",
+        "The MSI packet evidence is guest/run correlated; there is no per-process HTTP socket binding in this bounded Windows sampler.",
+        "Windows PML and Kali network observation windows differ. Do not place all21 polls inside the300-second Windows window or infer exact cross-guest latency.",
+        "Detailed MSI Procmon API/process attribution is not synthesized; raw PML is retained. Native controlled capability proof remains a separate experiment.",
+        "The historical harness cleanup omitted the payload because of a case-insensitive variable collision. Its observed continued life is not an evasion or persistence finding.",
+        "No scheduled-task registration, task firing, original batch persistence or privilege escalation is established by this MSI run.",
+        "Defender behavior applies to recorded signatures/settings and analyst elevation; no universal bypass result follows.",
+        "Final VM restoration/power state and whole-case archive seal are separate finalization records."
+      ],
+      "sources": [
+        {
+          "file": "windows-msi.json",
+          "sha256": "45edc1e0eb5eee4bbc5eed7feea56d873839ed789b0aa795c4d0170105dd052d"
+        },
+        {
+          "file": "runtime-msi.json",
+          "sha256": "d67db8804562a4f37fe58e2fe75f3f5dc83eb06130f56fe269799e386843f12e"
+        },
+        {
+          "file": "msi-log-review.json",
+          "sha256": "fe989722ebf757935a0bba0d1c3094ffc6265e787cca0ea979da7c64bbe37726"
+        },
+        {
+          "file": "msi-payload-cleanup.json",
+          "sha256": "7499d426e4eb9ecd94999c61e686b87038c2d1291dfb933cf8f879ac283c6c9e"
+        },
+        {
+          "file": "windows-export-msi.json",
+          "sha256": "d3249d2d3e331d1950291b7fb2e40901e563ef73c0cad018a685af092541032c"
+        },
+        {
+          "file": "msi-notes.json",
+          "sha256": "1302cf8038d20716ccd0c470f53a851d49b7f529fafd3b1d75a3fadf08d93658"
+        },
+        {
+          "file": "windows-msi-preparation-attempt1.json",
+          "sha256": "34b3c55d4e228f99517e8f391142fe4b7a62ce4577c2f571c5e55d1fe3caa271"
+        },
+        {
+          "file": "runtime-msi-preparation-attempt1.json",
+          "sha256": "47df135dfde52de59abfcdd67ae86e82344d3669e1b2e47cb01d0c9ef6f707c1"
+        },
+        {
+          "file": "windows-export-msi-preparation-attempt1.json",
+          "sha256": "e6770e71f38ba479abeaf562557cb5990f754daceab447a1cc9ec947fc59e13f"
+        },
+        {
+          "file": "msi-preparation-progress.json",
+          "sha256": "163aadbe45929ac4035c83f3c68fa608e0fa547b955d95369855f9851ea3bbd2"
+        }
+      ]
+    }
+  },
+  "evidence_files": [
+    {
+      "file": "windows-interactive-inventory.json",
+      "sha256": "d2517a51322c708581570ec0b2b7d33e2ddd8e46ad405cc074ab0e8990c0708c"
+    },
+    {
+      "file": "windows-setup-inventory.json",
+      "sha256": "f7af2947a7e6a6b879c2604e2b7f87dbad76ddd67c3aecc5f947c9472cd817e2"
+    },
+    {
+      "file": "windows-procmon-preparation.json",
+      "sha256": "1b27d700ee6bb5c607407412e73d1ef1358870fefbbcfc5fe568f8fb44c82b04"
+    },
+    {
+      "file": "windows-clock-alignment.json",
+      "sha256": "397578e109dd391e725c04e6c7f0b85b4a012028be3081a08af9f96809621714"
+    },
+    {
+      "file": "windows-specimen-transfer-native-baseline.json",
+      "sha256": "5b26d8b7b1058ad677a88e7594009c633f5c6494cd9c901e28718f2ccb6c6859"
+    },
+    {
+      "file": "windows-isolation-pre-native.json",
+      "sha256": "44329e93419c76072c1f040bacf87c079683aec12c061b657025c46564f5aa97"
+    },
+    {
+      "file": "linux-controller-network-check.json",
+      "sha256": "35ab0691b0b4e41b545cbd7bbe8bfada8446afda1e8f617e171632253f24b23e"
+    },
+    {
+      "file": "windows-native-baseline.json",
+      "sha256": "111338df075d9a6eb6ca0e930f7b399ce7a97eb192b2857e61372c4abd56af9b"
+    },
+    {
+      "file": "runtime-native-baseline.json",
+      "sha256": "efe242727ae73964d31da54d56551a0d3efd9fcc7a185a534dde2d4fd6b7ce43"
+    },
+    {
+      "file": "procmon-native-baseline.json",
+      "sha256": "4090915452159800584e55320faec9fdedf45df0f147069fe4a4f09ee56dcb4b"
+    },
+    {
+      "file": "windows-export-native-baseline.json",
+      "sha256": "8062335161efb45b262a9d6e726a56ca605f378be7b07ac9369103ff1fe9bd15"
+    },
+    {
+      "file": "wireshark-native-baseline-summary.json",
+      "sha256": "d11954cb1e468f439d1031761b607b19c5543886bb2a620dd2c985493717bf40"
+    },
+    {
+      "file": "report/screened-image-manifest.json",
+      "sha256": "75c53f65a98b61214017172aab41d00865b295076a2d21e707d2a4f44785e774"
+    },
+    {
+      "file": "lifecycle-deep-findings.json",
+      "sha256": "e831cfbb4b99fe7944e492e66a83890226c4824f56e7d35ad768d051ebfea040"
+    },
+    {
+      "file": "windows-native-controlled.json",
+      "sha256": "30b4bee0b41610ce95b44145b4d441484a79d0dbf3c641884e3695036fa3bcca"
+    },
+    {
+      "file": "runtime-native-controlled.json",
+      "sha256": "545fbe549fe5e6ba0b8f6f956de0356fc2336d302bbac67e20bb077c94a44e62"
+    },
+    {
+      "file": "windows-fixture-reference.json",
+      "sha256": "d9a91310df119b005eea5ac88bc95a639661e014d02ee140b01174598d163444"
+    },
+    {
+      "file": "wireshark-native-controlled-summary.json",
+      "sha256": "7cdf8f194f716f7d575eb6355e62956a2f544521e55081a861f9dcee2a2c3a91"
+    },
+    {
+      "file": "ss1-visual-controlled-summary.json",
+      "sha256": "533b78048d649c07122f9e3a1278274c538a2a8c0bed1d88fc2c2887078874d6"
+    },
+    {
+      "file": "windows-clock-controlled.json",
+      "sha256": "194cf6df51422b73ae7d3d1a463fa5e2185c6d6d1d3261948d0637faa1f576a9"
+    },
+    {
+      "file": "windows-native-controlled-attempt1.json",
+      "sha256": "306ea2f620d7c46df05d002021485b2681e8156b88c415cff30b23a3fe5622bd"
+    },
+    {
+      "file": "runtime-native-controlled-attempt1.json",
+      "sha256": "099dfa3def26013fb0a118cf05496b67015b2e32c0a4cdc1ab33807c8e678001"
+    },
+    {
+      "file": "windows-export-native-controlled-attempt1.json",
+      "sha256": "c7e694ee2014e51724bee493d05aeca1323bc8c10cb64663291df06b45368ab7"
+    },
+    {
+      "file": "procmon-native-controlled-attempt1.json",
+      "sha256": "706a3e27e12fdf8dc8a46c7b2eeb1956b9894c50bdc2336297b8fd78e49b0725"
+    },
+    {
+      "file": "fixture-selftest.json",
+      "sha256": "9ae9856034728ce65b9543211c76bde5ff1aac3d37e29235a568ad09566ad048"
+    },
+    {
+      "file": "dynamic_fixture_server.py",
+      "sha256": "5d6725bf1c99c0addb74b96018b7438657a8fc3f380e537924a4774209b24ce4"
+    },
+    {
+      "file": "dynamic_fixture_tests.py",
+      "sha256": "93782ad88b9f0ffb05dfa7442eda69f8a6359caf734b9ee9f2b5bad2d444a408"
+    },
+    {
+      "file": "procmon-native-controlled.json",
+      "sha256": "b980a38e0daac3c98e1fe3baf63d90f08de8ed6a46d1a43c1ada7af3f305df17"
+    },
+    {
+      "file": "windows-export-native-controlled.json",
+      "sha256": "0855a97dd316ff89deba5ba82c94464ab8d022a49bff5614257ee1b98ed23e36"
+    },
+    {
+      "file": "procmon-controlled-supplement.json",
+      "sha256": "9846c6eefa4e8abdff5c64ebec47ab7e482f7e2b48812d9112e276ad5b2b038d"
+    },
+    {
+      "file": "windows-msi.json",
+      "sha256": "45edc1e0eb5eee4bbc5eed7feea56d873839ed789b0aa795c4d0170105dd052d"
+    },
+    {
+      "file": "runtime-msi.json",
+      "sha256": "d67db8804562a4f37fe58e2fe75f3f5dc83eb06130f56fe269799e386843f12e"
+    },
+    {
+      "file": "msi-log-review.json",
+      "sha256": "fe989722ebf757935a0bba0d1c3094ffc6265e787cca0ea979da7c64bbe37726"
+    },
+    {
+      "file": "msi-payload-cleanup.json",
+      "sha256": "7499d426e4eb9ecd94999c61e686b87038c2d1291dfb933cf8f879ac283c6c9e"
+    },
+    {
+      "file": "windows-export-msi.json",
+      "sha256": "d3249d2d3e331d1950291b7fb2e40901e563ef73c0cad018a685af092541032c"
+    },
+    {
+      "file": "msi-notes.json",
+      "sha256": "1302cf8038d20716ccd0c470f53a851d49b7f529fafd3b1d75a3fadf08d93658"
+    },
+    {
+      "file": "windows-msi-preparation-attempt1.json",
+      "sha256": "34b3c55d4e228f99517e8f391142fe4b7a62ce4577c2f571c5e55d1fe3caa271"
+    },
+    {
+      "file": "runtime-msi-preparation-attempt1.json",
+      "sha256": "47df135dfde52de59abfcdd67ae86e82344d3669e1b2e47cb01d0c9ef6f707c1"
+    },
+    {
+      "file": "windows-export-msi-preparation-attempt1.json",
+      "sha256": "e6770e71f38ba479abeaf562557cb5990f754daceab447a1cc9ec947fc59e13f"
+    },
+    {
+      "file": "msi-preparation-progress.json",
+      "sha256": "163aadbe45929ac4035c83f3c68fa608e0fa547b955d95369855f9851ea3bbd2"
+    }
+  ],
+  "explicit_limits": [
+    "This schema1 record covers three bounded runtime phases. Completion of those experiments does not establish every payload path, original delivery, persistence, or final whole-case archive sealing.",
+    "Elevated analyst launch is inherited test context, not specimen privilege escalation.",
+    "MOTW/SmartScreen and the original delivered LNK/script entry conditions were not established by direct executable launch.",
+    "Defender observations are tied to the recorded configuration/signatures; latest signatures and cloud intelligence were not compared.",
+    "Registry API operation counts are not counts of newly created keys or distinct registry changes.",
+    "Snapshot names and presence do not prove restoration or full cleanliness.",
+    "Several-second cross-guest clock offset remains after timestamp transport into Windows. Use within-guest ordering; do not calculate cross-guest command latency.",
+    "Attempt1 stalled because of an analyst responder guard; preserved separately, it is not a specimen capability failure.",
+    "MSI Windows observation and Kali HTTP windows differ because of an analyst cleanup variable collision; the separate exact-identity cleanup record establishes the later stop.",
+    "The MSI return code and payload-process proof do not imply registered installation, scheduled persistence or a live operator session."
+  ],
+  "analyst_error_history": [
+    {
+      "classification": "analyst_fixture_error_not_specimen_failure",
+      "attempt": "controlled_attempt1",
+      "windows_run_id": "controlled-20261001T135440456Z",
+      "kali_controller_run_id": "controlled-20261001T135434485986Z",
+      "commands_dispatched_and_acknowledged": [
+        "GDR",
+        "FDD",
+        "msg"
+      ],
+      "http_posts": 36,
+      "cause": "The responder withheld commands for every msg key. The main loop sends cleared msg:[] after CMD, which was incorrectly treated like the worker msg:string response whose next_data is ignored. This stalled analyst task delivery after CMD.",
+      "correction": "Withhold only msg string values; cleared-list main-loop polls can receive the next command after acknowledgment and the full pacing gap.",
+      "specimen_modified": false,
+      "regression": {
+        "old_bug_reproduced_synthetically": true,
+        "fixed_host_suite_passed": true,
+        "guest_suite_returncode": 0,
+        "guest_test_count": 10,
+        "guest_recorded_utc": "2026-10-01T14:09:42.929894+00:00",
+        "checks": "Full nine-step sequence; string workers withheld; cleared-list advancement; no acknowledgment for wrong markers/lists; pre-gap withholding; exact-gap dispatch; duplicates do not reset pacing.",
+        "source": "fixture-selftest.json",
+        "corrected_fixture_sha256": "5d6725bf1c99c0addb74b96018b7438657a8fc3f380e537924a4774209b24ce4",
+        "regression_tests_sha256": "93782ad88b9f0ffb05dfa7442eda69f8a6359caf734b9ee9f2b5bad2d444a408"
+      },
+      "raw_evidence_preserved": {
+        "guest_archive_verified": true,
+        "zip_bytes": 158999825,
+        "zip_sha256": "bd79b00ec73faa3b49b58ac40759dfc7a93310415fee856c57c0708ea6cdd027",
+        "source_bytes": 1890816249,
+        "evidence_file_count": 12,
+        "guest_to_guest_only": true,
+        "raw_evidence_safe_for_host_copy": false,
+        "pml_bytes": 1882789205,
+        "pml_sha256": "bdc3d1263a08016078144577ef712a104ad62c88a2475b1fa8a94c4a67dedbe5",
+        "pcap_sha256": "78d7cb1315ea553ef085cf0d6fd15f5bb3a493dde46d70574dc6d6035ee9a798",
+        "source": "windows-export-native-controlled-attempt1.json"
+      },
+      "partial_procmon_review": "Partial PML exceeded the original 1 GiB reviewer bound and was preserved without parsing. PML/source bounds were later raised to 4 GiB; compressed transfer stays 1 GiB. This is an analyst tooling bound, not specimen behavior.",
+      "use_limit": "Attempt1 remains a preserved partial experiment; the command table uses only the corrected final run."
+    },
+    {
+      "classification": "analyst_instrumentation_readiness_failure",
+      "attempt": "msi_preparation_attempt1",
+      "windows_run_id": "msi-20261001T143534543Z",
+      "kali_controller_run_id": "baseline-20261001T143451701984Z",
+      "installer_launch_observed": false,
+      "pinned_payload_launch_observed": false,
+      "http_poll_requests": 0,
+      "failure_stage": "procmon_launch_and_readiness",
+      "cause": "Procmon backing-file readiness missed the original25-second deadline. The MSI was not launched. A later128MiB PML was force-closed and its capture integrity is unverified.",
+      "original_readiness_timeout_seconds": 25,
+      "corrected_readiness_timeout_seconds": 180,
+      "correction": "Extended bounded wait and persisted setup progress checkpoints plus safe failure line numbers; isolation, specimen hashes and fixed actions unchanged.",
+      "final_summary_saved_utc": "2026-10-01T14:39:01.7184036Z",
+      "cleanup_or_reporting_failure_established": false,
+      "stale_host_copy_note": "An earlier host copy still showed preparing; the later final summary did save. This was not evidence of a current hang or failed final reporting.",
+      "product_query_before": -1,
+      "product_query_after": -1,
+      "raw_evidence_preserved": {
+        "verified": true,
+        "zip_bytes": 1748592,
+        "zip_sha256": "b92eaf4d4a7401cf4c51539ae3d052134ebc9cdae2f5321cd06e2ce9a7d813be",
+        "pml_sha256": "366076873c7a63f458ea435689404448c05dadc8c988851c5334bb980d46036f",
+        "pml_integrity": "forced_capture_integrity_unverified",
+        "guest_to_guest_only": true
+      },
+      "sources": [
+        "windows-msi-preparation-attempt1.json",
+        "runtime-msi-preparation-attempt1.json",
+        "windows-export-msi-preparation-attempt1.json"
+      ]
+    },
+    {
+      "classification": "analyst_harness_cleanup_omission",
+      "attempt": "corrected_msi_run_cleanup",
+      "windows_run_id": "msi-20261001T144810035Z",
+      "cause": "At script scope, foreach($owned...) overwrote the case-insensitive $script:Owned process collection with the installer-client object. The later payload cleanup loop never visited PID8912.",
+      "synthetic_reproduction": "An inert three-object collection becomes the installer-client object after the script-scope loop; the later payload filter sees zero entries. No guest action was needed to reproduce the language-scope defect.",
+      "affected_identity": {
+        "pid": 8912,
+        "creation_filetime": 134353397087498452,
+        "image_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716"
+      },
+      "effect": "Pinned payload was omitted from historical cleanup and remained alive; Kali polling continued beyond the Windows observation/PML window.",
+      "remediation": "Separate fixed guest helper revalidated exact creation time, path, size and hash, retained a kernel handle, stopped only that payload identity and confirmed exit.",
+      "verified_stop_utc": "2026-10-01T15:00:02.8695522Z",
+      "stop_status": "terminated_owned_handle",
+      "historical_harness_modified": false,
+      "not_specimen_anomaly_or_persistence_proof": true,
+      "source": "msi-payload-cleanup.json"
+    }
+  ]
+}

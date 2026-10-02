@@ -1,0 +1,204 @@
+{
+  "mode": "eh",
+  "excerpts": {
+    "0x445727-0x445750": "00445727: push   ebp\n00445728: mov    ebp,esp\n0044572a: sub    esp,0x8\n0044572d: push   ebx\n0044572e: push   esi\n0044572f: push   edi\n00445730: cld\n00445731: mov    DWORD PTR [ebp-0x4],eax\n00445734: xor    eax,eax\n00445736: push   eax\n00445737: push   eax\n00445738: push   eax\n00445739: push   DWORD PTR [ebp-0x4]\n0044573c: push   DWORD PTR [ebp+0x14]\n0044573f: push   DWORD PTR [ebp+0x10]\n00445742: push   DWORD PTR [ebp+0xc]\n00445745: push   DWORD PTR [ebp+0x8]\n00445748: call   0x4481a1\n0044574d: add    esp,0x20",
+    "0x42d954-0x42da00": "0042d954: push   ebp\n0042d955: mov    ebp,esp\n0042d957: sub    esp,0x14\n0042d95a: push   esi\n0042d95b: mov    esi,DWORD PTR [ebp+0x8]\n0042d95e: push   DWORD PTR [esi*4+0x470960]\n0042d965: call   0x42d989\n0042d96a: push   eax\n0042d96b: push   DWORD PTR [esi*4+0x47097c]\n0042d972: lea    ecx,[ebp-0x14]\n0042d975: call   0x42d860\n0042d97a: push   0x48265c\n0042d97f: lea    eax,[ebp-0x14]\n0042d982: push   eax\n0042d983: call   0x445b90\n0042d988: int3\n0042d989: mov    eax,0x4860d4\n0042d98e: ret\n0042d98f: push   ebp\n0042d990: mov    ebp,esp\n0042d992: push   ecx\n0042d993: push   DWORD PTR [ebp+0xc]\n0042d996: call   0x430079\n0042d99b: pop    ecx\n0042d99c: mov    ecx,DWORD PTR [ebp+0x8]\n0042d99f: push   eax\n0042d9a0: call   0x4136b0\n0042d9a5: mov    eax,DWORD PTR [ebp+0x8]\n0042d9a8: leave\n0042d9a9: ret    0x8\n0042d9ac: push   ebp\n0042d9ad: mov    ebp,esp\n0042d9af: push   esi\n0042d9b0: push   DWORD PTR [ebp+0x8]\n0042d9b3: mov    esi,ecx\n0042d9b5: call   0x401290\n0042d9ba: mov    DWORD PTR [esi],0x470a90\n0042d9c0: mov    eax,esi\n0042d9c2: pop    esi\n0042d9c3: pop    ebp\n0042d9c4: ret    0x4\n0042d9c7: and    DWORD PTR [ecx+0x4],0x0\n0042d9cb: mov    eax,ecx\n0042d9cd: and    DWORD PTR [ecx+0x8],0x0\n0042d9d1: mov    DWORD PTR [ecx],0x470a90\n0042d9d7: ret\n0042d9d8: push   ebp\n0042d9d9: mov    ebp,esp\n0042d9db: push   esi\n0042d9dc: push   DWORD PTR [ebp+0x8]\n0042d9df: mov    esi,ecx\n0042d9e1: call   0x401290\n0042d9e6: mov    DWORD PTR [esi],0x470ac8\n0042d9ec: mov    eax,esi\n0042d9ee: pop    esi\n0042d9ef: pop    ebp\n0042d9f0: ret    0x4\n0042d9f3: push   ebp\n0042d9f4: mov    ebp,esp\n0042d9f6: push   ecx\n0042d9f7: push   esi\n0042d9f8: push   DWORD PTR [ebp+0x8]\n0042d9fb: mov    esi,ecx\n0042d9fd: mov    DWORD PTR [ebp-0x4],esi",
+    "0x450254-0x4502b0": "00450254: push   0x8\n00450256: push   0x483aa8\n0045025b: call   0x444fd0\n00450260: call   0x45845f\n00450265: mov    esi,DWORD PTR [eax+0xc]\n00450268: test   esi,esi\n0045026a: je     0x45028a\n0045026c: and    DWORD PTR [ebp-0x4],0x0\n00450270: mov    ecx,esi\n00450272: call   DWORD PTR ds:0x46e2ac\n00450278: call   esi\n0045027a: jmp    0x450283\n0045027c: xor    eax,eax\n0045027e: inc    eax\n0045027f: ret\n00450280: mov    esp,DWORD PTR [ebp-0x18]\n00450283: mov    DWORD PTR [ebp-0x4],0xfffffffe\n0045028a: call   0x451b2a\n0045028f: int3\n00450290: mov    eax,ds:0x4894b8\n00450295: push   esi\n00450296: push   0x3\n00450298: pop    esi\n00450299: test   eax,eax\n0045029b: jne    0x4502a4\n0045029d: mov    eax,0x200\n004502a2: jmp    0x4502aa\n004502a4: cmp    eax,esi\n004502a6: jge    0x4502af\n004502a8: mov    eax,esi\n004502aa: mov    ds:0x4894b8,eax\n004502af: push   0x4"
+  },
+  "main_backedges": [
+    "0040d4fe: jb     0x40d4e1",
+    "0040d553: jb     0x40d543",
+    "0040da58: jne    0x40da48",
+    "0040e090: jb     0x40e013",
+    "0040e2ef: jmp    0x40de51",
+    "0040e7c1: jmp    0x40d8e0",
+    "0040e7cc: jmp    0x40e73d",
+    "0040eb6d: jbe    0x40e73d",
+    "0040eb7a: jmp    0x40de61",
+    "0040eb85: jmp    0x40e73d",
+    "0040f01d: jmp    0x40e738",
+    "0040f028: jmp    0x40e73d",
+    "0040f1ab: jmp    0x40e73d",
+    "0040f1b6: jmp    0x40e73d",
+    "0040f2d5: jmp    0x40e73d",
+    "0040f2e0: jmp    0x40e73d",
+    "0040f39a: jmp    0x40e738",
+    "0040f3a5: jmp    0x40e73d",
+    "0040f3c2: je     0x40e744",
+    "0040f574: jmp    0x40e73d",
+    "0040f592: jmp    0x40d8e0"
+  ],
+  "main_FuncInfo": {
+    "magic": "0x19930522",
+    "maxState": 128,
+    "pUnwindMap": "0x480248",
+    "nTryBlocks": 10,
+    "pTryBlockMap": "0x480648",
+    "nIPMapEntries": 0,
+    "pIPMap": "0x0",
+    "pESTypeList": "0x0",
+    "EHFlags": "0x1"
+  },
+  "try_blocks": [
+    {
+      "tryLow": 23,
+      "tryHigh": 32,
+      "catchHigh": 33,
+      "nCatches": 1,
+      "pHandlerArray": "0x480710",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe9bc",
+          "addressOfHandler": "0x40de8e"
+        }
+      ]
+    },
+    {
+      "tryLow": 35,
+      "tryHigh": 44,
+      "catchHigh": 45,
+      "nCatches": 1,
+      "pHandlerArray": "0x480720",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe9b8",
+          "addressOfHandler": "0x40e2f4"
+        }
+      ]
+    },
+    {
+      "tryLow": 47,
+      "tryHigh": 54,
+      "catchHigh": 55,
+      "nCatches": 1,
+      "pHandlerArray": "0x480730",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe9b4",
+          "addressOfHandler": "0x40e7c6"
+        }
+      ]
+    },
+    {
+      "tryLow": 57,
+      "tryHigh": 64,
+      "catchHigh": 65,
+      "nCatches": 1,
+      "pHandlerArray": "0x480740",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe9b0",
+          "addressOfHandler": "0x40eb7f"
+        }
+      ]
+    },
+    {
+      "tryLow": 67,
+      "tryHigh": 87,
+      "catchHigh": 88,
+      "nCatches": 1,
+      "pHandlerArray": "0x480750",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe9ac",
+          "addressOfHandler": "0x40f022"
+        }
+      ]
+    },
+    {
+      "tryLow": 89,
+      "tryHigh": 103,
+      "catchHigh": 104,
+      "nCatches": 1,
+      "pHandlerArray": "0x480760",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe9a8",
+          "addressOfHandler": "0x40f1b0"
+        }
+      ]
+    },
+    {
+      "tryLow": 105,
+      "tryHigh": 108,
+      "catchHigh": 109,
+      "nCatches": 1,
+      "pHandlerArray": "0x480770",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe9a4",
+          "addressOfHandler": "0x40f2da"
+        }
+      ]
+    },
+    {
+      "tryLow": 110,
+      "tryHigh": 112,
+      "catchHigh": 113,
+      "nCatches": 1,
+      "pHandlerArray": "0x480780",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe9a0",
+          "addressOfHandler": "0x40f39f"
+        }
+      ]
+    },
+    {
+      "tryLow": 114,
+      "tryHigh": 125,
+      "catchHigh": 126,
+      "nCatches": 1,
+      "pHandlerArray": "0x480790",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe99c",
+          "addressOfHandler": "0x40f579"
+        }
+      ]
+    },
+    {
+      "tryLow": 16,
+      "tryHigh": 126,
+      "catchHigh": 127,
+      "nCatches": 1,
+      "pHandlerArray": "0x4807a0",
+      "handlers": [
+        {
+          "adjectives": "0x9",
+          "pType": "0x48735c",
+          "type_name": ".?AVexception@std@@",
+          "dispCatchObj": "0xffffe998",
+          "addressOfHandler": "0x40f57f"
+        }
+      ]
+    }
+  ]
+}

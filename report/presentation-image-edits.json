@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "edits": [
+    {
+      "file": "screenshots/native-controlled-ss1-viewer-edited.png",
+      "sha256": "959a88cea2a23b81f44a5bb9b7ab1e881f55d69d7f2ad202d185020cbacd779a",
+      "source_file": "screenshots/native-controlled-ss1-viewer.png",
+      "source_sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+      "edit": "Removed the text line \"No credentials or personal data\" for presentation.",
+      "tool": "image_gen"
+    }
+  ]
+}

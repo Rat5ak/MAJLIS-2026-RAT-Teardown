@@ -1,0 +1,49 @@
+{
+  "application": "Wireshark",
+  "capture_command": "import -silent -window <verified Wireshark window> <guest PNG>",
+  "classification": "actual_completed_lab_capture",
+  "completed_utc": "2026-10-01T13:24:40.214556+00:00",
+  "controller_lock_held_through_completion": true,
+  "controller_processes_observed": {
+    "capture": "absent",
+    "controller": "absent",
+    "fixture": "absent"
+  },
+  "controller_status": "stopped",
+  "created_utc": "2026-10-01T13:24:37.624321+00:00",
+  "display": ":99",
+  "display_filter": "http && ip.addr == 172.30.77.2",
+  "display_is_private_xvfb": true,
+  "frames": 126,
+  "guest_session": "/home/kali/majlis-analysis/dynamic/wireshark-evidence/baseline-20261001T131627068490Z-http-overview-20261001T132437429141Z",
+  "guest_view_capture": "/home/kali/majlis-analysis/dynamic/wireshark-evidence/baseline-20261001T131627068490Z-http-overview-20261001T132437429141Z/baseline-actual-lab-capture-http-overview.pcapng",
+  "guest_view_capture_sha256": "546ed66f07b4e4fbf03129355fc2591a3953194a84e623824b8021485816565f",
+  "image_processing_performed": false,
+  "matching_frames": 22,
+  "original_capture_hashes_preserved": true,
+  "packet_bytes_pane_enabled": false,
+  "phase": "baseline",
+  "policy": "Original captures and derived captures remain inside Kali; PNG is a direct real Wireshark window capture with no editing.",
+  "run_id": "baseline-20261001T131627068490Z",
+  "schema": 1,
+  "screenshot_bytes": 273931,
+  "screenshot_dimensions": [
+    1900,
+    1000
+  ],
+  "screenshot_guest_path": "/home/kali/majlis-analysis/dynamic/wireshark-evidence/baseline-20261001T131627068490Z-http-overview-20261001T132437429141Z/baseline-actual-lab-capture-wireshark-http-overview.png",
+  "screenshot_name": "baseline-actual-lab-capture-wireshark-http-overview.png",
+  "screenshot_sha256": "446fbf93c855744362b03ceab4e3d0682378d02a7a00b44ddb0c9cd4bd0764f9",
+  "source_captures": [
+    {
+      "bytes": 13492,
+      "guest_path": "/home/kali/majlis-analysis/dynamic/captures/baseline-20261001T131627068490Z/private/network.pcap0",
+      "mtime_ns": 1790860922963927245,
+      "sha256": "3773a908c6101f649e06e3c4aac811a0ed97f55f152da3094ef05aad592ababa"
+    }
+  ],
+  "status": "screenshot_saved_guest_only",
+  "view": "http-overview",
+  "window_id": "6291463",
+  "window_title": "baseline-actual-lab-capture-http-overview.pcapng"
+}

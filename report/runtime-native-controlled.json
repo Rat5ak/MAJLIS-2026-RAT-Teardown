@@ -1,0 +1,871 @@
+{
+  "controller_status": "stopped",
+  "event_counts": {
+    "client_pinned": 1,
+    "fixed_sequence_complete": 1,
+    "fixture_dispatched": 9,
+    "fixture_result": 9,
+    "fixture_start": 1,
+    "inert_download_served": 1,
+    "mode": 1,
+    "poll_result": 26,
+    "request": 29,
+    "upload_saved": 2
+  },
+  "fixture_events": [
+    {
+      "command_type": "GDR",
+      "event": "fixture_dispatched",
+      "fixture_index": 0,
+      "time": "2026-10-01T14:16:05.464766+00:00"
+    },
+    {
+      "command_type": "GDR",
+      "event": "fixture_result",
+      "fixture_index": 0,
+      "result_type": "drive_array",
+      "time": "2026-10-01T14:16:23.481304+00:00"
+    },
+    {
+      "command_type": "FDD",
+      "event": "fixture_dispatched",
+      "fixture_index": 1,
+      "time": "2026-10-01T14:16:55.525635+00:00"
+    },
+    {
+      "command_type": "FDD",
+      "event": "fixture_result",
+      "fixture_index": 1,
+      "result_type": "directory_array",
+      "time": "2026-10-01T14:16:55.541828+00:00"
+    },
+    {
+      "command_type": "msg",
+      "event": "fixture_dispatched",
+      "fixture_index": 2,
+      "time": "2026-10-01T14:17:47.591123+00:00"
+    },
+    {
+      "command_type": "msg",
+      "event": "fixture_result",
+      "fixture_index": 2,
+      "result_type": "fixed_shell_marker",
+      "time": "2026-10-01T14:17:47.702792+00:00"
+    },
+    {
+      "command_type": "ms2",
+      "event": "fixture_dispatched",
+      "fixture_index": 3,
+      "time": "2026-10-01T14:18:33.626451+00:00"
+    },
+    {
+      "command_type": "ms2",
+      "event": "fixture_result",
+      "fixture_index": 3,
+      "result_type": "fixed_shell_marker",
+      "time": "2026-10-01T14:18:37.465689+00:00"
+    },
+    {
+      "command_type": "DWW",
+      "event": "fixture_dispatched",
+      "fixture_index": 4,
+      "time": "2026-10-01T14:19:13.682401+00:00"
+    },
+    {
+      "command_type": "DWW",
+      "event": "fixture_result",
+      "fixture_index": 4,
+      "result_type": "inert_file_present_in_listing",
+      "time": "2026-10-01T14:19:36.714026+00:00"
+    },
+    {
+      "command_type": "UPP",
+      "event": "fixture_dispatched",
+      "fixture_index": 5,
+      "time": "2026-10-01T14:20:12.757790+00:00"
+    },
+    {
+      "event": "upload_saved",
+      "file_sha256": "7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23",
+      "file_size": 36,
+      "fixture_index": 5,
+      "time": "2026-10-01T14:20:12.773756+00:00"
+    },
+    {
+      "command_type": "UPP",
+      "event": "fixture_result",
+      "fixture_index": 5,
+      "result_type": "inert_file_upload",
+      "time": "2026-10-01T14:20:12.773809+00:00"
+    },
+    {
+      "command_type": "DEL",
+      "event": "fixture_dispatched",
+      "fixture_index": 6,
+      "time": "2026-10-01T14:20:50.820396+00:00"
+    },
+    {
+      "command_type": "DEL",
+      "event": "fixture_result",
+      "fixture_index": 6,
+      "result_type": "inert_file_absent_in_listing",
+      "time": "2026-10-01T14:21:05.841135+00:00"
+    },
+    {
+      "command_type": "RUN",
+      "event": "fixture_dispatched",
+      "fixture_index": 7,
+      "time": "2026-10-01T14:21:45.883924+00:00"
+    },
+    {
+      "command_type": "RUN",
+      "event": "fixture_result",
+      "fixture_index": 7,
+      "result_type": "process_success",
+      "time": "2026-10-01T14:22:04.397704+00:00"
+    },
+    {
+      "command_type": "SS1",
+      "event": "fixture_dispatched",
+      "fixture_index": 8,
+      "time": "2026-10-01T14:22:48.439939+00:00"
+    },
+    {
+      "event": "upload_saved",
+      "file_sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+      "file_size": 123772,
+      "fixture_index": 8,
+      "time": "2026-10-01T14:22:48.688500+00:00"
+    },
+    {
+      "command_type": "SS1",
+      "event": "fixture_result",
+      "fixture_index": 8,
+      "result_type": "screenshot_upload",
+      "time": "2026-10-01T14:22:48.688549+00:00"
+    },
+    {
+      "event": "fixed_sequence_complete",
+      "time": "2026-10-01T14:22:48.688579+00:00"
+    }
+  ],
+  "generated_utc": "2026-10-01T14:24:19.415703+00:00",
+  "pcaps": [
+    {
+      "bytes": 160556,
+      "foreign_ipv4_frames": 0,
+      "frames": 310,
+      "http_request_methods": {
+        "GET": 1,
+        "POST": 28
+      },
+      "http_response_codes": {
+        "200": 29
+      },
+      "name": "network.pcap0",
+      "sha256": "d31e7712846f44773b59c2f1ff677d3fd9f9b7f4f0a871cd033d2dc7f9e3fdef",
+      "tcp_destination_ports": {
+        "49684": 2,
+        "49685": 2,
+        "49686": 5,
+        "49687": 5,
+        "49688": 5,
+        "49689": 5,
+        "49690": 5,
+        "49691": 5,
+        "49692": 5,
+        "49693": 5,
+        "49694": 5,
+        "49695": 5,
+        "49696": 5,
+        "49697": 5,
+        "49698": 5,
+        "49699": 5,
+        "49700": 5,
+        "49701": 5,
+        "49702": 5,
+        "49703": 5,
+        "49704": 5,
+        "49705": 5,
+        "49706": 5,
+        "49707": 5,
+        "49708": 5,
+        "49709": 5,
+        "49710": 5,
+        "49711": 5,
+        "49712": 5,
+        "49713": 8,
+        "49714": 5,
+        "80": 156
+      },
+      "tshark_exit": 0
+    }
+  ],
+  "phase": "controlled",
+  "polls": [
+    {
+      "body_sha256": "2458b8b655a3739e7d13b92bd5c2506f4f8d13e25a4fb01326e7fb33ce22144c",
+      "body_size": 45,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "json_valid": true,
+      "request_id": "000001",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:16:05.463888+00:00",
+      "value_type": "NoneType"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "874414a12708c926a6ef13529dff527d2dbd759f94c889c18a122b818f059116",
+      "body_size": 89,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 1,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [
+        {
+          "fmod": 0,
+          "isDir": true,
+          "name": "C:\\",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000002",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:16:23.481013+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "874414a12708c926a6ef13529dff527d2dbd759f94c889c18a122b818f059116",
+      "body_size": 89,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 1,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [
+        {
+          "fmod": 0,
+          "isDir": true,
+          "name": "C:\\",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000003",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:16:41.502243+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "874414a12708c926a6ef13529dff527d2dbd759f94c889c18a122b818f059116",
+      "body_size": 89,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 1,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [
+        {
+          "fmod": 0,
+          "isDir": true,
+          "name": "C:\\",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000004",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:16:55.525412+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+      "body_size": 185,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 2,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000005",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:16:55.541655+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+      "body_size": 185,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 2,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000006",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:17:10.555254+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+      "body_size": 185,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 2,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000007",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:17:24.575110+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+      "body_size": 185,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 2,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000008",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:17:47.590860+00:00",
+      "value_type": "list"
+    },
+    {
+      "body_sha256": "e9c1c503d5cf5625863821003e764238320effb0dffab0f3bc827e8b61849650",
+      "body_size": 66,
+      "client_id_matches_lab": true,
+      "cmd_marker_matches": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "json_valid": true,
+      "powershell_marker_matches": false,
+      "request_id": "000009",
+      "response_type": "msg",
+      "string_length": 21,
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:17:47.702551+00:00",
+      "value_type": "str"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "6e93bcb4d653bbe7679a75b7964a731960421f896aebb9d367995c174a423ec8",
+      "body_size": 43,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 0,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000010",
+      "response_type": "msg",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:18:11.605880+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "6e93bcb4d653bbe7679a75b7964a731960421f896aebb9d367995c174a423ec8",
+      "body_size": 43,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 0,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000011",
+      "response_type": "msg",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:18:33.626273+00:00",
+      "value_type": "list"
+    },
+    {
+      "body_sha256": "30cbe4850b2a29283107a7151bc4fd30f40c9a8d3c28de76219ccf5095f53da8",
+      "body_size": 65,
+      "client_id_matches_lab": true,
+      "cmd_marker_matches": false,
+      "connection_close": true,
+      "content_type_matches": true,
+      "json_valid": true,
+      "powershell_marker_matches": true,
+      "request_id": "000012",
+      "response_type": "msg",
+      "string_length": 20,
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:18:37.465478+00:00",
+      "value_type": "str"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "6e93bcb4d653bbe7679a75b7964a731960421f896aebb9d367995c174a423ec8",
+      "body_size": 43,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 0,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000013",
+      "response_type": "msg",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:18:57.654003+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "6e93bcb4d653bbe7679a75b7964a731960421f896aebb9d367995c174a423ec8",
+      "body_size": 43,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 0,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000014",
+      "response_type": "msg",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:19:13.682185+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "4d809c2ec64d0c985d5f7253bf94223f8e545dbe01570089c8cfe520265ad6fd",
+      "body_size": 271,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 3,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 14:19:10",
+          "isDir": false,
+          "name": "received-from-lab.txt",
+          "size": 36
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": true,
+      "json_valid": true,
+      "request_id": "000016",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:19:36.713805+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "4d809c2ec64d0c985d5f7253bf94223f8e545dbe01570089c8cfe520265ad6fd",
+      "body_size": 271,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 3,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 14:19:10",
+          "isDir": false,
+          "name": "received-from-lab.txt",
+          "size": 36
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": true,
+      "json_valid": true,
+      "request_id": "000017",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:19:52.741368+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "4d809c2ec64d0c985d5f7253bf94223f8e545dbe01570089c8cfe520265ad6fd",
+      "body_size": 271,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 3,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 14:19:10",
+          "isDir": false,
+          "name": "received-from-lab.txt",
+          "size": 36
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": true,
+      "json_valid": true,
+      "request_id": "000018",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:20:12.757577+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "83e3988d8ed1390d191d4891ccacd0e7e925bbd28404c3176e07ad6a45fb89dd",
+      "body_size": 40,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 0,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000020",
+      "response_type": "",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:20:30.796849+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "83e3988d8ed1390d191d4891ccacd0e7e925bbd28404c3176e07ad6a45fb89dd",
+      "body_size": 40,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 0,
+      "fixed_alpha_file_present": false,
+      "fixed_entries": [],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000021",
+      "response_type": "",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:20:50.820176+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+      "body_size": 185,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 2,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000022",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:21:05.840943+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+      "body_size": 185,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 2,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000023",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:21:24.864703+00:00",
+      "value_type": "list"
+    },
+    {
+      "all_entries_expected_fields": true,
+      "body_sha256": "0933a7b1cf5644c56fb5aa75b695f7838e43b8cbc94397ae341a6ab0d9a85a09",
+      "body_size": 185,
+      "client_id_matches_lab": true,
+      "connection_close": true,
+      "content_type_matches": true,
+      "entry_count": 2,
+      "fixed_alpha_file_present": true,
+      "fixed_entries": [
+        {
+          "fmod": "2026-10-01 12:57:49",
+          "isDir": false,
+          "name": "alpha.txt",
+          "size": 23
+        },
+        {
+          "fmod": "2026-10-01 22:17:58",
+          "isDir": true,
+          "name": "subdir",
+          "size": 0
+        }
+      ],
+      "fixed_lab_file_present": false,
+      "json_valid": true,
+      "request_id": "000024",
+      "response_type": "fdd",
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:21:45.883701+00:00",
+      "value_type": "list"
+    },
+    {
+      "body_sha256": "9417d7144de7ba3eca7748f1d481ee444e29eb8d5b3c431d0f22f076fe57085c",
+      "body_size": 50,
+      "client_id_matches_lab": true,
+      "cmd_marker_matches": false,
+      "connection_close": true,
+      "content_type_matches": true,
+      "json_valid": true,
+      "powershell_marker_matches": false,
+      "process_status": "success",
+      "request_id": "000025",
+      "response_type": "sts",
+      "string_length": 7,
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:22:04.397527+00:00",
+      "value_type": "str"
+    },
+    {
+      "body_sha256": "9417d7144de7ba3eca7748f1d481ee444e29eb8d5b3c431d0f22f076fe57085c",
+      "body_size": 50,
+      "client_id_matches_lab": true,
+      "cmd_marker_matches": false,
+      "connection_close": true,
+      "content_type_matches": true,
+      "json_valid": true,
+      "powershell_marker_matches": false,
+      "process_status": "success",
+      "request_id": "000026",
+      "response_type": "sts",
+      "string_length": 7,
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:22:26.417305+00:00",
+      "value_type": "str"
+    },
+    {
+      "body_sha256": "9417d7144de7ba3eca7748f1d481ee444e29eb8d5b3c431d0f22f076fe57085c",
+      "body_size": 50,
+      "client_id_matches_lab": true,
+      "cmd_marker_matches": false,
+      "connection_close": true,
+      "content_type_matches": true,
+      "json_valid": true,
+      "powershell_marker_matches": false,
+      "process_status": "success",
+      "request_id": "000027",
+      "response_type": "sts",
+      "string_length": 7,
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:22:48.439607+00:00",
+      "value_type": "str"
+    },
+    {
+      "body_sha256": "a76b40ee552bff9acf0bea1d5177e64070f6bf4d549fa2f80ddd622e2db3242a",
+      "body_size": 40,
+      "client_id_matches_lab": true,
+      "cmd_marker_matches": false,
+      "connection_close": true,
+      "content_type_matches": true,
+      "json_valid": true,
+      "powershell_marker_matches": false,
+      "request_id": "000029",
+      "response_type": "",
+      "string_length": 0,
+      "two_member_envelope": true,
+      "utc": "2026-10-01T14:23:12.709342+00:00",
+      "value_type": "str"
+    }
+  ],
+  "raw_evidence_exported": false,
+  "run_id": "controlled-20261001T141355136847Z",
+  "saved_uploads": [
+    {
+      "bytes": 36,
+      "inert_fixture_matches": true,
+      "name": "fixture-05-7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23.bin",
+      "sha256": "7e00b67b299f58c522e1d187c73c2f7265213162e100d9f0802e2c4cfac55f23"
+    },
+    {
+      "bytes": 123772,
+      "decoded_image_format": "JPEG",
+      "height": 768,
+      "inert_fixture_matches": false,
+      "name": "fixture-08-d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9.bin",
+      "sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+      "width": 1024
+    }
+  ],
+  "schema": 1,
+  "scope": "Offline fixture capture metadata. Specimen execution must be established by the paired Windows launch record; this is not recovered attacker tasking.",
+  "upload_requests": [
+    {
+      "body_sha256": "936de37465d4a46cac5ea281b9c7ba9b591ca9667cf98b40d75391d287a803b4",
+      "body_size": 239,
+      "boundary_matches_static": true,
+      "client_id_matches_lab": true,
+      "otp_matches_static": true,
+      "request_id": "000019",
+      "utc": "2026-10-01T14:20:12.772748+00:00"
+    },
+    {
+      "body_sha256": "73991d5ddac4abc9f1edd763530cbf376ffd7a843f92add81115cc94a8debfca",
+      "body_size": 123960,
+      "boundary_matches_static": true,
+      "client_id_matches_lab": true,
+      "otp_matches_static": true,
+      "request_id": "000028",
+      "utc": "2026-10-01T14:22:48.684625+00:00"
+    }
+  ]
+}

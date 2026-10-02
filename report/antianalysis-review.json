@@ -1,0 +1,190 @@
+{
+  "status": "independent static anti-analysis review, 2026-10-01",
+  "sample_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+  "verdict": "Application VM detection or VM-conditioned evasion has not been established in the reviewed specimen. Unconditional delayed startup and recurring randomized polling are established. Debugger and CPUID references reviewed below are library diagnostics/CPU-feature initialization, not demonstrated application VM gates.",
+  "execution_and_containment": {
+    "specimen_executed": false,
+    "network_changes": false,
+    "configuration_changes": false,
+    "ghidra_project_mode": "readOnly",
+    "network_snapshot": "Kali172.30.77.1 private172.30.77.0/24 route only, plus loopback; no default gateway in read-only snapshot. Root separately controls nftables isolation."
+  },
+  "evidence_scope": [
+    "Reviewed complete previously recovered main behavior (0x40d470), startup and backedges, sleep/clock/random helpers, identity collector, static decoder uses and application command dispatch.",
+    "Enumerated all three direct IsDebuggerPresent IAT references and decompiled their enclosing functions; reviewed callers and outcome semantics.",
+    "Enumerated CPUID, RDTSC/RDTSCP, descriptor-table and port-I/O candidate mnemonics in full guest disassembly; used Ghidra instruction/data classification and containing functions to distinguish real code from linear disassembly artifacts.",
+    "Reviewed relevant import references and runtime GetProcAddress use; examined GetSystemInfo use, timing clock wrappers, CPU initializer, and TLS callback metadata.",
+    "Absence of VM-related strings is supplementary only; conclusions primarily use reachable control flow and classified reference semantics."
+  ],
+  "actual_application_behavior": [
+    {
+      "finding": "Unconditional startup delay",
+      "evidence": [
+        "0x40d4a8 stores18seconds;0x40d4c4 invokes sleep",
+        "0x40d4c9 random seed via std::_Random_device",
+        "0x40d528 random generator;0x40d533 multiplier73 and0x40d555-0x40d56d offset41 give41through113seconds",
+        "0x40d573 invokes second sleep",
+        "0x40d8b3 stores5seconds;0x40d8c7 third sleep",
+        "0x40d973 enters first poll"
+      ],
+      "interpretation": "Requested sleep budget totals64through136seconds before first C2 attempt, plus computation/config/identity overhead. No VM/debugger/environment predicate selects these delays in main. Delay can reduce visibility in short runs; deliberate VM detection is not proven."
+    },
+    {
+      "finding": "Deadline-based sleep helper",
+      "evidence": [
+        "0x41a3c0 computes now+duration using clock0x402c10",
+        "0x41a3f9 onwards converts seconds to nanoseconds and constructs deadline",
+        "0x41a43c onwards rechecks clock until deadline; Sleep called through0x4303c5 thunk",
+        "0x402c10 clock uses QueryPerformanceFrequency wrapper0x42d71b and QueryPerformanceCounter wrapper0x42d704"
+      ],
+      "interpretation": "Clock comparisons govern completion of the requested sleep. No short-elapsed-time predicate that labels VM/debugger and exits, suppresses C2, or changes command dispatch was found. Deadline waiting is consistent with standard chrono sleep behavior; a timing API reference alone does not demonstrate an anti-VM check."
+    },
+    {
+      "finding": "Recurring jitter",
+      "evidence": [
+        "0x40e752-0x40e777 uniform random14through24seconds and sleep",
+        "0x40e7c1 backedge to poll0x40d8e0"
+      ],
+      "interpretation": "Polling jitter, not a hardware-conditioned branch. Main std::exception continuation can retry without passing normal jitter."
+    },
+    {
+      "finding": "Identity collection",
+      "evidence": [
+        "0x40c5e0 GetUserNameW",
+        "0x40c608 GetComputerNameW",
+        "guest identity C55-72 only fills strings when API succeeds, then concatenates with underscore"
+      ],
+      "interpretation": "Collects client ID. No comparison against analyst usernames, machine names, or VM-associated values was found in this helper. API failure can leave a component empty; it does not implement a VM-name abort."
+    },
+    {
+      "finding": "Temporary string work",
+      "evidence": [
+        "0x40d370 appends repeated characters to a temporary string and destroys it",
+        "main calls0x40d370 at0x40d523,0x40d8d1,0x40d8e9 and dispatch paths"
+      ],
+      "interpretation": "Additional work/noise; no environment sensing in reviewed helper."
+    },
+    {
+      "finding": "Screen/environment-dependent functionality",
+      "evidence": [
+        "0x40c8b2 GetSystemMetrics reference and dimensions0x4e/0x4f",
+        "0x40c8db metrics reference in monitor-information path",
+        "0x40f42f uses stat mode directory predicate for screenshot path"
+      ],
+      "interpretation": "Screenshot sizing/path selection is environment-dependent operational behavior. No VM-resolution rejection or monitor-count gate that disables the backdoor was established. Screenshot capture failure does not establish VM detection."
+    }
+  ],
+  "debugger_reference_audit": [
+    {
+      "call_va": "0x444112",
+      "function": "ATL::CAtlBaseModule constructor0x4440df",
+      "evidence": [
+        "Ghidra library single-match classification",
+        "Critical-section initialization0x407740 must fail (<0) before debugger query",
+        "Debugger-positive path only emits ERROR : Unable to initialize critical section in CAtlBaseModule via OutputDebugStringW",
+        "Failure flag0x489cc4 set regardless of debugger result"
+      ],
+      "classification": "Library failure diagnostic; no authored debugger-conditioned backdoor exit proved. This can execute during initialization only if critical-section initialization fails."
+    },
+    {
+      "call_va": "0x4450fd",
+      "function": "CRT fatal-reporting function0x445025",
+      "evidence": [
+        "Callers include __scrt_initialize_onexit_tables0x444647 and CRT startup0x4448e9",
+        "IsProcessorFeaturePresent(0x17) leads fast-fail int0x29",
+        "Fallback builds STATUS_FATAL_APP_EXIT0x40000015 exception, calls UnhandledExceptionFilter, uses debugger result for reporting path"
+      ],
+      "classification": "CRT fatal-app-exit/fast-fail fallback, not application anti-debug branch. It is associated with runtime failure handling."
+    },
+    {
+      "call_va": "0x4519ba",
+      "function": "__acrt_call_reportfault0x4518c2",
+      "evidence": [
+        "Ghidra VisualStudio2019 library single-match",
+        "Caller __invoke_watson0x451aeb",
+        "Calls SetUnhandledExceptionFilter/UnhandledExceptionFilter; debugger result changes reportfault behavior"
+      ],
+      "classification": "CRT invalid-parameter/crash reporting. No malware-authored debugger gate demonstrated."
+    }
+  ],
+  "cpu_and_vm_instruction_audit": {
+    "cpuid_sites": [
+      "0x444b9b",
+      "0x444bd7",
+      "0x444c4e",
+      "0x444c8a",
+      "0x444cb5"
+    ],
+    "function": "0x444b6c called by __scrt_initialize_crt0x44460e at0x44461e",
+    "reviewed_semantics": "Checks processor feature support; queries CPU leaves0,1,7(subleaves0/1),0x24; uses Intel vendor/model and ISA feature masks/XCR state to set globals0x4893ec,0x4861c8,0x4861d0 and returns0. Consistent with CRT ISA initialization (semantic inference supported by caller and global use).",
+    "vm_specific_tests": "No CPUID hypervisor leaf0x40000000, leaf1 ECXbit31 test, VMware/VirtualBox vendor check, or conditional application shutdown was found in this reviewed initializer.",
+    "rdtsc_rdtscp": "No candidate mnemonic found in guest linear disassembly; no timestamp-instruction based application threshold established.",
+    "peb_direct_checks": "No fs:0x30/gs:0x60 mnemonic references found in full guest disassembly. This scan alone is not a universal proof of absence of all PEB checks.",
+    "port_io_false_positives": [
+      {
+        "va": "0x4031b0",
+        "classification": "Ghidra data, not an instruction"
+      },
+      {
+        "va": "0x403324",
+        "classification": "Ghidra data, not an instruction"
+      },
+      {
+        "va": "0x40f5e8",
+        "classification": "Not a Ghidra instruction or function; lies in main switch continuation-table area0x40f5d4"
+      },
+      {
+        "va": "0x418778",
+        "classification": "Ghidra data, not an instruction"
+      },
+      {
+        "va": "0x41fbf2",
+        "classification": "Not an instruction boundary; within function0x41fbf0 after its entry prologue. Linear-disassembly in al,dx is an artifact."
+      }
+    ],
+    "descriptor_table_probes": "No SIDT/SGDT/SLDT/SMSW candidate mnemonics found in full guest disassembly; no authored probe established."
+  },
+  "other_environment_api_audit": [
+    {
+      "api": "GetSystemInfo",
+      "reference": "0x448ae0",
+      "function": "0x448aa3",
+      "semantics": "Uses dwPageSize with VirtualQuery/VirtualAlloc/VirtualProtect for stack guard restoration; it does not compare processor count/RAM to reject analysis systems."
+    },
+    {
+      "api": "QueryPerformanceCounter",
+      "reference": "0x445252",
+      "semantics": "CRT security-cookie entropy path using thread/process IDs and address entropy; separate clock wrapper0x42d704 supports sleep."
+    },
+    {
+      "api": "GetProcAddress/GetModuleHandleW",
+      "references": [
+        "0x4304ec",
+        "0x4304fd"
+      ],
+      "semantics": "Resolves kernel32 GetSystemTimePreciseAsFileTime and GetTempPath2W. Other reviewed resolvers are CRT FLS/locale/critical-section compatibility and CorExitProcess runtime exit handling; no dynamically resolved VM/debugger probe established."
+    },
+    {
+      "api": "TLS callbacks",
+      "semantics": "PE has no callback addresses in inspected TLS metadata. Entry0x444a65 reaches CRT startup and then main0x40d470."
+    }
+  ],
+  "confidence_limits": [
+    "High confidence for classification of the three debugger references, unconditional delay constants, normal jitter, and reviewed CPU initializer semantics.",
+    "No runtime observation is part of this audit; whether the sample behaves differently in a particular VM remains untested here.",
+    "Static review is bounded to visible specimen code and recovered application behavior; it does not prove absence of every conceivable indirect/exception-based environment effect.",
+    "No further payload was obtained or executed in this lane. Secondary scripts or operator commands could implement checks independent of this EXE.",
+    "An absent import/string/instruction match is only supplementary evidence, not proof of universal absence.",
+    "A VM run with no callback before136seconds plus setup/network overhead would not by itself establish evasion. Runtime failure, DNS/transport issues and normal delays need separate evidence."
+  ],
+  "recommended_report_language": "Static analysis found64\u2013136seconds of unconditional startup sleeps and14\u201324second polling jitter. Application VM-detection logic was not established. IsDebuggerPresent and CPUID references examined were ATL/CRT diagnostics and CPU feature initialization.",
+  "evidence_artifacts": [
+    "antianalysis-static-probe.json",
+    "antianalysis-function-map.txt",
+    "antianalysis-snippets.json",
+    "antianalysis-selected.json",
+    "lifecycle-startup.json",
+    "lifecycle-loop.json"
+  ],
+  "guest_full_evidence": "Guest-only antianalysis-ghidra/*.c, existing ghidra-protocol C and binary-objdump.txt. Host exports are bounded semantic notes/mnemonic excerpts; no full functions or sample bytes."
+}

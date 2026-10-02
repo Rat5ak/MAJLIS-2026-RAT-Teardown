@@ -1,0 +1,20 @@
+{
+    "status":  "success",
+    "recorded_utc":  "2026-10-01T15:01:16.0760929Z",
+    "case_id":  "majlis-2026-analysis-20261001",
+    "guest_id":  "14d36378-76f4-4bf7-9f85-2e82f60651a9",
+    "evidence_file_count":  16,
+    "source_bytes":  1237836995,
+    "zip_bytes":  122595772,
+    "zip_sha256":  "f67544712261d4c5e96196e8b47b473023356c032772823d03f5591149885492",
+    "windows_private_zip":  "C:\\Lab\\PrivateExports\\20261001T150014474Z-msi-final-48a6dcc9d17a49e797cdc572c5f17029.zip",
+    "kali_private_zip":  "/home/kali/majlis-analysis/dynamic/windows-evidence/1790866878702582031-f67544712261d4c5e96196e8b47b473023356c032772823d03f5591149885492.zip",
+    "receiver_hash_and_size_verified":  true,
+    "route":  "/windows-evidence",
+    "fixed_peer":  "172.30.77.1:8080",
+    "guest_to_guest_only":  true,
+    "raw_evidence_safe_for_host_copy":  false,
+    "host_copy_allowlist":  "this export-status JSON only",
+    "network_or_execution_settings_changed":  false,
+    "specimens_launched_by_helper":  false
+}

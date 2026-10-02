@@ -1,0 +1,546 @@
+{
+  "string_pool": {
+    "codepage": 1252,
+    "flags": 0,
+    "count": 770,
+    "consumed_text_bytes": 30151,
+    "actual_text_bytes": 30151
+  },
+  "schemas": {
+    "CustomAction": [
+      {
+        "table": "CustomAction",
+        "number": 1,
+        "name": "Action",
+        "type": "0x2d48",
+        "raw_type": 11592
+      },
+      {
+        "table": "CustomAction",
+        "number": 2,
+        "name": "Type",
+        "type": "0x502",
+        "raw_type": 1282
+      },
+      {
+        "table": "CustomAction",
+        "number": 3,
+        "name": "Source",
+        "type": "0x1d48",
+        "raw_type": 7496
+      },
+      {
+        "table": "CustomAction",
+        "number": 4,
+        "name": "Target",
+        "type": "0x1dff",
+        "raw_type": 7679
+      },
+      {
+        "table": "CustomAction",
+        "number": 5,
+        "name": "ExtendedType",
+        "type": "0x1104",
+        "raw_type": 4356
+      }
+    ],
+    "InstallExecuteSequence": [
+      {
+        "table": "InstallExecuteSequence",
+        "number": 1,
+        "name": "Action",
+        "type": "0x2d48",
+        "raw_type": 11592
+      },
+      {
+        "table": "InstallExecuteSequence",
+        "number": 2,
+        "name": "Condition",
+        "type": "0x1dff",
+        "raw_type": 7679
+      },
+      {
+        "table": "InstallExecuteSequence",
+        "number": 3,
+        "name": "Sequence",
+        "type": "0x1502",
+        "raw_type": 5378
+      }
+    ],
+    "Property": [
+      {
+        "table": "Property",
+        "number": 1,
+        "name": "Property",
+        "type": "0x2d48",
+        "raw_type": 11592
+      },
+      {
+        "table": "Property",
+        "number": 2,
+        "name": "Value",
+        "type": "0xf00",
+        "raw_type": 3840
+      }
+    ],
+    "Binary": [
+      {
+        "table": "Binary",
+        "number": 1,
+        "name": "Name",
+        "type": "0x2d48",
+        "raw_type": 11592
+      },
+      {
+        "table": "Binary",
+        "number": 2,
+        "name": "Data",
+        "type": "0x900",
+        "raw_type": 2304
+      }
+    ]
+  },
+  "tables": {
+    "CustomAction": [
+      {
+        "Action": "_9AE88E99_8372_4458_9911_9EC626582345",
+        "Type": 194,
+        "Source": "_2E9D1C8BAC5D0F288E61BF5987C52203",
+        "Target": "",
+        "ExtendedType": null
+      }
+    ],
+    "InstallExecuteSequence": [
+      {
+        "Action": "CostFinalize",
+        "Condition": "",
+        "Sequence": 1000
+      },
+      {
+        "Action": "CostInitialize",
+        "Condition": "",
+        "Sequence": 800
+      },
+      {
+        "Action": "InstallFinalize",
+        "Condition": "",
+        "Sequence": 6600
+      },
+      {
+        "Action": "InstallInitialize",
+        "Condition": "",
+        "Sequence": 1500
+      },
+      {
+        "Action": "InstallValidate",
+        "Condition": "",
+        "Sequence": 1400
+      },
+      {
+        "Action": "CreateShortcuts",
+        "Condition": "",
+        "Sequence": 4500
+      },
+      {
+        "Action": "MsiPublishAssemblies",
+        "Condition": "",
+        "Sequence": 6250
+      },
+      {
+        "Action": "PublishComponents",
+        "Condition": "",
+        "Sequence": 6200
+      },
+      {
+        "Action": "RegisterClassInfo",
+        "Condition": "",
+        "Sequence": 4600
+      },
+      {
+        "Action": "RegisterExtensionInfo",
+        "Condition": "",
+        "Sequence": 4700
+      },
+      {
+        "Action": "RegisterMIMEInfo",
+        "Condition": "",
+        "Sequence": 4900
+      },
+      {
+        "Action": "RegisterProgIdInfo",
+        "Condition": "",
+        "Sequence": 4800
+      },
+      {
+        "Action": "InstallFiles",
+        "Condition": "",
+        "Sequence": 4000
+      },
+      {
+        "Action": "FileCost",
+        "Condition": "",
+        "Sequence": 900
+      },
+      {
+        "Action": "AppSearch",
+        "Condition": "",
+        "Sequence": 100
+      },
+      {
+        "Action": "_9AE88E99_8372_4458_9911_9EC626582345",
+        "Condition": "NOT REMOVE~=\"ALL\"",
+        "Sequence": 5999
+      },
+      {
+        "Action": "FindRelatedProducts",
+        "Condition": "",
+        "Sequence": 200
+      },
+      {
+        "Action": "LaunchConditions",
+        "Condition": "NOT Installed",
+        "Sequence": 400
+      },
+      {
+        "Action": "CCPSearch",
+        "Condition": "NOT Installed",
+        "Sequence": 500
+      },
+      {
+        "Action": "RMCCPSearch",
+        "Condition": "NOT Installed",
+        "Sequence": 600
+      },
+      {
+        "Action": "ValidateProductID",
+        "Condition": "",
+        "Sequence": 700
+      },
+      {
+        "Action": "IsolateComponents",
+        "Condition": "RedirectedDllSupport",
+        "Sequence": 950
+      },
+      {
+        "Action": "SetODBCFolders",
+        "Condition": "NOT Installed",
+        "Sequence": 1100
+      },
+      {
+        "Action": "AllocateRegistrySpace",
+        "Condition": "NOT Installed",
+        "Sequence": 1550
+      },
+      {
+        "Action": "ProcessComponents",
+        "Condition": "",
+        "Sequence": 1600
+      },
+      {
+        "Action": "MsiUnpublishAssemblies",
+        "Condition": "",
+        "Sequence": 1650
+      },
+      {
+        "Action": "UnpublishComponents",
+        "Condition": "",
+        "Sequence": 1700
+      },
+      {
+        "Action": "UnpublishFeatures",
+        "Condition": "",
+        "Sequence": 1800
+      },
+      {
+        "Action": "StopServices",
+        "Condition": "VersionNT",
+        "Sequence": 1900
+      },
+      {
+        "Action": "DeleteServices",
+        "Condition": "VersionNT",
+        "Sequence": 2000
+      },
+      {
+        "Action": "UnregisterComPlus",
+        "Condition": "",
+        "Sequence": 2100
+      },
+      {
+        "Action": "SelfUnregModules",
+        "Condition": "",
+        "Sequence": 2200
+      },
+      {
+        "Action": "UnregisterTypeLibraries",
+        "Condition": "",
+        "Sequence": 2300
+      },
+      {
+        "Action": "RemoveODBC",
+        "Condition": "",
+        "Sequence": 2400
+      },
+      {
+        "Action": "UnregisterFonts",
+        "Condition": "",
+        "Sequence": 2500
+      },
+      {
+        "Action": "RemoveRegistryValues",
+        "Condition": "",
+        "Sequence": 2600
+      },
+      {
+        "Action": "UnregisterClassInfo",
+        "Condition": "",
+        "Sequence": 2700
+      },
+      {
+        "Action": "UnregisterExtensionInfo",
+        "Condition": "",
+        "Sequence": 2800
+      },
+      {
+        "Action": "UnregisterProgIdInfo",
+        "Condition": "",
+        "Sequence": 2900
+      },
+      {
+        "Action": "UnregisterMIMEInfo",
+        "Condition": "",
+        "Sequence": 3000
+      },
+      {
+        "Action": "RemoveIniValues",
+        "Condition": "",
+        "Sequence": 3100
+      },
+      {
+        "Action": "RemoveShortcuts",
+        "Condition": "",
+        "Sequence": 3200
+      },
+      {
+        "Action": "RemoveEnvironmentStrings",
+        "Condition": "",
+        "Sequence": 3300
+      },
+      {
+        "Action": "RemoveDuplicateFiles",
+        "Condition": "",
+        "Sequence": 3400
+      },
+      {
+        "Action": "RemoveFiles",
+        "Condition": "",
+        "Sequence": 3500
+      },
+      {
+        "Action": "RemoveFolders",
+        "Condition": "",
+        "Sequence": 3600
+      },
+      {
+        "Action": "CreateFolders",
+        "Condition": "",
+        "Sequence": 3700
+      },
+      {
+        "Action": "MoveFiles",
+        "Condition": "",
+        "Sequence": 3800
+      },
+      {
+        "Action": "PatchFiles",
+        "Condition": "",
+        "Sequence": 4090
+      },
+      {
+        "Action": "DuplicateFiles",
+        "Condition": "",
+        "Sequence": 4210
+      },
+      {
+        "Action": "BindImage",
+        "Condition": "",
+        "Sequence": 4300
+      },
+      {
+        "Action": "WriteRegistryValues",
+        "Condition": "",
+        "Sequence": 5000
+      },
+      {
+        "Action": "WriteIniValues",
+        "Condition": "",
+        "Sequence": 5100
+      },
+      {
+        "Action": "WriteEnvironmentStrings",
+        "Condition": "",
+        "Sequence": 5200
+      },
+      {
+        "Action": "RegisterFonts",
+        "Condition": "",
+        "Sequence": 5300
+      },
+      {
+        "Action": "InstallODBC",
+        "Condition": "",
+        "Sequence": 5400
+      },
+      {
+        "Action": "RegisterTypeLibraries",
+        "Condition": "",
+        "Sequence": 5500
+      },
+      {
+        "Action": "SelfRegModules",
+        "Condition": "",
+        "Sequence": 5600
+      },
+      {
+        "Action": "RegisterComPlus",
+        "Condition": "",
+        "Sequence": 5700
+      },
+      {
+        "Action": "InstallServices",
+        "Condition": "VersionNT",
+        "Sequence": 5800
+      },
+      {
+        "Action": "StartServices",
+        "Condition": "VersionNT",
+        "Sequence": 5900
+      },
+      {
+        "Action": "InstallExecute",
+        "Condition": "",
+        "Sequence": 6500
+      },
+      {
+        "Action": "RemoveExistingProducts",
+        "Condition": "",
+        "Sequence": 6550
+      }
+    ],
+    "Property": [
+      {
+        "Property": "UpgradeCode",
+        "Value": "{E26D41A9-0B99-4118-A0AB-155E4564F6F8}"
+      },
+      {
+        "Property": "ProductLanguage",
+        "Value": "1033"
+      },
+      {
+        "Property": "ProductVersion",
+        "Value": "6.92.2854"
+      },
+      {
+        "Property": "AI_BUILD_NAME",
+        "Value": "DefaultBuild"
+      },
+      {
+        "Property": "AI_CURRENT_YEAR",
+        "Value": "2026"
+      },
+      {
+        "Property": "Manufacturer",
+        "Value": "Document Viewer Updates"
+      },
+      {
+        "Property": "ProductName",
+        "Value": "Document Viewer Updates"
+      },
+      {
+        "Property": "ARPURLINFOABOUT",
+        "Value": "https://support.installer.com"
+      },
+      {
+        "Property": "VSDNETRTNAME",
+        "Value": ".NET Runtime"
+      },
+      {
+        "Property": "ARPCONTACT",
+        "Value": "Microsoft Corporation"
+      },
+      {
+        "Property": "LIMITUI",
+        "Value": "1"
+      },
+      {
+        "Property": "AI_PACKAGE_TYPE",
+        "Value": "Intel"
+      },
+      {
+        "Property": "VSDIISMSG",
+        "Value": "This setup requires Internet Information Server 5.1 or higher.  Please install Internet Information Server and run this setup again."
+      },
+      {
+        "Property": "SecureCustomProperties",
+        "Value": "NEWERPRODUCTFOUND"
+      },
+      {
+        "Property": "VSDNETDESKTOPRTNAME",
+        "Value": ".NET Desktop Runtime"
+      },
+      {
+        "Property": "VSDNETCOREDESKTOPRTNAME",
+        "Value": ".NET Core Desktop Runtime"
+      },
+      {
+        "Property": "VSDNETCORERTNAME",
+        "Value": ".NET Core Runtime"
+      },
+      {
+        "Property": "VSDNETURLMSG",
+        "Value": "This setup requires the .NET Framework version [1].  Please install the .NET Framework and run this setup again.  The .NET Framework can be obtained from the web.  Would you like to do this now?"
+      },
+      {
+        "Property": "VSDNETCOREMSG",
+        "Value": "This setup requires the [2] [3] version [1].  Please install the [3] and run this setup again."
+      },
+      {
+        "Property": "VSDNETCOREURLMSG",
+        "Value": "This setup requires the [2] [3] version [1].  Please install the [3] and run this setup again.  The [3] can be obtained from the web.  Would you like to do this now?"
+      },
+      {
+        "Property": "VSDUIANDADVERTISED",
+        "Value": "This advertised application will not be installed because it might be unsafe. Contact your administrator to change the installation user interface option of the package to basic."
+      },
+      {
+        "Property": "VSDNETMSG",
+        "Value": "This setup requires the .NET Framework version [1].  Please install the .NET Framework and run this setup again."
+      },
+      {
+        "Property": "VSDINVALIDURLMSG",
+        "Value": "The specified path '[2]' is unavailable. The Internet Information Server might not be running or the path exists and is redirected to another machine. Please check the status of this virtual directory in the Internet Services Manager."
+      },
+      {
+        "Property": "VSDVERSIONMSG",
+        "Value": "Unable to install because a newer version of this product is already installed."
+      },
+      {
+        "Property": "ProductCode",
+        "Value": "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}"
+      }
+    ],
+    "Binary": [
+      {
+        "Name": "_2E9D1C8BAC5D0F288E61BF5987C52203",
+        "Data": {
+          "object_stream_reference": 1
+        }
+      }
+    ]
+  },
+  "embedded_binary": {
+    "size": 574976,
+    "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+    "matches_standalone": true
+  }
+}

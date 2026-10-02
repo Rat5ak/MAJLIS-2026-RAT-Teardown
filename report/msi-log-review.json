@@ -1,0 +1,147 @@
+{
+    "status":  "reviewed",
+    "schema":  1,
+    "case_id":  "majlis-2026-analysis-20261001",
+    "guest_id":  "14d36378-76f4-4bf7-9f85-2e82f60651a9",
+    "run_id":  "msi-20261001T144810035Z",
+    "reviewed_utc":  "2026-10-01T14:56:33.9653500Z",
+    "msi_sha256":  "4008c8f9e52d3e6fd7df4a980a9a78f46f2412ba2fda10a38aa92d338767c54c",
+    "expected_payload_sha256":  "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+    "expected_product_code":  "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}",
+    "expected_custom_action":  "_9AE88E99_8372_4458_9911_9EC626582345",
+    "expected_custom_action_type":  194,
+    "current_and_run_recorded_harness_sha256_verified":  "0aba71eef24c08249669b7ec5033717f1fa060bd6418191eb185d314127d9381",
+    "private_verbose_log_guest_path":  "C:\\Lab\\Evidence\\MSI\\msi-20261001T144810035Z\\private\\installer-verbose.log",
+    "log_bytes":  104944,
+    "log_sha256":  "aa72fe3ff4ed48c42ab37ba237f1f8f298c49efad50b6d61dcc8831dd67f29ef",
+    "decoded_encoding":  "utf-16",
+    "line_count":  684,
+    "capture_timezone":  "UTC",
+    "run_start_utc":  "2026-10-01T14:48:10.0559989Z",
+    "run_end_utc":  "2026-10-01T14:53:16.7156394Z",
+    "marker_counts":  {
+                          "expected_action_end":  1,
+                          "expected_action_start":  1,
+                          "expected_product_code_property":  1,
+                          "engine_return_marker":  2,
+                          "install_sequence_end":  1,
+                          "product_install_status_marker":  1,
+                          "expected_action_dispatch":  1
+                      },
+    "selected_marker_rows":  [
+                                 {
+                                     "classification":  "observed_installer_log_marker",
+                                     "kind":  "expected_action_dispatch",
+                                     "line_index":  486,
+                                     "decoded_line_utf8_sha256":  "1fd9c66b9b8361ee23c7e933bc7a8b33e81333ad00dccc552886801512e6d70d",
+                                     "event_utc":  "2026-10-01T14:48:28.5610000Z",
+                                     "log_context":  "server",
+                                     "child_execution_proven_by_this_line":  false,
+                                     "expected_custom_action":  "_9AE88E99_8372_4458_9911_9EC626582345"
+                                 },
+                                 {
+                                     "classification":  "observed_installer_log_marker",
+                                     "kind":  "expected_action_start",
+                                     "line_index":  489,
+                                     "decoded_line_utf8_sha256":  "591f3c57f783fdab776ef305f02b40d80068f61de130fd39afa3c3801984f2b2",
+                                     "event_utc":  "2026-10-01T14:48:28.0000000Z",
+                                     "log_context":  "sequence",
+                                     "child_execution_proven_by_this_line":  false,
+                                     "expected_custom_action":  "_9AE88E99_8372_4458_9911_9EC626582345"
+                                 },
+                                 {
+                                     "classification":  "observed_installer_log_marker",
+                                     "kind":  "expected_action_end",
+                                     "line_index":  538,
+                                     "decoded_line_utf8_sha256":  "ba4dc5c5415ef9a7b5ad23272d509370760a7e6f368de031d16016b9aa86a5b6",
+                                     "event_utc":  "2026-10-01T14:48:28.0000000Z",
+                                     "log_context":  "sequence",
+                                     "child_execution_proven_by_this_line":  false,
+                                     "logged_numeric_value":  0,
+                                     "expected_custom_action":  "_9AE88E99_8372_4458_9911_9EC626582345"
+                                 },
+                                 {
+                                     "classification":  "observed_installer_log_marker",
+                                     "kind":  "install_sequence_end",
+                                     "line_index":  543,
+                                     "decoded_line_utf8_sha256":  "61957411fc00629f4361ad9419a6f711f751db9a72b1ce77e130175d07ef544d",
+                                     "event_utc":  "2026-10-01T14:48:28.0000000Z",
+                                     "log_context":  "sequence",
+                                     "child_execution_proven_by_this_line":  false,
+                                     "logged_numeric_value":  1
+                                 },
+                                 {
+                                     "classification":  "observed_installer_log_marker",
+                                     "kind":  "expected_product_code_property",
+                                     "line_index":  573,
+                                     "decoded_line_utf8_sha256":  "9d0c88a01c3e4a899009a68c9915946ccf3b226f4d6446df56b21d8508cb8e07",
+                                     "event_utc":  null,
+                                     "log_context":  "property",
+                                     "child_execution_proven_by_this_line":  false,
+                                     "expected_product_code":  "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}"
+                                 },
+                                 {
+                                     "classification":  "observed_installer_log_marker",
+                                     "kind":  "product_install_status_marker",
+                                     "line_index":  666,
+                                     "decoded_line_utf8_sha256":  "e2a09f7bdb97d96eb61df9b49bbde2779652d991d85795ed685de2df3c863c11",
+                                     "event_utc":  "2026-10-01T14:48:28.8150000Z",
+                                     "log_context":  "server",
+                                     "child_execution_proven_by_this_line":  false,
+                                     "logged_numeric_value":  0
+                                 },
+                                 {
+                                     "classification":  "observed_installer_log_marker",
+                                     "kind":  "engine_return_marker",
+                                     "line_index":  670,
+                                     "decoded_line_utf8_sha256":  "a663c19158f0d53f7df17b9eb56042ee9e8a2f58ade809d59916655dd1927080",
+                                     "event_utc":  "2026-10-01T14:48:28.8260000Z",
+                                     "log_context":  "server",
+                                     "child_execution_proven_by_this_line":  false,
+                                     "logged_numeric_value":  0
+                                 },
+                                 {
+                                     "classification":  "observed_installer_log_marker",
+                                     "kind":  "engine_return_marker",
+                                     "line_index":  682,
+                                     "decoded_line_utf8_sha256":  "180f454bf2441dd8e9f7097864b78c4a116e7868274c327124b1a426bef81f91",
+                                     "event_utc":  "2026-10-01T14:48:28.8590000Z",
+                                     "log_context":  "client",
+                                     "child_execution_proven_by_this_line":  false,
+                                     "logged_numeric_value":  0
+                                 }
+                             ],
+    "selected_row_limit":  128,
+    "selected_rows_truncated":  false,
+    "timestamp_parse_or_window_failures":  0,
+    "expected_action_start_logged":  true,
+    "expected_action_end_logged":  true,
+    "type194_schedule_count":  0,
+    "different_type_for_expected_action_count":  0,
+    "expected_action_sequence_and_type194_schedule_observed":  false,
+    "expected_product_code_property_logged":  true,
+    "natural_installer_client_exit_observed_by_harness":  true,
+    "natural_installer_client_return_code":  0,
+    "client_log_engine_return_markers":  [
+                                             0
+                                         ],
+    "natural_return_matches_a_client_log_marker":  true,
+    "schedule_source_to_separate_payload_observation_links":  [
+
+                                                              ],
+    "raw_log_proves_child_process_execution":  false,
+    "installer_success_implies_child_execution":  false,
+    "raw_verbose_log_safe_for_host_copy":  false,
+    "host_copy_allowlist":  "this msi-log-review-safe JSON only",
+    "processes_launched":  false,
+    "network_or_execution_settings_changed":  false,
+    "interpretation_source":  "https://learn.microsoft.com/en-us/windows/win32/msi/custom-action-return-processing-options",
+    "limitations":  [
+                        "Action start/dispatch/schedule/end markers are installer evidence for the fixed custom action, not proof that its EXE began or completed successfully.",
+                        "Type194 is EXE type2 plus async/continue192: Windows Installer does not wait for the child to complete. Installer return codes and action log return values are separate quantities.",
+                        "A logged action Return value1 is an installer action result, not a child exit code. Actual-error-code text is preserved as a numeric log marker without promoting it to independent child proof.",
+                        "Only exact source-path matches to separate pinned file/process observations are correlated. The raw source target and arbitrary command line never leave the guest.",
+                        "Line hashes cover decoded line text encoded as UTF8 without the line terminator; the complete raw-file SHA256 anchors original bytes.",
+                        "Missing markers or observations do not prove the action or child was absent; hash-verified process observations and packet evidence must be assessed separately."
+                    ]
+}

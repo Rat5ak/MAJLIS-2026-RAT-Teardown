@@ -1,0 +1,31 @@
+{
+  "mode": "loop",
+  "excerpts": {
+    "0x40e730-0x40e7d1": "0040e732: lea    ecx,[ebp-0x1640]\n0040e738: call   0x4113b0\n0040e73d: mov    DWORD PTR [ebp-0x4],0x15\n0040e744: lea    ecx,[ebp-0x54]\n0040e747: call   0x4113b0\n0040e74c: mov    edi,DWORD PTR [ebp-0x1534]\n0040e752: lea    eax,[ebp-0x1514]\n0040e758: push   eax\n0040e759: lea    ecx,[ebp-0x1600]\n0040e75f: call   0x41a4d0\n0040e764: cdq\n0040e765: lea    ecx,[ebp-0x15f8]\n0040e76b: mov    DWORD PTR [ebp-0x15f8],eax\n0040e771: mov    DWORD PTR [ebp-0x15f4],edx\n0040e777: call   0x41a3c0\n0040e77c: mov    BYTE PTR [ebp-0x4],0x10\n0040e780: mov    ecx,DWORD PTR [ebp-0x148]\n0040e786: cmp    ecx,0xf\n0040e789: jbe    0x40e7ba\n0040e78b: mov    edx,DWORD PTR [ebp-0x15c]\n0040e791: inc    ecx\n0040e792: mov    eax,edx\n0040e794: cmp    ecx,0x1000\n0040e79a: jb     0x40e7b0\n0040e79c: mov    edx,DWORD PTR [eax-0x4]\n0040e79f: add    ecx,0x23\n0040e7a2: sub    eax,edx\n0040e7a4: add    eax,0xfffffffc\n0040e7a7: cmp    eax,0x1f\n0040e7aa: ja     0x40f5b9\n0040e7b0: push   ecx\n0040e7b1: push   edx\n0040e7b2: call   0x4447ea\n0040e7b7: add    esp,0x8\n0040e7ba: mov    DWORD PTR [ebp-0x4],0xf\n0040e7c1: jmp    0x40d8e0\n0040e7c6: mov    eax,0x40e7cc\n0040e7cb: ret\n0040e7cc: jmp    0x40e73d",
+    "0x41a4d0-0x41a5f0": "0041a4d0: push   ebp\n0041a4d1: mov    ebp,esp\n0041a4d3: push   ecx\n0041a4d4: mov    eax,DWORD PTR [ecx+0x4]\n0041a4d7: push   esi\n0041a4d8: mov    esi,DWORD PTR [ecx]\n0041a4da: xor    eax,0x80000000\n0041a4df: mov    ecx,DWORD PTR [ebp+0x8]\n0041a4e2: xor    esi,0x80000000\n0041a4e8: sub    eax,esi\n0041a4ea: cmp    eax,0xffffffff\n0041a4ed: jne    0x41a505\n0041a4ef: call   0x428f90\n0041a4f4: mov    ecx,eax\n0041a4f6: lea    eax,[ecx+esi*1]\n0041a4f9: xor    eax,0x80000000\n0041a4fe: pop    esi\n0041a4ff: mov    esp,ebp\n0041a501: pop    ebp\n0041a502: ret    0x4\n0041a505: push   edi\n0041a506: lea    edi,[eax+0x1]\n0041a509: call   0x428f90\n0041a50e: mul    edi\n0041a510: mov    DWORD PTR [ebp-0x4],eax\n0041a513: mov    ecx,edx\n0041a515: cmp    eax,edi\n0041a517: jae    0x41a541\n0041a519: mov    eax,edi\n0041a51b: xor    edx,edx\n0041a51d: neg    eax\n0041a51f: div    edi\n0041a521: push   ebx\n0041a522: mov    ebx,edx\n0041a524: cmp    DWORD PTR [ebp-0x4],ebx\n0041a527: jae    0x41a540\n0041a529: nop    DWORD PTR [eax+0x0]\n0041a530: mov    ecx,DWORD PTR [ebp+0x8]\n0041a533: call   0x428f90\n0041a538: mul    edi\n0041a53a: mov    ecx,edx\n0041a53c: cmp    eax,ebx\n0041a53e: jb     0x41a530\n0041a540: pop    ebx\n0041a541: lea    eax,[ecx+esi*1]\n0041a544: pop    edi\n0041a545: xor    eax,0x80000000\n0041a54a: pop    esi\n0041a54b: mov    esp,ebp\n0041a54d: pop    ebp\n0041a54e: ret    0x4\n0041a551: int3\n0041a552: int3\n0041a553: int3\n0041a554: int3\n0041a555: int3\n0041a556: int3\n0041a557: int3\n0041a558: int3\n0041a559: int3\n0041a55a: int3\n0041a55b: int3\n0041a55c: int3\n0041a55d: int3\n0041a55e: int3\n0041a55f: int3\n0041a560: push   ebp\n0041a561: mov    ebp,esp\n0041a563: push   0xffffffff\n0041a565: push   0x46a7c0\n0041a56a: mov    eax,fs:0x0\n0041a570: push   eax\n0041a571: sub    esp,0x18\n0041a574: push   esi\n0041a575: mov    eax,ds:0x486180\n0041a57a: xor    eax,ebp\n0041a57c: push   eax\n0041a57d: lea    eax,[ebp-0xc]\n0041a580: mov    fs:0x0,eax\n0041a586: mov    DWORD PTR [ebp-0x14],edx\n0041a589: mov    esi,ecx\n0041a58b: xorps  xmm0,xmm0\n0041a58e: lea    edx,[ebp-0x14]\n0041a591: movups XMMWORD PTR [ebp-0x24],xmm0\n0041a595: lea    ecx,[ebp-0x24]\n0041a598: movq   QWORD PTR [ebp-0x1c],xmm0\n0041a59d: call   0x42a6b0\n0041a5a2: lea    edx,[ebp-0x24]\n0041a5a5: mov    ecx,esi\n0041a5a7: call   0x41e700\n0041a5ac: lea    ecx,[ebp-0x24]\n0041a5af: mov    BYTE PTR [ebp-0xd],al\n0041a5b2: call   0x4113b0\n0041a5b7: mov    al,BYTE PTR [ebp-0xd]\n0041a5ba: mov    ecx,DWORD PTR [ebp-0xc]\n0041a5bd: mov    DWORD PTR fs:0x0,ecx\n0041a5c4: pop    ecx\n0041a5c5: pop    esi\n0041a5c6: mov    esp,ebp\n0041a5c8: pop    ebp\n0041a5c9: ret\n0041a5ca: int3\n0041a5cb: int3\n0041a5cc: int3\n0041a5cd: int3\n0041a5ce: int3\n0041a5cf: int3\n0041a5d0: push   ebp\n0041a5d1: mov    ebp,esp\n0041a5d3: push   ecx\n0041a5d4: push   DWORD PTR [ebp+0x8]\n0041a5d7: call   0x41a210\n0041a5dc: mov    eax,DWORD PTR [ebp+0x8]\n0041a5df: mov    esp,ebp\n0041a5e1: pop    ebp\n0041a5e2: ret    0x4\n0041a5e5: int3\n0041a5e6: int3\n0041a5e7: int3\n0041a5e8: int3\n0041a5e9: int3\n0041a5ea: int3\n0041a5eb: int3\n0041a5ec: int3\n0041a5ed: int3\n0041a5ee: int3\n0041a5ef: int3",
+    "0x469be0-0x469c47": "00469be0: nop\n00469be1: nop\n00469be2: mov    edx,DWORD PTR [esp+0x8]\n00469be6: lea    eax,[edx+0xc]\n00469be9: mov    ecx,DWORD PTR [edx-0x166c]\n00469bef: xor    ecx,eax\n00469bf1: call   0x44418d\n00469bf6: mov    ecx,DWORD PTR [edx-0x8]\n00469bf9: xor    ecx,eax\n00469bfb: call   0x44418d\n00469c00: mov    eax,0x480220\n00469c05: jmp    0x445727\n00469c0a: int3\n00469c0b: int3\n00469c0c: int3\n00469c0d: int3\n00469c0e: int3\n00469c0f: int3\n00469c10: mov    eax,DWORD PTR [ebp-0x10]\n00469c13: and    eax,0x1\n00469c16: je     0x469c2b\n00469c1c: and    DWORD PTR [ebp-0x10],0xfffffffe\n00469c20: mov    ecx,DWORD PTR [ebp-0x14]\n00469c23: add    ecx,0x68\n00469c26: jmp    0x412d90\n00469c2b: ret\n00469c2c: mov    ecx,DWORD PTR [ebp-0x14]\n00469c2f: add    ecx,0x8\n00469c32: jmp    0x412d70\n00469c37: mov    ecx,DWORD PTR [ebp-0x14]\n00469c3a: add    ecx,0x4\n00469c3d: jmp    0x410250\n00469c42: int3\n00469c43: int3\n00469c44: int3\n00469c45: int3\n00469c46: int3"
+  },
+  "main_backedges": [
+    "0040d4fe: jb     0x40d4e1",
+    "0040d553: jb     0x40d543",
+    "0040da58: jne    0x40da48",
+    "0040e090: jb     0x40e013",
+    "0040e2ef: jmp    0x40de51",
+    "0040e7c1: jmp    0x40d8e0",
+    "0040e7cc: jmp    0x40e73d",
+    "0040eb6d: jbe    0x40e73d",
+    "0040eb7a: jmp    0x40de61",
+    "0040eb85: jmp    0x40e73d",
+    "0040f01d: jmp    0x40e738",
+    "0040f028: jmp    0x40e73d",
+    "0040f1ab: jmp    0x40e73d",
+    "0040f1b6: jmp    0x40e73d",
+    "0040f2d5: jmp    0x40e73d",
+    "0040f2e0: jmp    0x40e73d",
+    "0040f39a: jmp    0x40e738",
+    "0040f3a5: jmp    0x40e73d",
+    "0040f3c2: je     0x40e744",
+    "0040f574: jmp    0x40e73d",
+    "0040f592: jmp    0x40d8e0"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "captured",
+  "captured_utc": "2026-10-02T12:15:56.141124+00:00",
+  "source_guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/icon2.xz",
+  "source_sha256": "fec4f301a1be36a42ec27208e13b5d1d3d0bbe0f1ab47bbab863a7ca9923c571",
+  "source_bytes": 2086470,
+  "source_format": "JPEG",
+  "source_dimensions": [
+    5641,
+    3761
+  ],
+  "source_full_pixel_decode": true,
+  "source_unchanged": true,
+  "source_exported": false,
+  "viewer": "ImageMagick display",
+  "viewer_title": "icon2.xz - Snowy village - ImageMagick",
+  "viewer_fit": "1440x960, aspect ratio preserved",
+  "capture_method": "ImageMagick import -silent -frame -window of verified viewer window",
+  "private_display": "Xvfb 1600x1100x24, -nolisten tcp",
+  "viewer_user": "kali",
+  "screenshot_guest_path": "/home/kali/majlis-analysis/snowy-village-screenshot-20261002/snowy-village.png",
+  "screenshot_sha256": "b87fa7b8f62793032d13e4829c9c8008ee6b9c7b00c0fce1af0822904964b524",
+  "screenshot_bytes": 1017964,
+  "screenshot_dimensions": [
+    1450,
+    996
+  ],
+  "screenshot_edited": false,
+  "isolation": {
+    "no_live_nonloopback_link": true,
+    "no_default_route": true,
+    "no_shared_mounts": true,
+    "forwarding_disabled": true
+  }
+}

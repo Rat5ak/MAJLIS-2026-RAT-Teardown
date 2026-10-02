@@ -1,0 +1,242 @@
+{
+  "lnk": {
+    "flags": "0x40e3",
+    "fields": {
+      "icon_location": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+    },
+    "arguments_summary": {
+      "characters": 11,
+      "urls": [],
+      "webdav_paths": [],
+      "environment_variables": [],
+      "msiexec_options": [],
+      "curl_response_to_cmd": false,
+      "pipes_more_output_to_cmd": false,
+      "scheduled_task_options": {
+        "sc": [],
+        "mo": [],
+        "tn": [],
+        "ru": [],
+        "rl": [],
+        "st": []
+      },
+      "scheduled_task_action_summary": null,
+      "windows_paths": [],
+      "contains_output_redirection": false,
+      "contains_stdin_redirection": false,
+      "remote_command_prefix": null,
+      "keywords": [],
+      "file_references": [
+        "-s:icon.ico"
+      ],
+      "lines": [
+        {
+          "index": 0,
+          "characters": 11,
+          "shell_escape": false,
+          "exit": false,
+          "command_head": [
+            "-s"
+          ],
+          "keyword_sequence": []
+        }
+      ]
+    }
+  },
+  "icon.ico.bin": {
+    "characters": 59,
+    "urls": [],
+    "webdav_paths": [
+      "\\\\rappellingaart.com@SSL\\secure-docs\\res.ico"
+    ],
+    "environment_variables": [],
+    "msiexec_options": [],
+    "curl_response_to_cmd": false,
+    "pipes_more_output_to_cmd": true,
+    "scheduled_task_options": {
+      "sc": [],
+      "mo": [],
+      "tn": [],
+      "ru": [],
+      "rl": [],
+      "st": []
+    },
+    "scheduled_task_action_summary": null,
+    "windows_paths": [],
+    "contains_output_redirection": false,
+    "contains_stdin_redirection": false,
+    "remote_command_prefix": "!more ",
+    "keywords": [
+      "cmd"
+    ],
+    "file_references": [
+      "SSL\\secure-docs\\res.ico"
+    ],
+    "lines": [
+      {
+        "index": 0,
+        "characters": 54,
+        "shell_escape": true,
+        "exit": false,
+        "command_head": [
+          "!more"
+        ],
+        "keyword_sequence": [
+          "cmd"
+        ]
+      },
+      {
+        "index": 1,
+        "characters": 3,
+        "shell_escape": false,
+        "exit": true,
+        "command_head": [
+          "bye"
+        ],
+        "keyword_sequence": []
+      }
+    ]
+  },
+  "res.ico.bin": {
+    "characters": 361,
+    "urls": [
+      "http://gomescareerplans.com/docs/?vid=%computername%G"
+    ],
+    "webdav_paths": [
+      "\\\\rappellingaart.com@SSL\\secure-docs\\Imp_Details.msi"
+    ],
+    "environment_variables": [
+      "computername"
+    ],
+    "msiexec_options": [
+      "/create",
+      "/sc",
+      "/mo",
+      "/tn",
+      "/tr",
+      "/c",
+      "/f",
+      "/gomescareerplans",
+      "/i",
+      "/qn"
+    ],
+    "curl_response_to_cmd": true,
+    "pipes_more_output_to_cmd": true,
+    "scheduled_task_options": {
+      "sc": [
+        [
+          "",
+          "minute"
+        ]
+      ],
+      "mo": [
+        [
+          "",
+          "39"
+        ]
+      ],
+      "tn": [
+        [
+          "",
+          "MicrosoftUpdates\\updates88679"
+        ]
+      ],
+      "ru": [],
+      "rl": [],
+      "st": []
+    },
+    "scheduled_task_action_summary": {
+      "executables": [
+        "cmd",
+        "more",
+        "cmd"
+      ],
+      "command_prefix_before_file": "cmd /c more ",
+      "file_references": [
+        "C:\\users\\public\\music\\err.log"
+      ],
+      "reads_stdin_redirection": false,
+      "pipes_type_output_to_cmd": false,
+      "pipes_more_output_to_cmd": true,
+      "runs_command_string": true
+    },
+    "windows_paths": [
+      "C:\\users\\public\\music\\err.log"
+    ],
+    "contains_output_redirection": true,
+    "contains_stdin_redirection": false,
+    "remote_command_prefix": null,
+    "keywords": [
+      "msiexec",
+      "cmd",
+      "schtasks",
+      "curl",
+      "echo"
+    ],
+    "file_references": [
+      "SSL\\secure-docs\\Imp_Details.msi"
+    ],
+    "lines": [
+      {
+        "index": 0,
+        "characters": 123,
+        "shell_escape": false,
+        "exit": false,
+        "command_head": [
+          "schtasks"
+        ],
+        "keyword_sequence": [
+          "schtasks",
+          "cmd",
+          "cmd"
+        ]
+      },
+      {
+        "index": 1,
+        "characters": 121,
+        "shell_escape": false,
+        "exit": false,
+        "command_head": [
+          "echo"
+        ],
+        "keyword_sequence": [
+          "echo",
+          "curl",
+          "cmd"
+        ]
+      },
+      {
+        "index": 2,
+        "characters": 67,
+        "shell_escape": false,
+        "exit": false,
+        "command_head": [
+          "msiexec"
+        ],
+        "keyword_sequence": [
+          "msiexec"
+        ]
+      },
+      {
+        "index": 3,
+        "characters": 46,
+        "shell_escape": false,
+        "exit": false,
+        "command_head": [
+          "msg"
+        ],
+        "keyword_sequence": []
+      }
+    ]
+  },
+  "msi_listing": {
+    "returncode": 0,
+    "stdout": "\n7-Zip 24.09 (x64) : Copyright (c) 1999-2024 Igor Pavlov : 2024-11-29\n 64-bit locale=en_AU.UTF-8 Threads:128 OPEN_MAX:1024, ASM\n\nScanning the drive for archives:\n1 file, 633856 bytes (619 KiB)\n\nListing archive: /home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Imp_Details.msi.bin\n\n--\nPath = /home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Imp_Details.msi.bin\nType = Compound\nPhysical Size = 633856\nExtension = msi\nCluster Size = 512\nSector Size = 64\n\n----------\nPath = Binary._2E9D1C8BAC5D0F288E61BF5987C52203\nSize = 574976\nPacked Size = 574976\nCreated = \nModified = \n\nPath = !InstallExecuteSequence\nSize = 378\nPacked Size = 384\nCreated = \nModified = \n\nPath = !Component\nSize = 12\nPacked Size = 64\nCreated = \nModified = \n\nPath = !Directory\nSize = 6\nPacked Size = 64\nCreated = \nModified = \n\nPath = !Feature\nSize = 16\nPacked Size = 64\nCreated = \nModified = \n\nPath = !Binary\nSize = 4\nPacked Size = 64\nCreated = \nModified = \n\nPath = !Media\nSize = 12\nPacked Size = 64\nCreated = \nModified = \n\nPath = !_Tables\nSize = 172\nPacked Size = 192\nCreated = \nModified = \n\nPath = !_Columns\nSize = 3288\nPacked Size = 3328\nCreated = \nModified = \n\nPath = !Property\nSize = 100\nPacked Size = 128\nCreated = \nModified = \n\nPath = !Upgrade\nSize = 16\nPacked Size = 64\nCreated = \nModified = \n\nPath = !FeatureComponents\nSize = 4\nPacked Size = 64\nCreated = \nModified = \n\nPath = !ModuleSignature\nSize = 6\nPacked Size = 64\nCreated = \nModified = \n\nPath = !_Validation\nSize = 10176\nPacked Size = 10240\nCreated = \nModified = \n\nPath = !_StringPool\nSize = 3080\nPacked Size = 3136\nCreated = \nModified = \n\nPath = !_StringData\nSize = 30151\nPacked Size = 30208\nCreated = \nModified = \n\nPath = !CustomAction\nSize = 12\nPacked Size = 64\nCreated = \nModified = \n\nPath = !AdminExecuteSequence\nSize = 54\nPacked Size = 64\nCreated = \nModified = \n\nPath = !AdvtExecuteSequence\nSize = 84\nPacked Size = 128\nCreated = \nModified = \n\nPath = [5]SummaryInformation\nSize = 488\nPacked Size = 512\nCreated = \nModified = \n\n",
+    "stderr": ""
+  },
+  "ole_modules": {
+    "returncode": 0,
+    "stdout": "{'olefile': True, 'oletools': False, 'capstone': True, 'dnfile': False, 'PIL': True}\n",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,1868 @@
+{
+    "status":  "reviewed",
+    "schema":  1,
+    "case_id":  "majlis-2026-analysis-20261001",
+    "guest_id":  "14d36378-76f4-4bf7-9f85-2e82f60651a9",
+    "mode":  "baseline",
+    "run_id":  "baseline-20261001T131647267Z",
+    "recorded_utc":  "2026-10-01T13:49:16.8898098Z",
+    "sample_sha256":  "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+    "procmon_sha256":  "fc3af5317c707e0555ad6e7590ad65ceb5c5085b053b41221944ac3ca3492d9c",
+    "capture_start_utc":  "2026-10-01T13:16:47.2831614Z",
+    "capture_end_utc":  "2026-10-01T13:22:02.8679314Z",
+    "capture_timezone":  "UTC",
+    "pml_bytes":  365312131,
+    "pml_sha256":  "39134bb43b045e9a0ce3ac8af482ba85939156d3011c2af850a09b92fd3ddf61",
+    "csv_bytes":  150461130,
+    "csv_sha256":  "d40c4fa55b6032a2e70baa9b7d8fb6ea1199bdf0d54e50c4d087aab48ae87ea4",
+    "csv_reused_from_verified_previous_review":  true,
+    "private_pml_guest_path":  "C:\\Lab\\Evidence\\Native\\baseline-20261001T131647267Z\\private\\native.pml",
+    "private_csv_guest_path":  "C:\\Lab\\Evidence\\Native\\baseline-20261001T131647267Z\\private\\procmon-review-20261001T134111089Z-a51fa2bfa8c04e36bfe71e4a3914c21d.csv",
+    "csv_rows":  902113,
+    "attributed_rows":  2097,
+    "rejected_pid_name_or_lifetime_rows":  0,
+    "lifecycle_time_parse_failures":  0,
+    "candidate_time_parse_failures":  0,
+    "pid_reuse_boundaries":  0,
+    "unmatched_fixed_child_creates":  0,
+    "unattributed_expected_task_path_rows":  0,
+    "process_lifetimes":  [
+                              {
+                                  "pid":  6360,
+                                  "process_name":  "Binary.exe",
+                                  "role":  "pinned_specimen",
+                                  "image":  "C:\\Lab\\Specimens\\Binary.exe",
+                                  "parent_pid":  4868,
+                                  "start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                  "end_utc":  "2026-10-01T13:22:02.8679314Z",
+                                  "basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                  "procmon_start_corroborated":  true,
+                                  "procmon_exit_observed":  false,
+                                  "procmon_start_path_empty":  true,
+                                  "procmon_parent_corroborated":  true,
+                                  "upper_bound_kind":  "capture_end_only"
+                              }
+                          ],
+    "operation_counts":  [
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "CloseFile",
+                                 "result":  "SUCCESS",
+                                 "count":  65
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "CreateFile",
+                                 "result":  "NAME NOT FOUND",
+                                 "count":  2
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "CreateFile",
+                                 "result":  "SUCCESS",
+                                 "count":  68
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "FileSystemControl",
+                                 "result":  "other_result",
+                                 "count":  2
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "FileSystemControl",
+                                 "result":  "SUCCESS",
+                                 "count":  21
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "Load Image",
+                                 "result":  "SUCCESS",
+                                 "count":  35
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "other_operation",
+                                 "result":  "BUFFER OVERFLOW",
+                                 "count":  27
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "other_operation",
+                                 "result":  "FILE LOCKED WITH ONLY READERS",
+                                 "count":  15
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "other_operation",
+                                 "result":  "SUCCESS",
+                                 "count":  503
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "Process Start",
+                                 "result":  "SUCCESS",
+                                 "count":  1
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "QueryBasicInformationFile",
+                                 "result":  "SUCCESS",
+                                 "count":  14
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "QueryNameInformationFile",
+                                 "result":  "SUCCESS",
+                                 "count":  12
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "QueryNetworkOpenInformationFile",
+                                 "result":  "SUCCESS",
+                                 "count":  1
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "QueryOpen",
+                                 "result":  "FAST IO DISALLOWED",
+                                 "count":  13
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "QueryStandardInformationFile",
+                                 "result":  "SUCCESS",
+                                 "count":  10
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "ReadFile",
+                                 "result":  "SUCCESS",
+                                 "count":  67
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegCloseKey",
+                                 "result":  "SUCCESS",
+                                 "count":  164
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegCreateKey",
+                                 "result":  "REPARSE",
+                                 "count":  7
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegCreateKey",
+                                 "result":  "SUCCESS",
+                                 "count":  7
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegEnumKey",
+                                 "result":  "NO MORE ENTRIES",
+                                 "count":  1
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegEnumKey",
+                                 "result":  "SUCCESS",
+                                 "count":  1
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegEnumValue",
+                                 "result":  "NO MORE ENTRIES",
+                                 "count":  5
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegEnumValue",
+                                 "result":  "SUCCESS",
+                                 "count":  14
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegOpenKey",
+                                 "result":  "NAME NOT FOUND",
+                                 "count":  53
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegOpenKey",
+                                 "result":  "REPARSE",
+                                 "count":  122
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegOpenKey",
+                                 "result":  "SUCCESS",
+                                 "count":  170
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegQueryKey",
+                                 "result":  "SUCCESS",
+                                 "count":  149
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegQueryValue",
+                                 "result":  "BUFFER OVERFLOW",
+                                 "count":  36
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegQueryValue",
+                                 "result":  "BUFFER TOO SMALL",
+                                 "count":  4
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegQueryValue",
+                                 "result":  "NAME NOT FOUND",
+                                 "count":  182
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegQueryValue",
+                                 "result":  "SUCCESS",
+                                 "count":  168
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "RegSetInfoKey",
+                                 "result":  "SUCCESS",
+                                 "count":  84
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "TCP Connect",
+                                 "result":  "SUCCESS",
+                                 "count":  11
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "TCP Disconnect",
+                                 "result":  "SUCCESS",
+                                 "count":  11
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "TCP Receive",
+                                 "result":  "SUCCESS",
+                                 "count":  26
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "TCP Send",
+                                 "result":  "SUCCESS",
+                                 "count":  11
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "Thread Create",
+                                 "result":  "SUCCESS",
+                                 "count":  9
+                             },
+                             {
+                                 "role":  "pinned_specimen",
+                                 "operation":  "Thread Exit",
+                                 "result":  "SUCCESS",
+                                 "count":  6
+                             }
+                         ],
+    "indicators":  {
+                       "download_successful_write_events":  0,
+                       "download_delete_true_success_events":  0,
+                       "requested_screenshot_successful_write_events":  0,
+                       "fallback_screenshot_successful_write_events":  0,
+                       "successful_fixed_child_process_create_events":  0,
+                       "attributed_registry_mutation_success_events":  91,
+                       "attributed_expected_task_path_mutation_success_events":  0,
+                       "attributed_tcp_send_events":  11,
+                       "attributed_tcp_receive_events":  26
+                   },
+    "selected_proof_rows":  [
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  261244,
+                                    "event_utc":  "2026-10-01T13:17:01.2686123Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegSetInfoKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "4606f793bdcce226499d745ac47674e4f42e0f659e0bd654907a2a6940a1de62",
+                                    "raw_detail_sha256":  "40887bcd11331358edb981122aae390abc862cd012718400246a15f9e763ae7c",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  261264,
+                                    "event_utc":  "2026-10-01T13:17:01.2688913Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegSetInfoKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "04fc135e51ef47447d92b8a68d9bca8ed743f3f093ee97f5a88ac22fcac4ddea",
+                                    "raw_detail_sha256":  "40887bcd11331358edb981122aae390abc862cd012718400246a15f9e763ae7c",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  261703,
+                                    "event_utc":  "2026-10-01T13:17:01.2735522Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegSetInfoKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "5b776d35e0967d80840f6dd0edfb120fe5ca2e1f79c68781274ba5d75ab1b2ba",
+                                    "raw_detail_sha256":  "40887bcd11331358edb981122aae390abc862cd012718400246a15f9e763ae7c",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  261720,
+                                    "event_utc":  "2026-10-01T13:17:01.2736680Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegSetInfoKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "eb4af353aa5d29b6f3af0f986c2cc1f129ac2180cedd9e4aed92e098f5ba6ea9",
+                                    "raw_detail_sha256":  "40887bcd11331358edb981122aae390abc862cd012718400246a15f9e763ae7c",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  261727,
+                                    "event_utc":  "2026-10-01T13:17:01.2737471Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegSetInfoKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "04c65ca6c2e460ad14b52aa7db3157975f9cd185ed2835a7f7de50a8046e62a3",
+                                    "raw_detail_sha256":  "40887bcd11331358edb981122aae390abc862cd012718400246a15f9e763ae7c",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  261775,
+                                    "event_utc":  "2026-10-01T13:17:01.2742041Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegSetInfoKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "13fafd9596eadfec3291f0c1858a5ab056ea05b80e6b9dc625edc948ef3a8269",
+                                    "raw_detail_sha256":  "40887bcd11331358edb981122aae390abc862cd012718400246a15f9e763ae7c",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  261871,
+                                    "event_utc":  "2026-10-01T13:17:01.2752440Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegSetInfoKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "0dcf3eea77789b3a84fec1ae78be9d35229140e4a9cf3644cc5a33745253c27d",
+                                    "raw_detail_sha256":  "40887bcd11331358edb981122aae390abc862cd012718400246a15f9e763ae7c",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  262188,
+                                    "event_utc":  "2026-10-01T13:17:01.3554815Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegSetInfoKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "0dcf3eea77789b3a84fec1ae78be9d35229140e4a9cf3644cc5a33745253c27d",
+                                    "raw_detail_sha256":  "40887bcd11331358edb981122aae390abc862cd012718400246a15f9e763ae7c",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  262204,
+                                    "event_utc":  "2026-10-01T13:17:01.3556961Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "CreateFile",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "pinned_specimen_image",
+                                                 "fixed_path":  "C:\\Lab\\Specimens\\Binary.exe",
+                                                 "exact_fixed_path":  true
+                                             },
+                                    "raw_path_sha256":  "04bbe2e4e0d10dab7e15629cb53031241767680d686a2d66985c17f9bc76d8ee",
+                                    "raw_detail_sha256":  "538f8f9dbfd7297bcb73a1f7d18aca0aae9938febc5092bd3f4ace52b4e62114",
+                                    "derived_detail":  {
+                                                           "create_disposition":  "Open"
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  262535,
+                                    "event_utc":  "2026-10-01T13:17:01.3588202Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "CreateFile",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "pinned_specimen_image",
+                                                 "fixed_path":  "C:\\Lab\\Specimens\\Binary.exe",
+                                                 "exact_fixed_path":  true
+                                             },
+                                    "raw_path_sha256":  "04bbe2e4e0d10dab7e15629cb53031241767680d686a2d66985c17f9bc76d8ee",
+                                    "raw_detail_sha256":  "c83e92bebab86ba0f39c9ebd562b64bbe5b63088e19c9e56b9ba3d0b2ea7ece1",
+                                    "derived_detail":  {
+                                                           "create_disposition":  "Open"
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  262639,
+                                    "event_utc":  "2026-10-01T13:17:01.3595830Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "CreateFile",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "pinned_specimen_image",
+                                                 "fixed_path":  "C:\\Lab\\Specimens\\Binary.exe",
+                                                 "exact_fixed_path":  true
+                                             },
+                                    "raw_path_sha256":  "04bbe2e4e0d10dab7e15629cb53031241767680d686a2d66985c17f9bc76d8ee",
+                                    "raw_detail_sha256":  "c83e92bebab86ba0f39c9ebd562b64bbe5b63088e19c9e56b9ba3d0b2ea7ece1",
+                                    "derived_detail":  {
+                                                           "create_disposition":  "Open"
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  262895,
+                                    "event_utc":  "2026-10-01T13:17:01.3628570Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "CreateFile",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "pinned_specimen_image",
+                                                 "fixed_path":  "C:\\Lab\\Specimens\\Binary.exe",
+                                                 "exact_fixed_path":  true
+                                             },
+                                    "raw_path_sha256":  "04bbe2e4e0d10dab7e15629cb53031241767680d686a2d66985c17f9bc76d8ee",
+                                    "raw_detail_sha256":  "c83e92bebab86ba0f39c9ebd562b64bbe5b63088e19c9e56b9ba3d0b2ea7ece1",
+                                    "derived_detail":  {
+                                                           "create_disposition":  "Open"
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  463952,
+                                    "event_utc":  "2026-10-01T13:18:35.5285573Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "REPARSE",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "e286e153175563e103e7ff359a88aa7d9d8e62b0ff4f98664b28670d1ec68fef",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  463955,
+                                    "event_utc":  "2026-10-01T13:18:35.5285831Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "ba0010fdcfe69229ce1ce99124bd53c822311199b625a8cbe9e0476182eb544d",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464004,
+                                    "event_utc":  "2026-10-01T13:18:35.5289153Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "REPARSE",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "e286e153175563e103e7ff359a88aa7d9d8e62b0ff4f98664b28670d1ec68fef",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464007,
+                                    "event_utc":  "2026-10-01T13:18:35.5289669Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "ba0010fdcfe69229ce1ce99124bd53c822311199b625a8cbe9e0476182eb544d",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464034,
+                                    "event_utc":  "2026-10-01T13:18:35.5291561Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "REPARSE",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "e286e153175563e103e7ff359a88aa7d9d8e62b0ff4f98664b28670d1ec68fef",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464036,
+                                    "event_utc":  "2026-10-01T13:18:35.5291777Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "ba0010fdcfe69229ce1ce99124bd53c822311199b625a8cbe9e0476182eb544d",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464260,
+                                    "event_utc":  "2026-10-01T13:18:35.5316662Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "REPARSE",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "e286e153175563e103e7ff359a88aa7d9d8e62b0ff4f98664b28670d1ec68fef",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464264,
+                                    "event_utc":  "2026-10-01T13:18:35.5316845Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "ba0010fdcfe69229ce1ce99124bd53c822311199b625a8cbe9e0476182eb544d",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464281,
+                                    "event_utc":  "2026-10-01T13:18:35.5318110Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "REPARSE",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "e286e153175563e103e7ff359a88aa7d9d8e62b0ff4f98664b28670d1ec68fef",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464282,
+                                    "event_utc":  "2026-10-01T13:18:35.5318266Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "ba0010fdcfe69229ce1ce99124bd53c822311199b625a8cbe9e0476182eb544d",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464305,
+                                    "event_utc":  "2026-10-01T13:18:35.5319423Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "REPARSE",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "e286e153175563e103e7ff359a88aa7d9d8e62b0ff4f98664b28670d1ec68fef",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464307,
+                                    "event_utc":  "2026-10-01T13:18:35.5319553Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "ba0010fdcfe69229ce1ce99124bd53c822311199b625a8cbe9e0476182eb544d",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464335,
+                                    "event_utc":  "2026-10-01T13:18:35.5321263Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "REPARSE",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "e286e153175563e103e7ff359a88aa7d9d8e62b0ff4f98664b28670d1ec68fef",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  464338,
+                                    "event_utc":  "2026-10-01T13:18:35.5321446Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "RegCreateKey",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "2c946615fcc71d0484be4d05a08af98a37b8a026586daeca96a314f5b4e996d8",
+                                    "raw_detail_sha256":  "ba0010fdcfe69229ce1ce99124bd53c822311199b625a8cbe9e0476182eb544d",
+                                    "derived_detail":  {
+
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  465206,
+                                    "event_utc":  "2026-10-01T13:18:35.5584619Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Connect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "471ffcdd2b51c50a19d48cc544ce8a5cb518e19eb5b959ce9f292a6f8156ba6f",
+                                    "raw_detail_sha256":  "d49f90eb1b510a0977103405e6426f9cc92fe9f149ace4a51807f3e8f88e6bcf",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49695,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  465209,
+                                    "event_utc":  "2026-10-01T13:18:35.5593980Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Send",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "471ffcdd2b51c50a19d48cc544ce8a5cb518e19eb5b959ce9f292a6f8156ba6f",
+                                    "raw_detail_sha256":  "a605cd7d65134ad8ed9c26c8ff4901948a9cd894daaa234145c7cca6f1fa04e5",
+                                    "derived_detail":  {
+                                                           "requested_length":  204
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49695,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  465215,
+                                    "event_utc":  "2026-10-01T13:18:35.5726053Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Receive",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "471ffcdd2b51c50a19d48cc544ce8a5cb518e19eb5b959ce9f292a6f8156ba6f",
+                                    "raw_detail_sha256":  "27f2ab70e2821e5f101d74b0b14dc9c84cfa3c756f5a48194d46cbfd35b2a9c1",
+                                    "derived_detail":  {
+                                                           "requested_length":  154
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49695,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  465218,
+                                    "event_utc":  "2026-10-01T13:18:35.5727212Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Receive",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "471ffcdd2b51c50a19d48cc544ce8a5cb518e19eb5b959ce9f292a6f8156ba6f",
+                                    "raw_detail_sha256":  "7817f40afb13434b799cb80e11f63deb745a9c62cf4f01d2d49ffa128954c772",
+                                    "derived_detail":  {
+                                                           "requested_length":  16
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49695,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  465219,
+                                    "event_utc":  "2026-10-01T13:18:35.5730158Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Disconnect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "471ffcdd2b51c50a19d48cc544ce8a5cb518e19eb5b959ce9f292a6f8156ba6f",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49695,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  492686,
+                                    "event_utc":  "2026-10-01T13:18:55.5856418Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Connect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "f436c2af65e0e86d2403191d1c159fcc99ac24b072d5d71b8161475b86d0df25",
+                                    "raw_detail_sha256":  "d49f90eb1b510a0977103405e6426f9cc92fe9f149ace4a51807f3e8f88e6bcf",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49696,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  492689,
+                                    "event_utc":  "2026-10-01T13:18:55.5860364Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Send",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "f436c2af65e0e86d2403191d1c159fcc99ac24b072d5d71b8161475b86d0df25",
+                                    "raw_detail_sha256":  "aa5721b8856d650aa042521a7e497b2594a55acae43acfc81cdaed28dc4614a2",
+                                    "derived_detail":  {
+                                                           "requested_length":  204
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49696,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  492700,
+                                    "event_utc":  "2026-10-01T13:18:55.5977287Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Receive",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "f436c2af65e0e86d2403191d1c159fcc99ac24b072d5d71b8161475b86d0df25",
+                                    "raw_detail_sha256":  "27f2ab70e2821e5f101d74b0b14dc9c84cfa3c756f5a48194d46cbfd35b2a9c1",
+                                    "derived_detail":  {
+                                                           "requested_length":  154
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49696,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  492702,
+                                    "event_utc":  "2026-10-01T13:18:55.5977987Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Receive",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "f436c2af65e0e86d2403191d1c159fcc99ac24b072d5d71b8161475b86d0df25",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49696,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  492703,
+                                    "event_utc":  "2026-10-01T13:18:55.5978278Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Receive",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "f436c2af65e0e86d2403191d1c159fcc99ac24b072d5d71b8161475b86d0df25",
+                                    "raw_detail_sha256":  "7817f40afb13434b799cb80e11f63deb745a9c62cf4f01d2d49ffa128954c772",
+                                    "derived_detail":  {
+                                                           "requested_length":  16
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49696,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  492704,
+                                    "event_utc":  "2026-10-01T13:18:55.5981720Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Disconnect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "f436c2af65e0e86d2403191d1c159fcc99ac24b072d5d71b8161475b86d0df25",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49696,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  525923,
+                                    "event_utc":  "2026-10-01T13:19:16.6012128Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Connect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "3f1443d70d2007208499d2f282b88c8f1f064fdcc1b74d0b2424be20fefb9dd0",
+                                    "raw_detail_sha256":  "d49f90eb1b510a0977103405e6426f9cc92fe9f149ace4a51807f3e8f88e6bcf",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49697,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  525926,
+                                    "event_utc":  "2026-10-01T13:19:16.6015987Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Send",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "3f1443d70d2007208499d2f282b88c8f1f064fdcc1b74d0b2424be20fefb9dd0",
+                                    "raw_detail_sha256":  "40cbf453c36504132b4ead6798206ad9e4dbe28adc7e2b0ae3d20bf525e94bb9",
+                                    "derived_detail":  {
+                                                           "requested_length":  204
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49697,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  525937,
+                                    "event_utc":  "2026-10-01T13:19:16.6131769Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Receive",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "3f1443d70d2007208499d2f282b88c8f1f064fdcc1b74d0b2424be20fefb9dd0",
+                                    "raw_detail_sha256":  "27f2ab70e2821e5f101d74b0b14dc9c84cfa3c756f5a48194d46cbfd35b2a9c1",
+                                    "derived_detail":  {
+                                                           "requested_length":  154
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49697,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  525939,
+                                    "event_utc":  "2026-10-01T13:19:16.6132868Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Receive",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "3f1443d70d2007208499d2f282b88c8f1f064fdcc1b74d0b2424be20fefb9dd0",
+                                    "raw_detail_sha256":  "7817f40afb13434b799cb80e11f63deb745a9c62cf4f01d2d49ffa128954c772",
+                                    "derived_detail":  {
+                                                           "requested_length":  16
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49697,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  525944,
+                                    "event_utc":  "2026-10-01T13:19:16.6136534Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Disconnect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "3f1443d70d2007208499d2f282b88c8f1f064fdcc1b74d0b2424be20fefb9dd0",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49697,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  558322,
+                                    "event_utc":  "2026-10-01T13:19:35.6228377Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Connect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "9ee80021f3cd6a93f4f71ec6150f7d36d0a83e41f47c3ba04d095829166d5560",
+                                    "raw_detail_sha256":  "d49f90eb1b510a0977103405e6426f9cc92fe9f149ace4a51807f3e8f88e6bcf",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49698,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  558329,
+                                    "event_utc":  "2026-10-01T13:19:35.6235596Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Send",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "9ee80021f3cd6a93f4f71ec6150f7d36d0a83e41f47c3ba04d095829166d5560",
+                                    "raw_detail_sha256":  "d6162ff438fb7998a120a0392acf1a19d0c994c7e4f44eb7da1a95960fb2de99",
+                                    "derived_detail":  {
+                                                           "requested_length":  204
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49698,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  558336,
+                                    "event_utc":  "2026-10-01T13:19:35.6344465Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Receive",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "9ee80021f3cd6a93f4f71ec6150f7d36d0a83e41f47c3ba04d095829166d5560",
+                                    "raw_detail_sha256":  "27f2ab70e2821e5f101d74b0b14dc9c84cfa3c756f5a48194d46cbfd35b2a9c1",
+                                    "derived_detail":  {
+                                                           "requested_length":  154
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49698,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  558345,
+                                    "event_utc":  "2026-10-01T13:19:35.6349057Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Disconnect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "9ee80021f3cd6a93f4f71ec6150f7d36d0a83e41f47c3ba04d095829166d5560",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49698,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  598417,
+                                    "event_utc":  "2026-10-01T13:19:57.6361555Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Connect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "81a6620b0eed7aed0b85bcfcfb6694d8f0b176b2c0f369577ffb365a9f3e44c3",
+                                    "raw_detail_sha256":  "d49f90eb1b510a0977103405e6426f9cc92fe9f149ace4a51807f3e8f88e6bcf",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49699,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  598420,
+                                    "event_utc":  "2026-10-01T13:19:57.6364609Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Send",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "81a6620b0eed7aed0b85bcfcfb6694d8f0b176b2c0f369577ffb365a9f3e44c3",
+                                    "raw_detail_sha256":  "b618c14ab1c4ee3594922358dce9ebbcefe0b5bd6da9ae3d76e0398c5c03332e",
+                                    "derived_detail":  {
+                                                           "requested_length":  204
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49699,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  598436,
+                                    "event_utc":  "2026-10-01T13:19:57.6487162Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Disconnect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "81a6620b0eed7aed0b85bcfcfb6694d8f0b176b2c0f369577ffb365a9f3e44c3",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49699,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  634357,
+                                    "event_utc":  "2026-10-01T13:20:17.6656840Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Connect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "30478a1942b9dd549bbf3545582f73b9b49eb37a23ccf075f35e019ba5ac29b9",
+                                    "raw_detail_sha256":  "d49f90eb1b510a0977103405e6426f9cc92fe9f149ace4a51807f3e8f88e6bcf",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49700,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  634360,
+                                    "event_utc":  "2026-10-01T13:20:17.6660330Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Send",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "30478a1942b9dd549bbf3545582f73b9b49eb37a23ccf075f35e019ba5ac29b9",
+                                    "raw_detail_sha256":  "c232407d70d095925b07417dbf1bead28f668272bb4190293dd5fd4a3a440c83",
+                                    "derived_detail":  {
+                                                           "requested_length":  204
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49700,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  634375,
+                                    "event_utc":  "2026-10-01T13:20:17.6775648Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Disconnect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "30478a1942b9dd549bbf3545582f73b9b49eb37a23ccf075f35e019ba5ac29b9",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49700,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  668874,
+                                    "event_utc":  "2026-10-01T13:20:38.6875666Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Connect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "7d0b36b772a44b5761315b984d095c6d90e4b70f4e4d1c9dc1474724daa89ed6",
+                                    "raw_detail_sha256":  "d49f90eb1b510a0977103405e6426f9cc92fe9f149ace4a51807f3e8f88e6bcf",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49701,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  668877,
+                                    "event_utc":  "2026-10-01T13:20:38.6880057Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Send",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "7d0b36b772a44b5761315b984d095c6d90e4b70f4e4d1c9dc1474724daa89ed6",
+                                    "raw_detail_sha256":  "8cd26e0d5ac4ef6a62aaeb902d290c17d7d8c734468706ce92c3ba8b455d457b",
+                                    "derived_detail":  {
+                                                           "requested_length":  204
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49701,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  668898,
+                                    "event_utc":  "2026-10-01T13:20:38.6999463Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Disconnect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "7d0b36b772a44b5761315b984d095c6d90e4b70f4e4d1c9dc1474724daa89ed6",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49701,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  702216,
+                                    "event_utc":  "2026-10-01T13:20:59.7016562Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Connect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "7dfb077d4722a202a98d9185a234856a8f509ea0d8248f9ee3220e6f582ccd0e",
+                                    "raw_detail_sha256":  "d49f90eb1b510a0977103405e6426f9cc92fe9f149ace4a51807f3e8f88e6bcf",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49702,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  702219,
+                                    "event_utc":  "2026-10-01T13:20:59.7021121Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Send",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "7dfb077d4722a202a98d9185a234856a8f509ea0d8248f9ee3220e6f582ccd0e",
+                                    "raw_detail_sha256":  "c368e20a877ef71d6da4c494d0389a7614a4ce7dfe4edc4a4fdcfbf0f9e1bbf7",
+                                    "derived_detail":  {
+                                                           "requested_length":  204
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49702,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                },
+                                {
+                                    "classification":  "observed_procmon_event",
+                                    "row_ordinal":  702239,
+                                    "event_utc":  "2026-10-01T13:20:59.7129943Z",
+                                    "pid":  6360,
+                                    "process_name":  "Binary.exe",
+                                    "role":  "pinned_specimen",
+                                    "process_start_utc":  "2026-10-01T13:17:01.2297292Z",
+                                    "attribution_basis":  "retained_handle_pinned_hash_and_procmon_pid_name_time_wmi_parent",
+                                    "operation":  "TCP Disconnect",
+                                    "result":  "SUCCESS",
+                                    "path":  {
+                                                 "label":  "other_path",
+                                                 "exact_fixed_path":  false
+                                             },
+                                    "raw_path_sha256":  "7dfb077d4722a202a98d9185a234856a8f509ea0d8248f9ee3220e6f582ccd0e",
+                                    "raw_detail_sha256":  "4563a56ffe2ddd81290646fd0b4b6488105f0e19baa9e72157c3fa73fa51bd7f",
+                                    "derived_detail":  {
+                                                           "requested_length":  0
+                                                       },
+                                    "command_success_inferred":  false,
+                                    "http_payload_content_inferred":  false,
+                                    "fixed_network_endpoint":  {
+                                                                   "direction":  "guest_to_fixed_peer",
+                                                                   "guest_address":  "172.30.77.2",
+                                                                   "guest_port":  49702,
+                                                                   "peer_address":  "172.30.77.1",
+                                                                   "peer_port":  80
+                                                               }
+                                }
+                            ],
+    "selected_proof_row_limit":  512,
+    "rows_per_category_limit":  8,
+    "task_registration_proven_by_this_review":  false,
+    "raw_evidence_safe_for_host_copy":  false,
+    "host_copy_allowlist":  "this procmon-review-safe JSON only",
+    "specimens_launched_by_helper":  false,
+    "network_configuration_changed":  false,
+    "limitations":  [
+                        "Only observed process lifetimes are attributed; PID/name alone is insufficient and broker-created processes remain unattributed.",
+                        "Capture-end bounds without a Procmon exit are explicit limits; missing events and dropped events are not ruled out.",
+                        "CreateFile success does not prove data was written. WriteFile success is an observed operation; downloaded content needs separate file/hash proof.",
+                        "A successful delete disposition requests deletion; final absence and fixture chronology provide separate outcome evidence.",
+                        "Process Create/Start proves launch, not successful command completion. Network operations do not establish HTTP body contents.",
+                        "Registry/file mutations on task paths do not alone prove a task was registered or fired. Service/broker rows are not attributed to the specimen.",
+                        "Raw command lines, registry data, arbitrary paths and CSV remain in the guest; selected fixed fields and SHA256 digests are exported.",
+                        "MSI captures require their own validated harness schema and are not accepted by this native reviewer."
+                    ]
+}

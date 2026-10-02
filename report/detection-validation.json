@@ -1,0 +1,325 @@
+{
+  "network_offline": true,
+  "sample_execution": false,
+  "yara_version": "4.5.2",
+  "utc": "2026-10-01T11:04:00Z",
+  "rules_sha256": "665940963e9cb835c18022e8f4fc70b30c12a630cec9b0ce76eed951f5978a5b",
+  "compile_success": true,
+  "rule_names": [
+    "Majlis_2026_Exact_RAT_Or_Installer",
+    "Majlis_2026_RAT_Protocol_And_Capabilities",
+    "Majlis_2026_Installer_Embedded_Protocol",
+    "Majlis_2026_Task_And_Download_Script",
+    "Majlis_2026_FTP_Script_WebDAV_Stage",
+    "Majlis_2026_WebDAV_Internet_Shortcut",
+    "Majlis_2026_FTP_Launching_Shell_Link"
+  ],
+  "provided_artifacts": [
+    {
+      "kind": "provided",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Binary.exe",
+      "filename": "Binary.exe",
+      "size": 574976,
+      "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+      "matches": [
+        "Majlis_2026_Exact_RAT_Or_Installer",
+        "Majlis_2026_RAT_Protocol_And_Capabilities"
+      ],
+      "expected_matches": [
+        "Majlis_2026_Exact_RAT_Or_Installer",
+        "Majlis_2026_RAT_Protocol_And_Capabilities"
+      ],
+      "matches_expectation": true
+    },
+    {
+      "kind": "provided",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Imp_Details.msi.bin",
+      "filename": "Imp_Details.msi.bin",
+      "size": 633856,
+      "sha256": "4008c8f9e52d3e6fd7df4a980a9a78f46f2412ba2fda10a38aa92d338767c54c",
+      "matches": [
+        "Majlis_2026_Exact_RAT_Or_Installer",
+        "Majlis_2026_Installer_Embedded_Protocol"
+      ],
+      "expected_matches": [
+        "Majlis_2026_Exact_RAT_Or_Installer",
+        "Majlis_2026_Installer_Embedded_Protocol"
+      ],
+      "matches_expectation": true
+    },
+    {
+      "kind": "provided",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Scanned Document 2026.lnk.bin",
+      "filename": "Scanned Document 2026.lnk.bin",
+      "size": 1745,
+      "sha256": "613b6569bd8a4cd75ab11ee9682dd690fabfb11d5c1103caf2ba086e006da034",
+      "matches": [
+        "Majlis_2026_FTP_Launching_Shell_Link"
+      ],
+      "expected_matches": [
+        "Majlis_2026_FTP_Launching_Shell_Link"
+      ],
+      "matches_expectation": true
+    },
+    {
+      "kind": "provided",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Scanned Image.url",
+      "filename": "Scanned Image.url",
+      "size": 190,
+      "sha256": "0457ad9cb2f0ecfabd7cf324d0af59ac7ce5e8ded5ea3619385c460139ed4577",
+      "matches": [
+        "Majlis_2026_WebDAV_Internet_Shortcut"
+      ],
+      "expected_matches": [
+        "Majlis_2026_WebDAV_Internet_Shortcut"
+      ],
+      "matches_expectation": true
+    },
+    {
+      "kind": "provided",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/icon.ico.bin",
+      "filename": "icon.ico.bin",
+      "size": 59,
+      "sha256": "c27ca16248e04f6535ae3e6d1670d740b3884f0fa64935ddfd39faf712f4175d",
+      "matches": [
+        "Majlis_2026_FTP_Script_WebDAV_Stage"
+      ],
+      "expected_matches": [
+        "Majlis_2026_FTP_Script_WebDAV_Stage"
+      ],
+      "matches_expectation": true
+    },
+    {
+      "kind": "provided",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/icon2.xz",
+      "filename": "icon2.xz",
+      "size": 2086470,
+      "sha256": "fec4f301a1be36a42ec27208e13b5d1d3d0bbe0f1ab47bbab863a7ca9923c571",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true
+    },
+    {
+      "kind": "provided",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/res.ico.bin",
+      "filename": "res.ico.bin",
+      "size": 361,
+      "sha256": "f1060a81c9f68d6f3d23e28f2a1af50fa18ecb9b0a763ca5dcd4b294b6a3593c",
+      "matches": [
+        "Majlis_2026_Task_And_Download_Script"
+      ],
+      "expected_matches": [
+        "Majlis_2026_Task_And_Download_Script"
+      ],
+      "matches_expectation": true
+    }
+  ],
+  "archive": {
+    "kind": "compressed_archive",
+    "guest_path": "/home/kali/majlis-analysis/incoming/sample.7z",
+    "filename": "sample.7z",
+    "size": 2340789,
+    "sha256": "24a751d37ae7b0ceb0958ee4c3a0bd3ecde8c13f63400e963aebc91c909f62f1",
+    "matches": [],
+    "expected_matches": [],
+    "matches_expectation": true
+  },
+  "archive_note": "Raw YARA scans do not unpack the 7z archive; extract in a contained environment before scanning members.",
+  "benign_controls": [
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/bin/ls",
+      "filename": "ls",
+      "size": 158632,
+      "sha256": "f288ddd1ddc2fbe58e508325193487da3c9dba916652d15e6f55feb19d9bc66e",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": null,
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/bin/python3",
+      "filename": "python3",
+      "size": 6808048,
+      "sha256": "cd3c1349638f564447b0ead1ecc4e3747951cd2eabedb504faa09c6d49af7164",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "python3-minimal: /usr/bin/python3",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/etc/os-release",
+      "filename": "os-release",
+      "size": 279,
+      "sha256": "6bf3ffb2bfaaa74775395e17027e62032556d8ed5f6b42d98a868debed21dcd7",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "base-files: /etc/os-release",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/share/common-licenses/GPL-3",
+      "filename": "GPL-3",
+      "size": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "base-files: /usr/share/common-licenses/GPL-3",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/lib/python3/dist-packages/distlib/t32.exe",
+      "filename": "t32.exe",
+      "size": 97792,
+      "sha256": "6b4195e640a85ac32eb6f9628822a622057df1e459df7c17a12f97aeabc9415b",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "python3-distlib: /usr/lib/python3/dist-packages/distlib/t32.exe",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/lib/python3/dist-packages/distlib/t64-arm.exe",
+      "filename": "t64-arm.exe",
+      "size": 182784,
+      "sha256": "ebc4c06b7d95e74e315419ee7e88e1d0f71e9e9477538c00a93a9ff8c66a6cfc",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "python3-distlib: /usr/lib/python3/dist-packages/distlib/t64-arm.exe",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/lib/python3/dist-packages/distlib/t64.exe",
+      "filename": "t64.exe",
+      "size": 108032,
+      "sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "python3-distlib: /usr/lib/python3/dist-packages/distlib/t64.exe",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/lib/python3/dist-packages/distlib/w32.exe",
+      "filename": "w32.exe",
+      "size": 91648,
+      "sha256": "47872cc77f8e18cf642f868f23340a468e537e64521d9a3a416c8b84384d064b",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "python3-distlib: /usr/lib/python3/dist-packages/distlib/w32.exe",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/lib/python3/dist-packages/distlib/w64-arm.exe",
+      "filename": "w64-arm.exe",
+      "size": 168448,
+      "sha256": "c5dc9884a8f458371550e09bd396e5418bf375820a31b9899f6499bf391c7b2e",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "python3-distlib: /usr/lib/python3/dist-packages/distlib/w64-arm.exe",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/lib/python3/dist-packages/distlib/w64.exe",
+      "filename": "w64.exe",
+      "size": 101888,
+      "sha256": "7a319ffaba23a017d7b1e18ba726ba6c54c53d6446db55f92af53c279894f8ad",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "python3-distlib: /usr/lib/python3/dist-packages/distlib/w64.exe",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.8/System.Console.dll",
+      "filename": "System.Console.dll",
+      "size": 180224,
+      "sha256": "f6e091707f089b5e66388e50ba378a1dadaf4622a02622286f71dcb6e634a7d5",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "dotnet-runtime-6.0: /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.8/System.Console.dll",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    },
+    {
+      "kind": "installed_system_or_package_control",
+      "guest_path": "/usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.8/System.Private.CoreLib.dll",
+      "filename": "System.Private.CoreLib.dll",
+      "size": 10404864,
+      "sha256": "66565e166d683366c7525df14d05f314bdfbf3ec094e308c75dc311c080a71af",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true,
+      "package_owner": "dotnet-runtime-6.0: /usr/share/dotnet/shared/Microsoft.NETCore.App/6.0.8/System.Private.CoreLib.dll",
+      "provenance_limit": "Existing guest-installed file; not independently compared with vendor release hashes."
+    }
+  ],
+  "synthetic_controls": [
+    {
+      "name": "all_protocol_strings_non_PE",
+      "size": 61,
+      "sha256": "4625d9cae1503ad71cb326be12de97b7f40abc87225363564f8d91f603cf2d78",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true
+    },
+    {
+      "name": "task_source_only",
+      "size": 56,
+      "sha256": "547a8c8ba535d7d8a7bb819a96348ea0b2bf8e19c6bee3fd4b73880dfef5dce5",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true
+    },
+    {
+      "name": "ordinary_internet_shortcut",
+      "size": 48,
+      "sha256": "048bcae899884a49371f3021bd645a1635d4196f15815a10ff70a3ac1b31ffe5",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true
+    },
+    {
+      "name": "ftp_marker_without_target",
+      "size": 22,
+      "sha256": "a92d1fcc0c28298434aa10085a6cc4bc29b43d75439a07228c11b468d0cbe0d9",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true
+    },
+    {
+      "name": "LNK_marker_strings_without_header",
+      "size": 68,
+      "sha256": "d56d4789f454dc671304805c7aa39f0b50b746683df5bf9f7affacbacc52a089",
+      "matches": [],
+      "expected_matches": [],
+      "matches_expectation": true
+    }
+  ],
+  "limitations": [
+    "The positive corpus is one supplied case, not a diverse malware-family corpus.",
+    "Negative controls are a small convenience sample, not a false-positive-rate study.",
+    "Structural rules may miss changed builds or different string encoding and container layout.",
+    "Exact hashes identify bytes only; no execution or runtime behavior is demonstrated by a match.",
+    "The supplied JPEG (no malicious content established in this review) intentionally has no positive rule.",
+    "Raw scanning does not recursively unpack archives or MSI streams; the tested MSI rule searches its observed raw container bytes."
+  ],
+  "all_expectations_met": true
+}

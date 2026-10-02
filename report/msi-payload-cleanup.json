@@ -1,0 +1,23 @@
+{
+    "case_id":  "majlis-2026-analysis-20261001",
+    "run_id":  "msi-20261001T144810035Z",
+    "pid":  8912,
+    "expected_creation_filetime":  134353397087498452,
+    "expected_image_path":  "C:\\Windows\\Installer\\MSIE099.tmp",
+    "expected_image_sha256":  "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+    "checked_utc":  "2026-10-01T15:00:01.6604250Z",
+    "historical_harness_cleanup_missing":  true,
+    "specimen_executed_by_helper":  false,
+    "network_or_power_settings_changed":  false,
+    "raw_commandline_exported":  false,
+    "termination_attempted":  true,
+    "alive_before_cleanup":  true,
+    "creation_filetime_verified":  134353397087498452,
+    "image_hash_and_size_verified":  true,
+    "status":  "terminated_owned_handle",
+    "alive_after_cleanup":  false,
+    "observed_exit_code":  19786,
+    "observed_exit_utc":  "2026-10-01T15:00:02.8695522Z",
+    "kernel_handle_used_for_identity_and_stop":  true,
+    "finished_utc":  "2026-10-01T15:00:02.9706630Z"
+}

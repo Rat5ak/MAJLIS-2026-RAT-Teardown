@@ -1,0 +1,417 @@
+{
+    "status":  "success",
+    "mode":  "Check",
+    "collected_utc":  "2026-10-01T13:14:38.3245530Z",
+    "case_id":  "majlis-2026-analysis-20261001",
+    "guest_id":  "14d36378-76f4-4bf7-9f85-2e82f60651a9",
+    "computer_name_sha256":  "58e992d7f005f59795ebf4dd3c4e5fa751b0ebff33c9f93778d31f7356faba8b",
+    "guest_identity_verified":  true,
+    "settings_changed":  false,
+    "specimen_transferred_or_executed":  false,
+    "phase":  "controlled fixture; native C2 hostname overridden to isolated lab peer",
+    "hypervisor_pvn_independently_verified_by_this_helper":  false,
+    "hypervisor_boundary":  "Root must separately verify both connectionType=pvn and matching pvnID, connected state, and absence of host/uplink backing. A pvnID alone is insufficient.",
+    "network":  {
+                    "adapters":  [
+                                     {
+                                         "InterfaceIndex":  6,
+                                         "Name":  "Ethernet (Kernel Debugger)",
+                                         "InterfaceDescription":  "Microsoft Kernel Debug Network Adapter",
+                                         "Status":  "Not Present",
+                                         "HardwareInterface":  false,
+                                         "MacAddress":  null
+                                     },
+                                     {
+                                         "InterfaceIndex":  5,
+                                         "Name":  "Teredo Tunneling Pseudo-Interface",
+                                         "InterfaceDescription":  "",
+                                         "Status":  "Not Present",
+                                         "HardwareInterface":  false,
+                                         "MacAddress":  null
+                                     },
+                                     {
+                                         "InterfaceIndex":  4,
+                                         "Name":  "Ethernet0",
+                                         "InterfaceDescription":  "Intel(R) 82574L Gigabit Network Connection",
+                                         "Status":  "Up",
+                                         "HardwareInterface":  true,
+                                         "MacAddress":  "00-0C-29-D1-BA-2B"
+                                     },
+                                     {
+                                         "InterfaceIndex":  3,
+                                         "Name":  "Microsoft IP-HTTPS Platform Interface",
+                                         "InterfaceDescription":  "",
+                                         "Status":  "Not Present",
+                                         "HardwareInterface":  false,
+                                         "MacAddress":  null
+                                     },
+                                     {
+                                         "InterfaceIndex":  2,
+                                         "Name":  "6to4 Adapter",
+                                         "InterfaceDescription":  "",
+                                         "Status":  "Not Present",
+                                         "HardwareInterface":  false,
+                                         "MacAddress":  null
+                                     }
+                                 ],
+                    "all_up_adapters":  [
+                                            {
+                                                "InterfaceIndex":  4,
+                                                "Name":  "Ethernet0",
+                                                "InterfaceDescription":  "Intel(R) 82574L Gigabit Network Connection",
+                                                "Status":  "Up",
+                                                "HardwareInterface":  true,
+                                                "MacAddress":  "00-0C-29-D1-BA-2B"
+                                            }
+                                        ],
+                    "addresses":  [
+                                      {
+                                          "InterfaceIndex":  1,
+                                          "IPAddress":  "::1",
+                                          "PrefixLength":  128,
+                                          "AddressFamily":  "IPv6",
+                                          "AddressState":  "Preferred"
+                                      },
+                                      {
+                                          "InterfaceIndex":  4,
+                                          "IPAddress":  "172.30.77.2",
+                                          "PrefixLength":  24,
+                                          "AddressFamily":  "IPv4",
+                                          "AddressState":  "Preferred"
+                                      },
+                                      {
+                                          "InterfaceIndex":  1,
+                                          "IPAddress":  "127.0.0.1",
+                                          "PrefixLength":  8,
+                                          "AddressFamily":  "IPv4",
+                                          "AddressState":  "Preferred"
+                                      }
+                                  ],
+                    "active_routes":  [
+                                          {
+                                              "InterfaceIndex":  4,
+                                              "DestinationPrefix":  "255.255.255.255/32",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "DestinationPrefix":  "255.255.255.255/32",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  4,
+                                              "DestinationPrefix":  "224.0.0.0/4",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "DestinationPrefix":  "224.0.0.0/4",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  4,
+                                              "DestinationPrefix":  "172.30.77.255/32",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  4,
+                                              "DestinationPrefix":  "172.30.77.2/32",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  4,
+                                              "DestinationPrefix":  "172.30.77.0/24",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "DestinationPrefix":  "127.255.255.255/32",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "DestinationPrefix":  "127.0.0.1/32",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "DestinationPrefix":  "127.0.0.0/8",
+                                              "NextHop":  "0.0.0.0",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv4",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "DestinationPrefix":  "ff00::/8",
+                                              "NextHop":  "::",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv6",
+                                              "State":  "Alive"
+                                          },
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "DestinationPrefix":  "::1/128",
+                                              "NextHop":  "::",
+                                              "RouteMetric":  256,
+                                              "AddressFamily":  "IPv6",
+                                              "State":  "Alive"
+                                          }
+                                      ],
+                    "ip_interfaces":  [
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "AddressFamily":  "IPv6",
+                                              "Dhcp":  "Disabled",
+                                              "Forwarding":  "Disabled",
+                                              "ConnectionState":  "Connected"
+                                          },
+                                          {
+                                              "InterfaceIndex":  4,
+                                              "AddressFamily":  "IPv4",
+                                              "Dhcp":  "Disabled",
+                                              "Forwarding":  "Disabled",
+                                              "ConnectionState":  "Connected"
+                                          },
+                                          {
+                                              "InterfaceIndex":  1,
+                                              "AddressFamily":  "IPv4",
+                                              "Dhcp":  "Disabled",
+                                              "Forwarding":  "Disabled",
+                                              "ConnectionState":  "Connected"
+                                          }
+                                      ],
+                    "dns":  [
+                                {
+                                    "InterfaceIndex":  4,
+                                    "AddressFamily":  2,
+                                    "ServerAddresses":  [
+                                                            "172.30.77.1"
+                                                        ]
+                                },
+                                {
+                                    "InterfaceIndex":  4,
+                                    "AddressFamily":  23,
+                                    "ServerAddresses":  [
+
+                                                        ]
+                                },
+                                {
+                                    "InterfaceIndex":  1,
+                                    "AddressFamily":  2,
+                                    "ServerAddresses":  [
+
+                                                        ]
+                                },
+                                {
+                                    "InterfaceIndex":  1,
+                                    "AddressFamily":  23,
+                                    "ServerAddresses":  [
+                                                            "fec0:0:0:ffff::1",
+                                                            "fec0:0:0:ffff::2",
+                                                            "fec0:0:0:ffff::3"
+                                                        ]
+                                }
+                            ],
+                    "ipv6_bindings":  [
+                                          {
+                                              "InterfaceAlias":  "Ethernet0",
+                                              "Enabled":  false
+                                          }
+                                      ],
+                    "ip_enable_router":  0,
+                    "firewall_profiles":  [
+                                              {
+                                                  "Name":  "Domain",
+                                                  "Enabled":  1,
+                                                  "DefaultInboundAction":  "Block",
+                                                  "DefaultOutboundAction":  "Block"
+                                              },
+                                              {
+                                                  "Name":  "Private",
+                                                  "Enabled":  1,
+                                                  "DefaultInboundAction":  "Block",
+                                                  "DefaultOutboundAction":  "Block"
+                                              },
+                                              {
+                                                  "Name":  "Public",
+                                                  "Enabled":  1,
+                                                  "DefaultInboundAction":  "Block",
+                                                  "DefaultOutboundAction":  "Block"
+                                              }
+                                          ],
+                    "active_outbound_allow_rules":  [
+                                                        {
+                                                            "name":  "Majlis-Lab-Only-TCP",
+                                                            "policy_source_type":  "Local"
+                                                        },
+                                                        {
+                                                            "name":  "Majlis-Lab-Only-ICMP",
+                                                            "policy_source_type":  "Local"
+                                                        }
+                                                    ],
+                    "native_c2_hosts_mappings":  [
+                                                     {
+                                                         "address":  "172.30.77.1",
+                                                         "name":  "www.chestergreenfarming.com"
+                                                     }
+                                                 ]
+                },
+    "configuration_failures":  [
+
+                               ],
+    "connectivity_checks_requested":  true,
+    "peer_health":  {
+                        "address":  "172.30.77.1",
+                        "port":  8080,
+                        "path":  "/health",
+                        "http_status":  200,
+                        "body_size":  27,
+                        "body_sha256":  "53c063276712ce9c96dfaf3f074600e0a75dfde6b6255dde3c9d3e65c77f97df",
+                        "exact_marker_match":  true,
+                        "passed":  true
+                    },
+    "negative_controls":  [
+                              {
+                                  "label":  "host_physical_at_preparation",
+                                  "tcp":  {
+                                              "address":  "192.168.0.211",
+                                              "port":  445,
+                                              "connected":  false,
+                                              "outcome":  "connection_failed"
+                                          },
+                                  "covering_routes":  [
+
+                                                      ],
+                                  "no_route":  true,
+                                  "passed":  true
+                              },
+                              {
+                                  "label":  "host_vmnet1",
+                                  "tcp":  {
+                                              "address":  "192.168.59.1",
+                                              "port":  445,
+                                              "connected":  false,
+                                              "outcome":  "connection_failed"
+                                          },
+                                  "covering_routes":  [
+
+                                                      ],
+                                  "no_route":  true,
+                                  "passed":  true
+                              },
+                              {
+                                  "label":  "host_vmnet8",
+                                  "tcp":  {
+                                              "address":  "192.168.217.1",
+                                              "port":  445,
+                                              "connected":  false,
+                                              "outcome":  "connection_failed"
+                                          },
+                                  "covering_routes":  [
+
+                                                      ],
+                                  "no_route":  true,
+                                  "passed":  true
+                              },
+                              {
+                                  "label":  "host_other_virtual_at_preparation",
+                                  "tcp":  {
+                                              "address":  "192.168.56.1",
+                                              "port":  445,
+                                              "connected":  false,
+                                              "outcome":  "connection_failed"
+                                          },
+                                  "covering_routes":  [
+
+                                                      ],
+                                  "no_route":  true,
+                                  "passed":  true
+                              },
+                              {
+                                  "label":  "host_wsl_at_preparation",
+                                  "tcp":  {
+                                              "address":  "172.29.96.1",
+                                              "port":  445,
+                                              "connected":  false,
+                                              "outcome":  "connection_failed"
+                                          },
+                                  "covering_routes":  [
+
+                                                      ],
+                                  "no_route":  true,
+                                  "passed":  true
+                              },
+                              {
+                                  "label":  "host_default_switch_at_preparation",
+                                  "tcp":  {
+                                              "address":  "172.21.128.1",
+                                              "port":  445,
+                                              "connected":  false,
+                                              "outcome":  "connection_failed"
+                                          },
+                                  "covering_routes":  [
+
+                                                      ],
+                                  "no_route":  true,
+                                  "passed":  true
+                              },
+                              {
+                                  "label":  "public_control",
+                                  "tcp":  {
+                                              "address":  "1.1.1.1",
+                                              "port":  443,
+                                              "connected":  false,
+                                              "outcome":  "connection_failed"
+                                          },
+                                  "covering_routes":  [
+
+                                                      ],
+                                  "no_route":  true,
+                                  "passed":  true
+                              },
+                              {
+                                  "label":  "public_control_2",
+                                  "tcp":  {
+                                              "address":  "8.8.8.8",
+                                              "port":  443,
+                                              "connected":  false,
+                                              "outcome":  "connection_failed"
+                                          },
+                                  "covering_routes":  [
+
+                                                      ],
+                                  "no_route":  true,
+                                  "passed":  true
+                              }
+                          ],
+    "boundary":  "Finite guest configuration/connectivity checks; negative TCP alone does not prove isolation. Hypervisor backing and no-route checks are independently required.",
+    "backups_guest_only":  "C:\\Lab\\IsolationBackup"
+}

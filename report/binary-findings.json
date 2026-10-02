@@ -1,0 +1,237 @@
+{
+  "network_offline": true,
+  "inspection_mode": "Static guest-only parsing/disassembly/decompilation; no specimen execution. Parent separately attempted authorized referenced-stage acquisition (DNS failures and empty response bodies); no successful backdoor C2 exchange claimed.",
+  "sample_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+  "size": 574976,
+  "format": "Native MSVC C++ PE32 GUI, statically linked Boost.Asio and nlohmann JSON 3.11.3",
+  "main_va": "0x40d470",
+  "main_entry_reference": "0x4449dc",
+  "decoder": {
+    "va": "0x40c780",
+    "operation": "Copy encoded static config/prefix/path string; XOR each byte with0x50 except00,0a,50,5a. No XOR transform on received command values, next_data or outgoing JSON body in reviewed code.",
+    "xor_instruction_va": "0x40c7ff"
+  },
+  "config": {
+    "host": {
+      "value": "www.chestergreenfarming.com",
+      "file_offset": "0x785d4",
+      "va": "0x479bd4"
+    },
+    "port": {
+      "value": "80",
+      "file_offset": "0x785f0",
+      "va": "0x479bf0"
+    },
+    "cmd_prefix": {
+      "value": "cmd /c ",
+      "file_offset": "0x78648",
+      "va": "0x479c48"
+    },
+    "powershell_prefix": {
+      "value": "powershell -c ",
+      "file_offset": "0x78654",
+      "va": "0x479c54"
+    },
+    "upload_path": {
+      "value": "/receive.php",
+      "file_offset": "0x7867c",
+      "va": "0x479c7c"
+    },
+    "download_path": {
+      "value": "/send.php",
+      "file_offset": "0x78690",
+      "va": "0x479c90"
+    },
+    "screenshot_path": {
+      "value": "C:\\programdata\\ss.jpg",
+      "file_offset": "0x786d0",
+      "va": "0x479cd0"
+    },
+    "base_path": {
+      "value": "/peachforthevictory",
+      "file_offset": "0x785f4",
+      "va": "0x479bf4"
+    },
+    "poll_path": {
+      "value": "/peachforthevictory/",
+      "file_offset": "0x78608",
+      "va": "0x479c08"
+    }
+  },
+  "version_claims": {
+    "CompanyName": "Microsoft Corporation",
+    "ProductName": "Microsoft redistributables",
+    "OriginalFilename": "ktvrsvc.exe",
+    "FileVersion": "72.14.0.144"
+  },
+  "protocol": {
+    "transport": "Plain HTTP/1.1 over native Winsock/Boost.Asio TCPport80",
+    "urls": {
+      "poll": "http://www.chestergreenfarming.com:80/peachforthevictory/",
+      "upload": "http://www.chestergreenfarming.com:80/peachforthevictory/receive.php",
+      "download": "http://www.chestergreenfarming.com:80/peachforthevictory/send.php?file=<UTF8 basename of value>"
+    },
+    "json_request_schema": {
+      "client_id": "JSON string username_computername",
+      "<response_type>": "Native JSON response_data, dynamically named second member"
+    },
+    "json_response_schema": {
+      "next_data": "JSON string containing serialized command object, e.g. {\"type\":\"FDD\",\"value\":\"<directory>\"}"
+    },
+    "first_request": {
+      "client_id": "<username>_<computername>",
+      "fdd": null
+    },
+    "command_schema": {
+      "type": "Case-sensitive JSON string matching supported command",
+      "value": "JSON string; arrays, objects, booleans, numbers and null fail string getter"
+    },
+    "file_headers": {
+      "OTP": "123456",
+      "ClientID": "username_computername"
+    },
+    "multipart_boundary": "----Boundary43985743985798fjkfscxWW",
+    "protocol_details": "protocol-deep-findings.json",
+    "wire_cipher_assessment": "No command/response XOR. Static literal XOR decoder only."
+  },
+  "commands": [
+    {
+      "type": "msg",
+      "behavior": "Decode cmd /c prefix; execute remote command and collect pipe output",
+      "evidence": [
+        "prefix VA 0x479c48 referenced at 0x40db70",
+        "shared callback 0x40cd10 assigned at 0x41a6c6",
+        "CreateProcessW at 0x40cf85 with CREATE_NO_WINDOW; ReadFile loop starting 0x40cff1"
+      ],
+      "value_schema": "command string",
+      "response_key": "msg",
+      "response_value": "Captured stdout/stderr pipe output as a JSON string, posted by detached shell worker."
+    },
+    {
+      "type": "ms2",
+      "behavior": "Decode powershell -c prefix; use shared command execution callback",
+      "evidence": [
+        "type comparison begins 0x40de99",
+        "prefix VA 0x479c54 referenced at 0x40df5b",
+        "thread constructor 0x41a5f0 called at 0x40e153"
+      ],
+      "value_schema": "PowerShell command string",
+      "response_key": "msg",
+      "response_value": "Same detached worker and string result as msg."
+    },
+    {
+      "type": "FDD",
+      "behavior": "Directory listing, returns fields including name,isDir,size,fmod",
+      "evidence": [
+        "type comparison begins 0x40e2ff",
+        "directory routine 0x407cf0 called at 0x40e492",
+        "FindFirstFileW 0x407d8a; FindNextFileW 0x408036"
+      ],
+      "value_schema": "local directory path string",
+      "response_key": "fdd",
+      "response_value": "Directory array; immediately POSTed then preserved for subsequent outer polls. Immediate POST return is discarded."
+    },
+    {
+      "type": "UPP",
+      "behavior": "Upload selected file using multipart request to /receive.php",
+      "evidence": [
+        "type comparison begins 0x40e7d1",
+        "decode /receive.php at 0x40e947",
+        "multipart uploader 0x40a500 called at 0x40e98c"
+      ],
+      "value_schema": "local file path string",
+      "response_key": null,
+      "response_value": "Separate multipart upload; raw HTTP response returned by uploader is discarded. No handler-authored JSON status response. Main response type remains empty string and data remains the type-preserving cleared prior JSON value."
+    },
+    {
+      "type": "DWW",
+      "behavior": "Request server file by basename of value; write to full value destination, then refresh parent directory listing.",
+      "evidence": [
+        "type comparison begins 0x40eb8a",
+        "decode /send.php at 0x40ecab",
+        "download helper 0x40b050 called at 0x40ece4",
+        "?file= used at 0x40b1d5"
+      ],
+      "value_schema": "local destination file path string, whose basename is the requested server filename",
+      "response_key": "fdd",
+      "response_value": "Refresh directory listing of destination parent after downloader returns. This is not a reliable transfer-success acknowledgment."
+    },
+    {
+      "type": "DEL",
+      "behavior": "Delete selected local file and refresh directory listing",
+      "evidence": [
+        "type check 0x40f03e",
+        "CRT delete wrapper 0x44c8ac called at 0x40f094",
+        "DeleteFileW at 0x44c8b4",
+        "directory listing refresh at 0x40f12f"
+      ],
+      "value_schema": "local file path string",
+      "response_key": "fdd",
+      "response_value": "Refresh parent directory listing after delete attempt; delete return is not checked."
+    },
+    {
+      "type": "RUN",
+      "behavior": "Launch selected executable",
+      "evidence": [
+        "type check at 0x40f1cc",
+        "CreateProcessW at 0x40f26a",
+        "status response key sts and success/failed literals"
+      ],
+      "value_schema": "executable path string",
+      "response_key": "sts",
+      "response_value": "JSON string success or failed according to CreateProcessW return."
+    },
+    {
+      "type": "GDR",
+      "behavior": "Enumerate logical drives",
+      "evidence": [
+        "type check at 0x40f2f6",
+        "drive routine 0x40bfc0 called at 0x40f362",
+        "GetLogicalDrives at 0x40c00f"
+      ],
+      "value_schema": "string (extracted and UTF16-converted, but unused by drive enumeration)",
+      "response_key": "fdd",
+      "response_value": "Array of drive roots C through Z; fields name,isDir:true,size:0,fmod:0."
+    },
+    {
+      "type": "SS1",
+      "behavior": "Capture screenshot using conditional path derived from value; fallback C:\\programdata\\ss.jpg; if capture succeeds upload with OTP123456. Predicate tests whole derived path for directory mode.",
+      "evidence": [
+        "type check at 0x40f3bb",
+        "screenshot routine 0x40c820 called at 0x40f4aa",
+        "BitBlt at 0x40c956; GDI+ image encoding helper 0x4078d0",
+        "multipart uploader 0x40a500 called at 0x40f530"
+      ],
+      "value_schema": "path string; code appends \\ss.jpg and tests the whole resulting path with stat mode directory bit",
+      "response_key": null,
+      "response_value": "If screenshot capture succeeds, separate multipart upload; returned HTTP response is discarded. Main response type remains empty string and data remains the type-preserving cleared prior JSON value."
+    }
+  ],
+  "client_identity": {
+    "behavior": "Calls GetUserNameW and GetComputerNameW; concatenates username + '_' + computername. Separator VA 0x479bc8.",
+    "function": "0x40c560",
+    "call_sites": [
+      "0x40c5e0",
+      "0x40c608"
+    ]
+  },
+  "analysis_obstacles": {
+    "startup_delay": "18seconds, randomized41-113seconds, then5seconds before first poll; normal recurring main poll jitter14-24seconds. Exception retry may bypass jitter.",
+    "junk_function": "0x40d370 appends repeated bytes to a temporary string and discards it; called throughout main.",
+    "debugger_check_assessment": "IsDebuggerPresent references reviewed are in CRT diagnostics/exception handling; deliberate sample-specific debugger gating not established.",
+    "exception_handling": "Ordinary MSVC std::exception catch funclets return continuation addresses; no authored opaque control-flow claim."
+  },
+  "persistence_assessment": "No direct authored persistence established in reviewed EXE code; root independently established scheduled-task persistence in res.ico. Arbitrary command functionality could permit operator-installed persistence.",
+  "classification": "Backdoor/RAT behavior demonstrated statically; no specific malware family attribution established.",
+  "uncertainties": [
+    "Static analysis only. No successful backdoor connection, remote command, file upload/download or screenshot execution was demonstrated.",
+    "No operator/server implementation or C2 replies obtained; expected schemas are reconstructed from client-side code.",
+    "Error and retry behavior derives from inspected static helpers and MSVC catch continuations; library/OS failure combinations were not exhaustively tested.",
+    "No specific family or actor attribution established.",
+    "No direct EXE-authored persistence established in reviewed functions; installer script persistence is independently documented by parent."
+  ],
+  "evidence_notes": "Raw PE and full disassembly remain guest-only. Retrieved bounded excerpts are mnemonic-only, without machine-code byte columns.",
+  "next_reversing_path": "If runtime proof is later requested, use a separate isolated Windows guest with external C2 blocked and local inert mock responses. Static protocol details are now documented; no runtime execution performed.",
+  "status": "canonical; supersedes preliminary binary-notes and old protocol claims",
+  "protocol_schema_evidence": "protocol-deep-findings.json; guest full Ghidra C remains under ghidra-protocol and database under ghidra-projects."
+}

@@ -1,0 +1,275 @@
+{
+  "analysis_date": "2026-10-01",
+  "sample_root_guest": "/home/kali/majlis-analysis",
+  "archive": {
+    "size": 2340789,
+    "sha256": "24a751d37ae7b0ceb0958ee4c3a0bd3ecde8c13f63400e963aebc91c909f62f1",
+    "name": "Official Invitation Majilis 2026 Gala Dinner.7z"
+  },
+  "provided_files": [
+    {
+      "name": "Binary.exe",
+      "size": 574976,
+      "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Binary.exe"
+    },
+    {
+      "name": "Imp_Details.msi.bin",
+      "size": 633856,
+      "sha256": "4008c8f9e52d3e6fd7df4a980a9a78f46f2412ba2fda10a38aa92d338767c54c",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Imp_Details.msi.bin"
+    },
+    {
+      "name": "Scanned Document 2026.lnk.bin",
+      "size": 1745,
+      "sha256": "613b6569bd8a4cd75ab11ee9682dd690fabfb11d5c1103caf2ba086e006da034",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Scanned Document 2026.lnk.bin"
+    },
+    {
+      "name": "Scanned Image.url",
+      "size": 190,
+      "sha256": "0457ad9cb2f0ecfabd7cf324d0af59ac7ce5e8ded5ea3619385c460139ed4577",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Scanned Image.url"
+    },
+    {
+      "name": "icon.ico.bin",
+      "size": 59,
+      "sha256": "c27ca16248e04f6535ae3e6d1670d740b3884f0fa64935ddfd39faf712f4175d",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/icon.ico.bin"
+    },
+    {
+      "name": "icon2.xz",
+      "size": 2086470,
+      "sha256": "fec4f301a1be36a42ec27208e13b5d1d3d0bbe0f1ab47bbab863a7ca9923c571",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/icon2.xz"
+    },
+    {
+      "name": "res.ico.bin",
+      "size": 361,
+      "sha256": "f1060a81c9f68d6f3d23e28f2a1af50fa18ecb9b0a763ca5dcd4b294b6a3593c",
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/res.ico.bin"
+    }
+  ],
+  "msi_streams": [
+    {
+      "name": "Binary._2E9D1C8BAC5D0F288E61BF5987C52203",
+      "size": 574976,
+      "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716"
+    },
+    {
+      "name": "!InstallExecuteSequence",
+      "size": 378,
+      "sha256": "fb088b9407dfb9b54d868a77e1a9c0c01e6a0d15579ba2442619f01d8a7094a0"
+    },
+    {
+      "name": "!Component",
+      "size": 12,
+      "sha256": "f4a19e2cfc420676e2929cb4c12a97c2c8b3aa997231f8eb81124a5586241732"
+    },
+    {
+      "name": "!Directory",
+      "size": 6,
+      "sha256": "9aa50e42464568696f5cc916f67b17910cb09364a0a5c9610364199d41f560b1"
+    },
+    {
+      "name": "!Feature",
+      "size": 16,
+      "sha256": "b854f79d7f6d2e4618c3ece81d7fe91278e6479e14c5984a5bc9c8027d882ff4"
+    },
+    {
+      "name": "!Binary",
+      "size": 4,
+      "sha256": "6fd6ca73acea8fd7cb059c6c05a3e4cbdba9440f46dd98104b2538f0f90a9c3c"
+    },
+    {
+      "name": "!Media",
+      "size": 12,
+      "sha256": "6d6439ee7674f41e14e8a2aa442c4830461dac478c35109cddb7409d0274a472"
+    },
+    {
+      "name": "!_Tables",
+      "size": 172,
+      "sha256": "d01a7e873e684a33f96cb0dbba9db2dc79c41bf41fbe15ba87c9e900641511c7"
+    },
+    {
+      "name": "!_Columns",
+      "size": 3288,
+      "sha256": "1f7805657d9cb815d171494f1c6dc1c5a30b03455fc34b4d5a72f36bd5e41727"
+    },
+    {
+      "name": "!Property",
+      "size": 100,
+      "sha256": "fa0e47d3babf2aefb67bc22fd7fbdbd6e5188a24f067ac91cd566af908a1ffe4"
+    },
+    {
+      "name": "!Upgrade",
+      "size": 16,
+      "sha256": "26d23ede2c33fe6f1e65dcd39bb33b98eef8895a50fad40d87fdbcc9f8a48425"
+    },
+    {
+      "name": "!FeatureComponents",
+      "size": 4,
+      "sha256": "8cd790a70b6494cff0922c60313cb22f62901225cb65b8981f594be453892a3e"
+    },
+    {
+      "name": "!ModuleSignature",
+      "size": 6,
+      "sha256": "daa132e1fb577a29104e9102a92c4c01d9c73fbc13ceb8fb5668c039a7ac6b31"
+    },
+    {
+      "name": "!_Validation",
+      "size": 10176,
+      "sha256": "aef428b6725ddf95d57310ee3ff9374674ce4421050166acd4c78d161bf89d9c"
+    },
+    {
+      "name": "!_StringPool",
+      "size": 3080,
+      "sha256": "938b57fcb3173b8878b92405d772327294c6f0298be0d5ce7242775acc8e1d12"
+    },
+    {
+      "name": "!_StringData",
+      "size": 30151,
+      "sha256": "76c31c4e4548da6da84ca3f0b45dcc659d2a6da5ccfc13104cbd5588862e4a11"
+    },
+    {
+      "name": "!CustomAction",
+      "size": 12,
+      "sha256": "d36308bb4e445c46db1964e30e8893653e2acbfdc253a2d7894775831760f563"
+    },
+    {
+      "name": "!AdminExecuteSequence",
+      "size": 54,
+      "sha256": "2b7ca2d8169ed10822e1f19bb22760d6582fab39f595557067caf7b570735686"
+    },
+    {
+      "name": "!AdvtExecuteSequence",
+      "size": 84,
+      "sha256": "6cdc96a05bb4b9df702b63a1b98a01b791d4f32fd73c0b9ba4e59a8a68c52dc5"
+    },
+    {
+      "name": "[5]SummaryInformation",
+      "size": 488,
+      "sha256": "c133f58ad314dd2f5e647df973b73111d691b183399dbc64adf210977c14d4e8"
+    }
+  ],
+  "remote_acquisition": [
+    {
+      "source": "https://rappellingaart.com/secure-docs/3",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:35.186465+00:00",
+      "synthetic_identifier": false,
+      "error": "[Errno -2] Name or service not known"
+    },
+    {
+      "source": "https://rappellingaart.com/secure-docs/3",
+      "method": "PROPFIND",
+      "time_utc": "2026-10-01T10:57:35.228442+00:00",
+      "synthetic_identifier": false,
+      "error": "[Errno -2] Name or service not known"
+    },
+    {
+      "source": "https://rappellingaart.com/secure-docs/res.ico",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:35.241768+00:00",
+      "synthetic_identifier": false,
+      "error": "[Errno -2] Name or service not known"
+    },
+    {
+      "source": "https://rappellingaart.com/secure-docs/Imp_Details.msi",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:35.246943+00:00",
+      "synthetic_identifier": false,
+      "error": "[Errno -2] Name or service not known"
+    },
+    {
+      "source": "http://gomescareerplans.com/docs/",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:35.252661+00:00",
+      "synthetic_identifier": false,
+      "resolved_ips": [
+        "176.123.0.199"
+      ],
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "location": null,
+      "server": "LiteSpeed",
+      "guest_path": "/home/kali/majlis-analysis/acquired/command-source-no-id.bin",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file_type": "empty",
+      "referenced_urls": [],
+      "hrefs": [],
+      "webdav_hrefs": [],
+      "body_classifiers": {
+        "not found": false,
+        "forbidden": false,
+        "access denied": false,
+        "captcha": false,
+        "cloudflare": false,
+        "<html": false,
+        "powershell": false,
+        "msiexec": false,
+        "curl": false,
+        "schtasks": false
+      }
+    },
+    {
+      "source": "http://gomescareerplans.com/docs/?vid=LAB-ANALYSISG",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:36.786685+00:00",
+      "synthetic_identifier": true,
+      "resolved_ips": [
+        "176.123.0.199"
+      ],
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "location": null,
+      "server": "LiteSpeed",
+      "guest_path": "/home/kali/majlis-analysis/acquired/command-source-lab-id.bin",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file_type": "empty",
+      "referenced_urls": [],
+      "hrefs": [],
+      "webdav_hrefs": [],
+      "body_classifiers": {
+        "not found": false,
+        "forbidden": false,
+        "access denied": false,
+        "captcha": false,
+        "cloudflare": false,
+        "<html": false,
+        "powershell": false,
+        "msiexec": false,
+        "curl": false,
+        "schtasks": false
+      }
+    }
+  ],
+  "coverage": "All seven supplied members and all 20 MSI streams; unavailable remote stages are not claimed recovered.",
+  "runtime_phase_status": {
+    "baseline": "complete",
+    "controlled": "complete",
+    "msi": "complete"
+  },
+  "screened_runtime_images": [
+    {
+      "file": "screenshots/native-baseline-wireshark.png",
+      "sha256": "446fbf93c855744362b03ceab4e3d0682378d02a7a00b44ddb0c9cd4bd0764f9",
+      "phase": "baseline",
+      "source_run_id": "baseline-20261001T131627068490Z"
+    },
+    {
+      "file": "screenshots/native-controlled-wireshark.png",
+      "sha256": "a3af3cdd4b4f8c275f1ad4dc424163d429e0f710e4cf6822070c4fcb6e31c44d",
+      "phase": "controlled",
+      "source_run_id": "controlled-20261001T141355136847Z"
+    },
+    {
+      "file": "screenshots/native-controlled-ss1-viewer.png",
+      "sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+      "phase": "controlled",
+      "source_run_id": "controlled-20261001T141355136847Z"
+    }
+  ]
+}

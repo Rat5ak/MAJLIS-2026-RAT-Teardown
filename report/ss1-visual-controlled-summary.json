@@ -1,0 +1,75 @@
+{
+  "application": "ImageMagick display",
+  "capture_method": "ImageMagick import -silent -frame -window <verified viewer window>",
+  "command_type": "SS1",
+  "completed_utc": "2026-10-01T14:25:00.449464+00:00",
+  "controller_ended_utc": "2026-10-01T14:23:50.234227+00:00",
+  "controller_lock_held_through_completion": true,
+  "controller_status": "stopped",
+  "created_utc": "2026-10-01T14:24:56.893756+00:00",
+  "decoded_pixel_sha256": "e8cbff870cd7080b7517694e550fd14387de626a643014baff119ae75ce2f92f",
+  "decoded_pixel_statistics_only": true,
+  "display_is_private_xvfb": true,
+  "evidence_image_edited": false,
+  "fixture_index": 8,
+  "image_edited_or_composited": false,
+  "jpeg_channel_extrema": [
+    [
+      0,
+      255
+    ],
+    [
+      0,
+      255
+    ],
+    [
+      0,
+      255
+    ]
+  ],
+  "jpeg_channel_mean": [
+    60.31958,
+    77.058987,
+    100.834977
+  ],
+  "jpeg_channel_stddev": [
+    87.418375,
+    78.812636,
+    68.331721
+  ],
+  "jpeg_dimensions": [
+    1024,
+    768
+  ],
+  "jpeg_full_pixel_decode": true,
+  "jpeg_mode": "RGB",
+  "original_upload_hash_preserved": true,
+  "png_export_requires_manual_screening": true,
+  "raw_copy_stays_guest_only": true,
+  "raw_upload_exported": false,
+  "raw_view_copy_guest_path": "/home/kali/majlis-analysis/dynamic/ss1-visual-evidence/controlled-20261001T141355136847Z/SS1-upload-raw-guest-only.jpg",
+  "recorded_process_identities": {
+    "capture": "absent",
+    "controller": "absent",
+    "fixture": "absent"
+  },
+  "run_id": "controlled-20261001T141355136847Z",
+  "schema": 1,
+  "screenshot_bytes": 340444,
+  "screenshot_dimensions": [
+    1034,
+    804
+  ],
+  "screenshot_guest_path": "/home/kali/majlis-analysis/dynamic/ss1-visual-evidence/controlled-20261001T141355136847Z/SS1-upload-in-ImageMagick-viewer.png",
+  "screenshot_sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+  "source_upload_bytes": 123772,
+  "source_upload_guest_path": "/home/kali/majlis-analysis/dynamic/captures/controlled-20261001T141355136847Z/fixture/private/uploads/fixture-08-d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9.bin",
+  "source_upload_sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+  "status": "viewer_png_saved_guest_only",
+  "viewer_runs_as": "kali",
+  "viewer_window_id": "8389598",
+  "viewer_window_title": "SS1 lab upload - ImageMagick viewer - raw JPEG stays in Kali",
+  "visual_marker_assessment": "pending_manual_review",
+  "window_manager": "xfwm4",
+  "windows_file_hash_correlation": "pending_separate_Windows_evidence"
+}

@@ -1,0 +1,652 @@
+{
+    "status":  "finished_observation_not_capability_verdict",
+    "run_id":  "msi-20261001T144810035Z",
+    "created_utc":  "2026-10-01T14:48:10.0559989Z",
+    "updated_utc":  "2026-10-01T14:53:16.7156394Z",
+    "harness_sha256":  "0aba71eef24c08249669b7ec5033717f1fa060bd6418191eb185d314127d9381",
+    "observation_seconds":  300,
+    "required_kali_mode":  "baseline_empty_tasking",
+    "msi_sha256":  "4008c8f9e52d3e6fd7df4a980a9a78f46f2412ba2fda10a38aa92d338767c54c",
+    "procmon_readiness_timeout_seconds":  180,
+    "expected_payload_sha256":  "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+    "product_code":  "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}",
+    "guest":  "MAJLIS-W11",
+    "session_id":  1,
+    "elevated_analyst_context":  true,
+    "specimen_privilege_escalation_tested":  false,
+    "initial_network":  {
+                            "interface_index":  4,
+                            "address":  "172.30.77.2/24",
+                            "default_routes":  0,
+                            "gateway_routes":  0,
+                            "c2_address":  "172.30.77.1"
+                        },
+    "operating_system":  {
+                             "Caption":  "Microsoft Windows 11 Pro",
+                             "Version":  "10.0.26200",
+                             "BuildNumber":  "26200",
+                             "OSArchitecture":  "64-bit"
+                         },
+    "scoped_keep_awake":  {
+                              "enabled":  true,
+                              "restored":  true,
+                              "persistent_power_settings_changed":  false
+                          },
+    "defender_before":  {
+                            "AMRunningMode":  "Normal",
+                            "AntivirusEnabled":  true,
+                            "RealTimeProtectionEnabled":  true,
+                            "BehaviorMonitorEnabled":  true,
+                            "IsTamperProtected":  true,
+                            "AntivirusSignatureVersion":  "1.437.1.0"
+                        },
+    "defender_after":  {
+                           "AMRunningMode":  "Normal",
+                           "AntivirusEnabled":  true,
+                           "RealTimeProtectionEnabled":  true,
+                           "BehaviorMonitorEnabled":  true,
+                           "IsTamperProtected":  true,
+                           "AntivirusSignatureVersion":  "1.437.1.0"
+                       },
+    "procmon_result":  {
+                           "started":  true,
+                           "pid":  3232,
+                           "start_utc":  "2026-10-01T14:48:11.8011679Z",
+                           "tool_sha256":  "fc3af5317c707e0555ad6e7590ad65ceb5c5085b053b41221944ac3ca3492d9c",
+                           "backing_file_present_before_installer":  true,
+                           "stop_result":  "graceful_termination_confirmed",
+                           "capture":  {
+                                           "label":  "private_msi_procmon_pml",
+                                           "present":  true,
+                                           "size":  1234376289,
+                                           "sha256":  "99bcccdccc94f02fba701924fdad04bb7d0933ddbdde54f8a7b0b96f6766950f",
+                                           "last_write_utc":  "2026-10-01T14:53:14.0211323Z"
+                                       }
+                       },
+    "installer_launch":  {
+                             "requested_utc":  "2026-10-01T14:48:12.5155513Z",
+                             "client_created":  true,
+                             "identity_retained":  true,
+                             "system_installer":  "C:\\Windows\\System32\\msiexec.exe",
+                             "reboot_suppressed":  true,
+                             "pid":  5992,
+                             "start_utc":  "2026-10-01T14:48:12.7844786Z",
+                             "creation_filetime":  134353396927844786
+                         },
+    "installer_return":  {
+                             "natural_exit_observed":  true,
+                             "observed_utc":  "2026-10-01T14:48:29.9371747Z",
+                             "return_code":  0,
+                             "success_return_code":  true,
+                             "reboot_required_return_code":  false,
+                             "proves_payload_execution":  false
+                         },
+    "product_before":  {
+                           "checked_utc":  "2026-10-01T14:48:11.2852542Z",
+                           "product_code":  "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}",
+                           "msi_query_state":  -1,
+                           "installed_for_current_context":  false,
+                           "registration_indicators_present":  false,
+                           "uninstall_registry_entries":  [
+
+                                                          ],
+                           "method":  "Read-only MsiQueryProductState and fixed uninstall registry keys; no Win32_Product query"
+                       },
+    "product_after":  {
+                          "checked_utc":  "2026-10-01T14:53:16.6444997Z",
+                          "product_code":  "{C1B4E779-4A66-405F-9B2C-F8CAD4AE106F}",
+                          "msi_query_state":  -1,
+                          "installed_for_current_context":  false,
+                          "registration_indicators_present":  false,
+                          "uninstall_registry_entries":  [
+
+                                                         ],
+                          "method":  "Read-only MsiQueryProductState and fixed uninstall registry keys; no Win32_Product query"
+                      },
+    "pinned_file_observations":  [
+                                     {
+                                         "image_guest_path":  "C:\\WINDOWS\\Installer\\MSIE099.tmp",
+                                         "size":  574976,
+                                         "sha256":  "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+                                         "observed_utc":  "2026-10-01T14:48:29.2719632Z",
+                                         "source":  "new_process_image",
+                                         "new_file_event_after_launch":  true,
+                                         "file_creation_utc":  "2026-10-01T14:48:28.5614127Z",
+                                         "file_last_write_utc":  "2026-10-01T14:48:28.5634204Z"
+                                     }
+                                 ],
+    "pinned_process_observations":  [
+                                        {
+                                            "process_id":  8912,
+                                            "start_utc":  "2026-10-01T14:48:28.7498452Z",
+                                            "creation_filetime":  134353397087498452,
+                                            "image_guest_path":  "C:\\Windows\\Installer\\MSIE099.tmp",
+                                            "image_sha256":  "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+                                            "image_size":  574976,
+                                            "observed_parent_pid":  7572,
+                                            "observed_parent_name":  "msiexec.exe",
+                                            "session_id":  1,
+                                            "owner_sid":  "S-1-5-21-2866619907-2862913017-496529384-1000",
+                                            "identification_source":  "periodic_new_process_identity",
+                                            "process_start_proven_by":  "Retained live/new process handle, creation time, image path and on-disk pinned SHA256",
+                                            "assumed_installer_client_child":  false,
+                                            "first_observed_utc":  "2026-10-01T14:48:29.3712702Z"
+                                        }
+                                    ],
+    "pinned_process_identification_errors":  [
+
+                                             ],
+    "file_watch_roots":  [
+                             "C:\\Windows\\Installer",
+                             "C:\\Windows\\Temp",
+                             "C:\\Users\\analyst\\AppData\\Local\\Temp"
+                         ],
+    "file_watcher_error_observed":  false,
+    "file_candidate_limit_reached":  false,
+    "polling":  {
+                    "http_polling_proven_by_this_harness":  false,
+                    "status":  "requires_fresh_Kali_fixture_ledger_and_PCAP_corroboration",
+                    "windows_tcp_observations":  [
+
+                                                 ],
+                    "tcp_connection_is_not_http_poll_proof":  true
+                },
+    "samples":  [
+                    {
+                        "observed_utc":  "2026-10-01T14:48:13.6606069Z",
+                        "elapsed_seconds":  0.83,
+                        "installer_client_alive":  true,
+                        "pinned_process_count":  0,
+                        "pinned_file_count":  0,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:48:19.0709337Z",
+                        "elapsed_seconds":  6.24,
+                        "installer_client_alive":  true,
+                        "pinned_process_count":  0,
+                        "pinned_file_count":  0,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:48:24.6205856Z",
+                        "elapsed_seconds":  11.79,
+                        "installer_client_alive":  true,
+                        "pinned_process_count":  0,
+                        "pinned_file_count":  0,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:48:30.1431750Z",
+                        "elapsed_seconds":  17.31,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:48:35.4833906Z",
+                        "elapsed_seconds":  22.65,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:48:40.7912511Z",
+                        "elapsed_seconds":  27.96,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:48:46.0361063Z",
+                        "elapsed_seconds":  33.2,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:48:51.5899723Z",
+                        "elapsed_seconds":  38.76,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:48:56.9794936Z",
+                        "elapsed_seconds":  44.15,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:02.2422767Z",
+                        "elapsed_seconds":  49.41,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:07.4711140Z",
+                        "elapsed_seconds":  54.64,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:12.8008463Z",
+                        "elapsed_seconds":  59.97,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:18.2540298Z",
+                        "elapsed_seconds":  65.42,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:23.6006107Z",
+                        "elapsed_seconds":  70.77,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:28.8334076Z",
+                        "elapsed_seconds":  76,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:34.1610918Z",
+                        "elapsed_seconds":  81.33,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:39.3776290Z",
+                        "elapsed_seconds":  86.55,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:44.6723561Z",
+                        "elapsed_seconds":  91.84,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:50.2031985Z",
+                        "elapsed_seconds":  97.37,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:49:55.6347830Z",
+                        "elapsed_seconds":  102.8,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:00.9776890Z",
+                        "elapsed_seconds":  108.15,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:06.5202251Z",
+                        "elapsed_seconds":  113.69,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:11.7311434Z",
+                        "elapsed_seconds":  118.9,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:17.0038386Z",
+                        "elapsed_seconds":  124.17,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:22.4755383Z",
+                        "elapsed_seconds":  129.64,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:27.7896639Z",
+                        "elapsed_seconds":  134.96,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:33.3457878Z",
+                        "elapsed_seconds":  140.51,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:38.7784196Z",
+                        "elapsed_seconds":  145.95,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:44.0510198Z",
+                        "elapsed_seconds":  151.22,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:49.2657214Z",
+                        "elapsed_seconds":  156.43,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:50:54.5884906Z",
+                        "elapsed_seconds":  161.76,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:00.1390216Z",
+                        "elapsed_seconds":  167.31,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:05.3599264Z",
+                        "elapsed_seconds":  172.53,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:10.6310373Z",
+                        "elapsed_seconds":  177.8,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:16.0719117Z",
+                        "elapsed_seconds":  183.24,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:21.4059899Z",
+                        "elapsed_seconds":  188.57,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:26.9385699Z",
+                        "elapsed_seconds":  194.11,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:32.1516452Z",
+                        "elapsed_seconds":  199.32,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:37.4604111Z",
+                        "elapsed_seconds":  204.63,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:42.6740295Z",
+                        "elapsed_seconds":  209.84,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:47.9698721Z",
+                        "elapsed_seconds":  215.14,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:53.4443014Z",
+                        "elapsed_seconds":  220.61,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:51:58.7384004Z",
+                        "elapsed_seconds":  225.91,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:04.0525626Z",
+                        "elapsed_seconds":  231.22,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:09.4075148Z",
+                        "elapsed_seconds":  236.58,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:14.9496571Z",
+                        "elapsed_seconds":  242.12,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:20.4096633Z",
+                        "elapsed_seconds":  247.58,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:25.7313030Z",
+                        "elapsed_seconds":  252.9,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:31.2829799Z",
+                        "elapsed_seconds":  258.45,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:36.7241527Z",
+                        "elapsed_seconds":  263.89,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:42.0296108Z",
+                        "elapsed_seconds":  269.2,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:47.5816326Z",
+                        "elapsed_seconds":  274.75,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:52.7931115Z",
+                        "elapsed_seconds":  279.96,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:52:58.0911993Z",
+                        "elapsed_seconds":  285.26,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:53:03.5468550Z",
+                        "elapsed_seconds":  290.71,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    },
+                    {
+                        "observed_utc":  "2026-10-01T14:53:08.8585500Z",
+                        "elapsed_seconds":  296.03,
+                        "installer_client_alive":  false,
+                        "pinned_process_count":  1,
+                        "pinned_file_count":  1,
+                        "product_state":  -1
+                    }
+                ],
+    "process_cleanup":  [
+                            {
+                                "role":  "installer_client",
+                                "pid":  5992,
+                                "start_utc":  "2026-10-01T14:48:12.7844786Z",
+                                "result":  "already_exited"
+                            }
+                        ],
+    "observation_finished":  true,
+    "end_reason":  "fixed_deadline_reached",
+    "failure":  null,
+    "raw_evidence_guest_only":  true,
+    "limitations":  [
+                        "Installer return and product registration never imply payload extraction, process execution or HTTP polling.",
+                        "Hash-verified payload identity is based on the observed executable file and retained process handle; this is not a full memory-image measurement.",
+                        "Async MSI actions may launch from the installer service; only observed parent metadata is reported and no service process is terminated.",
+                        "Short-lived or deleted files/processes may evade a live hash check; raw Procmon and MSI logs remain necessary for unresolved cases.",
+                        "File watches cover only the top level of existing fixed installer/temp roots; process-image observation independently covers local C: paths.",
+                        "Only pinned processes identified before payload cleanup are stopped. An asynchronous installer service may continue after the client; revert the isolated snapshot after evidence collection.",
+                        "Windows TCP metadata cannot prove the HTTP poll body or path; correlate the isolated Kali baseline ledger and PCAP for this exact interval.",
+                        "The elevated interactive analyst context is deliberate and does not prove privilege escalation; no uninstall or persistent security/power changes are performed."
+                    ],
+    "progress_stage":  "identity_scoped_msi_cleanup",
+    "private_process_event_count":  54,
+    "final_network":  {
+                          "interface_index":  4,
+                          "address":  "172.30.77.2/24",
+                          "default_routes":  0,
+                          "gateway_routes":  0,
+                          "c2_address":  "172.30.77.1"
+                      },
+    "installer_log":  {
+                          "label":  "private_verbose_installer_log",
+                          "present":  true,
+                          "size":  104944,
+                          "sha256":  "aa72fe3ff4ed48c42ab37ba237f1f8f298c49efad50b6d61dcc8831dd67f29ef",
+                          "last_write_utc":  "2026-10-01T14:48:28.8611881Z"
+                      },
+    "separate_findings":  {
+                              "installer_natural_return_observed":  true,
+                              "product_registration_observed":  false,
+                              "pinned_payload_file_observed":  true,
+                              "new_pinned_file_event_observed":  true,
+                              "pinned_payload_process_start_observed":  true,
+                              "http_polling_proof":  "requires_separate_Kali_evidence",
+                              "installer_success_does_not_imply_payload_execution":  true
+                          },
+    "ended_utc":  "2026-10-01T14:53:16.7156394Z"
+}

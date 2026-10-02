@@ -1,0 +1,11 @@
+{
+  "guest_archive_path": "/home/kali/majlis-analysis/majlis-case-20261001.tar.gz",
+  "contains_malware": true,
+  "keep_guest_only": true,
+  "size": 11546331,
+  "sha256": "dd454084d0571de2e1eebd84f0b15ffae171c7392d94925399be6067cba3bb64",
+  "files_verified": 205,
+  "manifest_guest_path": "/home/kali/majlis-analysis/case-bundle-manifest.json",
+  "network_offline": true,
+  "created_utc": "2026-10-01T11:27:11.410235+00:00"
+}

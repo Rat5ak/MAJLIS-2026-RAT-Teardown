@@ -1,0 +1,90 @@
+{
+  "inspection": "Static disassembly, PE exception-table parsing, and bounded Ghidra decompilation review inside offline Kali. No specimen execution or network contact during this pass.",
+  "sample_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+  "main_va": "0x40d470",
+  "high_level_main_flow": [
+    "Sleep 18 seconds; seed a 624-word Mersenne Twister state using std::_Random_device/rand_s; sleep a uniform random integer from 41 through 113 seconds.",
+    "Decode static configuration strings, obtain client identity, initialize response_type='fdd' and response_data=null, and sleep another 5 seconds.",
+    "Repeat: invoke disposable string work, convert client identity to UTF-8, and call the JSON HTTP poll helper with client_id plus the current response_type and response_data.",
+    "When the returned next_data string is empty, keep the previous response state and proceed to the common 14-24 second random sleep.",
+    "When next_data is nonempty, clear the previous response-type string and JSON response data, then parse next_data itself as JSON with exceptions enabled; dispatch on its type field and use its value field.",
+    "Command handlers may update response state for the next main poll. Shell commands launch detached worker threads that post their own msg output separately.",
+    "After ordinary completion, unknown commands, or caught command-handler std::exception failures, clean up temporary command objects and sleep a uniform random integer from 14 through 24 seconds before the next poll.",
+    "The encompassing main-loop std::exception catch resumes directly at the poll loop, bypassing the common recurring jitter; no retry limit or explicit main-loop shutdown branch was identified. Startup initialization precedes this encompassing catch."
+  ],
+  "timing": {
+    "initial_fixed_seconds": 18,
+    "initial_random_seconds_inclusive": [41, 113],
+    "pre_poll_fixed_seconds": 5,
+    "total_before_first_poll_excluding_computation_seconds_inclusive": [64, 136],
+    "recurring_random_seconds_inclusive": [14, 24],
+    "startup_evidence": ["0x40d4a8 initializes 18 seconds; 0x40d4c4 invokes sleep", "0x40d4c9 invokes random source 0x430057", "0x40d4e1-0x40d4fe initializes MT state with 0x6c078965 and count 0x270", "0x40d533 multiplies random output by 73; 0x40d555 adds 41 after rejection sampling; 0x40d573 invokes sleep", "0x40d8b3 initializes 5 seconds; 0x40d8c7 invokes sleep"],
+    "recurring_evidence": ["0x40d50f sets lower bound 14; 0x40d519 sets upper bound 24", "0x40e752-0x40e75f passes the MT state and bounds to uniform-int helper 0x41a4d0", "0x40e76b-0x40e777 sleeps the generated number of seconds", "0x41a4d0-0x41a54e implements multiply-high/rejection sampling over inclusive bounds", "0x41a3f0-0x41a3f9 multiplies seconds by 1e9; helper ultimately calls Sleep through 0x4303c5"],
+    "random_source": "Ghidra library match identifies 0x430057 as std::_Random_device; it calls rand_s and returns the resulting uint on success. The timing helper is normal chrono-style deadline accounting, not a demonstrated anti-debug timing check."
+  },
+  "response_state": {
+    "initial": {"type": "fdd", "data": null},
+    "poll_return_string": "main [ebp-0x15c], size [ebp-0x14c]",
+    "response_type_string": "main [ebp-0xc4]",
+    "response_data_json": "main [ebp-0x64]",
+    "body_shape_confirmed_by_protocol_agent": "client_id plus a property named by response_type whose value is response_data; initial body includes fdd:null",
+    "empty_next_data": "0x40d9b3-0x40d9ba branches directly to common sleep; prior response state remains available for the following poll",
+    "nonempty_next_data": "0x40d9c0-0x40da8c clears prior response type and JSON data; 0x40da8c-0x40daaa parses next_data; dispatch begins with type access at 0x40dab4",
+    "json_clear_semantics": "Data clearing follows JSON type-specific cases: strings/containers emptied, numeric/bool values zeroed, null unchanged. Clearing is not a universal reassignment to null.",
+    "FDD_order_resolution": "Wider guest Ghidra review confirms incoming directory value is assigned to global current-directory state before enumeration (C lines 602-606 precede listing at line 616); a redundant later assignment exists. No stale/previous-directory listing claim.",
+    "FDD_immediate_result_post": "After setting response_type=fdd and response_data=listing, FDD directly invokes the same poll helper at 0x40e69d. The helper receives main response state [ebp-0xc4]/[ebp-0x64], but its returned next_data string is destroyed at 0x40e6a2 onward and is not dispatched.",
+    "FDD_state_retention": "The immediate FDD result post does not clear main response_type/data. After ordinary jitter, the next main-loop poll reuses that fdd/listing response state. Empty next_data at subsequent main polls retains it again; nonempty next_data clears it before parsing the next command.",
+    "upload_ack_boundary": "Reviewed UPP and SS1 paths discard multipart helper return strings without copying them into main response state. Since incoming-command processing already clears response state, do not claim a dedicated success acknowledgement is posted for these uploads. JSON data clearing can retain its prior type rather than always becoming null.",
+    "scope": "HTTP serialization, transfer wire format, and exact per-command response structures are independently handled by the protocol agent."
+  },
+  "exception_control_flow": {
+    "conclusion": "The mov eax, continuation; ret islands are MSVC x86 C++ catch continuation funclets, not evidence of deliberate opaque control flow.",
+    "main_exception_thunk": "0x469be0; loads FuncInfo VA 0x480220 at 0x469c00 and enters runtime handler 0x445727",
+    "main_func_info": {"va": "0x480220", "magic": "0x19930522", "max_state": 128, "try_block_count": 10, "try_block_map": "0x480648"},
+    "handler_type": "Every parsed main handler references type descriptor 0x48735c, name .?AVexception@std@@ (std::exception).",
+    "command_handlers": [
+      {"command": "msg", "try_states": [23, 32], "handler": "0x40de8e", "resume": "0x40de94 -> 0x40e73d"},
+      {"command": "ms2", "try_states": [35, 44], "handler": "0x40e2f4", "resume": "0x40e2fa -> 0x40e73d"},
+      {"command": "FDD", "try_states": [47, 54], "handler": "0x40e7c6", "resume": "0x40e7cc -> 0x40e73d"},
+      {"command": "UPP", "try_states": [57, 64], "handler": "0x40eb7f", "resume": "0x40eb85 -> 0x40e73d"},
+      {"command": "DWW", "try_states": [67, 87], "handler": "0x40f022", "resume": "0x40f028 -> 0x40e73d"},
+      {"command": "DEL", "try_states": [89, 103], "handler": "0x40f1b0", "resume": "0x40f1b6 -> 0x40e73d"},
+      {"command": "RUN", "try_states": [105, 108], "handler": "0x40f2da", "resume": "0x40f2e0 -> 0x40e73d"},
+      {"command": "GDR", "try_states": [110, 112], "handler": "0x40f39f", "resume": "0x40f3a5 -> 0x40e73d"},
+      {"command": "SS1", "try_states": [114, 125], "handler": "0x40f579", "resume": "0x40e73d"}
+    ],
+    "outer_loop_handler": {"try_states": [16, 126], "handler": "0x40f57f", "resume": "0x40f585 -> 0x40d8e0", "behavior": "Retry directly, with no explicit iteration cap; recurring 14-24 second sleep is bypassed on this exception continuation."},
+    "boundaries": "Initialization states 0-15 precede outer-loop catch. Non-C++ faults and exceptions outside std::exception are not proved recoverable. Fatal CRT integrity checks and terminate paths exist; this is not a claim that the process can never exit."
+  },
+  "shell_threads": {
+    "constructor": "0x41a5f0",
+    "heap_argument_bytes": 124,
+    "argument_ownership": "Constructor copies configuration/client strings and moves command text into a heap tuple; callback pointer fixed to 0x40cd10 at 0x41a6c6.",
+    "start": "0x41a6e4 calls CRT thread starter 0x44cb85; CreateThread occurs at 0x44cbce with invoker 0x426890 wrapped by CRT bookkeeping.",
+    "detach": "Main calls 0x4304ba, verified CloseHandle wrapper at 0x4304c0, then zeroes handle/id (example 0x40e168-0x40e17f). It does not join workers.",
+    "worker_lifetime": "Invoker 0x426890 calls callback through [tuple+0x78] at 0x4269ad; after return, destructor 0x425d40 and deallocation at 0x4269b7-0x4269c1 release tuple storage. Worker-owned copies survive main's local cleanup.",
+    "pipe": "CreatePipe at 0x40cd89 uses inheritable security attributes. CreateProcessW at 0x40cf85 uses CREATE_NO_WINDOW and inherited handles.",
+    "process_start_failure": "0x40cf93-0x40cfa5 closes both pipe ends and returns through cleanup without posting result.",
+    "process_start_success": "0x40cfaa-0x40cfc0 closes parent write pipe, process handle, and process-thread handle immediately; output collection proceeds on read pipe.",
+    "read_loop": "0x40cff1-0x40d041 performs synchronous ReadFile requests for 4095 bytes, appends output, and repeats until ReadFile fails or returns zero bytes. No explicit timeout, child termination, wait-for-process call, or output-size cap is present in that reviewed loop.",
+    "result_post": "0x40d12d invokes shared JSON POST helper using response type msg and collected output; returned next_data is destroyed beginning 0x40d132 and is not dispatched by the worker.",
+    "callback_exception": "Shell FuncInfo 0x480148 has one std::exception catch spanning states 4-10; handler 0x40d34a returns continuation 0x40d243. Exceptions abandon work/result posting and return through argument cleanup; there is no callback retry loop.",
+    "implication": "Main can poll and start later shell workers while a prior worker is still blocked collecting output. Actual overlapping workers and resource behavior have not been demonstrated at runtime."
+  },
+  "ss1_path_correction": {
+    "constructed_path": "Convert command value to a wide string with 0x407b30, then concatenate wide literal at 0x479cc0 (\\ss.jpg) through 0x419bc0 at 0x40f40a.",
+    "predicate": "0x40f42f calls 0x407bd0 on the constructed path. This function invokes CRT stat wrapper 0x44d4d2 and returns true only on stat success with mode bit 0x4000 (_S_IFDIR) set.",
+    "success_branch": "0x40f436 jumps to screenshot at 0x40f49c, retaining the constructed path.",
+    "fallback_branch": "False predicate decodes C:\\programdata\\ss.jpg and assigns it to the screenshot path at 0x40f438-0x40f497.",
+    "interpretation": "The predicate is applied to value plus \\ss.jpg, not to the command value directory alone. Ordinarily a nonexistent/regular-file computed target fails this directory predicate. Do not claim that any valid command-specified directory necessarily controls the screenshot destination.",
+    "canonicalization": "Reviewed helper 0x407b30 performs UTF conversion; no path normalization/canonicalization was established by that helper."
+  },
+  "noise_and_anti_analysis_claim_boundary": {
+    "routine_0x40d370": "Constructs a temporary string from a two-byte literal; when integer n > 0, appends the low byte of n n times, then destroys the string. Main calls it with small constants (12, 5, 17). No result is retained or used for dispatch/network state in reviewed code.",
+    "proved": ["Static strings use the previously documented XOR transform", "Startup and recurring sleeps delay observation/polling", "Disposable string operations are present"],
+    "not_proved": ["Deliberate sample-specific debugger or VM detection", "Timing measurements used to classify analyst environments", "Deliberate opaque-control-flow transformation; identified continuation islands are compiler EH", "Any malware family or actor attribution"],
+    "debugger_reference_context": "Prior import-reference review placed IsDebuggerPresent uses in CRT diagnostics/exception machinery. This pass independently proves main exception structure and ordinary RNG/sleep use; it is not an exhaustive new audit of every CRT path."
+  },
+  "evidence_host_text_files": ["lifecycle-startup.json", "lifecycle-loop.json", "lifecycle-poll-sites.json", "lifecycle-eh.json", "lifecycle-callback-eh.json", "lifecycle-threads.json", "lifecycle-thread-entry.json", "lifecycle-shell-io.json", "lifecycle-ss1.json", "lifecycle-ghidra-main.json", "lifecycle-ghidra-core.json", "lifecycle-ghidra-path.json", "lifecycle-ghidra-noise.json"],
+  "limitations": ["Entire pass was static; no successful C2 interaction, command execution, actual timing, or persistence execution demonstrated.", "Ghidra names added by the analysis script are analyst labels; conclusions above are checked against call sites, imports, literals, branch structure, and PE EH tables.", "Raw specimen, full disassembly, and full decompiled source remain inside Kali. Host artifacts are helpers and bounded textual findings/excerpts."]
+}

@@ -1,0 +1,2005 @@
+{
+    "status":  "finished",
+    "mode":  "baseline",
+    "run_id":  "baseline-20261001T131647267Z",
+    "created_utc":  "2026-10-01T13:16:47.2831614Z",
+    "updated_utc":  "2026-10-01T13:22:02.8700565Z",
+    "deadline_seconds":  300,
+    "sample_sha256":  "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+    "guest":  "MAJLIS-W11",
+    "initial_network":  {
+                            "interface_index":  4,
+                            "address":  "172.30.77.2/24",
+                            "default_routes":  0,
+                            "gateway_routes":  0,
+                            "c2_address":  "172.30.77.1"
+                        },
+    "session_id":  1,
+    "elevated_analyst_context":  true,
+    "specimen_privilege_escalation_tested":  false,
+    "scoped_keep_awake":  {
+                              "enabled":  true,
+                              "restored":  true,
+                              "persistent_power_settings_changed":  false
+                          },
+    "operating_system":  {
+                             "Caption":  "Microsoft Windows 11 Pro",
+                             "Version":  "10.0.26200",
+                             "BuildNumber":  "26200",
+                             "OSArchitecture":  "64-bit"
+                         },
+    "defender_before":  {
+                            "AMRunningMode":  "Normal",
+                            "AntivirusEnabled":  true,
+                            "RealTimeProtectionEnabled":  true,
+                            "BehaviorMonitorEnabled":  true,
+                            "IsTamperProtected":  true,
+                            "AntivirusSignatureVersion":  "1.437.1.0"
+                        },
+    "defender_after":  {
+                           "AMRunningMode":  "Normal",
+                           "AntivirusEnabled":  true,
+                           "RealTimeProtectionEnabled":  true,
+                           "BehaviorMonitorEnabled":  true,
+                           "IsTamperProtected":  true,
+                           "AntivirusSignatureVersion":  "1.437.1.0"
+                       },
+    "sample_launch":  {
+                          "requested_utc":  "2026-10-01T13:16:48.8791166Z",
+                          "process_created":  true,
+                          "pid":  6360,
+                          "start_utc":  "2026-10-01T13:17:01.2297292Z",
+                          "creation_filetime":  134353342212297292,
+                          "identity_retained":  true
+                      },
+    "sample_result":  {
+                          "alive_before_cleanup":  true,
+                          "observed_exit_code":  null,
+                          "stop_result":  "terminated_owned_handle"
+                      },
+    "procmon_result":  {
+                           "started":  true,
+                           "pid":  1816,
+                           "start_utc":  "2026-10-01T13:16:48.3855581Z",
+                           "tool_sha256":  "fc3af5317c707e0555ad6e7590ad65ceb5c5085b053b41221944ac3ca3492d9c",
+                           "backing_file_present_before_specimen":  true,
+                           "stop_result":  "graceful_termination_confirmed",
+                           "capture":  {
+                                           "label":  "private_procmon_pml",
+                                           "present":  true,
+                                           "size":  365312131,
+                                           "sha256":  "39134bb43b045e9a0ce3ac8af482ba85939156d3011c2af850a09b92fd3ddf61",
+                                           "last_write_utc":  "2026-10-01T13:22:02.1302812Z"
+                                       }
+                       },
+    "fixture_samples":  [
+                            {
+                                "observed_utc":  "2026-10-01T13:17:01.6532899Z",
+                                "elapsed_seconds":  0.3,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:06.9148573Z",
+                                "elapsed_seconds":  5.56,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:12.1317775Z",
+                                "elapsed_seconds":  10.78,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:17.3515966Z",
+                                "elapsed_seconds":  15.99,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:22.5930516Z",
+                                "elapsed_seconds":  21.24,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:27.7971254Z",
+                                "elapsed_seconds":  26.44,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:32.9825834Z",
+                                "elapsed_seconds":  31.63,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:38.1616264Z",
+                                "elapsed_seconds":  36.81,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:43.3506927Z",
+                                "elapsed_seconds":  42,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:48.5103676Z",
+                                "elapsed_seconds":  47.15,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:53.7614689Z",
+                                "elapsed_seconds":  52.41,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:17:58.9837932Z",
+                                "elapsed_seconds":  57.63,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:04.2027622Z",
+                                "elapsed_seconds":  62.85,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:09.4030093Z",
+                                "elapsed_seconds":  68.05,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:14.6532585Z",
+                                "elapsed_seconds":  73.3,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:19.8453135Z",
+                                "elapsed_seconds":  78.49,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:25.1045547Z",
+                                "elapsed_seconds":  83.75,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:30.2939347Z",
+                                "elapsed_seconds":  88.94,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:35.4785923Z",
+                                "elapsed_seconds":  94.12,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:40.7175416Z",
+                                "elapsed_seconds":  99.36,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:45.9618433Z",
+                                "elapsed_seconds":  104.61,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:51.1466240Z",
+                                "elapsed_seconds":  109.79,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:18:56.3438202Z",
+                                "elapsed_seconds":  114.99,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:01.5453719Z",
+                                "elapsed_seconds":  120.19,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:06.7647227Z",
+                                "elapsed_seconds":  125.41,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:11.9534940Z",
+                                "elapsed_seconds":  130.6,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:17.1656909Z",
+                                "elapsed_seconds":  135.81,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:22.3759886Z",
+                                "elapsed_seconds":  141.02,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:27.5848813Z",
+                                "elapsed_seconds":  146.23,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:32.7804518Z",
+                                "elapsed_seconds":  151.43,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:38.0436190Z",
+                                "elapsed_seconds":  156.69,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:43.2425656Z",
+                                "elapsed_seconds":  161.89,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:48.4483309Z",
+                                "elapsed_seconds":  167.09,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:53.6292798Z",
+                                "elapsed_seconds":  172.27,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:19:58.8302415Z",
+                                "elapsed_seconds":  177.48,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:04.0297325Z",
+                                "elapsed_seconds":  182.68,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:09.2319612Z",
+                                "elapsed_seconds":  187.88,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:14.4425609Z",
+                                "elapsed_seconds":  193.09,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:19.6097355Z",
+                                "elapsed_seconds":  198.25,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:24.8004642Z",
+                                "elapsed_seconds":  203.44,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:29.9931927Z",
+                                "elapsed_seconds":  208.64,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:35.2017126Z",
+                                "elapsed_seconds":  213.85,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:40.3888268Z",
+                                "elapsed_seconds":  219.03,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:45.5842782Z",
+                                "elapsed_seconds":  224.23,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:50.7748058Z",
+                                "elapsed_seconds":  229.42,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:20:56.0075355Z",
+                                "elapsed_seconds":  234.65,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:01.2268767Z",
+                                "elapsed_seconds":  239.87,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:06.5267401Z",
+                                "elapsed_seconds":  245.17,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:11.7345274Z",
+                                "elapsed_seconds":  250.38,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:16.9197625Z",
+                                "elapsed_seconds":  255.56,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:22.1275517Z",
+                                "elapsed_seconds":  260.77,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:27.3266476Z",
+                                "elapsed_seconds":  265.97,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:32.5355920Z",
+                                "elapsed_seconds":  271.18,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:37.7679540Z",
+                                "elapsed_seconds":  276.41,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:43.0108842Z",
+                                "elapsed_seconds":  281.66,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:48.2244867Z",
+                                "elapsed_seconds":  286.87,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:53.4595925Z",
+                                "elapsed_seconds":  292.1,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            },
+                            {
+                                "observed_utc":  "2026-10-01T13:21:58.6787767Z",
+                                "elapsed_seconds":  297.32,
+                                "sample_alive":  true,
+                                "sample_exit_code":  null,
+                                "fixtures":  {
+                                                 "entry_count":  2,
+                                                 "unexpected_name_count":  0,
+                                                 "subdir_entry_count":  0,
+                                                 "files":  [
+                                                               {
+                                                                   "label":  "alpha",
+                                                                   "present":  true,
+                                                                   "size":  23,
+                                                                   "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                                                   "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                                               },
+                                                               {
+                                                                   "label":  "inert_download",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "requested_screenshot",
+                                                                   "present":  false
+                                                               },
+                                                               {
+                                                                   "label":  "fallback_screenshot",
+                                                                   "present":  false
+                                                               }
+                                                           ]
+                                             }
+                            }
+                        ],
+    "process_events":  [
+                           {
+                               "kind":  "start",
+                               "name":  "Binary.exe",
+                               "name_sha256":  "d7bac70d7cfcdb72693ac3422ff93c1fa6859cdd8fd186ef56bfe794880e18be",
+                               "process_id":  6360,
+                               "parent_process_id":  4868,
+                               "event_utc":  "2026-10-01T13:17:01.3876320Z",
+                               "exit_status":  null,
+                               "related_to_retained_specimen_process":  true
+                           },
+                           {
+                               "kind":  "stop",
+                               "name":  "Binary.exe",
+                               "name_sha256":  "d7bac70d7cfcdb72693ac3422ff93c1fa6859cdd8fd186ef56bfe794880e18be",
+                               "process_id":  6360,
+                               "parent_process_id":  0,
+                               "event_utc":  "2026-10-01T13:22:01.9319574Z",
+                               "exit_status":  19786,
+                               "related_to_retained_specimen_process":  true
+                           }
+                       ],
+    "event_count_private":  17,
+    "process_cleanup":  [
+
+                        ],
+    "failure":  null,
+    "raw_capture_guest_only":  true,
+    "observation_finished":  true,
+    "end_reason":  "fixed_deadline_reached",
+    "limitations":  [
+                        "Process creation establishes launch evidence, not successful command execution or operator activity.",
+                        "WMI event delivery can be delayed; very short-lived children may exit before a handle or command line is collected.",
+                        "Only retained specimen and directly verified fixed-fixture child identities are terminated; broker-created processes may remain unowned.",
+                        "PML presence and hash do not establish complete event coverage; detailed Procmon review remains guest-only.",
+                        "The analyst deliberately supplies an elevated interactive desktop session; inherited elevation is not evidence of specimen privilege escalation.",
+                        "All command responses come from the fixed isolated analyst fixture; this does not demonstrate live operator infrastructure."
+                    ],
+    "final_fixtures":  {
+                           "entry_count":  2,
+                           "unexpected_name_count":  0,
+                           "subdir_entry_count":  0,
+                           "files":  [
+                                         {
+                                             "label":  "alpha",
+                                             "present":  true,
+                                             "size":  23,
+                                             "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                                             "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+                                         },
+                                         {
+                                             "label":  "inert_download",
+                                             "present":  false
+                                         },
+                                         {
+                                             "label":  "requested_screenshot",
+                                             "present":  false
+                                         },
+                                         {
+                                             "label":  "fallback_screenshot",
+                                             "present":  false
+                                         }
+                                     ]
+                       },
+    "final_network":  {
+                          "interface_index":  4,
+                          "address":  "172.30.77.2/24",
+                          "default_routes":  0,
+                          "gateway_routes":  0,
+                          "c2_address":  "172.30.77.1"
+                      },
+    "ended_utc":  "2026-10-01T13:22:02.8679314Z"
+}

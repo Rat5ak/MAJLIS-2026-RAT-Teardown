@@ -1,0 +1,297 @@
+{
+  "network_offline": true,
+  "stream_count": 20,
+  "stream_manifest": [
+    {
+      "name": "Binary._2E9D1C8BAC5D0F288E61BF5987C52203",
+      "size": 574976,
+      "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716"
+    },
+    {
+      "name": "!InstallExecuteSequence",
+      "size": 378,
+      "sha256": "fb088b9407dfb9b54d868a77e1a9c0c01e6a0d15579ba2442619f01d8a7094a0"
+    },
+    {
+      "name": "!Component",
+      "size": 12,
+      "sha256": "f4a19e2cfc420676e2929cb4c12a97c2c8b3aa997231f8eb81124a5586241732"
+    },
+    {
+      "name": "!Directory",
+      "size": 6,
+      "sha256": "9aa50e42464568696f5cc916f67b17910cb09364a0a5c9610364199d41f560b1"
+    },
+    {
+      "name": "!Feature",
+      "size": 16,
+      "sha256": "b854f79d7f6d2e4618c3ece81d7fe91278e6479e14c5984a5bc9c8027d882ff4"
+    },
+    {
+      "name": "!Binary",
+      "size": 4,
+      "sha256": "6fd6ca73acea8fd7cb059c6c05a3e4cbdba9440f46dd98104b2538f0f90a9c3c"
+    },
+    {
+      "name": "!Media",
+      "size": 12,
+      "sha256": "6d6439ee7674f41e14e8a2aa442c4830461dac478c35109cddb7409d0274a472"
+    },
+    {
+      "name": "!_Tables",
+      "size": 172,
+      "sha256": "d01a7e873e684a33f96cb0dbba9db2dc79c41bf41fbe15ba87c9e900641511c7"
+    },
+    {
+      "name": "!_Columns",
+      "size": 3288,
+      "sha256": "1f7805657d9cb815d171494f1c6dc1c5a30b03455fc34b4d5a72f36bd5e41727"
+    },
+    {
+      "name": "!Property",
+      "size": 100,
+      "sha256": "fa0e47d3babf2aefb67bc22fd7fbdbd6e5188a24f067ac91cd566af908a1ffe4"
+    },
+    {
+      "name": "!Upgrade",
+      "size": 16,
+      "sha256": "26d23ede2c33fe6f1e65dcd39bb33b98eef8895a50fad40d87fdbcc9f8a48425"
+    },
+    {
+      "name": "!FeatureComponents",
+      "size": 4,
+      "sha256": "8cd790a70b6494cff0922c60313cb22f62901225cb65b8981f594be453892a3e"
+    },
+    {
+      "name": "!ModuleSignature",
+      "size": 6,
+      "sha256": "daa132e1fb577a29104e9102a92c4c01d9c73fbc13ceb8fb5668c039a7ac6b31"
+    },
+    {
+      "name": "!_Validation",
+      "size": 10176,
+      "sha256": "aef428b6725ddf95d57310ee3ff9374674ce4421050166acd4c78d161bf89d9c"
+    },
+    {
+      "name": "!_StringPool",
+      "size": 3080,
+      "sha256": "938b57fcb3173b8878b92405d772327294c6f0298be0d5ce7242775acc8e1d12"
+    },
+    {
+      "name": "!_StringData",
+      "size": 30151,
+      "sha256": "76c31c4e4548da6da84ca3f0b45dcc659d2a6da5ccfc13104cbd5588862e4a11"
+    },
+    {
+      "name": "!CustomAction",
+      "size": 12,
+      "sha256": "d36308bb4e445c46db1964e30e8893653e2acbfdc253a2d7894775831760f563"
+    },
+    {
+      "name": "!AdminExecuteSequence",
+      "size": 54,
+      "sha256": "2b7ca2d8169ed10822e1f19bb22760d6582fab39f595557067caf7b570735686"
+    },
+    {
+      "name": "!AdvtExecuteSequence",
+      "size": 84,
+      "sha256": "6cdc96a05bb4b9df702b63a1b98a01b791d4f32fd73c0b9ba4e59a8a68c52dc5"
+    },
+    {
+      "name": "[5]SummaryInformation",
+      "size": 488,
+      "sha256": "c133f58ad314dd2f5e647df973b73111d691b183399dbc64adf210977c14d4e8"
+    }
+  ],
+  "table_row_counts": {
+    "ActionText": 0,
+    "AdminExecuteSequence": 9,
+    "AdminUISequence": 0,
+    "AdvtExecuteSequence": 14,
+    "AdvtUISequence": 0,
+    "AppId": 0,
+    "AppSearch": 0,
+    "BBControl": 0,
+    "Billboard": 0,
+    "Binary": 1,
+    "BindImage": 0,
+    "CCPSearch": 0,
+    "CheckBox": 0,
+    "Class": 0,
+    "ComboBox": 0,
+    "CompLocator": 0,
+    "Complus": 0,
+    "Component": 1,
+    "Condition": 0,
+    "Control": 0,
+    "ControlCondition": 0,
+    "ControlEvent": 0,
+    "CreateFolder": 0,
+    "CustomAction": 1,
+    "Dialog": 0,
+    "Directory": 1,
+    "DrLocator": 0,
+    "DuplicateFile": 0,
+    "Environment": 0,
+    "Error": 0,
+    "EventMapping": 0,
+    "Extension": 0,
+    "Feature": 1,
+    "FeatureComponents": 1,
+    "File": 0,
+    "FileSFPCatalog": 0,
+    "Font": 0,
+    "Icon": 0,
+    "IniFile": 0,
+    "IniLocator": 0,
+    "InstallExecuteSequence": 63,
+    "InstallUISequence": 0,
+    "IsolatedComponent": 0,
+    "LaunchCondition": 0,
+    "ListBox": 0,
+    "ListView": 0,
+    "LockPermissions": 0,
+    "MIME": 0,
+    "Media": 1,
+    "ModuleSignature": 1,
+    "MoveFile": 0,
+    "MsiAssembly": 0,
+    "MsiAssemblyName": 0,
+    "MsiDigitalCertificate": 0,
+    "MsiDigitalSignature": 0,
+    "MsiFileHash": 0,
+    "MsiPatchHeaders": 0,
+    "ODBCAttribute": 0,
+    "ODBCDataSource": 0,
+    "ODBCDriver": 0,
+    "ODBCSourceAttribute": 0,
+    "ODBCTranslator": 0,
+    "Patch": 0,
+    "PatchPackage": 0,
+    "ProgId": 0,
+    "Property": 25,
+    "PublishComponent": 0,
+    "RadioButton": 0,
+    "RegLocator": 0,
+    "Registry": 0,
+    "RemoveFile": 0,
+    "RemoveIniFile": 0,
+    "RemoveRegistry": 0,
+    "ReserveCost": 0,
+    "SFPCatalog": 0,
+    "SelfReg": 0,
+    "ServiceControl": 0,
+    "ServiceInstall": 0,
+    "Shortcut": 0,
+    "Signature": 0,
+    "TextStyle": 0,
+    "TypeLib": 0,
+    "UIText": 0,
+    "Upgrade": 1,
+    "Verb": 0,
+    "_Validation": 424
+  },
+  "selected_tables": {
+    "File": [],
+    "Media": [
+      {
+        "DiskId": 1,
+        "LastSequence": 1,
+        "DiskPrompt": "",
+        "Cabinet": "",
+        "VolumeLabel": "",
+        "Source": ""
+      }
+    ],
+    "Component": [
+      {
+        "Component": "C_DefaultComponent",
+        "ComponentId": "{4C231858-2B39-11D3-8E0D-00C04F6837D0}",
+        "Directory_": "TARGETDIR",
+        "Attributes": 0,
+        "Condition": "0",
+        "KeyPath": ""
+      }
+    ],
+    "Directory": [
+      {
+        "Directory": "TARGETDIR",
+        "Directory_Parent": "",
+        "DefaultDir": "SourceDir"
+      }
+    ],
+    "Feature": [
+      {
+        "Feature": "DefaultFeature",
+        "Feature_Parent": "",
+        "Title": "",
+        "Description": "",
+        "Display": 2,
+        "Level": 1,
+        "Directory_": "TARGETDIR",
+        "Attributes": 0
+      }
+    ],
+    "FeatureComponents": [
+      {
+        "Feature_": "DefaultFeature",
+        "Component_": "C_DefaultComponent"
+      }
+    ],
+    "Registry": [],
+    "RemoveRegistry": [],
+    "ServiceInstall": [],
+    "ServiceControl": [],
+    "Environment": [],
+    "Shortcut": [],
+    "CustomAction": [
+      {
+        "Action": "_9AE88E99_8372_4458_9911_9EC626582345",
+        "Type": 194,
+        "Source": "_2E9D1C8BAC5D0F288E61BF5987C52203",
+        "Target": "",
+        "ExtendedType": null
+      }
+    ],
+    "Binary": [
+      {
+        "Name": "_2E9D1C8BAC5D0F288E61BF5987C52203",
+        "Data": {
+          "object_stream_reference": 1
+        }
+      }
+    ],
+    "ModuleSignature": [
+      {
+        "ModuleID": "VsdBase.B242FD8F_28D6_4590_A991_07971DF894FB",
+        "Language": 1033,
+        "Version": "1.0.0.0"
+      }
+    ],
+    "Upgrade": [
+      {
+        "UpgradeCode": "{E26D41A9-0B99-4118-A0AB-155E4564F6F8}",
+        "VersionMin": "6.92.2854",
+        "VersionMax": "",
+        "Language": "",
+        "Attributes": 258,
+        "Remove": "",
+        "ActionProperty": "NEWERPRODUCTFOUND"
+      }
+    ]
+  },
+  "additional_cabinet_streams": [],
+  "non_table_streams": [
+    {
+      "name": "Binary._2E9D1C8BAC5D0F288E61BF5987C52203",
+      "size": 574976,
+      "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716"
+    },
+    {
+      "name": "[5]SummaryInformation",
+      "size": 488,
+      "sha256": "c133f58ad314dd2f5e647df973b73111d691b183399dbc64adf210977c14d4e8"
+    }
+  ],
+  "full_tables_guest_path": "/home/kali/majlis-analysis/msi-all-tables-guest-only.json"
+}

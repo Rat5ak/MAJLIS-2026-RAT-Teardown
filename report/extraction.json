@@ -1,0 +1,68 @@
+{
+  "extraction": {
+    "returncode": 0,
+    "stdout": "\n7-Zip 24.09 (x64) : Copyright (c) 1999-2024 Igor Pavlov : 2024-11-29\n 64-bit locale=en_AU.UTF-8 Threads:128 OPEN_MAX:1024, ASM\n\nScanning the drive for archives:\n1 file, 2340789 bytes (2286 KiB)\n\nExtracting archive: /home/kali/majlis-analysis/incoming/sample.7z\n--\nPath = /home/kali/majlis-analysis/incoming/sample.7z\nType = 7z\nPhysical Size = 2340789\nHeaders Size = 410\nMethod = LZMA2:22 BCJ\nSolid = +\nBlocks = 2\n\nEverything is Ok\n\nFolders: 1\nFiles: 7\nSize:       3297657\nCompressed: 2340789\n",
+    "stderr": ""
+  },
+  "files": [
+    {
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Binary.exe",
+      "name": "Binary.exe",
+      "size": 574976,
+      "sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+      "file": "PE32 executable for MS Windows 6.00 (GUI), Intel i386, 5 sections"
+    },
+    {
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Imp_Details.msi.bin",
+      "name": "Imp_Details.msi.bin",
+      "size": 633856,
+      "sha256": "4008c8f9e52d3e6fd7df4a980a9a78f46f2412ba2fda10a38aa92d338767c54c",
+      "file": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, MSI Installer, Last Printed: Fri Dec 11 12:47:44 2009, Create Time/Date: Fri Dec 11 12:47:44 2009, Last Saved Time/Date: Fri Sep 18 14:06:51 2020, Code page: 1252, Revision Number: {9F7B8B68-4FAA-4CA2-B5B7-45A15CEA967E}, Number of Words: 10, Subject: YunDetectService, Author: Microsoft Corporation, Name of Creating Application: Windows Installer, Template: ;1033, Title: MSI_SETUP_2025, Keywords: Installer, MSI, Database, Security: 1, Number of Pages: 200"
+    },
+    {
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Scanned Document 2026.lnk.bin",
+      "name": "Scanned Document 2026.lnk.bin",
+      "size": 1745,
+      "sha256": "613b6569bd8a4cd75ab11ee9682dd690fabfb11d5c1103caf2ba086e006da034",
+      "file": "MS Windows shortcut, Item id list present, Points to a file or directory, Has command line arguments, Icon number=11, Unicoded, HasExpIcon \"%ProgramFiles(x86)%\\Microsoft\\Edge\\Application\\msedge.exe\", MachineID desktop-qghtbcb KnownFolderID 1AC14E77-02E7-4E5D-B744-2EB1AE5198B7, Archive, ctime=Fri Dec  6 23:39:51 2019, atime=Sat Jan 18 05:48:11 2025, mtime=Fri Dec  6 23:39:51 2019, length=58880, window=showminnoactive, IDListSize 0x0135, Root folder \"20D04FE0-3AEA-1069-A2D8-08002B30309D\", Volume \"C:\\\", LocalBasePath \"C:\\Windows\\System32\\ftp.exe\""
+    },
+    {
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/Scanned Image.url",
+      "name": "Scanned Image.url",
+      "size": 190,
+      "sha256": "0457ad9cb2f0ecfabd7cf324d0af59ac7ce5e8ded5ea3619385c460139ed4577",
+      "file": "MS Windows 95 Internet shortcut text (URL=<file://rappellingaart.com@SSL/secure-docs/3>), ASCII text"
+    },
+    {
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/icon.ico.bin",
+      "name": "icon.ico.bin",
+      "size": 59,
+      "sha256": "c27ca16248e04f6535ae3e6d1670d740b3884f0fa64935ddfd39faf712f4175d",
+      "file": "ASCII text"
+    },
+    {
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/icon2.xz",
+      "name": "icon2.xz",
+      "size": 2086470,
+      "sha256": "fec4f301a1be36a42ec27208e13b5d1d3d0bbe0f1ab47bbab863a7ca9923c571",
+      "file": "JPEG image data, JFIF standard 1.01, resolution (DPI), density 254x254, segment length 16, Exif Standard: [TIFF image data, big-endian, direntries=4, description=A beautiful shot of a small village surrounded by a lake and snowy hills], baseline, precision 8, 5641x3761, components 3"
+    },
+    {
+      "guest_path": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/res.ico.bin",
+      "name": "res.ico.bin",
+      "size": 361,
+      "sha256": "f1060a81c9f68d6f3d23e28f2a1af50fa18ecb9b0a763ca5dcd4b294b6a3593c",
+      "file": "ASCII text"
+    }
+  ],
+  "available_modules": {
+    "returncode": 0,
+    "stdout": "Name: pefile\nVersion: 2024.8.26\nSummary: Python PE parsing module\nHome-page: https://github.com/erocarrera/pefile\nAuthor: Ero Carrera\nAuthor-email: ero.carrera@gmail.com\nLicense: MIT\nLocation: /usr/lib/python3/dist-packages\nRequires: \nRequired-by: \n---\nName: playwright\nVersion: 0.0.0\nSummary: A high-level API to automate web browsers\nHome-page: https://github.com/Microsoft/playwright-python\nAuthor: Microsoft Corporation\nAuthor-email: \nLicense: Apache-2.0\nLocation: /usr/lib/python3/dist-packages\nRequires: greenlet, pyee\nRequired-by: theHarvester\n",
+    "stderr": ""
+  },
+  "extra_tools": {
+    "returncode": 1,
+    "stdout": "/usr/bin/dotnet\n/usr/bin/exiftool\n/usr/bin/rabin2\n/usr/bin/7z\n/usr/bin/xz\n",
+    "stderr": ""
+  }
+}

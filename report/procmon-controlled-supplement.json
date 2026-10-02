@@ -1,0 +1,224 @@
+{
+  "archive_extracted": false,
+  "case_id": "majlis-2026-analysis-20261001",
+  "deletion": {
+    "actual_storage_reclamation_proven": false,
+    "event": {
+      "disposition": {
+        "contradictory_delete_tokens": false,
+        "delete_boolean": null,
+        "delete_requested": true,
+        "fully_recognized_flags": true,
+        "numeric_mask": null,
+        "recognized_flags": [
+          "FILE_DISPOSITION_DELETE",
+          "FILE_DISPOSITION_POSIX_SEMANTICS"
+        ],
+        "unknown_flag_token_count": 0
+      },
+      "event_utc": "2026-10-01T14:20:47.7539368Z",
+      "operation": "SetDispositionInformationEx",
+      "parsed_row_sha256": "efe8eb489835a1851e06f94107602f6fafc20e80ad8082eba0caa5b1bbde3f04",
+      "path": {
+        "empty": false,
+        "fixed_fixture_path": "C:\\Lab\\Fixtures\\received-from-lab.txt",
+        "recognized_notepad_image_path": false,
+        "sha256_utf8": "093f2239fa5eed4d91a89cc674690a7d69e1dc8ad475f84d72442e1c19e9bb67"
+      },
+      "pid": 2172,
+      "process_name": "binary.exe",
+      "process_name_sha256_utf8": "d7bac70d7cfcdb72693ac3422ff93c1fa6859cdd8fd186ef56bfe794880e18be",
+      "raw_detail_sha256_utf8": "52e371f79d0a35d345f0f8dbc3e605a203dbe4b2aa7469900f8e7f8d275cf712",
+      "raw_result_sha256_utf8": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+      "result": "SUCCESS",
+      "row_ordinal": 2889136
+    },
+    "final_named_fixture_absent": true,
+    "successful_delete_disposition_request": true
+  },
+  "kali_controller_run_id": "controlled-20261001T141355136847Z",
+  "limitations": [
+    "Process creation and correlated start do not prove useful work or program completion.",
+    "A recognized Windows Notepad path is path evidence, not Authenticode or executable hash validation.",
+    "Disposition SUCCESS plus a recognized DELETE flag proves an accepted delete request; final named-file absence is separate evidence. Open handles may retain file data.",
+    "Only the pinned specimen lifetime and Notepad PID8336 are bound here. Descendant PID8728 and unrelated processes are not newly attributed.",
+    "CSV full hash and original safe records are independently checked. Source row hashes describe parsed records, not literal CSV line bytes."
+  ],
+  "network_requests_made": false,
+  "notepad": {
+    "binding_verified": true,
+    "comparison_tolerance_seconds": 2,
+    "create_candidate_count": 1,
+    "descendant_pid_8728_attributed_by_this_supplement": false,
+    "exit_count": 1,
+    "exit_events": [
+      {
+        "event_utc": "2026-10-01T14:23:15.5559975Z",
+        "operation": "Process Exit",
+        "parsed_row_sha256": "5bd90ff70b60942cd2f069184e886ab2e1a6838f90591b1cb212b56347df648f",
+        "path": {
+          "empty": true,
+          "recognized_notepad_image_path": false,
+          "sha256_utf8": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "pid": 8336,
+        "process_name": "notepad.exe",
+        "process_name_sha256_utf8": "772dcad8ec8b79675f0c555696255604fc87ee7d369ab0e4222e5d4299b1cc31",
+        "raw_detail_sha256_utf8": "93dac7fb74f416bf1243af189442b207d72abcfbfad1f384c8f1223c56030ef2",
+        "raw_result_sha256_utf8": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+        "result": "SUCCESS",
+        "row_ordinal": 3725978
+      }
+    ],
+    "expected_parent_pid": 2172,
+    "pid": 8336,
+    "pid_reuse_rejected": false,
+    "signed_binary_identity_verified": false,
+    "start_count": 1,
+    "start_events": [
+      {
+        "event_utc": "2026-10-01T14:21:43.2371635Z",
+        "operation": "Process Start",
+        "parent_pid": 2172,
+        "parsed_row_sha256": "e0360dd4b3df6d705535d1227bb3fc799607772b969607e1beac3d42d20490a7",
+        "path": {
+          "empty": true,
+          "recognized_notepad_image_path": false,
+          "sha256_utf8": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "pid": 8336,
+        "process_name": "notepad.exe",
+        "process_name_sha256_utf8": "772dcad8ec8b79675f0c555696255604fc87ee7d369ab0e4222e5d4299b1cc31",
+        "raw_detail_sha256_utf8": "1f6c7c860dc8928171a881af722a184b9e2a918680b0469f15d584b83103d694",
+        "raw_result_sha256_utf8": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+        "result": "SUCCESS",
+        "row_ordinal": 3199972
+      }
+    ],
+    "successful_program_completion_proven": false,
+    "wmi_start_utc": "2026-10-01T14:21:43.3859441Z"
+  },
+  "original_review_modified": false,
+  "pinned_root": {
+    "end_utc": "2026-10-01T14:23:15.5346249Z",
+    "exit_event": {
+      "event_utc": "2026-10-01T14:23:15.5346249Z",
+      "operation": "Process Exit",
+      "parsed_row_sha256": "b949da721dbe128b6cf660cb22f8cfcdac4cb076cb9eb729f0a048a0a7efe288",
+      "path": {
+        "empty": true,
+        "recognized_notepad_image_path": false,
+        "sha256_utf8": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "pid": 2172,
+      "process_name": "binary.exe",
+      "process_name_sha256_utf8": "d7bac70d7cfcdb72693ac3422ff93c1fa6859cdd8fd186ef56bfe794880e18be",
+      "raw_detail_sha256_utf8": "12a26642656c90cc34f704bc4cd478610cf48947cfc4f685d23af6f251b7e0df",
+      "raw_result_sha256_utf8": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+      "result": "SUCCESS",
+      "row_ordinal": 3724150
+    },
+    "parent_pid": 2740,
+    "pid": 2172,
+    "sample_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+    "start_event": {
+      "event_utc": "2026-10-01T14:14:30.4141775Z",
+      "operation": "Process Start",
+      "parent_pid": 2740,
+      "parsed_row_sha256": "8a3d8d5486d6341ecab7d0df6a75eac76f8a12bc3a7a319ee6343222ddd8be50",
+      "path": {
+        "empty": true,
+        "recognized_notepad_image_path": false,
+        "sha256_utf8": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "pid": 2172,
+      "process_name": "binary.exe",
+      "process_name_sha256_utf8": "d7bac70d7cfcdb72693ac3422ff93c1fa6859cdd8fd186ef56bfe794880e18be",
+      "raw_detail_sha256_utf8": "96bd80dab8c4ce383d800709373f6b0cede22b6d112803b129dfd5aabc7b5448",
+      "raw_result_sha256_utf8": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+      "result": "SUCCESS",
+      "row_ordinal": 180530
+    },
+    "start_utc": "2026-10-01T14:14:30.3986897Z"
+  },
+  "raw_archive_or_csv_exported": false,
+  "raw_detail_or_command_lines_exported": false,
+  "recorded_utc": "2026-10-01T14:42:01.733157+00:00",
+  "root_process_creates": [
+    {
+      "created_pid": 4544,
+      "event_utc": "2026-10-01T14:17:44.5868726Z",
+      "operation": "Process Create",
+      "parsed_row_sha256": "66e2c187e6a6ff9f5034d1601589e9d93e682e36d9057dd17f2ce33beac84660",
+      "path": {
+        "empty": false,
+        "fixed_windows_image_path": "C:\\WINDOWS\\SysWOW64\\cmd.exe",
+        "recognized_notepad_image_path": false,
+        "sha256_utf8": "b056b86c143b8046334f42865c920d80bdcb77ee149a602737df2ceebe886cad"
+      },
+      "pid": 2172,
+      "process_name": "binary.exe",
+      "process_name_sha256_utf8": "d7bac70d7cfcdb72693ac3422ff93c1fa6859cdd8fd186ef56bfe794880e18be",
+      "raw_detail_sha256_utf8": "5c833620e317f3367acd5e173b0b83e3e37869c93ee3afbb2eacc1ba4f280a64",
+      "raw_result_sha256_utf8": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+      "result": "SUCCESS",
+      "row_ordinal": 919895
+    },
+    {
+      "created_pid": 6344,
+      "event_utc": "2026-10-01T14:18:30.6327403Z",
+      "operation": "Process Create",
+      "parsed_row_sha256": "d5e82200bcac546b19af3913635540ac441e3910c113082fff326c39bfc8fad6",
+      "path": {
+        "empty": false,
+        "fixed_windows_image_path": "C:\\WINDOWS\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "recognized_notepad_image_path": false,
+        "sha256_utf8": "9dde6c209fd73e685b33971b54eb17b37952617271960a88e5012cb0b5ee76b8"
+      },
+      "pid": 2172,
+      "process_name": "binary.exe",
+      "process_name_sha256_utf8": "d7bac70d7cfcdb72693ac3422ff93c1fa6859cdd8fd186ef56bfe794880e18be",
+      "raw_detail_sha256_utf8": "83a79a66558a9aea1a3ff49243d3c897bec63aad499efca3eb8b3f4aa16923c7",
+      "raw_result_sha256_utf8": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+      "result": "SUCCESS",
+      "row_ordinal": 1265983
+    },
+    {
+      "created_pid": 8336,
+      "event_utc": "2026-10-01T14:21:43.2371592Z",
+      "operation": "Process Create",
+      "parsed_row_sha256": "aab9aa226c08e32de24033d6be29be0fd20f3ff51bf001f83df54f88fbb1470f",
+      "path": {
+        "empty": false,
+        "fixed_windows_image_path": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2501.31.0_x64__8wekyb3d8bbwe\\Notepad\\Notepad.exe",
+        "recognized_notepad_image_path": true,
+        "sha256_utf8": "2368eb6e9fc9c7de8f57bde35221bb4283a470cbdd82523814501b95550f9c4f"
+      },
+      "pid": 2172,
+      "process_name": "binary.exe",
+      "process_name_sha256_utf8": "d7bac70d7cfcdb72693ac3422ff93c1fa6859cdd8fd186ef56bfe794880e18be",
+      "raw_detail_sha256_utf8": "c71462cbbc9732f1a5b239b542a0de7089d0992e4973fbe2dcf2e7e1afef38e7",
+      "raw_result_sha256_utf8": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+      "result": "SUCCESS",
+      "row_ordinal": 3199971
+    }
+  ],
+  "schema": 1,
+  "source": {
+    "archive_bytes": 190868480,
+    "archive_sha256": "2f08e52f4b71d721dde36bc7a4aa6f3517d807bc486c96c93e7c5cc906100321",
+    "csv_bytes": 669862849,
+    "csv_member": "Native/controlled-20261001T141416071Z/private/procmon-review-20261001T142353588Z-a224cb16cfd34d49bde7e928de03e14c.csv",
+    "csv_rows": 3726839,
+    "csv_sha256": "66f8f5743630974665475b5eb4bed0bec197aefab08ca0335085fd0231c61c5b",
+    "full_archive_and_csv_hashes_verified": true,
+    "header_sha256": "f4462861763ec30da76b2b32904a4c1d85be2d9c7a3e914be71030e32205b11e",
+    "review_record_sha256": "b980a38e0daac3c98e1fe3baf63d90f08de8ed6a46d1a43c1ada7af3f305df17",
+    "row_hash_definition": "SHA256 of parsed ordered CSV fields serialized as compact ensure_ascii=False JSON UTF8; ordinal1 is first data record; header excluded",
+    "windows_record_sha256": "30b4bee0b41610ce95b44145b4d441484a79d0dbf3c641884e3695036fa3bcca",
+    "zip_member_crc_checked_at_eof": true
+  },
+  "specimens_executed": false,
+  "status": "reviewed",
+  "windows_run_id": "controlled-20261001T141416071Z"
+}

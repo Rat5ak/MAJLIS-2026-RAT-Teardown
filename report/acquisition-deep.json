@@ -1,0 +1,128 @@
+{
+  "phase": "acquisition complete",
+  "tools": [
+    {
+      "source": "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_12.1.4_build/ghidra_12.1.4_PUBLIC_20260921.zip",
+      "guest_path": "/home/kali/majlis-analysis/tools/ghidra_12.1.4_PUBLIC_20260921.zip",
+      "size": 569649598,
+      "sha256": "ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db",
+      "checksum_verified": true
+    },
+    {
+      "source": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz",
+      "guest_path": "/home/kali/majlis-analysis/tools/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz",
+      "size": 207473347,
+      "sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94",
+      "checksum_verified": true
+    }
+  ],
+  "artifacts": [
+    {
+      "source": "https://rappellingaart.com/secure-docs/3",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:35.186465+00:00",
+      "synthetic_identifier": false,
+      "error": "[Errno -2] Name or service not known"
+    },
+    {
+      "source": "https://rappellingaart.com/secure-docs/3",
+      "method": "PROPFIND",
+      "time_utc": "2026-10-01T10:57:35.228442+00:00",
+      "synthetic_identifier": false,
+      "error": "[Errno -2] Name or service not known"
+    },
+    {
+      "source": "https://rappellingaart.com/secure-docs/res.ico",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:35.241768+00:00",
+      "synthetic_identifier": false,
+      "error": "[Errno -2] Name or service not known"
+    },
+    {
+      "source": "https://rappellingaart.com/secure-docs/Imp_Details.msi",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:35.246943+00:00",
+      "synthetic_identifier": false,
+      "error": "[Errno -2] Name or service not known"
+    },
+    {
+      "source": "http://gomescareerplans.com/docs/",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:35.252661+00:00",
+      "synthetic_identifier": false,
+      "resolved_ips": [
+        "176.123.0.199"
+      ],
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "location": null,
+      "server": "LiteSpeed",
+      "guest_path": "/home/kali/majlis-analysis/acquired/command-source-no-id.bin",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file_type": "empty",
+      "referenced_urls": [],
+      "hrefs": [],
+      "webdav_hrefs": [],
+      "body_classifiers": {
+        "not found": false,
+        "forbidden": false,
+        "access denied": false,
+        "captcha": false,
+        "cloudflare": false,
+        "<html": false,
+        "powershell": false,
+        "msiexec": false,
+        "curl": false,
+        "schtasks": false
+      }
+    },
+    {
+      "source": "http://gomescareerplans.com/docs/?vid=LAB-ANALYSISG",
+      "method": "GET",
+      "time_utc": "2026-10-01T10:57:36.786685+00:00",
+      "synthetic_identifier": true,
+      "resolved_ips": [
+        "176.123.0.199"
+      ],
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "location": null,
+      "server": "LiteSpeed",
+      "guest_path": "/home/kali/majlis-analysis/acquired/command-source-lab-id.bin",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "file_type": "empty",
+      "referenced_urls": [],
+      "hrefs": [],
+      "webdav_hrefs": [],
+      "body_classifiers": {
+        "not found": false,
+        "forbidden": false,
+        "access denied": false,
+        "captcha": false,
+        "cloudflare": false,
+        "<html": false,
+        "powershell": false,
+        "msiexec": false,
+        "curl": false,
+        "schtasks": false
+      }
+    }
+  ],
+  "network_events": [
+    {
+      "rc": 0
+    },
+    {
+      "rc": 0
+    },
+    {
+      "rc": 0
+    }
+  ],
+  "ghidra_home": "/home/kali/majlis-analysis/tools/ghidra_12.1.4_PUBLIC",
+  "java_home": "/home/kali/majlis-analysis/tools/jdk-21.0.12.1+1",
+  "network_offline": true,
+  "completed_utc": "2026-10-01T10:57:37.716040+00:00"
+}

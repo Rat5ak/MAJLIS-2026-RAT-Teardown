@@ -1,0 +1,34 @@
+{
+    "status":  "observed_reference",
+    "schema":  1,
+    "case_id":  "majlis-2026-analysis-20261001",
+    "guest_id":  "14d36378-76f4-4bf7-9f85-2e82f60651a9",
+    "run_id":  "controlled-20261001T141416071Z",
+    "observed_utc":  "2026-10-01T14:23:52.2236383Z",
+    "guest_timezone":  "UTC",
+    "logical_drive_source":  "Win32_LogicalDisk",
+    "logical_drives":  [
+                           {
+                               "drive_letter":  "C:",
+                               "drive_type":  3,
+                               "drive_type_name":  "LocalDisk"
+                           }
+                       ],
+    "alpha":  {
+                  "fixed_path":  "C:\\Lab\\Fixtures\\alpha.txt",
+                  "is_directory":  false,
+                  "size":  23,
+                  "sha256":  "ae7e86af1670fdf1e5d137a92a3e81e586d4fd1a54b262cab1d86530f675ce91",
+                  "fixed_inert_content_hash_verified":  true,
+                  "last_write_utc":  "2026-10-01T12:57:49.8007526Z"
+              },
+    "subdir":  {
+                   "fixed_path":  "C:\\Lab\\Fixtures\\subdir",
+                   "is_directory":  true,
+                   "last_write_utc":  "2026-10-01T22:17:58.7975029Z"
+               },
+    "metadata_changed_by_helper":  false,
+    "sample_bytes_read":  false,
+    "network_requests_made":  false,
+    "interpretation":  "Independent current Windows reference for comparison with GDR/FDD output. Timestamp cause requires setup chronology; future fixture metadata alone does not prove specimen timestomping."
+}

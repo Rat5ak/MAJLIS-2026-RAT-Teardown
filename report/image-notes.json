@@ -1,0 +1,497 @@
+{
+  "file": "/home/kali/majlis-analysis/extracted/Official Invitation Majilis 2026 Gala Dinner/icon2.xz",
+  "size": 2086470,
+  "sha256": "fec4f301a1be36a42ec27208e13b5d1d3d0bbe0f1ab47bbab863a7ca9923c571",
+  "entropy": 7.897,
+  "segments": [
+    {
+      "offset": 2,
+      "marker": "APP0",
+      "length": 16,
+      "end": 20,
+      "prefix_hex": "4a4649460001010100fe00fe0000",
+      "ascii_preview": "JFIF.........."
+    },
+    {
+      "offset": 20,
+      "marker": "APP1",
+      "length": 846,
+      "end": 868,
+      "prefix_hex": "4578696600004d4d002a000000080004010e0002000000490000014a8769000400000001000001949c9b000100000092",
+      "ascii_preview": "Exif..MM.*.............I...J.i.................................>................................................................................................"
+    },
+    {
+      "offset": 868,
+      "marker": "APP1",
+      "length": 2316,
+      "end": 3186,
+      "prefix_hex": "687474703a2f2f6e732e61646f62652e636f6d2f7861702f312e302f003c3f787061636b657420626567696e3d27efbb",
+      "ascii_preview": "http://ns.adobe.com/xap/1.0/.<?xpacket begin='...' id='W5M0MpCehiHzreSzNTczkc9d'?>..<x:xmpmeta xmlns:x=\"adobe:ns:meta/\"><rdf:RDF xmlns:rdf=\"http://www.w3.org/19"
+    },
+    {
+      "offset": 3186,
+      "marker": "DQT",
+      "length": 67,
+      "end": 3255
+    },
+    {
+      "offset": 3255,
+      "marker": "DQT",
+      "length": 67,
+      "end": 3324
+    },
+    {
+      "offset": 3324,
+      "marker": "SOF0",
+      "length": 17,
+      "end": 3343,
+      "bits": 8,
+      "height": 3761,
+      "width": 5641,
+      "components": 3
+    },
+    {
+      "offset": 3343,
+      "marker": "DHT",
+      "length": 31,
+      "end": 3376
+    },
+    {
+      "offset": 3376,
+      "marker": "DHT",
+      "length": 181,
+      "end": 3559
+    },
+    {
+      "offset": 3559,
+      "marker": "DHT",
+      "length": 31,
+      "end": 3592
+    },
+    {
+      "offset": 3592,
+      "marker": "DHT",
+      "length": 181,
+      "end": 3775
+    },
+    {
+      "offset": 3775,
+      "marker": "SOS",
+      "length": 12,
+      "end": 3789,
+      "scan_start": 3789,
+      "scan_length": 2082679,
+      "scan_entropy": 7.8972
+    },
+    {
+      "offset": 2086468,
+      "marker": "EOI"
+    }
+  ],
+  "append": {
+    "start": 2086470,
+    "length": 0,
+    "entropy": 0,
+    "sha256": null,
+    "first_64_hex": ""
+  },
+  "signatures": {
+    "MZ": [
+      106391,
+      197917,
+      200990,
+      212221,
+      290779,
+      346276,
+      460682,
+      475630,
+      513468,
+      521258,
+      532121,
+      538026,
+      547305,
+      553435,
+      594910,
+      621002,
+      671443,
+      777046,
+      800556,
+      800914,
+      830687,
+      840254,
+      848604,
+      855896,
+      896319,
+      904976,
+      926853,
+      1098380,
+      1125207,
+      1129700,
+      1206878,
+      1217976,
+      1230084,
+      1292622,
+      1368274,
+      1443433,
+      1453774,
+      1475454,
+      1498148,
+      1522598
+    ],
+    "PE": [],
+    "ZIP": [],
+    "RAR4": [],
+    "RAR5": [],
+    "7ZIP": [],
+    "XZ": [],
+    "GZIP": [],
+    "PNG": [],
+    "ELF": [],
+    "OLE": [],
+    "LNK": [],
+    "PDF": [],
+    "PowerShell": [],
+    "HTTP": [
+      872,
+      1012,
+      1138,
+      1266,
+      1384,
+      1450,
+      1864,
+      2081,
+      2379,
+      2466
+    ],
+    "PRIVATE_KEY": []
+  },
+  "blocks": [
+    {
+      "start": 0,
+      "length": 65536,
+      "entropy": 7.6683
+    },
+    {
+      "start": 65536,
+      "length": 65536,
+      "entropy": 7.7636
+    },
+    {
+      "start": 131072,
+      "length": 65536,
+      "entropy": 7.859
+    },
+    {
+      "start": 196608,
+      "length": 65536,
+      "entropy": 7.9444
+    },
+    {
+      "start": 262144,
+      "length": 65536,
+      "entropy": 7.9603
+    },
+    {
+      "start": 327680,
+      "length": 65536,
+      "entropy": 7.969
+    },
+    {
+      "start": 393216,
+      "length": 65536,
+      "entropy": 7.972
+    },
+    {
+      "start": 458752,
+      "length": 65536,
+      "entropy": 7.9699
+    },
+    {
+      "start": 524288,
+      "length": 65536,
+      "entropy": 7.9674
+    },
+    {
+      "start": 589824,
+      "length": 65536,
+      "entropy": 7.9679
+    },
+    {
+      "start": 655360,
+      "length": 65536,
+      "entropy": 7.9668
+    },
+    {
+      "start": 720896,
+      "length": 65536,
+      "entropy": 7.9657
+    },
+    {
+      "start": 786432,
+      "length": 65536,
+      "entropy": 7.9661
+    },
+    {
+      "start": 851968,
+      "length": 65536,
+      "entropy": 7.9648
+    },
+    {
+      "start": 917504,
+      "length": 65536,
+      "entropy": 7.9667
+    },
+    {
+      "start": 983040,
+      "length": 65536,
+      "entropy": 7.9676
+    },
+    {
+      "start": 1048576,
+      "length": 65536,
+      "entropy": 7.9666
+    },
+    {
+      "start": 1114112,
+      "length": 65536,
+      "entropy": 7.9654
+    },
+    {
+      "start": 1179648,
+      "length": 65536,
+      "entropy": 7.9655
+    },
+    {
+      "start": 1245184,
+      "length": 65536,
+      "entropy": 7.9625
+    },
+    {
+      "start": 1310720,
+      "length": 65536,
+      "entropy": 7.9628
+    },
+    {
+      "start": 1376256,
+      "length": 65536,
+      "entropy": 7.9665
+    },
+    {
+      "start": 1441792,
+      "length": 65536,
+      "entropy": 7.9646
+    },
+    {
+      "start": 1507328,
+      "length": 65536,
+      "entropy": 7.9667
+    },
+    {
+      "start": 1572864,
+      "length": 65536,
+      "entropy": 7.9677
+    },
+    {
+      "start": 1638400,
+      "length": 65536,
+      "entropy": 7.9651
+    },
+    {
+      "start": 1703936,
+      "length": 65536,
+      "entropy": 7.9346
+    },
+    {
+      "start": 1769472,
+      "length": 65536,
+      "entropy": 7.3861
+    },
+    {
+      "start": 1835008,
+      "length": 65536,
+      "entropy": 7.1107
+    },
+    {
+      "start": 1900544,
+      "length": 65536,
+      "entropy": 6.8599
+    },
+    {
+      "start": 1966080,
+      "length": 65536,
+      "entropy": 6.4347
+    },
+    {
+      "start": 2031616,
+      "length": 54854,
+      "entropy": 4.3973
+    }
+  ],
+  "long_string_count": 13,
+  "interesting_strings": [
+    {
+      "offset": 872,
+      "length": 28,
+      "preview": "http://ns.adobe.com/xap/1.0/"
+    },
+    {
+      "offset": 956,
+      "length": 860,
+      "preview": "<x:xmpmeta xmlns:x=\"adobe:ns:meta/\"><rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><rdf:Description rdf:about=\"uuid:faf5bdd5-ba3d-11da-ad31-d3"
+    },
+    {
+      "offset": 1821,
+      "length": 208,
+      "preview": "</dc:subject><dc:title><rdf:Alt xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><rdf:li xml:lang=\"x-default\">A beautiful shot of a small village surroun"
+    },
+    {
+      "offset": 2034,
+      "length": 212,
+      "preview": "</dc:title><dc:description><rdf:Alt xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><rdf:li xml:lang=\"x-default\">A beautiful shot of a small village sur"
+    },
+    {
+      "offset": 2251,
+      "length": 581,
+      "preview": "</dc:description></rdf:Description><rdf:Description rdf:about=\"uuid:faf5bdd5-ba3d-11da-ad31-d33d75182f1b\" xmlns:MicrosoftPhoto=\"http://ns.microsoft.com/photo/1."
+    },
+    {
+      "offset": 2837,
+      "length": 72,
+      "preview": "</MicrosoftPhoto:LastKeywordXMP></rdf:Description></rdf:RDF></x:xmpmeta>"
+    }
+  ],
+  "longest_strings": [
+    {
+      "offset": 956,
+      "length": 860,
+      "preview": "<x:xmpmeta xmlns:x=\"adobe:ns:meta/\"><rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><rdf:Description rdf:about=\"uuid:faf5bdd5-ba3d-11da-ad31-d3"
+    },
+    {
+      "offset": 2251,
+      "length": 581,
+      "preview": "</dc:description></rdf:Description><rdf:Description rdf:about=\"uuid:faf5bdd5-ba3d-11da-ad31-d33d75182f1b\" xmlns:MicrosoftPhoto=\"http://ns.microsoft.com/photo/1."
+    },
+    {
+      "offset": 2034,
+      "length": 212,
+      "preview": "</dc:title><dc:description><rdf:Alt xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><rdf:li xml:lang=\"x-default\">A beautiful shot of a small village sur"
+    },
+    {
+      "offset": 1821,
+      "length": 208,
+      "preview": "</dc:subject><dc:title><rdf:Alt xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><rdf:li xml:lang=\"x-default\">A beautiful shot of a small village surroun"
+    },
+    {
+      "offset": 2911,
+      "length": 100,
+      "preview": "                                                                                                    "
+    },
+    {
+      "offset": 3012,
+      "length": 100,
+      "preview": "                                                                                                    "
+    },
+    {
+      "offset": 3113,
+      "length": 73,
+      "preview": "                                                      <?xpacket end='w'?>"
+    },
+    {
+      "offset": 360,
+      "length": 72,
+      "preview": "A beautiful shot of a small village surrounded by a lake and snowy hills"
+    },
+    {
+      "offset": 2837,
+      "length": 72,
+      "preview": "</MicrosoftPhoto:LastKeywordXMP></rdf:Description></rdf:RDF></x:xmpmeta>"
+    },
+    {
+      "offset": 3441,
+      "length": 45,
+      "preview": "%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz"
+    },
+    {
+      "offset": 3660,
+      "length": 43,
+      "preview": "&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz"
+    },
+    {
+      "offset": 921,
+      "length": 33,
+      "preview": "' id='W5M0MpCehiHzreSzNTczkc9d'?>"
+    }
+  ],
+  "xmp_text": [
+    {
+      "tag": "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}li",
+      "text": "nature, landscape, water, sky, lake, mountain, summer, green, snow, travel, beautiful, blue, tree, beauty, outdoors, clouds, countryside, outdoor, white, rural, winter, trees, scenic, hill, grass, village, country, mountains, color, environment, forest, background, view, natural, sunlight, sun"
+    },
+    {
+      "tag": "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}li",
+      "text": "A beautiful shot of a small village surrounded by a lake and snowy hills"
+    },
+    {
+      "tag": "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}li",
+      "text": "A beautiful shot of a small village surrounded by a lake and snowy hills"
+    },
+    {
+      "tag": "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}li",
+      "text": "nature, landscape, water, sky, lake, mountain, summer, green, snow, travel, beautiful, blue, tree, beauty, outdoors, clouds, countryside, outdoor, white, rural, winter, trees, scenic, hill, grass, village, country, mountains, color, environment, forest, background, view, natural, sunlight, sun"
+    }
+  ],
+  "exif_metadata": [
+    {
+      "tag": "0x10e",
+      "name": "ImageDescription",
+      "type": 2,
+      "count": 73,
+      "length": 73,
+      "text": "A beautiful shot of a small village surrounded by a lake and snowy hills"
+    },
+    {
+      "tag": "0xea1c",
+      "name": "unknown",
+      "type": 7,
+      "count": 268,
+      "length": 268,
+      "sha256": "73d199e109f03c048d33ee8aee9f7fe88bc21753e49c3d7dcc8d6e67b2cf1223",
+      "preview": "................................................................................"
+    },
+    {
+      "tag": "0x8769",
+      "name": "ExifIFD",
+      "type": 4,
+      "count": 1,
+      "length": 4,
+      "value_hex": "00000194"
+    },
+    {
+      "tag": "0x9c9b",
+      "name": "XPTitle",
+      "type": 1,
+      "count": 146,
+      "length": 146,
+      "text": "A beautiful shot of a small village surrounded by a lake and snowy hills"
+    },
+    {
+      "tag": "0xea1c",
+      "name": "unknown",
+      "type": 7,
+      "count": 268,
+      "length": 268,
+      "sha256": "73d199e109f03c048d33ee8aee9f7fe88bc21753e49c3d7dcc8d6e67b2cf1223",
+      "preview": "................................................................................"
+    }
+  ],
+  "pillow": {
+    "format": "JPEG",
+    "mode": "RGB",
+    "size": [
+      5641,
+      3761
+    ],
+    "verify": "passed",
+    "decode": "passed"
+  }
+}

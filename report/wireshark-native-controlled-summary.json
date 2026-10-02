@@ -1,0 +1,49 @@
+{
+  "application": "Wireshark",
+  "capture_command": "import -silent -window <verified Wireshark window> <guest PNG>",
+  "classification": "actual_completed_lab_capture",
+  "completed_utc": "2026-10-01T14:24:24.771281+00:00",
+  "controller_lock_held_through_completion": true,
+  "controller_processes_observed": {
+    "capture": "absent",
+    "controller": "absent",
+    "fixture": "absent"
+  },
+  "controller_status": "stopped",
+  "created_utc": "2026-10-01T14:24:21.875074+00:00",
+  "display": ":99",
+  "display_filter": "http && (http.request.uri contains \"receive.php\" || http.request.uri contains \"send.php\")",
+  "display_is_private_xvfb": true,
+  "frames": 310,
+  "guest_session": "/home/kali/majlis-analysis/dynamic/wireshark-evidence/controlled-20261001T141355136847Z-http-transfers-20261001T142421671805Z",
+  "guest_view_capture": "/home/kali/majlis-analysis/dynamic/wireshark-evidence/controlled-20261001T141355136847Z-http-transfers-20261001T142421671805Z/controlled-actual-lab-capture-http-transfers.pcapng",
+  "guest_view_capture_sha256": "601b3adad3868f8eb8a416e091a77f4538ab662d39d497a47579b59291844bb3",
+  "image_processing_performed": false,
+  "matching_frames": 6,
+  "original_capture_hashes_preserved": true,
+  "packet_bytes_pane_enabled": false,
+  "phase": "controlled",
+  "policy": "Original captures and derived captures remain inside Kali; PNG is a direct real Wireshark window capture with no editing.",
+  "run_id": "controlled-20261001T141355136847Z",
+  "schema": 1,
+  "screenshot_bytes": 101982,
+  "screenshot_dimensions": [
+    1900,
+    1000
+  ],
+  "screenshot_guest_path": "/home/kali/majlis-analysis/dynamic/wireshark-evidence/controlled-20261001T141355136847Z-http-transfers-20261001T142421671805Z/controlled-actual-lab-capture-wireshark-http-transfers.png",
+  "screenshot_name": "controlled-actual-lab-capture-wireshark-http-transfers.png",
+  "screenshot_sha256": "a3af3cdd4b4f8c275f1ad4dc424163d429e0f710e4cf6822070c4fcb6e31c44d",
+  "source_captures": [
+    {
+      "bytes": 160556,
+      "guest_path": "/home/kali/majlis-analysis/dynamic/captures/controlled-20261001T141355136847Z/private/network.pcap0",
+      "mtime_ns": 1790864593235873392,
+      "sha256": "d31e7712846f44773b59c2f1ff677d3fd9f9b7f4f0a871cd033d2dc7f9e3fdef"
+    }
+  ],
+  "status": "screenshot_saved_guest_only",
+  "view": "http-transfers",
+  "window_id": "6291463",
+  "window_title": "controlled-actual-lab-capture-http-transfers.pcapng"
+}

@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "policy": "screened_runtime_images_v1",
+  "images": [
+    {
+      "file": "screenshots/native-baseline-wireshark.png",
+      "sha256": "446fbf93c855744362b03ceab4e3d0682378d02a7a00b44ddb0c9cd4bd0764f9",
+      "width": 1900,
+      "height": 1000,
+      "classification": "actual_runtime_evidence",
+      "screening": {
+        "approved": true,
+        "reviewer": "root analyst",
+        "reviewed_utc": "2026-10-01T13:29:42.366968+00:00",
+        "no_malware_file_bytes": true,
+        "no_raw_payloads": true,
+        "no_credentials": true,
+        "direct_tool_screenshot": true
+      },
+      "source": {
+        "kind": "wireshark",
+        "run_id": "baseline-20261001T131627068490Z",
+        "phase": "baseline",
+        "screenshot_sha256": "446fbf93c855744362b03ceab4e3d0682378d02a7a00b44ddb0c9cd4bd0764f9",
+        "capture_sha256": [
+          "3773a908c6101f649e06e3c4aac811a0ed97f55f152da3094ef05aad592ababa"
+        ],
+        "captured_frames": 126,
+        "displayed_frames": 22,
+        "view_capture_sha256": "546ed66f07b4e4fbf03129355fc2591a3953194a84e623824b8021485816565f",
+        "display_filter": "http && ip.addr == 172.30.77.2"
+      },
+      "screening_note": "Parent visually approved: 22 HTTP rows (11 POST/200 pairs), private IPs and fixed poll path, no packet bytes/details/credentials. Actual baseline capture, not infrastructure smoke."
+    },
+    {
+      "file": "screenshots/native-controlled-wireshark.png",
+      "sha256": "a3af3cdd4b4f8c275f1ad4dc424163d429e0f710e4cf6822070c4fcb6e31c44d",
+      "width": 1900,
+      "height": 1000,
+      "classification": "actual_runtime_evidence",
+      "screening": {
+        "approved": true,
+        "reviewer": "root analyst",
+        "reviewed_utc": "2026-10-01T14:27:13.575455+00:00",
+        "no_malware_file_bytes": true,
+        "no_raw_payloads": true,
+        "no_credentials": true,
+        "direct_tool_screenshot": true
+      },
+      "source": {
+        "kind": "wireshark",
+        "run_id": "controlled-20261001T141355136847Z",
+        "phase": "controlled",
+        "screenshot_sha256": "a3af3cdd4b4f8c275f1ad4dc424163d429e0f710e4cf6822070c4fcb6e31c44d",
+        "capture_sha256": [
+          "d31e7712846f44773b59c2f1ff677d3fd9f9b7f4f0a871cd033d2dc7f9e3fdef"
+        ],
+        "captured_frames": 310,
+        "displayed_frames": 6,
+        "view_capture_sha256": "601b3adad3868f8eb8a416e091a77f4538ab662d39d497a47579b59291844bb3",
+        "display_filter": "http && (http.request.uri contains \"receive.php\" || http.request.uri contains \"send.php\")"
+      },
+      "screening_note": "Root visually approved six HTTP request/response rows from the corrected controlled run: private IPs and fixed paths only; packet byte/detail panes and credentials absent. Direct unedited Wireshark window capture."
+    },
+    {
+      "file": "screenshots/native-controlled-ss1-viewer.png",
+      "sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+      "width": 1034,
+      "height": 804,
+      "classification": "actual_runtime_evidence",
+      "screening": {
+        "approved": true,
+        "reviewer": "root analyst",
+        "reviewed_utc": "2026-10-01T14:27:13.575455+00:00",
+        "no_malware_file_bytes": true,
+        "no_raw_payloads": true,
+        "no_credentials": true,
+        "direct_tool_screenshot": true
+      },
+      "source": {
+        "kind": "imagemagick_ss1",
+        "run_id": "controlled-20261001T141355136847Z",
+        "phase": "controlled",
+        "screenshot_sha256": "44e14795ebab3a2eeef9e5dcbe725913b158f5c012242d34e8da54cfcc8cf5b4",
+        "fixture_index": 8,
+        "command_type": "SS1",
+        "visual_summary_file": "ss1-visual-controlled-summary.json",
+        "visual_summary_sha256": "533b78048d649c07122f9e3a1278274c538a2a8c0bed1d88fc2c2887078874d6",
+        "upload_sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+        "upload_bytes": 123772,
+        "jpeg_dimensions": [
+          1024,
+          768
+        ],
+        "windows_record_file": "windows-native-controlled.json",
+        "windows_record_sha256": "30b4bee0b41610ce95b44145b4d441484a79d0dbf3c641884e3695036fa3bcca",
+        "windows_run_id": "controlled-20261001T141416071Z",
+        "windows_fixture_label": "fallback_screenshot",
+        "windows_file_sha256": "d862e9a53f667e83cd3acfb12e45320138bcd36d7a0fb3d295a5ebbfb7dddea9",
+        "windows_file_bytes": 123772,
+        "windows_upload_hash_match": true,
+        "raw_upload_kept_guest_only": true,
+        "actual_image_viewer_window": true,
+        "image_edited_or_composited": false,
+        "requested_screenshot_present": false
+      },
+      "screening_note": "Root visually approved the actual framed ImageMagick viewer showing the blue MAJLIS analyst desktop marker; visible guest console contains only fixed safe run JSON, without credentials or personal content. This is a direct viewer-window capture of the guest-only uploaded JPEG, not the original JPEG. Separate metadata correlation confirms the Windows fallback screenshot and uploaded JPEG have identical size and SHA256; requested screenshot is absent. Original capture metadata remains unchanged and records its earlier pending-review state.",
+      "correlation_review": {
+        "reviewer": "root analyst",
+        "reviewed_utc": "2026-10-01T14:27:13.575455+00:00",
+        "source": "explicit root visual approval plus independent safe-metadata hash/size comparison",
+        "blue_majlis_analyst_marker_visible": true,
+        "requested_screenshot_present": false,
+        "fallback_screenshot_upload_hash_and_size_match": true,
+        "raw_jpeg_read_on_host": false,
+        "original_helper_metadata_modified": false
+      }
+    }
+  ]
+}

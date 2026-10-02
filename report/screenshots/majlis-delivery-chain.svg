@@ -1,0 +1,19 @@
+<svg aria-labelledby="chain-title chain-desc" role="img" viewBox="0 0 900 490" xmlns="http://www.w3.org/2000/svg">
+<title id="chain-title">Majlis delivery and the two command channels</title>
+<desc id="chain-desc">Internet Shortcut to WebDAV, supplied LNK launching FTP script input, local shell escape to CMD, then a split into a 39-minute scheduled HTTP command task and MSI launching the native RAT, which polls another domain every 14 to 24 seconds. The entry-to-LNK link is reconstructed because the remote resource was unavailable.</desc>
+<g fill="#f2f6f5" stroke="#9eb5b3"><rect height="470" rx="8" width="880" x="10" y="10"></rect></g>
+<g fill="#fff" stroke="#608a89" stroke-width="1.5">
+<rect height="72" rx="5" width="230" x="45" y="43"></rect><rect height="72" rx="5" width="230" x="335" y="43"></rect><rect height="72" rx="5" width="230" x="625" y="43"></rect>
+<rect height="72" rx="5" width="370" x="265" y="173"></rect>
+<rect height="126" rx="5" width="355" x="45" y="303"></rect><rect height="126" rx="5" width="355" x="500" y="303"></rect>
+</g>
+<g fill="none" stroke="#397a75" stroke-width="2"><path d="M275 79H335" stroke-dasharray="6 4"></path><path d="M565 79H625 M740 115V148H450V173 M450 245V274H223V303 M450 274H678V303"></path></g>
+<g fill="#193d40" font-family="Segoe UI,Arial,sans-serif" text-anchor="middle">
+<text font-size="17" font-weight="600" x="160" y="70">Internet Shortcut</text><text font-size="13" x="160" y="96">WebDAV /secure-docs/3</text>
+<text font-size="17" font-weight="600" x="450" y="70">Supplied Shell Link</text><text font-size="13" x="450" y="96">ftp.exe with script input</text>
+<text font-size="17" font-weight="600" x="740" y="70">icon.ico: FTP script</text><text font-size="13" x="740" y="96">! local-shell escape</text>
+<text font-size="17" font-weight="600" x="450" y="201">res.ico: batch commands into CMD</text><text font-size="13" x="450" y="227">Creates a task and launches an MSI</text>
+<text font-size="17" font-weight="600" x="223" y="333">Scheduled command channel</text><text font-size="14" x="223" y="361">gomescareerplans[.]com/docs/</text><text font-size="13" x="223" y="386">HTTP response piped into CMD</text><text font-size="14" font-weight="600" x="223" y="411">Every 39 minutes</text>
+<text font-size="17" font-weight="600" x="678" y="333">MSI / native RAT channel</text><text font-size="14" x="678" y="361">www.chestergreenfarming[.]com</text><text font-size="13" x="678" y="386">JSON commands and file transfers</text><text font-size="14" font-weight="600" x="678" y="411">Normal polling every 14-24 seconds</text>
+<text font-size="12" x="450" y="461">Dashed link: the original WebDAV entry resource was unavailable.</text>
+</g></svg>
